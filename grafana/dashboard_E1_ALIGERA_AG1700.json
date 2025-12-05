@@ -1,0 +1,1820 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": false,
+    "canStar": true,
+    "canDelete": true,
+    "slug": "e1-aligera-ag1700",
+    "url": "/d/bXAYSxd7k/e1-aligera-ag1700",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2025-11-27T06:24:14-05:00",
+    "updated": "2025-12-02T09:22:37-05:00",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 4,
+    "hasAcl": false,
+    "isFolder": false,
+    "apiVersion": "v0alpha1",
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      },
+      "organization": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      }
+    }
+  },
+  "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "description": "Monitora Aligera AG562",
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 25,
+    "links": [],
+    "panels": [
+      {
+        "collapsed": false,
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 614,
+        "panels": [],
+        "title": "$E1",
+        "type": "row"
+      },
+      {
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 0,
+          "y": 1
+        },
+        "id": 617,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<tr>\n   <td align=\"center\"; background=\"d24dff\">\n      <a href=\"https://www.aligera.com.br/\">\n         <img alt=\"Aligera\" src=\"https://i.ibb.co/DCw4qcQ/aligera.png\"\n         width=\"160\" height=\"50\">\n      </a>\n   <td>\n<tr>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "decimals": 2,
+            "displayName": "",
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-green",
+                  "value": 0
+                },
+                {
+                  "color": "dark-green",
+                  "value": 1
+                },
+                {
+                  "color": "dark-yellow",
+                  "value": 50
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "velocityms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 3,
+          "y": 1
+        },
+        "id": 358,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": "Discovery Interface"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "$Group"
+            },
+            "host": {
+              "filter": "$E1"
+            },
+            "item": {
+              "filter": "Latencia Ping"
+            },
+            "itemTag": {
+              "filter": "Application: Discovery Interface"
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "LATENCY",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 70,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "never",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "normal"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "bps"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 6,
+          "w": 18,
+          "x": 6,
+          "y": 1
+        },
+        "id": 2,
+        "options": {
+          "alertThreshold": true,
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": "Discovery Interface"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "$Group"
+            },
+            "host": {
+              "filter": "$E1"
+            },
+            "item": {
+              "filter": "/Interface.*/"
+            },
+            "itemTag": {
+              "filter": "Application: Discovery Interface"
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "TRAFFIC",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "decimals": 0,
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-blue",
+                  "value": 0
+                }
+              ]
+            },
+            "unit": "dthms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 0,
+          "y": 4
+        },
+        "id": 618,
+        "maxDataPoints": "100",
+        "maxPerRow": 12,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "auto",
+          "orientation": "horizontal",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": "Geral"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "$Group"
+            },
+            "host": {
+              "filter": "$E1"
+            },
+            "item": {
+              "filter": "Uptime"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "UPTIME",
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "displayName": "",
+            "mappings": [
+              {
+                "options": {
+                  "match": "null",
+                  "result": {
+                    "text": "N/A"
+                  }
+                },
+                "type": "special"
+              }
+            ],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "dark-green",
+                  "value": 0
+                },
+                {
+                  "color": "#EAB839",
+                  "value": 30
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 3,
+          "w": 3,
+          "x": 3,
+          "y": 4
+        },
+        "id": 357,
+        "options": {
+          "minVizHeight": 75,
+          "minVizWidth": 75,
+          "orientation": "auto",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true,
+          "sizing": "auto"
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": "Discovery Interface"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "$Group"
+            },
+            "host": {
+              "filter": "$E1"
+            },
+            "item": {
+              "filter": "Perda de Pacote"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "LOSS",
+        "type": "gauge"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "fixedColor": "#1a1515",
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "center",
+              "cellOptions": {
+                "mode": "gradient",
+                "type": "color-background"
+              },
+              "filterable": false,
+              "footer": {
+                "reducers": []
+              },
+              "inspect": false
+            },
+            "mappings": [
+              {
+                "options": {
+                  "unreachable": {
+                    "color": "dark-red",
+                    "index": 0,
+                    "text": "OFF"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "#37872d",
+                  "value": 0
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Status"
+              },
+              "properties": [
+                {
+                  "id": "color"
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "SIP"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "transparent",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 6,
+          "x": 0,
+          "y": 7
+        },
+        "id": 619,
+        "options": {
+          "cellHeight": "md",
+          "frameIndex": 0,
+          "showHeader": true,
+          "sortBy": [
+            {
+              "desc": true,
+              "displayName": "Time"
+            }
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": "SIPSTATUS"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "Status OI_PETRO_LC1"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          },
+          {
+            "application": {
+              "filter": "SIPSTATUS"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "hide": false,
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "Status OI_PETRO_LC2"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "B",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          },
+          {
+            "application": {
+              "filter": "SIPSTATUS"
+            },
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "hide": false,
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "Status OI_PETRO_LD1"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "options": {
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "C",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          },
+          {
+            "application": {
+              "filter": "SIPSTATUS"
+            },
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "hide": false,
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "Status OI_PETRO_LD2"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "options": {
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "D",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          },
+          {
+            "application": {
+              "filter": "SIPSTATUS"
+            },
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "hide": false,
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "Status OI_PETRO_TR1"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "options": {
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "E",
+            "resultFormat": "time_series",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          },
+          {
+            "application": {
+              "filter": "SIPSTATUS"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "hide": false,
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "Status OI_PETRO_TR2"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "F",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "transformations": [
+          {
+            "id": "reduce",
+            "options": {
+              "includeTimeField": false,
+              "mode": "seriesToRows",
+              "reducers": [
+                "lastNotNull"
+              ]
+            }
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Time": true
+              },
+              "indexByName": {},
+              "renameByName": {
+                "Field": "SIP",
+                "Last *": "Status",
+                "Status OI_PETRO_LC1": "OI PETRO LC1",
+                "Status OI_PETRO_LC2": "OI PETRO LC2",
+                "Status OI_PETRO_LD1": "OI PETRO LD1",
+                "Status OI_PETRO_LD2": "OI PETRO LD2",
+                "Status OI_PETRO_TR1": "OI PETRO TR1",
+                "Status OI_PETRO_TR2": "OI PETRO TR2"
+              }
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "table"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {},
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Status"
+              },
+              "properties": []
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "SIP"
+              },
+              "properties": []
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 14,
+          "x": 6,
+          "y": 7
+        },
+        "id": 622,
+        "options": {
+          "ackEventColor": "rgb(56, 219, 156)",
+          "ackField": true,
+          "ageField": false,
+          "allowDangerousHTML": false,
+          "customLastChangeFormat": false,
+          "descriptionAtNewLine": false,
+          "descriptionField": true,
+          "fontSize": "100%",
+          "highlightBackground": false,
+          "highlightNewEvents": false,
+          "highlightNewerThan": "1h",
+          "hostField": true,
+          "hostGroups": false,
+          "hostProxy": false,
+          "hostTechNameField": false,
+          "lastChangeFormat": "",
+          "layout": "table",
+          "markAckEvents": false,
+          "okEventColor": "rgb(56, 189, 113)",
+          "opdataField": false,
+          "pageSize": 10,
+          "problemTimeline": true,
+          "severityField": true,
+          "showDatasourceName": false,
+          "showTags": true,
+          "sortProblems": "lastchange",
+          "statusField": true,
+          "statusIcon": false,
+          "triggerSeverity": [
+            {
+              "color": "rgb(108, 108, 108)",
+              "priority": 0,
+              "severity": "Not classified",
+              "show": true
+            },
+            {
+              "color": "rgb(120, 158, 183)",
+              "priority": 1,
+              "severity": "Information",
+              "show": true
+            },
+            {
+              "color": "rgb(175, 180, 36)",
+              "priority": 2,
+              "severity": "Warning",
+              "show": true
+            },
+            {
+              "color": "rgb(255, 137, 30)",
+              "priority": 3,
+              "severity": "Average",
+              "show": true
+            },
+            {
+              "color": "rgb(255, 101, 72)",
+              "priority": 4,
+              "severity": "High",
+              "show": true
+            },
+            {
+              "color": "rgb(215, 0, 0)",
+              "priority": 5,
+              "severity": "Disaster",
+              "show": true
+            }
+          ]
+        },
+        "pluginVersion": "6.0.3",
+        "targets": [
+          {
+            "application": {
+              "filter": "/.*/"
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "host": {
+              "filter": "E1-Aligera"
+            },
+            "item": {
+              "filter": "/.*/"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "2",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "Problemas detectados",
+        "transformations": [
+          {
+            "id": "reduce",
+            "options": {
+              "includeTimeField": false,
+              "mode": "seriesToRows",
+              "reducers": [
+                "lastNotNull"
+              ]
+            }
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {
+                "Time": true
+              },
+              "indexByName": {},
+              "renameByName": {
+                "Field": "SIP",
+                "Last *": "Status",
+                "Status OI_PETRO_LC1": "OI PETRO LC1",
+                "Status OI_PETRO_LC2": "OI PETRO LC2",
+                "Status OI_PETRO_LD1": "OI PETRO LD1",
+                "Status OI_PETRO_LD2": "OI PETRO LD2",
+                "Status OI_PETRO_TR1": "OI PETRO TR1",
+                "Status OI_PETRO_TR2": "OI PETRO TR2"
+              }
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "alexanderzobnin-zabbix-triggers-panel"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "displayName": "Remoto IP OI Circuito Altarede",
+            "mappings": [
+              {
+                "options": {
+                  "0": {
+                    "color": "dark-red",
+                    "index": 1,
+                    "text": "172.19.1.1"
+                  },
+                  "1": {
+                    "color": "dark-green",
+                    "index": 0,
+                    "text": "172.19.1.1"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 4,
+          "x": 20,
+          "y": 7
+        },
+        "id": 620,
+        "options": {
+          "colorMode": "value",
+          "graphMode": "none",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "host": {
+              "filter": "BGP Rota OI"
+            },
+            "item": {
+              "filter": "ICMP ping"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 4,
+          "w": 4,
+          "x": 20,
+          "y": 12
+        },
+        "id": 621,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [
+              {
+                "$$hashKey": "object:467",
+                "def": {
+                  "category": "Alias",
+                  "defaultParams": [],
+                  "name": "setAlias",
+                  "params": [
+                    {
+                      "name": "alias",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "params": [
+                  "Latency: "
+                ],
+                "text": "setAlias(Latency: )"
+              }
+            ],
+            "group": {
+              "filter": "Telefonia"
+            },
+            "host": {
+              "filter": "BGP Rota OI"
+            },
+            "item": {
+              "filter": "ICMP response time"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 0,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 1,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [
+              {
+                "options": {
+                  "unreachable": {
+                    "color": "dark-red",
+                    "index": 0,
+                    "text": "OFF"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "#37872d",
+                  "value": 0
+                }
+              ]
+            },
+            "unit": "ms"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 24,
+          "x": 0,
+          "y": 16
+        },
+        "id": 623,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "dataset": "mysql",
+            "datasource": {
+              "type": "mysql",
+              "uid": "aen8uc1e6ty4gf"
+            },
+            "editorMode": "code",
+            "evaltype": "0",
+            "format": "table",
+            "functions": [],
+            "group": {
+              "filter": ""
+            },
+            "host": {
+              "filter": ""
+            },
+            "item": {
+              "filter": ""
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "rawQuery": true,
+            "rawSql": "SELECT\r\n  h.clock AS time,\r\n  i.name AS metric,\r\n  CAST(SUBSTRING_INDEX(SUBSTRING_INDEX(h.value, '(', -1), ' ', 1) AS UNSIGNED) AS value\r\nFROM history_text h\r\nJOIN items i ON h.itemid = i.itemid\r\nWHERE h.itemid IN (86717, 86718, 86719, 86720, 86721, 86722)\r\n  AND h.value REGEXP '\\\\([0-9]+ ms\\\\)'\r\n  AND h.clock BETWEEN UNIX_TIMESTAMP($__timeFrom()) AND UNIX_TIMESTAMP($__timeTo())\r\nORDER BY h.clock ASC;\r\n",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "sql": {
+              "columns": [
+                {
+                  "parameters": [],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            }
+          }
+        ],
+        "title": "Histórico dos SIP's",
+        "transformations": [
+          {
+            "id": "prepareTimeSeries",
+            "options": {
+              "format": "multi"
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "timeseries"
+      }
+    ],
+    "preload": false,
+    "refresh": "",
+    "schemaVersion": 42,
+    "tags": [
+      "E1",
+      "ALIGERA",
+      "ZABBIX",
+      "GRAFANA",
+      "outros",
+      "CPT-02 TR TELECOM"
+    ],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "text": "Telefonia",
+            "value": "Telefonia"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "definition": "Zabbix - group",
+          "includeAll": false,
+          "label": "GROUP",
+          "name": "Group",
+          "options": [],
+          "query": {
+            "application": "",
+            "group": "Telefonia",
+            "host": "",
+            "item": "",
+            "itemTag": "",
+            "queryType": "group"
+          },
+          "refresh": 2,
+          "regex": "",
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "E1-Aligera",
+            "value": "E1-Aligera"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "definition": "Zabbix - host",
+          "includeAll": false,
+          "name": "E1",
+          "options": [],
+          "query": {
+            "application": "",
+            "group": "$Group",
+            "host": "/.*/",
+            "item": "",
+            "queryType": "host"
+          },
+          "refresh": 2,
+          "regex": "/E1-.*/",
+          "type": "query"
+        },
+        {
+          "current": {
+            "text": "All",
+            "value": "$__all"
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "definition": "Zabbix - item",
+          "hide": 2,
+          "includeAll": true,
+          "name": "Channels",
+          "options": [],
+          "query": {
+            "application": "Status",
+            "group": "$Group",
+            "host": "$E1",
+            "item": "/.*/",
+            "queryType": "item"
+          },
+          "refresh": 2,
+          "regex": "/\"([^\\\\].*)\\\"/",
+          "type": "query"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-3h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "E1 ALIGERA AG1700",
+    "uid": "bXAYSxd7k",
+    "version": 4,
+    "weekStart": ""
+  }
+}
