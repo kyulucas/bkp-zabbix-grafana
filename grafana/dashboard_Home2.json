@@ -1,0 +1,785 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": false,
+    "canStar": true,
+    "canDelete": true,
+    "slug": "home2",
+    "url": "/d/aa44cdde-29fb-4c5f-a56e-28ca801c18ba/home2",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2025-11-27T06:35:12-05:00",
+    "updated": "2025-12-03T14:31:27-05:00",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 8,
+    "hasAcl": false,
+    "isFolder": false,
+    "apiVersion": "v0alpha1",
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      },
+      "organization": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      }
+    }
+  },
+  "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 66,
+    "links": [],
+    "panels": [
+      {
+        "id": 65,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "",
+          "mode": "markdown"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 5,
+          "w": 12,
+          "x": 6,
+          "y": 0
+        },
+        "id": 45,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "\r\n    \r\n     \r\n         <h1 style=\"text-align: center;\"><img alt=\"Qries\" src=\"https://lh3.googleusercontent.com/pw/AP1GczObAPJeWIx0DuKNeU-hOgdEVoqdxsD9BvZQ5W3UU0KM8acGy78CvzTbH8eFqOhd66KhikRLDvCSljlOc-DxDT9mS7u2hK6-u7yJkb3CtWwafZKlWI35JI5ATgmLJ6aIAE5Nug77kRZxqlQbBhArBtAd=w818-h209-s-no-gm?authuser=0\" alt=\"download.png\"\r\n         width=600\" height=\"150\"> ",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "description": " ",
+        "gridPos": {
+          "h": 3,
+          "w": 6,
+          "x": 18,
+          "y": 0
+        },
+        "id": 64,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "",
+          "mode": "markdown"
+        },
+        "pluginVersion": "12.3.0",
+        "title": " ",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 0,
+          "y": 3
+        },
+        "id": 14,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">CPD-01 TR TELECOM</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 18,
+          "y": 3
+        },
+        "id": 56,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP BMP</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 0,
+          "y": 5
+        },
+        "id": 5,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "CPT-01 TR TELECOM"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 6,
+          "y": 5
+        },
+        "id": 52,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">CPD-02 TR TELECOM</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 12,
+          "y": 5
+        },
+        "id": 54,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP LEVY</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 18,
+          "y": 5
+        },
+        "id": 57,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP BMP"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 6,
+          "y": 7
+        },
+        "id": 53,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "CPT-02 TR TELECOM"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 12,
+          "y": 7
+        },
+        "id": 55,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP LEVY"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 0,
+          "y": 11
+        },
+        "id": 46,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SANTANA</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 18,
+          "y": 11
+        },
+        "id": 50,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP VILA ISABEL</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 0,
+          "y": 13
+        },
+        "id": 47,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP SANTANA"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 6,
+          "y": 13
+        },
+        "id": 18,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP CHIADOR</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 12,
+          "y": 13
+        },
+        "id": 24,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SIMÃO PEREIRA</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 18,
+          "y": 13
+        },
+        "id": 51,
+        "options": {
+          "folderUID": "",
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP VILA ISABEL"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 6,
+          "y": 15
+        },
+        "id": 19,
+        "options": {
+          "folderUID": "",
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP CHIADOR"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 12,
+          "y": 15
+        },
+        "id": 25,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP SIMÃO PEREIRA"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 0,
+          "y": 19
+        },
+        "id": 67,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP PARAIBA DO SUL</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 18,
+          "y": 19
+        },
+        "id": 60,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">ZABBIX SERVER DASH</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 0,
+          "y": 21
+        },
+        "id": 66,
+        "options": {
+          "folderUID": "",
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP PARAIBA DO SUL"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 6,
+          "y": 21
+        },
+        "id": 62,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP ALBERTO TORRES</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 12,
+          "y": 21
+        },
+        "id": 48,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">MITIGAÇÃO FASTMON / A10 BPA</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 18,
+          "y": 21
+        },
+        "id": 61,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "ZABBIX SERVER DASH"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 6,
+          "y": 23
+        },
+        "id": 63,
+        "options": {
+          "folderUID": "",
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "POP ALBERTO TORRES"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 12,
+          "y": 23
+        },
+        "id": 49,
+        "options": {
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "fast"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 2,
+          "w": 6,
+          "x": 0,
+          "y": 28
+        },
+        "id": 58,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">Central de  Energia Tr Telecom</div>",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 0,
+          "y": 30
+        },
+        "id": 59,
+        "options": {
+          "folderUID": "",
+          "includeVars": false,
+          "keepTime": false,
+          "maxItems": 30,
+          "query": "",
+          "showFolderNames": true,
+          "showHeadings": false,
+          "showRecentlyViewed": false,
+          "showSearch": true,
+          "showStarred": false,
+          "tags": [
+            "sala de energia"
+          ]
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "dashlist"
+      },
+      {
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 37
+        },
+        "id": 44,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "",
+          "mode": "html"
+        },
+        "pluginVersion": "12.3.0",
+        "transparent": true,
+        "type": "text"
+      }
+    ],
+    "preload": false,
+    "refresh": "",
+    "schemaVersion": 42,
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {
+      "hidden": true
+    },
+    "timezone": "browser",
+    "title": "Home2",
+    "uid": "aa44cdde-29fb-4c5f-a56e-28ca801c18ba",
+    "version": 8,
+    "weekStart": ""
+  }
+}
