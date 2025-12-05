@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": false,
+    "canStar": true,
+    "canDelete": true,
+    "slug": "testes-mysql-lucas",
+    "url": "/d/cegwyzpxsjbb4d/testes-mysql-lucas",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2025-11-27T06:37:56-05:00",
+    "updated": "2025-12-03T11:31:33-05:00",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 5,
+    "hasAcl": false,
+    "isFolder": false,
+    "apiVersion": "v0alpha1",
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      },
+      "organization": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      }
+    }
+  },
+  "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 81,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "bf5cl81i2yz28d"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "auto",
+              "cellOptions": {
+                "type": "auto"
+              },
+              "footer": {
+                "reducers": []
+              },
+              "inspect": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "tempo_conectado"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 293
+                },
+                {
+                  "id": "unit",
+                  "value": ""
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 1,
+        "options": {
+          "cellHeight": "sm",
+          "showHeader": true,
+          "sortBy": []
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "dataset": "ALTAREDE",
+            "datasource": {
+              "type": "mysql",
+              "uid": "bf5cl81i2yz28d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "select \r\n  UserName as Login, \r\n  FramedIPAddress as IP,\r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status',\r\n  \r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado,\r\n\r\n  COALESCE(AcctStopTime, '-\\\\-') as data_desconexao\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "parameters": [],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "table"
+      }
+    ],
+    "preload": false,
+    "refresh": "",
+    "schemaVersion": 42,
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "Testes Mysql lucas",
+    "uid": "cegwyzpxsjbb4d",
+    "version": 5,
+    "weekStart": ""
+  }
+}
