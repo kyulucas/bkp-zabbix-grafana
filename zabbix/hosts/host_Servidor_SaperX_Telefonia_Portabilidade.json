@@ -62,7 +62,7 @@
       "available": "2",
       "error": "Received empty response from Zabbix Agent at [170.80.227.6]. Assuming that agent dropped connection because of access permissions.",
       "errors_from": "1764787267",
-      "disable_until": "1764940883",
+      "disable_until": "1764951469",
       "details": []
     }
   ]
