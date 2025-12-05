@@ -1,0 +1,77 @@
+{
+  "hostid": "10814",
+  "proxyid": "0",
+  "host": "Routinator BGP",
+  "status": "0",
+  "ipmi_authtype": "-1",
+  "ipmi_privilege": "2",
+  "ipmi_username": "",
+  "ipmi_password": "",
+  "maintenanceid": "0",
+  "maintenance_status": "0",
+  "maintenance_type": "0",
+  "maintenance_from": "0",
+  "name": "Routinator BGP",
+  "flags": "0",
+  "templateid": "0",
+  "description": "",
+  "tls_connect": "1",
+  "tls_accept": "1",
+  "tls_issuer": "",
+  "tls_subject": "",
+  "custom_interfaces": "0",
+  "uuid": "",
+  "vendor_name": "",
+  "vendor_version": "",
+  "proxy_groupid": "0",
+  "monitored_by": "0",
+  "inventory_mode": "-1",
+  "active_available": "0",
+  "assigned_proxyid": "0",
+  "macros": [],
+  "groups": [
+    {
+      "groupid": "29",
+      "name": "BGP",
+      "flags": "0",
+      "uuid": "5259598992794341ad1b1a0877d02906"
+    }
+  ],
+  "interfaces": [
+    {
+      "interfaceid": "151",
+      "hostid": "10814",
+      "main": "1",
+      "type": "1",
+      "useip": "1",
+      "ip": "10.10.10.103",
+      "dns": "",
+      "port": "10050",
+      "available": "1",
+      "error": "",
+      "errors_from": "0",
+      "disable_until": "0",
+      "details": []
+    },
+    {
+      "interfaceid": "154",
+      "hostid": "10814",
+      "main": "1",
+      "type": "2",
+      "useip": "1",
+      "ip": "10.10.10.103",
+      "dns": "",
+      "port": "161",
+      "available": "0",
+      "error": "",
+      "errors_from": "0",
+      "disable_until": "0",
+      "details": {
+        "version": "2",
+        "bulk": "1",
+        "community": "TR-TELECOM",
+        "max_repetitions": "10"
+      }
+    }
+  ]
+}
