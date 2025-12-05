@@ -1,0 +1,530 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": false,
+    "canStar": true,
+    "canDelete": true,
+    "slug": "troubleshooting-bgp",
+    "url": "/d/oAEztAEVk/troubleshooting-bgp",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2025-11-27T06:37:49-05:00",
+    "updated": "2025-11-27T15:15:46-05:00",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 2,
+    "hasAcl": false,
+    "isFolder": false,
+    "apiVersion": "v0alpha1",
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      },
+      "organization": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      }
+    }
+  },
+  "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 80,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 43,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "#199ead",
+                  "value": 0
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "ROUTER-PPPOE: SOMA DOS PPPOE"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "#69bfbb",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 9,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 13,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.0",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "BRAS"
+            },
+            "host": {
+              "filter": "CONCENTRADOR PPPOE NE8K"
+            },
+            "item": {
+              "filter": "Total_clientes"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": true,
+              "disableDataAlignment": false,
+              "minSeverity": 3,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "TOTAL DE PPPOE",
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 11,
+              "gradientMode": "none",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "smooth",
+              "lineWidth": 2,
+              "pointSize": 5,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "showValues": false,
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "decimals": 1,
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 24,
+          "x": 0,
+          "y": 9
+        },
+        "id": 7,
+        "maxPerRow": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "table",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "tooltip": {
+            "hideZeros": false,
+            "mode": "multi",
+            "sort": "none"
+          }
+        },
+        "pluginVersion": "12.3.0",
+        "repeat": "iface",
+        "repeatDirection": "h",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [
+              {
+                "$$hashKey": "object:1346",
+                "def": {
+                  "category": "Alias",
+                  "defaultParams": [
+                    "/(.*)/",
+                    "$1"
+                  ],
+                  "name": "replaceAlias",
+                  "params": [
+                    {
+                      "name": "regexp",
+                      "type": "string"
+                    },
+                    {
+                      "name": "newAlias",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "params": [
+                  "ROUTER-BGP:",
+                  " "
+                ],
+                "text": "replaceAlias(ROUTER-BGP:,  )"
+              }
+            ],
+            "group": {
+              "filter": "BRAS"
+            },
+            "host": {
+              "filter": "CONCENTRADOR PPPOE NE8K"
+            },
+            "item": {
+              "filter": "Trafego de Entrada na Interface $iface"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          },
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "VQ2csaink"
+            },
+            "evaltype": "0",
+            "functions": [
+              {
+                "$$hashKey": "object:1367",
+                "def": {
+                  "category": "Alias",
+                  "defaultParams": [
+                    "/(.*)/",
+                    "$1"
+                  ],
+                  "name": "replaceAlias",
+                  "params": [
+                    {
+                      "name": "regexp",
+                      "type": "string"
+                    },
+                    {
+                      "name": "newAlias",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "params": [
+                  "ROUTER-BGP:",
+                  " "
+                ],
+                "text": "replaceAlias(ROUTER-BGP:,  )"
+              }
+            ],
+            "group": {
+              "filter": "/.*/"
+            },
+            "hide": false,
+            "host": {
+              "filter": "/.*/"
+            },
+            "item": {
+              "filter": "Trafego de Saida na Interface $iface"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "B",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            },
+            "triggers": {
+              "acknowledged": 2
+            }
+          }
+        ],
+        "title": "$iface",
+        "type": "timeseries"
+      }
+    ],
+    "preload": false,
+    "refresh": "30s",
+    "schemaVersion": 42,
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "text": [
+              "40GE0/3/0(Eth-Trunk1.101 Porta Ne40 X SwCore 6730 100GE-0/0/1)"
+            ],
+            "value": [
+              "40GE0/3/0(Eth-Trunk1.101 Porta Ne40 X SwCore 6730 100GE-0/0/1)"
+            ]
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "definition": "",
+          "includeAll": false,
+          "label": "INTERFACES",
+          "multi": true,
+          "name": "iface",
+          "options": [],
+          "query": {
+            "application": "/.*/",
+            "group": "BGP",
+            "host": "ROUTER-BGP",
+            "item": "/.*/",
+            "itemTag": "",
+            "queryType": "item"
+          },
+          "refresh": 1,
+          "regex": "/Trafego de (?:Entrada|Saida) na Interface ((?!.*\\b(?:GPON|PON)\\b).*)/",
+          "type": "query"
+        }
+      ]
+    },
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "TROUBLESHOOTING BGP",
+    "uid": "oAEztAEVk",
+    "version": 2,
+    "weekStart": ""
+  }
+}
