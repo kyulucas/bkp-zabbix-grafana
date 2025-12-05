@@ -1,0 +1,78 @@
+{
+  "hostid": "10816",
+  "proxyid": "0",
+  "host": "ROUTER-PPPOE - BKP",
+  "status": "0",
+  "ipmi_authtype": "-1",
+  "ipmi_privilege": "2",
+  "ipmi_username": "",
+  "ipmi_password": "",
+  "maintenanceid": "0",
+  "maintenance_status": "0",
+  "maintenance_type": "0",
+  "maintenance_from": "0",
+  "name": "ROUTER-PPPOE - BKP",
+  "flags": "0",
+  "templateid": "0",
+  "description": "",
+  "tls_connect": "1",
+  "tls_accept": "1",
+  "tls_issuer": "",
+  "tls_subject": "",
+  "custom_interfaces": "0",
+  "uuid": "",
+  "vendor_name": "",
+  "vendor_version": "",
+  "proxy_groupid": "0",
+  "monitored_by": "0",
+  "inventory_mode": "-1",
+  "active_available": "0",
+  "assigned_proxyid": "0",
+  "macros": [
+    {
+      "hostmacroid": "7857",
+      "hostid": "10816",
+      "macro": "{$SNMP_COMMUNITY}",
+      "value": "TR-TELECOM",
+      "description": "",
+      "type": "0",
+      "automatic": "0"
+    }
+  ],
+  "groups": [
+    {
+      "groupid": "31",
+      "name": "BRAS",
+      "flags": "0",
+      "uuid": "33d4ee1c6c2d4a3ba57bba12c563d12d"
+    },
+    {
+      "groupid": "53",
+      "name": "PPPOE",
+      "flags": "0",
+      "uuid": "41f45bc3b7e84a3f83cd022e6585a558"
+    }
+  ],
+  "interfaces": [
+    {
+      "interfaceid": "153",
+      "hostid": "10816",
+      "main": "1",
+      "type": "2",
+      "useip": "1",
+      "ip": "10.90.97.2",
+      "dns": "",
+      "port": "161",
+      "available": "1",
+      "error": "",
+      "errors_from": "0",
+      "disable_until": "0",
+      "details": {
+        "version": "2",
+        "bulk": "1",
+        "community": "TR-TELECOM",
+        "max_repetitions": "10"
+      }
+    }
+  ]
+}
