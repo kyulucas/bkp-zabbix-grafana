@@ -1,0 +1,105 @@
+{
+  "hostid": "10778",
+  "proxyid": "0",
+  "host": "PVE-DELL-2950",
+  "status": "0",
+  "ipmi_authtype": "-1",
+  "ipmi_privilege": "2",
+  "ipmi_username": "",
+  "ipmi_password": "",
+  "maintenanceid": "0",
+  "maintenance_status": "0",
+  "maintenance_type": "0",
+  "maintenance_from": "0",
+  "name": "PVE-DELL-2950",
+  "flags": "0",
+  "templateid": "0",
+  "description": "",
+  "tls_connect": "1",
+  "tls_accept": "1",
+  "tls_issuer": "",
+  "tls_subject": "",
+  "custom_interfaces": "0",
+  "uuid": "",
+  "vendor_name": "",
+  "vendor_version": "",
+  "proxy_groupid": "0",
+  "monitored_by": "0",
+  "inventory_mode": "-1",
+  "active_available": "0",
+  "assigned_proxyid": "0",
+  "macros": [
+    {
+      "hostmacroid": "7866",
+      "hostid": "10778",
+      "macro": "{$PVE.TOKEN.ID}",
+      "value": "zabbix@pve!qawsedrftg",
+      "description": "API tokens allow stateless access to most parts of the REST API by another system, software or API client.",
+      "type": "0",
+      "automatic": "0"
+    },
+    {
+      "hostmacroid": "7867",
+      "hostid": "10778",
+      "macro": "{$PVE.TOKEN.SECRET}",
+      "value": "dc2ba48b-e08e-4246-b967-5daad3849952",
+      "description": "Secret key.",
+      "type": "0",
+      "automatic": "0"
+    },
+    {
+      "hostmacroid": "7868",
+      "hostid": "10778",
+      "macro": "{$PVE.URL.HOST}",
+      "value": "172.16.20.5",
+      "description": "The hostname or IP address of the Proxmox VE API host.",
+      "type": "0",
+      "automatic": "0"
+    }
+  ],
+  "groups": [
+    {
+      "groupid": "44",
+      "name": "PROXMOX",
+      "flags": "0",
+      "uuid": "455523c91c344982af2a5a60de9c78ca"
+    }
+  ],
+  "interfaces": [
+    {
+      "interfaceid": "114",
+      "hostid": "10778",
+      "main": "1",
+      "type": "1",
+      "useip": "1",
+      "ip": "172.16.20.5",
+      "dns": "",
+      "port": "10050",
+      "available": "2",
+      "error": "Received empty response from Zabbix Agent at [172.16.20.5]. Assuming that agent dropped connection because of access permissions.",
+      "errors_from": "1764877443",
+      "disable_until": "1764936828",
+      "details": []
+    },
+    {
+      "interfaceid": "174",
+      "hostid": "10778",
+      "main": "1",
+      "type": "2",
+      "useip": "1",
+      "ip": "172.16.20.5",
+      "dns": "",
+      "port": "161",
+      "available": "0",
+      "error": "",
+      "errors_from": "0",
+      "disable_until": "0",
+      "details": {
+        "version": "2",
+        "bulk": "1",
+        "community": "TR-TELECOM",
+        "max_repetitions": "10"
+      }
+    }
+  ]
+}
