@@ -1,0 +1,152 @@
+#!/usr/bin/python3
+
+import os
+import re
+import json
+import sys
+import threading
+import time
+
+if (len(sys.argv) < 4 or len(sys.argv) > 4):
+    sys.exit(f'Tente assim: "{sys.argv[0]} <ip> <port snmp> <comunidade snmp>"')
+
+""" credenciais """
+ip = sys.argv[1]
+porta = sys.argv[2]
+cm = sys.argv[3]
+
+
+###########################################################################################
+def snmpbulkwalk(oid):
+    return os.popen(f'snmpbulkwalk -OQn -v2c -c {cm} {ip}:{porta} {oid}').read()
+
+
+###########################################################################################
+def get_ifname():
+    #print('\nget_ifnames ##################################\n')
+    global IFNAME
+    IFNAME = []
+    res = snmpbulkwalk('1.3.6.1.2.1.2.2.1.2').split('\n')
+    cont = 0
+    while cont < len(res) - 1:
+        IFNAME.append(re.split('.*^.*\s=\s(.*)$',
+                      res[cont])[1].replace('\"', ''))
+        cont = cont + 1
+
+
+get_ifname()
+""" print(json.dumps(IFNAME))
+print(len(IFNAME)) """
+
+
+###########################################################################################
+def get_ifalias():
+    #print('\nget_ifalias ##################################\n')
+    global IFALIAS
+    IFALIAS = []
+    res = snmpbulkwalk('1.3.6.1.2.1.31.1.1.1.18').split('\n')
+    cont = 0
+    while cont < len(res) - 1:
+        IFALIAS.append(re.split('.*^.*\.(.*)\s=\s(.*)',
+                       res[cont])[2].replace('\"', ''))
+        cont = cont + 1
+
+
+get_ifalias()
+""" print(json.dumps(IFALIAS))
+print(len(IFALIAS)) """
+
+
+###########################################################################################
+def make_if_interface():
+    global interfaces
+    interfaces = {}
+    for index, i in enumerate(IFNAME):
+        interfaces[IFNAME[index]] = IFALIAS[index]
+
+
+make_if_interface()
+""" print(interfaces) """
+
+
+###########################################################################################
+def get_ifpresent():
+    #print('\nget_ifpresent ##################################\n')
+    global IFPRESENT
+    IFPRESENT = []
+    res = snmpbulkwalk('1.3.6.1.4.1.2011.5.25.31.1.1.3.1.14').split('\n')
+    cont = 0
+    while cont < len(res) - 1:
+        IFPRESENT.append(re.split('.*^.*\.(.*)\s=\s(.*)', res[cont])[1])
+        cont = cont + 1
+
+
+get_ifpresent()
+""" print(json.dumps(IFPRESENT))
+print(len(IFPRESENT)) """
+
+
+
+###########################################################################################
+def get_high_threshold():
+    # print('\nget_high_threshold ##################################\n')
+    global IFTHRESHOLD
+    IFTHRESHOLD = []
+    res = snmpbulkwalk('1.3.6.1.4.1.2011.5.25.31.1.1.3.1.16').split('\n')
+    cont = 0
+    while cont < len(res) - 1:
+        value = re.split('.*^.*\.(.*)\s=\s(.*)', res[cont])[2]
+        # print(value)
+        if value != '-1':
+            IFTHRESHOLD.append(re.split('.*^.*\.(.*)\s=\s(.*)', res[cont])[1])
+        cont = cont + 1
+
+
+get_high_threshold()
+""" print(json.dumps(IFTHRESHOLD))
+print(len(IFTHRESHOLD))
+exit() """
+
+
+###########################################################################################
+def get_interfaces_interpirse():
+    #print('\nget_interfaces_interpirse ##################################\n')
+    global interfaces_interpirse
+    interfaces_interpirse = {}
+    res = snmpbulkwalk('1.3.6.1.2.1.47.1.1.1.1.7').split('\n')
+    cont = 0
+    while cont < len(res) - 1:
+        snmpindex = re.split('.*^.*\.(.*)\s=\s(.*)', res[cont])[1]
+        name = re.split('.*^.*\.(.*)\s=\s(.*)', res[cont])[2].replace('\"', '')
+        interfaces_interpirse[snmpindex] = name
+        cont = cont + 1
+
+
+get_interfaces_interpirse()
+""" print(interfaces_interpirse)
+print(len(interfaces_interpirse)) """
+
+
+###########################################################################################
+def make_final():
+    #print('\nmake_final ##################################\n')
+    global final
+    final = []
+    for i in IFTHRESHOLD:
+        final_snmpindex = i        
+        final_name = interfaces_interpirse[final_snmpindex]        
+        try:
+            final_alias = interfaces[final_name]
+        except:
+            final_alias = "NO ALIAS"
+        final.append({
+            '{#SNMPINDEX}': final_snmpindex,
+            '{#IFNAME}': final_name,
+            '{#IFALIAS}': final_alias
+        })
+
+
+make_final()
+
+print(json.dumps(final, indent=4))
+# print(json.dumps(final))
