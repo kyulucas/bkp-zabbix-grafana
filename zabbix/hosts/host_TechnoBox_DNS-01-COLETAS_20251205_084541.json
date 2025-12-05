@@ -1,0 +1,62 @@
+{
+  "hostid": "10806",
+  "proxyid": "0",
+  "host": "TechnoBox DNS-01-COLETAS",
+  "status": "0",
+  "ipmi_authtype": "-1",
+  "ipmi_privilege": "2",
+  "ipmi_username": "",
+  "ipmi_password": "",
+  "maintenanceid": "0",
+  "maintenance_status": "0",
+  "maintenance_type": "0",
+  "maintenance_from": "0",
+  "name": "TechnoBox DNS-01-COLETAS",
+  "flags": "0",
+  "templateid": "0",
+  "description": "",
+  "tls_connect": "1",
+  "tls_accept": "1",
+  "tls_issuer": "",
+  "tls_subject": "",
+  "custom_interfaces": "0",
+  "uuid": "",
+  "vendor_name": "",
+  "vendor_version": "",
+  "proxy_groupid": "0",
+  "monitored_by": "0",
+  "inventory_mode": "-1",
+  "active_available": "0",
+  "assigned_proxyid": "0",
+  "macros": [],
+  "groups": [
+    {
+      "groupid": "50",
+      "name": "TechnoBox DNS",
+      "flags": "0",
+      "uuid": "8f0833fc091f4d6788c591dc0653ce65"
+    }
+  ],
+  "interfaces": [
+    {
+      "interfaceid": "143",
+      "hostid": "10806",
+      "main": "1",
+      "type": "2",
+      "useip": "1",
+      "ip": "170.80.225.4",
+      "dns": "",
+      "port": "161",
+      "available": "2",
+      "error": "Timeout while connecting to \"170.80.225.4:161\".",
+      "errors_from": "1764903055",
+      "disable_until": "1764935110",
+      "details": {
+        "version": "2",
+        "bulk": "1",
+        "community": "SNMPtechnoDNS",
+        "max_repetitions": "10"
+      }
+    }
+  ]
+}
