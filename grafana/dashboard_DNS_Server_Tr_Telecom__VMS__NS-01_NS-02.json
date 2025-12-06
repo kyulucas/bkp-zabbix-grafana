@@ -10,10 +10,10 @@
     "url": "/d/f6140cf2-6895-44c2-995e-7308892e46e8/dns-server-tr-telecom-vms-ns-01-ns-02",
     "expires": "0001-01-01T00:00:00Z",
     "created": "2025-12-01T13:31:09-05:00",
-    "updated": "2025-12-05T09:30:08-05:00",
+    "updated": "2025-12-05T18:39:55-05:00",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 20,
+    "version": 21,
     "hasAcl": false,
     "isFolder": false,
     "apiVersion": "v0alpha1",
@@ -5382,7 +5382,7 @@
     "timezone": "",
     "title": "DNS Server Tr Telecom / VMS / NS-01 NS-02",
     "uid": "f6140cf2-6895-44c2-995e-7308892e46e8",
-    "version": 20,
+    "version": 21,
     "weekStart": ""
   }
 }
