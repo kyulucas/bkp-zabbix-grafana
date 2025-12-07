@@ -10,10 +10,10 @@
     "url": "/d/ROTEADORNE8000BORDA/as266385-bgp-r1",
     "expires": "0001-01-01T00:00:00Z",
     "created": "2025-11-26T22:41:31-05:00",
-    "updated": "2025-12-03T14:25:57-05:00",
+    "updated": "2025-12-06T12:13:20-05:00",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 16,
+    "version": 21,
     "hasAcl": false,
     "isFolder": false,
     "apiVersion": "v0alpha1",
@@ -991,7 +991,7 @@
               "filter": "/.*/"
             },
             "host": {
-              "filter": "ROUTER-BGP - ADM BGP"
+              "filter": "ROUTER-PPPOE - BKP"
             },
             "item": {
               "filter": "USO DE CPU"
@@ -1174,7 +1174,7 @@
               "filter": "/.*/"
             },
             "host": {
-              "filter": "ROUTER-BGP - ADM BGP"
+              "filter": "ROUTER-PPPOE - BKP"
             },
             "item": {
               "filter": "MEMORIA UTILIZADA EM %"
@@ -1328,7 +1328,7 @@
                 {
                   "id": "color",
                   "value": {
-                    "fixedColor": "#848380",
+                    "fixedColor": "light-blue",
                     "mode": "fixed"
                   }
                 }
@@ -1372,7 +1372,7 @@
               "filter": "/.*/"
             },
             "host": {
-              "filter": "ROUTER-BGP - ADM BGP"
+              "filter": "ROUTER-PPPOE - BKP"
             },
             "item": {
               "filter": "TEMPERATURA"
@@ -3624,7 +3624,7 @@
     "timezone": "",
     "title": "AS266385 BGP R1",
     "uid": "ROTEADORNE8000BORDA",
-    "version": 16,
+    "version": 21,
     "weekStart": ""
   }
 }
