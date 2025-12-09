@@ -10,10 +10,10 @@
     "url": "/d/GhVEAqm7k51/tv-noc-1",
     "expires": "0001-01-01T00:00:00Z",
     "created": "2025-11-27T06:37:32-05:00",
-    "updated": "2025-12-04T12:15:52-05:00",
+    "updated": "2025-12-08T12:39:39-05:00",
     "updatedBy": "admin",
     "createdBy": "admin",
-    "version": 31,
+    "version": 33,
     "hasAcl": false,
     "isFolder": false,
     "apiVersion": "v0alpha1",
@@ -5667,17 +5667,33 @@
           "problemTimeline": true,
           "resizedColumns": [
             {
-              "id": "value",
-              "value": 140
+              "id": "tags",
+              "value": 346.2708435058594
+            },
+            {
+              "id": "lastchange",
+              "value": 213
+            },
+            {
+              "id": "severity",
+              "value": 303
             },
             {
               "id": "host",
-              "value": 136.5426025390625
+              "value": 310.5416717529297
+            },
+            {
+              "id": "value",
+              "value": 104
+            },
+            {
+              "id": "ack",
+              "value": 11
             }
           ],
           "severityField": true,
           "showDatasourceName": false,
-          "showTags": true,
+          "showTags": false,
           "sortProblems": "lastchange",
           "statusField": true,
           "statusIcon": false,
@@ -6379,6 +6395,67 @@
             },
             "queryType": "5",
             "refId": "K",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "showProblems": "problems",
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            }
+          },
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "aefq119i80pa8a"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "ENERGIA"
+            },
+            "hide": false,
+            "host": {
+              "filter": "/.*/"
+            },
+            "item": {
+              "filter": ""
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "acknowledged": 2,
+              "count": false,
+              "disableDataAlignment": false,
+              "hostProxy": false,
+              "hostsInMaintenance": false,
+              "limit": 1001,
+              "minSeverity": 0,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "sortProblems": "default",
+              "useTimeRange": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "5",
+            "refId": "L",
             "resultFormat": "time_series",
             "schema": 12,
             "showProblems": "problems",
@@ -11712,7 +11789,7 @@
     "timezone": "",
     "title": "TV NOC 1",
     "uid": "GhVEAqm7k51",
-    "version": 31,
+    "version": 33,
     "weekStart": ""
   }
 }
