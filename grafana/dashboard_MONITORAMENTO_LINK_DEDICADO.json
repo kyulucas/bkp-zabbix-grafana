@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "type": "db",
+    "canSave": true,
+    "canEdit": true,
+    "canAdmin": false,
+    "canStar": true,
+    "canDelete": true,
+    "slug": "monitoramento-link-dedicado",
+    "url": "/d/q6Ljv7l7k1/monitoramento-link-dedicado",
+    "expires": "0001-01-01T00:00:00Z",
+    "created": "2025-12-08T06:11:38-05:00",
+    "updated": "2025-12-08T16:04:26-05:00",
+    "updatedBy": "admin",
+    "createdBy": "admin",
+    "version": 37,
+    "hasAcl": false,
+    "isFolder": false,
+    "apiVersion": "v0alpha1",
+    "folderId": 0,
+    "folderUid": "",
+    "folderTitle": "General",
+    "folderUrl": "",
+    "provisioned": false,
+    "provisionedExternalId": "",
+    "annotationsPermissions": {
+      "dashboard": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      },
+      "organization": {
+        "canAdd": true,
+        "canEdit": true,
+        "canDelete": true
+      }
+    }
+  },
+  "dashboard": {
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "target": {
+            "limit": 100,
+            "matchAny": false,
+            "tags": [],
+            "type": "dashboard"
+          },
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 112,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 37,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 1,
+        "options": {
+          "afterRender": "",
+          "content": "<div class=\"grid-container\">\r\n  {{#each @root.data}}\r\n  {{#if host}}\r\n  {{#if (eq item \"ICMP ping\")}}\r\n  {{#each @root.data}}\r\n  {{#if (and (eq this.host ../host) (eq this.item \"potencia\"))}}\r\n  <div class=\"monitor-card{{#if (and (eq ../valor 1) (lt this.valor -25))}} warning{{/if}}\"\r\n    data-status=\"{{#if (eq ../valor 1)}}1{{else}}0{{/if}}\" data-host-key=\"{{../host}}\" data-host-name=\"{{../host}}\">\r\n    <div class=\"card-content\">\r\n      <div class=\"card-header-row\">\r\n        <div class=\"host-name\">{{../host}}</div>\r\n        <div class=\"status-square\">\r\n          {{#if (eq ../valor 1)}}\r\n          {{#if (lt this.valor -25)}}\r\n          <img src=\"https://cdn-icons-png.flaticon.com/512/16741/16741218.png\" alt=\"Atenção\" class=\"status-icon status-warning\">\r\n            {{else}}\r\n          <img src=\"https://cdn-icons-png.flaticon.com/512/11433/11433365.png\" alt=\"Online\" class=\"status-icon status-online\">\r\n            {{/if}}\r\n            {{else}}\r\n          <img src=\"https://cdn-icons-png.flaticon.com/512/2797/2797387.png\" alt=\"Offline\" class=\"status-icon status-offline\">\r\n            {{/if}}\r\n        </div>\r\n      </div>\r\n      <div class=\"potencia-value\">Potência: {{this.valor}} dBm</div>\r\n    </div>\r\n  </div>\r\n  {{/if}}\r\n  {{/each}}\r\n  {{/if}}\r\n  {{/if}}\r\n  {{/each}}\r\n</div>",
+          "contentPartials": [],
+          "defaultContent": "",
+          "editor": {
+            "format": "auto",
+            "language": "html"
+          },
+          "editors": [
+            "styles"
+          ],
+          "externalStyles": [],
+          "helpers": "",
+          "renderMode": "allRows",
+          "status": "Value",
+          "styles": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody, html {\r\n  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\r\n  background: #0F1419;\r\n  color: #E4E7EB;\r\n  width: 100%;\r\n  height: 100vh;\r\n  overflow: hidden;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.grid-container {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\r\n  grid-auto-rows: 1fr;\r\n  gap: 24px;\r\n  padding: 24px;\r\n  width: 100%;\r\n  height: 100vh;\r\n  max-height: 100vh;\r\n  overflow: hidden;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.monitor-card {\r\n  background: #1A1F2E !important;\r\n  border-radius: 20px !important;\r\n  padding: 2px !important;\r\n  border: 2px solid #252A3A !important;\r\n  position: relative !important;\r\n  overflow: hidden !important;\r\n  display: flex !important;\r\n  flex-direction: column !important;\r\n  min-height: 0 !important;\r\n  height: 100% !important;\r\n  transition: all 0.3s ease !important;\r\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;\r\n}\r\n\r\n.monitor-card::before {\r\n  content: '' !important;\r\n  position: absolute !important;\r\n  left: 0 !important;\r\n  top: 0 !important;\r\n  bottom: 0 !important;\r\n  width: 5px !important;\r\n  background: #3A3F4E !important;\r\n  transition: all 0.3s ease !important;\r\n  border-radius: 16px 0 0 16px !important;\r\n  z-index: 2 !important;\r\n}\r\n\r\n/* Animações - Intensidade reduzida para visual mais clean */\r\n@keyframes pulseGreen {\r\n  0%, 100% {\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 12px rgba(16, 185, 129, 0.35) !important;\r\n  }\r\n  50% {\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 18px rgba(16, 185, 129, 0.5) !important;\r\n  }\r\n}\r\n\r\n@keyframes pulseRed {\r\n  0%, 100% {\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 12px rgba(239, 68, 68, 0.35) !important;\r\n  }\r\n  50% {\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 18px rgba(239, 68, 68, 0.5) !important;\r\n  }\r\n}\r\n\r\n@keyframes pulseYellow {\r\n  0%, 100% {\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 12px rgba(251, 191, 36, 0.35) !important;\r\n  }\r\n  50% {\r\n    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 18px rgba(251, 191, 36, 0.5) !important;\r\n  }\r\n}\r\n\r\n@keyframes pulseSquareGreen {\r\n  0%, 100% {\r\n    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5), inset 0 0 5px rgba(16, 185, 129, 0.2) !important;\r\n  }\r\n  50% {\r\n    box-shadow: 0 0 15px rgba(16, 185, 129, 0.7), inset 0 0 8px rgba(16, 185, 129, 0.3) !important;\r\n  }\r\n}\r\n\r\n@keyframes pulseSquareRed {\r\n  0%, 100% {\r\n    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5), inset 0 0 5px rgba(239, 68, 68, 0.2) !important;\r\n  }\r\n  50% {\r\n    box-shadow: 0 0 15px rgba(239, 68, 68, 0.7), inset 0 0 8px rgba(239, 68, 68, 0.3) !important;\r\n  }\r\n}\r\n\r\n@keyframes pulseSquareYellow {\r\n  0%, 100% {\r\n    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5), inset 0 0 5px rgba(251, 191, 36, 0.2) !important;\r\n  }\r\n  50% {\r\n    box-shadow: 0 0 15px rgba(251, 191, 36, 0.7), inset 0 0 8px rgba(251, 191, 36, 0.3) !important;\r\n  }\r\n}\r\n\r\n/* Status Online - Verde - Seletores simplificados */\r\n.monitor-card[data-status=\"1\"] {\r\n  border-color: #10B981 !important;\r\n  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, #1A1F2E 100%) !important;\r\n  animation: pulseGreen 3s ease-in-out infinite !important;\r\n}\r\n\r\n.monitor-card[data-status=\"1\"]::before {\r\n  background: #10B981 !important;\r\n  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6) !important;\r\n}\r\n\r\n/* Status Offline - Vermelho */\r\n.monitor-card[data-status=\"0\"] {\r\n  border-color: #EF4444 !important;\r\n  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, #1A1F2E 100%) !important;\r\n  animation: pulseRed 3s ease-in-out infinite !important;\r\n}\r\n\r\n.monitor-card[data-status=\"0\"]::before {\r\n  background: #EF4444 !important;\r\n  box-shadow: 0 0 8px rgba(239, 68, 68, 0.6) !important;\r\n}\r\n\r\n/* Status Warning - Amarelo - SOBRESCREVE ONLINE */\r\n.monitor-card.warning {\r\n  border-color: #FBBF24 !important;\r\n  background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, #1A1F2E 100%) !important;\r\n  animation: pulseYellow 3s ease-in-out infinite !important;\r\n}\r\n\r\n.monitor-card.warning::before {\r\n  background: #FBBF24 !important;\r\n  box-shadow: 0 0 8px rgba(251, 191, 36, 0.6) !important;\r\n}\r\n\r\n.monitor-card:hover {\r\n  transform: translateY(-2px);\r\n}\r\n\r\n.card-content {\r\n  display: flex;\r\n  flex-direction: column;\r\n  gap: 8px;\r\n  width: 100%;\r\n  flex: 1;\r\n  min-height: 0;\r\n  position: relative;\r\n  z-index: 1;\r\n  overflow: hidden;\r\n  justify-content: flex-start;\r\n  padding: 2px;\r\n}\r\n\r\n.card-header-row {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: flex-start;\r\n  gap: 16px;\r\n  width: 100%;\r\n}\r\n\r\n.host-name {\r\n  flex: 1;\r\n  font-size: 20px;\r\n  font-weight: 600;\r\n  color: #F3F4F6;\r\n  line-height: 1.5;\r\n  word-wrap: break-word;\r\n}\r\n\r\n.status-square {\r\n  width: 64px;\r\n  height: 64px;\r\n  border-radius: 14px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-shrink: 0;\r\n  border: 2px solid;\r\n  position: relative;\r\n  transition: all 0.3s ease;\r\n}\r\n\r\n/* Status Square - Online (Verde) */\r\n.monitor-card[data-status=\"1\"] .status-square {\r\n  background: rgba(16, 185, 129, 0.2) !important;\r\n  border-color: #10B981 !important;\r\n  animation: pulseSquareGreen 2.5s ease-in-out infinite !important;\r\n}\r\n\r\n/* Status Square - Offline (Vermelho) */\r\n.monitor-card[data-status=\"0\"] .status-square {\r\n  background: rgba(239, 68, 68, 0.2) !important;\r\n  border-color: #EF4444 !important;\r\n  animation: pulseSquareRed 2.5s ease-in-out infinite !important;\r\n}\r\n\r\n/* Status Square - Warning (Amarelo) - SOBRESCREVE ONLINE */\r\n.monitor-card.warning .status-square {\r\n  background: rgba(251, 191, 36, 0.2) !important;\r\n  border-color: #FBBF24 !important;\r\n  animation: pulseSquareYellow 2.5s ease-in-out infinite !important;\r\n}\r\n\r\n.monitor-card:hover .status-square {\r\n  transform: scale(1.05);\r\n}\r\n\r\n.status-icon {\r\n  width: 32px;\r\n  height: 32px;\r\n  display: block;\r\n  visibility: visible;\r\n  opacity: 1;\r\n  flex-shrink: 0;\r\n  object-fit: contain;\r\n}\r\n\r\n/* Ícones - cores naturais, sem filtros */\r\n.status-icon.status-online,\r\n.status-icon.status-offline,\r\n.status-icon.status-warning {\r\n  /* Sem filtro - mantém cor natural dos ícones */\r\n}\r\n\r\n.potencia-value {\r\n  font-size: 22px;\r\n  font-weight: 600;\r\n  color: #9CA3AF;\r\n  margin-top: 4px;\r\n}\r\n\r\n.potencia-value:empty {\r\n  display: none;\r\n}\r\n\r\n/* Responsividade - Focado em telas grandes, ajustes para menores */\r\n@media (max-width: 1920px) {\r\n  .grid-container {\r\n    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\r\n    height: 100vh;\r\n    max-height: 100vh;\r\n  }\r\n}\r\n\r\n@media (max-width: 1600px) {\r\n  .grid-container {\r\n    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\r\n    height: 100vh;\r\n    max-height: 100vh;\r\n  }\r\n}\r\n\r\n@media (max-width: 1200px) {\r\n  .grid-container {\r\n    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\r\n    gap: 20px;\r\n    padding: 20px;\r\n    height: 100vh;\r\n    max-height: 100vh;\r\n  }\r\n  \r\n  .monitor-card {\r\n    height: 100% !important;\r\n    padding: 2px;\r\n  }\r\n  \r\n  .host-name {\r\n    font-size: 18px;\r\n  }\r\n  \r\n  .potencia-value {\r\n    font-size: 20px;\r\n  }\r\n  \r\n  .status-square {\r\n    width: 56px;\r\n    height: 56px;\r\n  }\r\n  \r\n  .status-icon {\r\n    width: 28px;\r\n    height: 28px;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .grid-container {\r\n    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));\r\n    gap: 16px;\r\n    padding: 16px;\r\n    height: 100vh;\r\n    max-height: 100vh;\r\n  }\r\n  \r\n  .monitor-card {\r\n    height: 100% !important;\r\n    padding: 2px;\r\n  }\r\n  \r\n  .host-name {\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .potencia-value {\r\n    font-size: 18px;\r\n  }\r\n  \r\n  .status-square {\r\n    width: 52px;\r\n    height: 52px;\r\n  }\r\n  \r\n  .status-icon {\r\n    width: 24px;\r\n    height: 24px;\r\n  }\r\n}\r\n",
+          "wrap": true
+        },
+        "pluginVersion": "6.2.0",
+        "targets": [
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "ff5clh86a2mf4a"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "DEDICADO"
+            },
+            "host": {
+              "filter": "/.*/"
+            },
+            "item": {
+              "filter": "ICMP ping"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            }
+          },
+          {
+            "application": {
+              "filter": ""
+            },
+            "countTriggersBy": "",
+            "datasource": {
+              "type": "alexanderzobnin-zabbix-datasource",
+              "uid": "ff5clh86a2mf4a"
+            },
+            "evaltype": "0",
+            "functions": [],
+            "group": {
+              "filter": "DEDICADO"
+            },
+            "hide": false,
+            "host": {
+              "filter": "/.*/"
+            },
+            "item": {
+              "filter": "potencia"
+            },
+            "itemTag": {
+              "filter": ""
+            },
+            "macro": {
+              "filter": ""
+            },
+            "options": {
+              "count": false,
+              "disableDataAlignment": false,
+              "showDisabledItems": false,
+              "skipEmptyValues": false,
+              "useTrends": "default",
+              "useZabbixValueMapping": false
+            },
+            "proxy": {
+              "filter": ""
+            },
+            "queryType": "0",
+            "refId": "B",
+            "resultFormat": "time_series",
+            "schema": 12,
+            "table": {
+              "skipEmptyValues": false
+            },
+            "tags": {
+              "filter": ""
+            },
+            "textFilter": "",
+            "trigger": {
+              "filter": ""
+            }
+          }
+        ],
+        "transformations": [
+          {
+            "id": "reduce",
+            "options": {
+              "includeTimeField": false,
+              "labelsToFields": true,
+              "mode": "seriesToRows",
+              "reducers": [
+                "lastNotNull"
+              ]
+            }
+          },
+          {
+            "id": "groupBy",
+            "options": {
+              "fields": {
+                "Last *": {
+                  "aggregations": [
+                    "lastNotNull"
+                  ],
+                  "operation": "aggregate"
+                },
+                "host": {
+                  "aggregations": [],
+                  "operation": "groupby"
+                },
+                "item": {
+                  "aggregations": [],
+                  "operation": "groupby"
+                }
+              }
+            }
+          },
+          {
+            "id": "formatString",
+            "options": {
+              "outputFormat": "Substring",
+              "stringField": "host",
+              "substringEnd": 50,
+              "substringStart": 10
+            }
+          },
+          {
+            "id": "organize",
+            "options": {
+              "excludeByName": {},
+              "includeByName": {},
+              "indexByName": {},
+              "renameByName": {
+                "Last * (lastNotNull)": "valor"
+              }
+            }
+          }
+        ],
+        "transparent": true,
+        "type": "marcusolsson-dynamictext-panel"
+      }
+    ],
+    "preload": false,
+    "refresh": "30s",
+    "schemaVersion": 42,
+    "tags": [
+      "outros",
+      "ZABBIX SERVER DASH"
+    ],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "MONITORAMENTO LINK DEDICADO",
+    "uid": "q6Ljv7l7k1",
+    "version": 37,
+    "weekStart": ""
+  }
+}
