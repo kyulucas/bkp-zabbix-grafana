@@ -1,318 +1,775 @@
 {
-  "proxyid": "0",
-  "host": "OLT_HUAWEI_2022",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "OLT_HUAWEI_2022",
-  "flags": "0",
-  "templateid": "10676",
-  "description": "",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "414015cf4ad74923bbc8466921e51b64",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "23",
-      "name": "OLT_HUAWEI",
-      "uuid": "69e5786504d64482ad0d54289032b456"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10675",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X17 CPD TR",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X17 CPD TR",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10677",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 LEVY",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 LEVY",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10678",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 SIMAO PEREIRA",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 SIMAO PEREIRA",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10679",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 SANTANA",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 SANTANA",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10680",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 BEMPOSTA",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 BEMPOSTA",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10681",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 ALBERTO TORRES",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 ALBERTO TORRES",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10682",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 CHIADOR",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 CHIADOR",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10683",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X2 PARAIBA",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X2 PARAIBA",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10684",
-      "proxyid": "0",
-      "host": "OLT HUAWEI MA5800X7 VILA ISABEL",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "OLT HUAWEI MA5800X7 VILA ISABEL",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "414015cf4ad74923bbc8466921e51b64",
+        "template": "OLT_HUAWEI_2022",
+        "name": "OLT_HUAWEI_2022",
+        "templates": [
+          {
+            "name": "Cloud - Huawei OLT MA5800"
+          },
+          {
+            "name": "Template Module Generic SNMP"
+          }
+        ],
+        "groups": [
+          {
+            "name": "OLT_HUAWEI"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "2468264089a6456db56f7cccd343e2da",
+            "name": "Contador por PON (JSON)",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#STATUS}, .1.3.6.1.4.1.2011.6.128.1.1.2.46.1.15]",
+            "key": "contpon",
+            "delay": "2m",
+            "history": "1d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "preprocessing": [
+              {
+                "type": "STR_REPLACE",
+                "parameters": [
+                  "{#SNMPINDEX}",
+                  "PON"
+                ]
+              },
+              {
+                "type": "STR_REPLACE",
+                "parameters": [
+                  "{#STATUS}",
+                  "STATUS"
+                ]
+              },
+              {
+                "type": "JAVASCRIPT",
+                "parameters": [
+                  "valueObj = JSON.parse(value);\nvalueObj.forEach(function (el) {\n    el[\"PON\"] = el[\"PON\"].replace(/\\.(\\d+)/g, \"\");\n});\nreturn JSON.stringify(valueObj);"
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "CONT-PON"
+              }
+            ]
+          },
+          {
+            "uuid": "f342774565c540e98ac06a59028bfb31",
+            "name": "ONUs OFFLINE",
+            "type": "DEPENDENT",
+            "key": "onu.offline",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JAVASCRIPT",
+                "parameters": [
+                  "function qtd_clientes(json,status){\n     var count=0;\n     for (var index in json){\n       var statusONU = json[index][\"STATUS\"];\n       \n       if (statusONU == status){\n         count+=1;\n       }\n     }\n     return count;\n}\n\nvar file = JSON.parse(value);\n/* {#STATUS} 1 - UP | 0 - DOWN | -1 - INVALID */\nvar json = qtd_clientes(file,2);\nreturn JSON.stringify(json);"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "contpon"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "TOTAIS ONUs"
+              }
+            ]
+          },
+          {
+            "uuid": "d7432ed3ee424af3a043e6393f5ed206",
+            "name": "ONUs ONLINE",
+            "type": "DEPENDENT",
+            "key": "onu.online",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JAVASCRIPT",
+                "parameters": [
+                  "function qtd_clientes(json,status){\n     var count=0;\n     for (var index in json){\n       var statusONU = json[index][\"STATUS\"];\n       \n       if (statusONU == status){\n         count+=1;\n       }\n     }\n     return count;\n}\n\nvar file = JSON.parse(value);\n/* {#STATUS} 1 - UP | 0 - DOWN | -1 - INVALID */\nvar json = qtd_clientes(file,1);\nreturn JSON.stringify(json);"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "contpon"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "TOTAIS ONUs"
+              }
+            ]
+          },
+          {
+            "uuid": "cb5301305de54dbc873f125bc2e891c2",
+            "name": "Temperatura 1",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "1.3.6.1.4.1.2011.2.6.7.1.1.2.1.10.0.1",
+            "key": "temperatura",
+            "delay": "2m",
+            "history": "10d",
+            "trends": "30d",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Temperatura"
+              }
+            ]
+          },
+          {
+            "uuid": "bcffb6088a554cb69d717ae5947cbbe7",
+            "name": "Temperatura 2",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "1.3.6.1.4.1.2011.2.6.7.1.1.2.1.10.0.2",
+            "key": "temperatura2",
+            "delay": "2m",
+            "history": "10d",
+            "trends": "30d",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Temperatura"
+              }
+            ]
+          },
+          {
+            "uuid": "7f8372d34bce418f8206237aa6f5f052",
+            "name": "TRAFEGO TOTAL ENTRADA",
+            "type": "CALCULATED",
+            "key": "total.entrada",
+            "delay": "3m",
+            "history": "10d",
+            "trends": "30d",
+            "units": "bps",
+            "params": "sum(last_foreach(//neeet.if.in[*]))"
+          },
+          {
+            "uuid": "edcccb5690d6417683dbc8a406c7c7c5",
+            "name": "TOTAL DE ONU",
+            "type": "CALCULATED",
+            "key": "total.onu",
+            "history": "30d",
+            "trends": "90d",
+            "params": "last(//onu.online)+last(//onu.offline)",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "TOTAIS ONUs"
+              }
+            ]
+          },
+          {
+            "uuid": "fe62c7c004d0466abbbdc6ac27252d66",
+            "name": "TRAFEGO TOTAL SAIDA",
+            "type": "CALCULATED",
+            "key": "total.saida",
+            "delay": "3m",
+            "history": "10d",
+            "trends": "30d",
+            "units": "bps",
+            "params": "sum(last_foreach(//neeet.if.out[*]))"
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "0b25a8a1be4a4333a32137ac2f8fe2a1",
+            "name": "Descoberta LLD Informacoes da fan",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#FAN},.1.3.6.1.4.1.2011.6.1.1.5.1.1]",
+            "key": "Descoberta.lld.fan.unica",
+            "delay": "1h",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "3731839ee7b5405d9037b92272862b23",
+                "name": "hwFanRowStatus",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.6.1.1.5.1.6.{#SNMPINDEX}",
+                "key": "hwFanRowStatus.[{#SNMPINDEX}]",
+                "delay": "10m",
+                "history": "30d",
+                "trends": "90d",
+                "valuemap": {
+                  "name": "HUAWEI-ENTITY-EXTENT-MIB::hwEntityFanState"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Fans"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "7927469e09ec46d3a7062bbe1cb7205d",
+            "name": "OLT Boards",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#OLTBOARD},1.3.6.1.4.1.2011.6.3.3.2.1.1]",
+            "key": "hwSlotIndex",
+            "delay": "2h",
+            "lifetime": "3d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "296ec30e150043198d957d68c5546287",
+                "name": "{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.2.6.7.1.1.2.1.6.{#SNMPINDEX}",
+                "key": "MemoryUtilBoard[{#SNMPINDEX}]",
+                "delay": "4m",
+                "history": "30d",
+                "trends": "90d",
+                "units": "%",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "MEMORIA_PLACA"
+                  }
+                ]
+              },
+              {
+                "uuid": "dca086ab6d22440288f14f23160273f3",
+                "name": "{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.6.3.3.2.1.13.{#SNMPINDEX}",
+                "key": "OltBoardCpuTemp[{#SNMPINDEX}]",
+                "delay": "10m",
+                "history": "30d",
+                "trends": "90d",
+                "units": "ºC",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TEMPERATURA_PLACA"
+                  }
+                ]
+              },
+              {
+                "uuid": "de8e4359b2bc4b8d8d19a3ed02fd45de",
+                "name": "{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.2.6.7.1.1.2.1.5.{#SNMPINDEX}",
+                "key": "OltCpuUtilBoard[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "trends": "90d",
+                "units": "%",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "CPU_PLACA"
+                  }
+                ]
+              },
+              {
+                "uuid": "461df8e9dffe420d9812af199242828a",
+                "name": "{#SNMPINDEX}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.2.6.7.1.1.2.1.8.{#SNMPINDEX}",
+                "key": "slotstatus[{#SNMPINDEX}]",
+                "delay": "6m",
+                "history": "30d",
+                "trends": "90d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "STATUS_PLACA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "36526281c942426199e7496a4c30436e",
+            "name": "Interfaces Gpon",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#PLACA},1.3.6.1.4.1.2011.6.3.3.2.1.1,{#GPON},1.3.6.1.2.1.31.1.1.1.1]",
+            "key": "interfaces.gpon",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#GPON}",
+                  "value": "GPON",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "dd8ea947aa814be3ba062118bbafdd32",
+                "name": "{#GPON} - TOTAL AUTENTICADAS",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.6.128.1.1.2.21.1.16.{#SNMPINDEX}",
+                "key": "hwGponDeviceOltControlOntNum.[{#SNMPINDEX}]",
+                "delay": "1h",
+                "history": "10d",
+                "trends": "30d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "AUTENTICADAS_PON"
+                  }
+                ]
+              },
+              {
+                "uuid": "6b4c1d3486ff42c88a2311ddd43d968c",
+                "name": "{#GPON} - TEMPERATURA",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.6.128.1.1.2.23.1.1.{#SNMPINDEX}",
+                "key": "hwGponOltOpticsDdmInfoTemperature.[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "10d",
+                "trends": "30d",
+                "units": "C",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TEMPERATURA_PON"
+                  }
+                ]
+              },
+              {
+                "uuid": "80adb5d37a554dc29c83ce2e690cb39c",
+                "name": "{#GPON} - TX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.6.128.1.1.2.23.1.4.{#SNMPINDEX}",
+                "key": "hwGponOltOpticsDdmInfoTxPower.[{#SNMPINDEX}]",
+                "delay": "10m",
+                "history": "10d",
+                "trends": "30d",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "POTENCIA_PON"
+                  }
+                ]
+              },
+              {
+                "uuid": "95461b091b77461caeac52ca64db0431",
+                "name": "{#GPON} - TOTAL ONLINE",
+                "type": "DEPENDENT",
+                "key": "interface.[\"{#GPON}\"]",
+                "delay": "0",
+                "history": "30d",
+                "trends": "90d",
+                "preprocessing": [
+                  {
+                    "type": "JSONPATH",
+                    "parameters": [
+                      "$.[?(@.PON == '{#SNMPINDEX}' && @['STATUS'] == '1')].length()"
+                    ]
+                  }
+                ],
+                "master_item": {
+                  "key": "contpon"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "ONLINE_PON"
+                  }
+                ]
+              },
+              {
+                "uuid": "1c2f060909c04e88808957d28bed2b73",
+                "name": "{#GPON} - TOTAL OFFLINE",
+                "type": "DEPENDENT",
+                "key": "interfaceoffline.[\"{#GPON}\"]",
+                "delay": "0",
+                "history": "30d",
+                "trends": "90d",
+                "preprocessing": [
+                  {
+                    "type": "JSONPATH",
+                    "parameters": [
+                      "$.[?(@.PON == '{#SNMPINDEX}' && @['STATUS'] != '1')].length()"
+                    ]
+                  }
+                ],
+                "master_item": {
+                  "key": "contpon"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "OFFLINE_PON"
+                  }
+                ]
+              }
+            ],
+            "trigger_prototypes": [
+              {
+                "uuid": "b3acf33c5aed475db615a3abdba0b2ef",
+                "expression": "last(/OLT_HUAWEI_2022/hwGponDeviceOltControlOntNum.[{#SNMPINDEX}])>=2 and last(/OLT_HUAWEI_2022/interface.[\"{#GPON}\"])<=2 and last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=2",
+                "name": "Queda massiva detecada em {#GPON}",
+                "priority": "WARNING",
+                "tags": [
+                  {
+                    "tag": "QUEDA_PON"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "90ee6a0e94b34492bd7489ffdd83d713",
+            "name": "Network interfaces ETH",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFADMINSTATUS},1.3.6.1.2.1.2.2.1.7,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]",
+            "key": "net.if.discovery.eth",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFNAME}",
+                  "value": "^eth",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#IFOPERSTATUS}",
+                  "value": "(1|2|3|4|5|7)",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime": "3d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "058dde40bfbc4e5c9dfb10a55c04089f",
+                "name": "Trafego de Entrada na Interface {#IFNAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}",
+                "key": "neeet.if.in[ifHCInOctets.{#SNMPINDEX}]",
+                "delay": "3m",
+                "history": "10d",
+                "trends": "30d",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  },
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Network"
+                  }
+                ]
+              },
+              {
+                "uuid": "c6ad3585a78349bfbcde73baeb543f01",
+                "name": "Trafego de Saida na Interface {#IFNAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}",
+                "key": "neeet.if.out[ifHCOutOctets.{#SNMPINDEX}]",
+                "delay": "3m",
+                "history": "10d",
+                "trends": "30d",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  },
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Network"
+                  }
+                ]
+              },
+              {
+                "uuid": "1975a890d9c84b5e92d356cafedde70f",
+                "name": "Status da interface  {#IFNAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                "key": "neeet.if.status[ifOperStatus.{#SNMPINDEX}]",
+                "history": "10d",
+                "trends": "30d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Net_status"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "a60700d7c4e64caea44e224e9ab41f69",
+            "name": "Network interfaces PON",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFADMINSTATUS},1.3.6.1.2.1.2.2.1.7,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]",
+            "key": "net.if.discovery.pon",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFNAME}",
+                  "value": "^GPON",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#IFOPERSTATUS}",
+                  "value": "(1|2|3|4|5|7)",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime": "3d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "290f87ba6d234aac9b4c6608033f9bdb",
+                "name": "Trafego de Entrada na Interface {#IFNAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}",
+                "key": "nee.if.in[ifHCInOctets.{#SNMPINDEX}]",
+                "delay": "3m",
+                "history": "10d",
+                "trends": "30d",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  },
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Network"
+                  }
+                ]
+              },
+              {
+                "uuid": "5aba2ca671a649bcb95804c845dc2b11",
+                "name": "Trafego de Saida na Interface {#IFNAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}",
+                "key": "neet.if.out[ifHCOutOctets.{#SNMPINDEX}]",
+                "delay": "3m",
+                "history": "10d",
+                "trends": "30d",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  },
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Network"
+                  }
+                ]
+              },
+              {
+                "uuid": "d297fe9ab81e48e698defa00ad7085d9",
+                "name": "Status da interface  {#IFNAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                "key": "neet.if.status[ifOperStatus.{#SNMPINDEX}]",
+                "history": "10d",
+                "trends": "30d",
+                "valuemap": {
+                  "name": "INFERTACEPON"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Net_status"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "ef04e73265574ada88c6d8988e5e1866",
+                    "expression": "count(/OLT_HUAWEI_2022/neet.if.status[ifOperStatus.{#SNMPINDEX}],6m,,\"2\")>5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/OLT_HUAWEI_2022/neet.if.status[ifOperStatus.{#SNMPINDEX}])<>2",
+                    "name": "Interface {#IFNAME}: Link down",
+                    "priority": "HIGH",
+                    "manual_close": "YES",
+                    "tags": [
+                      {
+                        "tag": "PORTA_OFF_PON"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "valuemaps": [
+          {
+            "uuid": "242537c238554326b4f1c53eb4f15526",
+            "name": "HUAWEI-ENTITY-EXTENT-MIB::hwEntityFanState",
+            "mappings": [
+              {
+                "value": "1",
+                "newvalue": "normal"
+              },
+              {
+                "value": "2",
+                "newvalue": "abnormal"
+              }
+            ]
+          },
+          {
+            "uuid": "22a4b84784524dccb50061303de45102",
+            "name": "INFERTACEPON",
+            "mappings": [
+              {
+                "value": "1",
+                "newvalue": "UP"
+              },
+              {
+                "value": "2",
+                "newvalue": "DOWN"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
