@@ -1,957 +1,917 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": false,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "sonda-temperatura-cpd-tr",
-    "url": "/d/ZabbixNextconDSB/sonda-temperatura-cpd-tr",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-11-27T06:39:33-05:00",
-    "updated": "2025-11-27T06:39:33-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 1,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
       }
-    }
+    ]
   },
-  "dashboard": {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "type": "dashboard"
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 2,
+  "id": 0,
+  "links": [],
+  "liveNow": true,
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 10,
+      "panels": [],
+      "title": "DSB 1",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource"
+      },
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 1
+      },
+      "id": 2,
+      "options": {
+        "bgColor": "",
+        "clockType": "24 hour",
+        "countdownSettings": {
+          "endCountdownTime": "2023-06-22T19:32:57-03:00",
+          "endText": "00:00:00",
+          "invalidValueText": "invalid value",
+          "noValueText": "no value found",
+          "queryCalculation": "last",
+          "source": "input"
+        },
+        "countupSettings": {
+          "beginCountupTime": "2023-06-22T19:32:57-03:00",
+          "beginText": "00:00:00",
+          "invalidValueText": "invalid value",
+          "noValueText": "no value found",
+          "queryCalculation": "last",
+          "source": "input"
+        },
+        "dateSettings": {
+          "dateFormat": "YYYY-MM-DD",
+          "fontSize": "20px",
+          "fontWeight": "normal",
+          "locale": "",
+          "showDate": false
+        },
+        "descriptionSettings": {
+          "descriptionText": "",
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "noValueText": "no description found",
+          "source": "none"
+        },
+        "fontMono": false,
+        "mode": "time",
+        "refresh": "sec",
+        "timeSettings": {
+          "fontSize": "48px",
+          "fontWeight": "normal"
+        },
+        "timezone": "",
+        "timezoneSettings": {
+          "fontSize": "12px",
+          "fontWeight": "normal",
+          "showTimezone": false,
+          "zoneFormat": "offsetAbbv"
         }
-      ]
+      },
+      "pluginVersion": "3.0.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Hora de Brasilia",
+      "type": "grafana-clock-panel"
     },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 2,
-    "id": 92,
-    "links": [],
-    "liveNow": true,
-    "panels": [
-      {
-        "collapsed": false,
-        "gridPos": {
-          "h": 1,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 10,
-        "panels": [],
-        "title": "DSB 1",
-        "type": "row"
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "aefq119i80pa8a"
       },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource"
-        },
-        "fieldConfig": {
-          "defaults": {},
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 3,
-          "w": 8,
-          "x": 0,
-          "y": 1
-        },
-        "id": 2,
-        "options": {
-          "bgColor": "",
-          "clockType": "24 hour",
-          "countdownSettings": {
-            "endCountdownTime": "2023-06-22T19:32:57-03:00",
-            "endText": "00:00:00",
-            "invalidValueText": "invalid value",
-            "noValueText": "no value found",
-            "queryCalculation": "last",
-            "source": "input"
-          },
-          "countupSettings": {
-            "beginCountupTime": "2023-06-22T19:32:57-03:00",
-            "beginText": "00:00:00",
-            "invalidValueText": "invalid value",
-            "noValueText": "no value found",
-            "queryCalculation": "last",
-            "source": "input"
-          },
-          "dateSettings": {
-            "dateFormat": "YYYY-MM-DD",
-            "fontSize": "20px",
-            "fontWeight": "normal",
-            "locale": "",
-            "showDate": false
-          },
-          "descriptionSettings": {
-            "descriptionText": "",
-            "fontSize": "12px",
-            "fontWeight": "normal",
-            "noValueText": "no description found",
-            "source": "none"
-          },
-          "fontMono": false,
-          "mode": "time",
-          "refresh": "sec",
-          "timeSettings": {
-            "fontSize": "48px",
-            "fontWeight": "normal"
-          },
-          "timezone": "",
-          "timezoneSettings": {
-            "fontSize": "12px",
-            "fontWeight": "normal",
-            "showTimezone": false,
-            "zoneFormat": "offsetAbbv"
-          }
-        },
-        "pluginVersion": "3.0.1",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "countTriggersBy": "",
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": ""
-            },
-            "host": {
-              "filter": ""
-            },
-            "item": {
-              "filter": ""
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            }
-          }
-        ],
-        "title": "Hora de Brasilia",
-        "type": "grafana-clock-panel"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 3,
-          "w": 6,
-          "x": 8,
-          "y": 1
-        },
-        "id": 5,
-        "maxDataPoints": 100,
-        "options": {
-          "colorMode": "none",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "11.5.2",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "columns": [
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
               {
-                "selector": "field1",
-                "text": "Temperatura",
-                "type": "number"
-              }
-            ],
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "yesoreyeram-infinity-datasource",
-              "uid": "b652d017-b31b-4844-a616-b17217238ddf"
-            },
-            "evaltype": "0",
-            "filters": [],
-            "format": "table",
-            "functions": [],
-            "global_query_id": "",
-            "group": {
-              "filter": "sondas"
-            },
-            "host": {
-              "filter": "Sonda Temperatura CPD-TR"
-            },
-            "item": {
-              "filter": "Temperatura"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "parser": "backend",
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "root_selector": "feeds",
-            "schema": 12,
-            "source": "url",
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "type": "json",
-            "url": "https://api.thingspeak.com/channels/1047093/feeds.json",
-            "url_options": {
-              "data": "",
-              "method": "GET"
-            }
-          }
-        ],
-        "title": "Temperatura",
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 5,
-          "x": 14,
-          "y": 1
-        },
-        "id": 6,
-        "maxDataPoints": 100,
-        "options": {
-          "colorMode": "none",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "11.5.2",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "columns": [
-              {
-                "selector": "field2",
-                "text": "Mínima",
-                "type": "number"
-              }
-            ],
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "yesoreyeram-infinity-datasource",
-              "uid": "b652d017-b31b-4844-a616-b17217238ddf"
-            },
-            "evaltype": "0",
-            "filters": [],
-            "format": "table",
-            "functions": [],
-            "global_query_id": "",
-            "group": {
-              "filter": "sondas"
-            },
-            "host": {
-              "filter": "Sonda Temperatura CPD-TR"
-            },
-            "item": {
-              "filter": "Temperatura Minima"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "parser": "backend",
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "root_selector": "feeds",
-            "schema": 12,
-            "source": "url",
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "type": "json",
-            "url": "https://api.thingspeak.com/channels/1047093/feeds.json",
-            "url_options": {
-              "data": "",
-              "method": "GET"
-            }
-          }
-        ],
-        "title": "Temperatura Mínima",
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "fixedColor": "text",
-              "mode": "shades"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 5,
-          "x": 19,
-          "y": 1
-        },
-        "id": 8,
-        "maxDataPoints": 100,
-        "options": {
-          "colorMode": "value",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "11.5.2",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "columns": [
-              {
-                "selector": "field3",
-                "text": "Maxima",
-                "type": "number"
-              }
-            ],
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "yesoreyeram-infinity-datasource",
-              "uid": "b652d017-b31b-4844-a616-b17217238ddf"
-            },
-            "evaltype": "0",
-            "filters": [],
-            "format": "table",
-            "functions": [],
-            "global_query_id": "",
-            "group": {
-              "filter": "sondas"
-            },
-            "host": {
-              "filter": "Sonda Temperatura CPD-TR"
-            },
-            "item": {
-              "filter": "Temperatura Maxima"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "parser": "backend",
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "root_selector": "feeds",
-            "schema": 12,
-            "source": "url",
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "type": "json",
-            "url": "https://api.thingspeak.com/channels/1047093/feeds.json",
-            "url_options": {
-              "data": "",
-              "method": "GET"
-            }
-          }
-        ],
-        "title": "Temperatura Máxima",
-        "type": "stat"
-      },
-      {
-        "description": "",
-        "fieldConfig": {
-          "defaults": {},
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 3,
-          "w": 8,
-          "x": 0,
-          "y": 4
-        },
-        "id": 3,
-        "options": {
-          "code": {
-            "language": "plaintext",
-            "showLineNumbers": false,
-            "showMiniMap": false
-          },
-          "content": "<div style=\"display: flex; justify-content: center; align-items: center; font-size: 30px;\">DSB Monitor Zabbix</div>",
-          "mode": "html"
-        },
-        "pluginVersion": "11.5.2",
-        "title": "Powered by Nextcon",
-        "type": "text"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
-        },
-        "description": "",
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [
-              {
-                "options": {
-                  "0": {
-                    "color": "red",
-                    "index": 1,
-                    "text": "Offline"
-                  },
-                  "1": {
-                    "color": "green",
-                    "index": 0,
-                    "text": "Online"
-                  }
-                },
-                "type": "value"
-              }
-            ],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 3,
-          "w": 6,
-          "x": 8,
-          "y": 4
-        },
-        "id": 9,
-        "maxDataPoints": 100,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "center",
-          "orientation": "horizontal",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "last"
-            ],
-            "fields": "/^ICMP ping$/",
-            "limit": 0,
-            "values": false
-          },
-          "showPercentChange": false,
-          "text": {
-            "titleSize": 0,
-            "valueSize": 0
-          },
-          "textMode": "value",
-          "wideLayout": true
-        },
-        "pluginVersion": "11.5.2",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "columns": [
-              {
-                "selector": "last_created_at",
-                "text": "",
-                "type": "string"
+                "color": "green",
+                "value": null
               },
               {
-                "selector": "status",
-                "text": "",
-                "type": "number"
+                "color": "red",
+                "value": 80
               }
-            ],
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "yesoreyeram-infinity-datasource",
-              "uid": "b652d017-b31b-4844-a616-b17217238ddf"
-            },
-            "evaltype": "0",
-            "filters": [],
-            "format": "table",
-            "functions": [],
-            "global_query_id": "",
-            "group": {
-              "filter": "sondas"
-            },
-            "host": {
-              "filter": "Sonda Temperatura CPD-TR"
-            },
-            "item": {
-              "filter": "ICMP ping"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "acknowledged": 2,
-              "count": false,
-              "disableDataAlignment": false,
-              "hostProxy": false,
-              "hostsInMaintenance": false,
-              "limit": 1001,
-              "minSeverity": 0,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "sortProblems": "default",
-              "useTimeRange": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "parser": "backend",
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "root_selector": "",
-            "schema": 12,
-            "showProblems": "problems",
-            "source": "url",
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "type": "json",
-            "url": "http://195.35.17.162:5000/?time=7&channelid=1047093",
-            "url_options": {
-              "body_content_type": "text/plain",
-              "body_type": "raw",
-              "data": "",
-              "method": "GET"
-            }
+            ]
           }
-        ],
-        "title": "Status",
-        "type": "stat"
+        },
+        "overrides": []
       },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineStyle": {
-                "fill": "solid"
-              },
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": null
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 7,
-          "w": 24,
-          "x": 0,
-          "y": 7
-        },
-        "id": 1,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "timezone": [
-            "America/Sao_Paulo"
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 8,
+        "y": 1
+      },
+      "id": 5,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
           ],
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "multi",
-            "sort": "none"
-          }
+          "fields": "",
+          "values": false
         },
-        "pluginVersion": "11.5.2",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "columns": [
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "columns": [
+            {
+              "selector": "field1",
+              "text": "Temperatura",
+              "type": "number"
+            }
+          ],
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "b652d017-b31b-4844-a616-b17217238ddf"
+          },
+          "evaltype": "0",
+          "filters": [],
+          "format": "table",
+          "functions": [],
+          "global_query_id": "",
+          "group": {
+            "filter": "sondas"
+          },
+          "host": {
+            "filter": "Sonda Temperatura CPD-TR"
+          },
+          "item": {
+            "filter": "Temperatura"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "parser": "backend",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "root_selector": "feeds",
+          "schema": 12,
+          "source": "url",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "type": "json",
+          "url": "https://api.thingspeak.com/channels/1047093/feeds.json",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Temperatura",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "aefq119i80pa8a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
               {
-                "selector": "created_at",
-                "text": "Data",
-                "timestampFormat": "",
-                "type": "timestamp"
+                "color": "green",
+                "value": null
               },
               {
-                "selector": "field1",
-                "text": "Temperatura",
-                "type": "number"
+                "color": "red",
+                "value": 80
               }
-            ],
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "yesoreyeram-infinity-datasource",
-              "uid": "b652d017-b31b-4844-a616-b17217238ddf"
-            },
-            "evaltype": "0",
-            "filters": [],
-            "format": "table",
-            "functions": [],
-            "global_query_id": "",
-            "group": {
-              "filter": "sondas"
-            },
-            "host": {
-              "filter": "Sonda Temperatura CPD-TR"
-            },
-            "item": {
-              "filter": "Temperatura"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "parser": "backend",
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "root_selector": "feeds",
-            "schema": 12,
-            "source": "url",
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "type": "json",
-            "url": "https://api.thingspeak.com/channels/1047093/feeds.json?results=80000",
-            "url_options": {
-              "data": "",
-              "method": "GET"
-            }
+            ]
           }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 14,
+        "y": 1
+      },
+      "id": 6,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "none",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "columns": [
+            {
+              "selector": "field2",
+              "text": "Mínima",
+              "type": "number"
+            }
+          ],
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "b652d017-b31b-4844-a616-b17217238ddf"
+          },
+          "evaltype": "0",
+          "filters": [],
+          "format": "table",
+          "functions": [],
+          "global_query_id": "",
+          "group": {
+            "filter": "sondas"
+          },
+          "host": {
+            "filter": "Sonda Temperatura CPD-TR"
+          },
+          "item": {
+            "filter": "Temperatura Minima"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "parser": "backend",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "root_selector": "feeds",
+          "schema": 12,
+          "source": "url",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "type": "json",
+          "url": "https://api.thingspeak.com/channels/1047093/feeds.json",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Temperatura Mínima",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "aefq119i80pa8a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "text",
+            "mode": "shades"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 5,
+        "x": 19,
+        "y": 1
+      },
+      "id": 8,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "columns": [
+            {
+              "selector": "field3",
+              "text": "Maxima",
+              "type": "number"
+            }
+          ],
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "b652d017-b31b-4844-a616-b17217238ddf"
+          },
+          "evaltype": "0",
+          "filters": [],
+          "format": "table",
+          "functions": [],
+          "global_query_id": "",
+          "group": {
+            "filter": "sondas"
+          },
+          "host": {
+            "filter": "Sonda Temperatura CPD-TR"
+          },
+          "item": {
+            "filter": "Temperatura Maxima"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "parser": "backend",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "root_selector": "feeds",
+          "schema": 12,
+          "source": "url",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "type": "json",
+          "url": "https://api.thingspeak.com/channels/1047093/feeds.json",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Temperatura Máxima",
+      "type": "stat"
+    },
+    {
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 4
+      },
+      "id": 3,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"display: flex; justify-content: center; align-items: center; font-size: 30px;\">DSB Monitor Zabbix</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "11.5.2",
+      "title": "Powered by Nextcon",
+      "type": "text"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "aefq119i80pa8a"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "red",
+                  "index": 1,
+                  "text": "Offline"
+                },
+                "1": {
+                  "color": "green",
+                  "index": 0,
+                  "text": "Online"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 8,
+        "y": 4
+      },
+      "id": 9,
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^ICMP ping$/",
+          "limit": 0,
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 0,
+          "valueSize": 0
+        },
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "columns": [
+            {
+              "selector": "last_created_at",
+              "text": "",
+              "type": "string"
+            },
+            {
+              "selector": "status",
+              "text": "",
+              "type": "number"
+            }
+          ],
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "b652d017-b31b-4844-a616-b17217238ddf"
+          },
+          "evaltype": "0",
+          "filters": [],
+          "format": "table",
+          "functions": [],
+          "global_query_id": "",
+          "group": {
+            "filter": "sondas"
+          },
+          "host": {
+            "filter": "Sonda Temperatura CPD-TR"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "parser": "backend",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "root_selector": "",
+          "schema": 12,
+          "showProblems": "problems",
+          "source": "url",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "type": "json",
+          "url": "http://195.35.17.162:5000/?time=7&channelid=1047093",
+          "url_options": {
+            "body_content_type": "text/plain",
+            "body_type": "raw",
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Status",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "aefq119i80pa8a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezone": [
+          "America/Sao_Paulo"
         ],
-        "title": "Nextcon",
-        "transparent": true,
-        "type": "timeseries"
-      }
-    ],
-    "preload": false,
-    "refresh": "15s",
-    "schemaVersion": 40,
-    "tags": [],
-    "templating": {
-      "list": []
-    },
-    "time": {
-      "from": "now-6h",
-      "to": "now"
-    },
-    "timepicker": {
-      "nowDelay": "1s",
-      "refresh_intervals": [
-        "15s"
-      ]
-    },
-    "timezone": "",
-    "title": "Sonda Temperatura CPD TR",
-    "uid": "ZabbixNextconDSB",
-    "version": 1,
-    "weekStart": ""
-  }
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "columns": [
+            {
+              "selector": "created_at",
+              "text": "Data",
+              "timestampFormat": "",
+              "type": "timestamp"
+            },
+            {
+              "selector": "field1",
+              "text": "Temperatura",
+              "type": "number"
+            }
+          ],
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "b652d017-b31b-4844-a616-b17217238ddf"
+          },
+          "evaltype": "0",
+          "filters": [],
+          "format": "table",
+          "functions": [],
+          "global_query_id": "",
+          "group": {
+            "filter": "sondas"
+          },
+          "host": {
+            "filter": "Sonda Temperatura CPD-TR"
+          },
+          "item": {
+            "filter": "Temperatura"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "parser": "backend",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "root_selector": "feeds",
+          "schema": 12,
+          "source": "url",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "type": "json",
+          "url": "https://api.thingspeak.com/channels/1047093/feeds.json?results=80000",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Nextcon",
+      "transparent": true,
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "15s",
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "nowDelay": "1s",
+    "refresh_intervals": [
+      "15s"
+    ]
+  },
+  "timezone": "",
+  "title": "Sonda Temperatura CPD TR",
+  "uid": "ZabbixNextconDSB",
+  "weekStart": ""
 }
