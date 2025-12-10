@@ -1,101 +1,557 @@
 {
-  "proxyid": "0",
-  "host": "Huawei NE40 - NE8000 - BGP",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Huawei NE40 - NE8000 - BGP",
-  "flags": "0",
-  "templateid": "10685",
-  "description": "",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "60c6e23e5b76454db2714edd7f4d795a",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "24",
-      "name": "HUAWEI BGP",
-      "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10689",
-      "proxyid": "0",
-      "host": "ROUTER-BGP",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ROUTER-BGP",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10731",
-      "proxyid": "0",
-      "host": "ROUTER-BGP - VS CDN",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ROUTER-BGP - VS CDN",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "60c6e23e5b76454db2714edd7f4d795a",
+        "template": "Huawei NE40 - NE8000 - BGP",
+        "name": "Huawei NE40 - NE8000 - BGP",
+        "groups": [
+          {
+            "name": "HUAWEI BGP"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "6cd92a5c363546cb8fcdaf17ba64bc83",
+            "name": "TOTAL DE PEERS ATIVO",
+            "type": "DEPENDENT",
+            "key": "ATIVO",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP == '3')].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          },
+          {
+            "uuid": "581cf38444884f4b997b1028ef29c7f3",
+            "name": "TOTAL DE PEERS CONECTADO",
+            "type": "DEPENDENT",
+            "key": "CONECTADO",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP == '2')].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          },
+          {
+            "uuid": "19af1334f70c425585ef0cc4e5ada952",
+            "name": "Item BGP(COUNT)",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#BGP}, .1.3.6.1.4.1.2011.5.25.177.1.1.2.1.5]",
+            "key": "countbgp",
+            "delay": "2m",
+            "history": "90d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "preprocessing": [
+              {
+                "type": "STR_REPLACE",
+                "parameters": [
+                  "{#BGP}",
+                  "BGP"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "2cde93b17e6345269a51b945c06ee1d6",
+            "name": "TOTAL DE PEERS ESTABELECIDA",
+            "type": "DEPENDENT",
+            "key": "estabelecida",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP == '6')].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          },
+          {
+            "uuid": "00fb63399b834dbd842fc8c5382dee73",
+            "name": "Total de Rotas IPv4 na FIB",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "1.3.6.1.2.1.4.24.3.0",
+            "key": "hwIPv4FibRoutes",
+            "delay": "5m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "Prefixes",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Rotas"
+              }
+            ]
+          },
+          {
+            "uuid": "eac1338624564c85a1bd15307a9a2de2",
+            "name": "Total de Rotas IPv6 na FIB",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "1.3.6.1.2.1.55.1.9.0",
+            "key": "hwIPv6FibRoutes",
+            "delay": "5m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "Prefixes",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Rotas"
+              }
+            ]
+          },
+          {
+            "uuid": "134416b4c4694acf91fce999ca74eeae",
+            "name": "MEMORIA UTILIZADA EM %",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7.16777216",
+            "key": "memori",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "%",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "CPU"
+              }
+            ]
+          },
+          {
+            "uuid": "17942a738e26413380f801d5fb7978b4",
+            "name": "TOTAL DE PEERS OCIOSO",
+            "type": "DEPENDENT",
+            "key": "OCIOSO",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP == '1')].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          },
+          {
+            "uuid": "5f4ebd79c25e41b19e5a58848c24c2de",
+            "name": "TOTAL DE PEERS Openconfirm",
+            "type": "DEPENDENT",
+            "key": "Openconfirm",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP == '5')].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          },
+          {
+            "uuid": "9484cbbb0e8c48919bf1723cd8222a92",
+            "name": "TOTAL DE PEERS OPENSENT",
+            "type": "DEPENDENT",
+            "key": "OPENSENT",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP == '4')].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          },
+          {
+            "uuid": "ffe679572ae5436a9e1e9e24663e541d",
+            "name": "TEMPERATURA",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11.16973825",
+            "key": "TemperaturaMtx",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "ºC",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "CPU"
+              }
+            ]
+          },
+          {
+            "uuid": "7586acca053f4f5fb91702bac22e1c7e",
+            "name": "TOTAL DE PEERS",
+            "type": "DEPENDENT",
+            "key": "total",
+            "delay": "0",
+            "history": "30d",
+            "trends": "90d",
+            "preprocessing": [
+              {
+                "type": "JSONPATH",
+                "parameters": [
+                  "$[?(@.BGP)].length()"
+                ]
+              }
+            ],
+            "master_item": {
+              "key": "countbgp"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "COUNT-BGP"
+              }
+            ]
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "df879a431dca45669fe26fd5b2cc29a3",
+            "name": "CPU",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#SNMPVALUE},1.3.6.1.4.1.2011.6.3.4.1.3]",
+            "key": "huaweihwCpuDevIndex",
+            "delay": "1h",
+            "lifetime": "1d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "3a546f3c0c28468fa24bde3f0dab4b2c",
+                "name": "USO DE CPU",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.6.3.4.1.3.{#SNMPINDEX}",
+                "key": "huaweihwAvgDuty1min[{#SNMPINDEX}]",
+                "history": "30d",
+                "trends": "90d",
+                "units": "%",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "CPU"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "c70203a516ad43108233e8cd20f27f22",
+            "name": "MPU Discovery Memória",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#ENT_NAME},1.3.6.1.2.1.47.1.1.1.1.7]",
+            "key": "mpum.discovery",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#ENT_NAME}",
+                  "value": "^NetEngine 8000 M8 frame$",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "c1ff1245a3204193a73e67a6a7846f8f",
+                "name": "{#ENT_NAME}: Utilização de Memória",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7.{#SNMPINDEX}",
+                "key": "memory.util.[{#SNMPINDEX}]",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "%",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "CPU"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "f9fddcd80caa49468537d24b819fbc63",
+            "name": "DESCOVERY BGP",
+            "type": "EXTERNAL",
+            "key": "teste.py[{$SNMP_COMMUNITY},{HOST.IP},{$SNMP_PORT}]",
+            "delay": "1h",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "b71e3edb7f194572aba5c5df475f0788",
+                "name": "{#ASNNAME}/{#REMOTEADD} - AS",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.177.1.1.2.1.2.{#SNMPINDEX}",
+                "key": "as.[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "trends": "90d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "AS-PEER"
+                  }
+                ]
+              },
+              {
+                "uuid": "49fe7ef4d4b743cb9eeedfbf043cfe17",
+                "name": "{#ASNNAME}/{#REMOTEADD} - Tempo estabelecido",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.177.1.1.2.1.7.{#SNMPINDEX}",
+                "key": "BgpEstablishedTimePeerIpva[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "trends": "90d",
+                "units": "uptime",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TempoEstabelecido"
+                  }
+                ]
+              },
+              {
+                "uuid": "8fd231f18f434c4d89bd4c04c0206318",
+                "name": "{#ASNNAME}/{#REMOTEADD} - Prefixo recebidos",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.177.1.1.3.1.1.{#SNMPINDEX}",
+                "key": "BgpPeerPrefixRcvCounter[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "trends": "90d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "PrefixRecebidos"
+                  }
+                ]
+              },
+              {
+                "uuid": "082577baed1c4424856390dd4c0cdcd2",
+                "name": "{#ASNNAME}/{#REMOTEADD} - Status do peer",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.177.1.1.2.1.5.{#SNMPINDEX}",
+                "key": "status.bgp.peer.ipv4[{#SNMPINDEX}]",
+                "history": "30d",
+                "trends": "90d",
+                "valuemap": {
+                  "name": "BgpPeerState"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "PeerStatus"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "08483b6a561e4898b9e0c29625d249e9",
+                    "expression": "last(/Huawei NE40 - NE8000 - BGP/status.bgp.peer.ipv4[{#SNMPINDEX}])<>6",
+                    "name": "{#ASNNAME}/{#REMOTEADD} - DOWN",
+                    "priority": "AVERAGE",
+                    "tags": [
+                      {
+                        "tag": "BGP_OFF"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "valuemaps": [
+          {
+            "uuid": "b4a6ba09cea84521873558efa371a2c1",
+            "name": "BgpPeerState",
+            "mappings": [
+              {
+                "value": "1",
+                "newvalue": "idle"
+              },
+              {
+                "value": "2",
+                "newvalue": "connect"
+              },
+              {
+                "value": "3",
+                "newvalue": "active"
+              },
+              {
+                "value": "4",
+                "newvalue": "opensent"
+              },
+              {
+                "value": "5",
+                "newvalue": "openconfirm"
+              },
+              {
+                "value": "6",
+                "newvalue": "established"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
