@@ -1,101 +1,220 @@
 {
-  "proxyid": "0",
-  "host": "Technobox - DNS",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Technobox - DNS",
-  "flags": "0",
-  "templateid": "10800",
-  "description": "Template para monitoramento de servidores DNS Technobox via SNMP.\r\n\r\nEste template monitora parâmetros operacionais dos servidores DNS Technobox, incluindo:\r\n- Estatísticas do serviço recursivo (consultas, hits, misses, erros)\r\n- Estatísticas do serviço autoritativo\r\n- Conexões UDP e TCP do serviço autoritativo\r\n- Status e descrição do serviço\r\n\r\nOIDs baseados em TECHNODNS-MIB.\r\n\r\n#=======================================\r\nCriado por: kyulucas\r\nData: 01/12/2025\r\n#=======================================",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "e705bf53046e4911b1494408a9c42926",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "49",
-      "name": "Technobox - DNS",
-      "uuid": "9a8c032b388f4d81a5b4fef524f87d84"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10801",
-      "proxyid": "0",
-      "host": "TechnoBox DNS-01",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "TechnoBox DNS-01",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10802",
-      "proxyid": "0",
-      "host": "TechnoBox DNS-02",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "TechnoBox DNS-02",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "e705bf53046e4911b1494408a9c42926",
+        "template": "Technobox - DNS",
+        "name": "Technobox - DNS",
+        "description": "Template para monitoramento de servidores DNS Technobox via SNMP.\n\nEste template monitora parâmetros operacionais dos servidores DNS Technobox, incluindo:\n- Estatísticas do serviço recursivo (consultas, hits, misses, erros)\n- Estatísticas do serviço autoritativo\n- Conexões UDP e TCP do serviço autoritativo\n- Status e descrição do serviço\n\nOIDs baseados em TECHNODNS-MIB.\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
+        "groups": [
+          {
+            "name": "Technobox - DNS"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "1f66270a685b4f43bf2df8dc8635eab1",
+            "name": "DNS Recursivo - Consultas ANY",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.10.0",
+            "key": "getTechnoDNSserviceAny",
+            "history": "7d",
+            "trends": "0",
+            "description": "Consultas do tipo ANY no serviço recursivo. Indica consultas que solicitam todos os tipos de registros DNS para um domínio."
+          },
+          {
+            "uuid": "2bfaae8202c94dc0a0878331914abfbf",
+            "name": "DNS - Contador",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.1.0",
+            "key": "technoDNSCount",
+            "history": "7d",
+            "trends": "90d",
+            "description": "Contador de amostra do serviço DNS. Valor inteiro que representa uma contagem de algo relacionado ao serviço."
+          },
+          {
+            "uuid": "60f510758c7b434d9a06af81cbb0b2b3",
+            "name": "DNS - Descrição",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.2.0",
+            "key": "technoDNSDescription",
+            "delay": "1h",
+            "history": "30d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "description": "Descrição do serviço DNS. Informação textual sobre o serviço."
+          },
+          {
+            "uuid": "491ac6c062804516b79ee3d46daf37db",
+            "name": "DNS Recursivo - Consultas HIT",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.8.0",
+            "key": "technoDNShit",
+            "history": "7d",
+            "trends": "0",
+            "description": "Consultas com cache hit no serviço recursivo. Indica consultas que foram respondidas diretamente do cache, melhorando a performance."
+          },
+          {
+            "uuid": "4a184206ab414d09b4de92e2f824796d",
+            "name": "DNS Recursivo - Consultas MISS",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.7.0",
+            "key": "technoDNSmiss",
+            "history": "7d",
+            "trends": "0",
+            "description": "Consultas com cache miss no serviço recursivo. Indica consultas que não foram encontradas no cache e precisaram ser resolvidas externamente."
+          },
+          {
+            "uuid": "c49d561554ef4577b5cf2abc5849be05",
+            "name": "DNS Recursivo - Consultas NOERROR",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.4.0",
+            "key": "technoDNSnoerror",
+            "history": "7d",
+            "trends": "0",
+            "description": "Consultas com resposta NOERROR no serviço recursivo. Indica consultas bem-sucedidas sem erros."
+          },
+          {
+            "uuid": "189a84ff474f43f685690294aedea0ef",
+            "name": "DNS Recursivo - Consultas NXDOMAIN",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.5.0",
+            "key": "technoDNSnxdomain",
+            "history": "7d",
+            "trends": "0",
+            "description": "Consultas com resposta NXDOMAIN no serviço recursivo. Indica consultas para domínios que não existem."
+          },
+          {
+            "uuid": "5c55ca3a0f3f439b83f9ed5c62afbb46",
+            "name": "DNS Recursivo - Consultas SERVFAIL",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.6.0",
+            "key": "technoDNSservfail",
+            "history": "7d",
+            "trends": "0",
+            "description": "Consultas com resposta SERVFAIL no serviço recursivo. Indica falhas no servidor durante o processamento da consulta."
+          },
+          {
+            "uuid": "c6284ec1df2a48a3a76891c0daa7bbc6",
+            "name": "DNS Autoritativo - Status do Serviço",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.11.0",
+            "key": "technoDNSserviceAutoritativo",
+            "history": "7d",
+            "trends": "0",
+            "description": "Status do serviço autoritativo DNS. Indica o estado operacional do serviço que responde autoritativamente por domínios."
+          },
+          {
+            "uuid": "13f988925ec247ae9258fc38fe4f9176",
+            "name": "DNS Recursivo - Status do Serviço",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.9.0",
+            "key": "technoDNSserviceRecursivo",
+            "history": "7d",
+            "trends": "0",
+            "description": "Status do serviço recursivo DNS. Indica o estado operacional do serviço de resolução recursiva."
+          },
+          {
+            "uuid": "92e690e6ffec40df9ac2a0f909775bf2",
+            "name": "DNS Autoritativo - Conexões TCP IPv4",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.13.0",
+            "key": "TechnoDNSserviceTCP4",
+            "history": "7d",
+            "trends": "0",
+            "description": "Número de conexões TCP IPv4 do serviço autoritativo. Indica a quantidade de conexões TCP ativas no serviço autoritativo."
+          },
+          {
+            "uuid": "7077b8f0520d4a08a0ac0f8be3d50c89",
+            "name": "DNS Autoritativo - Conexões UDP IPv4",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.48813.12.0",
+            "key": "TechnoDNSserviceUDP4",
+            "history": "7d",
+            "trends": "0",
+            "description": "Número de conexões UDP IPv4 do serviço autoritativo. Indica a quantidade de conexões UDP ativas no serviço autoritativo."
+          }
+        ]
+      }
+    ]
+  }
 }
