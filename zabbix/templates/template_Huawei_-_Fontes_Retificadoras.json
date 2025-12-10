@@ -1,132 +1,490 @@
 {
-  "proxyid": "0",
-  "host": "Huawei - Fontes Retificadoras",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Huawei - Fontes Retificadoras",
-  "flags": "0",
-  "templateid": "10797",
-  "description": "Template para monitoramento de fontes retificadoras Huawei via SNMP.\r\n\r\nEste template monitora parâmetros operacionais e de configuração de fontes retificadoras Huawei, incluindo:\r\n- Status e parâmetros do grupo de retificadores\r\n- Status e parâmetros individuais de cada retificador\r\n- Status e parâmetros das baterias\r\n- Detecção de falta de energia e modo de operação\r\n\r\nOIDs baseados em EMAP-MIB (HUAWEI-MIB).\r\n\r\n#=======================================\r\nCriado por: kyulucas\r\nData: 01/12/2025\r\n#=======================================",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "eb2a756206ec4a16a985080f20ccddcf",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "48",
-      "name": "Huawei - Fontes Retificadoras",
-      "uuid": "7d9b9033ef5e409f8dd158865d918a19"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10792",
-      "proxyid": "0",
-      "host": "ENERGIA POP PARAIBA HW",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ENERGIA POP PARAIBA HW",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10798",
-      "proxyid": "0",
-      "host": "ENERGIA POP CPD TR RACK 1 HW",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ENERGIA POP CPD TR RACK 1 HW",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10799",
-      "proxyid": "0",
-      "host": "ENERGIA POP CPD TR RACK 2 HW",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ENERGIA POP CPD TR RACK 2 HW",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "eb2a756206ec4a16a985080f20ccddcf",
+        "template": "Huawei - Fontes Retificadoras",
+        "name": "Huawei - Fontes Retificadoras",
+        "description": "Template para monitoramento de fontes retificadoras Huawei via SNMP.\n\nEste template monitora parâmetros operacionais e de configuração de fontes retificadoras Huawei, incluindo:\n- Status e parâmetros do grupo de retificadores\n- Status e parâmetros individuais de cada retificador\n- Status e parâmetros das baterias\n- Detecção de falta de energia e modo de operação\n\nOIDs baseados em EMAP-MIB (HUAWEI-MIB).\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
+        "groups": [
+          {
+            "name": "Huawei - Fontes Retificadoras"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "b6507ddc10154fe5b92140b6b28fe448",
+            "name": "Baterias - Status de Carga",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.4.2.3.0",
+            "key": "battsChargeStatus",
+            "history": "7d",
+            "trends": "0",
+            "description": "Estado de carga do grupo de baterias. Valores: 1=floatCharge (carregamento flutuante - energia elétrica), 2=boostCharge (carregamento rápido - energia elétrica), 3=disCharge (descarregando - modo bateria), 4=hibernating (hibernando), 7=offline (offline), 255=unknown (desconhecido)."
+          },
+          {
+            "uuid": "1994e5e823924668be0292763a6778cb",
+            "name": "Baterias - Tempo de Backup",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.4.2.2.0",
+            "key": "battsPreDischargeTime",
+            "history": "7d",
+            "trends": "90d",
+            "units": "min",
+            "description": "Tempo de backup estimado do grupo de baterias. Indica o tempo real de backup do grupo. Faixa: 0 a 15360 minutos. Valor inteiro."
+          },
+          {
+            "uuid": "62e5c1e76b8b43a7acb3ce121378da27",
+            "name": "Baterias - Corrente Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.4.2.1.0",
+            "key": "battsTotalCurrent",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "A",
+            "description": "Corrente total do grupo de baterias. Indica estatísticas em tempo real do grupo. Valor com precisão de uma casa decimal (0.1A). Valores negativos indicam descarga (modo bateria), valores positivos indicam carga (energia elétrica).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "9db941025782414ab9536ad37cadc7d5",
+            "name": "Retificador - Tensão AC de Entrada",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.2.1.6.28672",
+            "key": "rectACVoltage",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "V",
+            "description": "Tensão de entrada em corrente alternada (AC) do módulo retificador. Faixa: 0 a 600V com precisão de uma casa decimal (0.1V). Indica a tensão da rede elétrica de entrada.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "c5fa460f71a04b6f939e90f3389e4ab1",
+            "name": "Retificador - Potência DC",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.2.1.5.28672",
+            "key": "rectDCOutputPower",
+            "history": "7d",
+            "trends": "90d",
+            "units": "W",
+            "description": "Potência de saída em corrente contínua (DC) do módulo retificador. Faixa: 0 a 30000W. Valor inteiro em Watts."
+          },
+          {
+            "uuid": "1994e5e823924668be0292763a6778ca",
+            "name": "Retificador - Eficiência",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.1.1.10.28672",
+            "key": "rectEfficiency",
+            "delay": "5m",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "30d",
+            "units": "%",
+            "description": "Eficiência do módulo retificador. É um atributo inerente do equipamento. Faixa: 0 a 100% com precisão de uma casa decimal (0.1%). Indica a eficiência de conversão de energia.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "922a21f320a84c6597d5d4bd354f0035",
+            "name": "Retificador - Status Ligado/Desligado",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.1.1.12.28672",
+            "key": "rectOnOffStatus",
+            "history": "7d",
+            "trends": "0",
+            "description": "Status de ligado/desligado do módulo retificador. Valores: 1=on (ligado), 2=off (desligado), 255=nullOper (operação nula). Configurável pelo usuário para controlar o módulo."
+          },
+          {
+            "uuid": "62e5c1e76b8b43a7acb3ce121378da26",
+            "name": "Retificador - Status Operacional",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.2.1.99.28672",
+            "key": "rectOperStatus",
+            "history": "7d",
+            "trends": "0",
+            "description": "Estado operacional do módulo retificador. Valores: 1=normal (energia elétrica), 2=fault (falha), 3=protect (proteção automática), 4=commFail (falha de comunicação), 5=switchOff (desligado), 6=invalid (inválido), 7=noConfig (não configurado), 8=acOff (sem energia na tomada), 9=rectLost (retificador perdido), 254=alarmResume (alarme resolvido), 255=unknown (desconhecido)."
+          },
+          {
+            "uuid": "f792544073024ec98f69a20c07162be5",
+            "name": "Retificador - Corrente de Saída",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.2.1.2.28672",
+            "key": "rectOutputCurrent",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "A",
+            "description": "Corrente de saída do módulo retificador. Parâmetro analógico coletado em tempo real. Faixa: 0 a 300A com precisão de uma casa decimal (0.1A).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "eb88b914f9b540368b8fb72b23f6a77e",
+            "name": "Retificador - Tensão de Saída",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.2.1.3.28672",
+            "key": "rectOutputVoltage",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "V",
+            "description": "Tensão de saída do módulo retificador. Parâmetro analógico coletado em tempo real. Faixa: 0 a 65V com precisão de uma casa decimal (0.1V).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "b6507ddc10154fe5b92140b6b28fe447",
+            "name": "Retificador - Corrente Nominal",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.1.1.9.28672",
+            "key": "rectRatedCurrent",
+            "delay": "5m",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "30d",
+            "units": "A",
+            "description": "Corrente nominal do módulo retificador. É um atributo inerente do equipamento. Faixa: 0 a 200A com precisão de uma casa decimal (0.1A).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "eb88b914f9b540368b8fb72b23f6a77f",
+            "name": "Retificador - Número de Série",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.1.1.8.28672",
+            "key": "rectSerialNumber",
+            "delay": "1h",
+            "history": "30d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "description": "Número de série do módulo retificador. Indica a etiqueta eletrônica do produto para identificação única do equipamento."
+          },
+          {
+            "uuid": "10c82485048f4630a0d0e44ff780b6cb",
+            "name": "Grupo Retificadores - ID do Grupo",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.1.0",
+            "key": "rectsGroupId",
+            "delay": "1h",
+            "history": "30d",
+            "trends": "0",
+            "description": "ID único do grupo de módulos retificadores. Os primeiros dígitos indicam o tipo de dispositivo e os últimos três dígitos indicam o número de série do dispositivo."
+          },
+          {
+            "uuid": "d22d9df0cb3541b5aeb10cf0f09aadcf",
+            "name": "Grupo Retificadores - Nome do Grupo",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.2.0",
+            "key": "rectsGroupName",
+            "delay": "1h",
+            "history": "30d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "description": "Nome do grupo de módulos retificadores, configurável pelo usuário."
+          },
+          {
+            "uuid": "9db941025782414ab9536ad37cadc7d4",
+            "name": "Grupo Retificadores - Capacidade Alta",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.12.0",
+            "key": "rectsHighRectifierCapacity",
+            "delay": "5m",
+            "history": "7d",
+            "trends": "30d",
+            "units": "%",
+            "description": "Limite superior de capacidade dos retificadores. Faixa: 0 a 150%. Configurável pelo usuário. Indica o limite alto de capacidade do retificador."
+          },
+          {
+            "uuid": "eb88b914f9b540368b8fb72b23f6a77d",
+            "name": "Grupo Retificadores - Uso de Carga",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.10.0",
+            "key": "rectsLoadUsage",
+            "history": "7d",
+            "trends": "90d",
+            "units": "%",
+            "description": "Percentual de uso da carga do grupo de retificadores. Faixa: 0 a 150%. Indica a capacidade de carga utilizada."
+          },
+          {
+            "uuid": "48d2e191761449cfbf866155257fffb7",
+            "name": "Grupo Retificadores - Capacidade Baixa",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.13.0",
+            "key": "rectsLowRectifierCapacity",
+            "delay": "5m",
+            "history": "7d",
+            "trends": "30d",
+            "units": "%",
+            "description": "Limite inferior de capacidade dos retificadores. Faixa: 0 a 150%. Configurável pelo usuário. Indica o limite baixo de capacidade do retificador."
+          },
+          {
+            "uuid": "f792544073024ec98f69a20c07162be6",
+            "name": "Retificador - Versão do Software",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.1.1.5.28672",
+            "key": "rectSoftwareVersion",
+            "delay": "1h",
+            "history": "30d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "description": "Versão do software/firmware do módulo retificador. Identifica a versão do software instalado no equipamento."
+          },
+          {
+            "uuid": "922a21f320a84c6597d5d4bd354f0034",
+            "name": "Grupo Retificadores - Tensão de Saída",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.6.0",
+            "key": "rectsOutputVoltage",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "V",
+            "description": "Tensão de saída ajustável do módulo retificador. Faixa: 36.0 a 65.0V com precisão de uma casa decimal. Valor configurável pelo usuário.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "05c91876ff8d4dbcaa4648b76ec7855e",
+            "name": "Grupo Retificadores - Limite de Sobretensão",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.14.0",
+            "key": "rectsOverVoltProtThres",
+            "delay": "5m",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "30d",
+            "units": "V",
+            "description": "Limite de proteção contra sobretensão. Faixa: 56.0 a 60.5V com precisão de uma casa decimal. Configurável pelo usuário.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "3a6e5187a11046d08d64283c36323c46",
+            "name": "Grupo Retificadores - Tensão Nominal",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.5.0",
+            "key": "rectsRatedVoltage",
+            "delay": "5m",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "30d",
+            "units": "V",
+            "description": "Tensão nominal do grupo de módulos retificadores. É um atributo inerente do equipamento. Faixa: 42.0 a 58.3V com precisão de uma casa decimal.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "c5fa460f71a04b6f939e90f3389e4ab0",
+            "name": "Grupo Retificadores - Potência AC de Entrada Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.11.0",
+            "key": "rectsTotalACInputPower",
+            "history": "7d",
+            "trends": "90d",
+            "units": "W",
+            "description": "Potência total de entrada em corrente alternada (AC) do grupo de retificadores. Valor inteiro em Watts."
+          },
+          {
+            "uuid": "3f7991233ce841679dc595a01b0df451",
+            "name": "Grupo Retificadores - Corrente Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.3.0",
+            "key": "rectsTotalCurrent",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "A",
+            "description": "Corrente total do grupo de módulos retificadores no site. Indica estatísticas em tempo real do grupo. Valor com precisão de uma casa decimal (0.1A).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "f792544073024ec98f69a20c07162be4",
+            "name": "Grupo Retificadores - Potência DC Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.9.0",
+            "key": "rectsTotalDCPower",
+            "history": "7d",
+            "trends": "90d",
+            "units": "W",
+            "description": "Potência total de saída em corrente contínua (DC) do grupo de retificadores. Valor inteiro em Watts."
+          },
+          {
+            "uuid": "3f3d87730a4e44d091cfb54c485a5507",
+            "name": "Grupo Retificadores - Quantidade Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.1.4.0",
+            "key": "rectsTotalQuantity",
+            "delay": "5m",
+            "history": "7d",
+            "trends": "0",
+            "units": "pcs",
+            "description": "Quantidade total de módulos retificadores no grupo. Faixa de valores: 0 a 256 unidades."
+          },
+          {
+            "uuid": "05c91876ff8d4dbcaa4648b76ec7855f",
+            "name": "Retificador - Temperatura",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.3.2.2.1.8.28672",
+            "key": "rectTemperature",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "°C",
+            "description": "Temperatura do módulo retificador. Faixa: -300 a 300°C com precisão de uma casa decimal (0.1°C). Monitora a temperatura interna do equipamento.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
