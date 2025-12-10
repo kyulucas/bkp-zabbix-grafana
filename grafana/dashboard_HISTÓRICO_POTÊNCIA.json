@@ -1,1816 +1,1776 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": false,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "historico-potencia",
-    "url": "/d/dd8402f8-614a-416a-999e-7b76cf9a4e63/historico-potencia",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-11-27T06:35:34-05:00",
-    "updated": "2025-12-03T09:03:56-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 4,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
       }
-    }
+    ]
   },
-  "dashboard": {
-    "annotations": {
-      "list": [
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 11,
+      "panels": [],
+      "title": "SW-01 MPLS POP CPD TR",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#00486e",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "noValue": "SW-01 MPLS POP CPD TR",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
         {
-          "builtIn": 1,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
           "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
           },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "type": "dashboard"
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
         }
-      ]
+      ],
+      "type": "stat"
     },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": 67,
-    "links": [],
-    "panels": [
-      {
-        "collapsed": false,
-        "gridPos": {
-          "h": 1,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 11,
-        "panels": [],
-        "title": "SW-01 MPLS POP CPD TR",
-        "type": "row"
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
       },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "fixedColor": "#00486e",
-              "mode": "fixed"
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
             },
-            "mappings": [],
-            "noValue": "SW-01 MPLS POP CPD TR",
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
             }
           },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 2,
-          "w": 24,
-          "x": 0,
-          "y": 1
-        },
-        "id": 2,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "area",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": ""
-            },
-            "host": {
-              "filter": ""
-            },
-            "item": {
-              "filter": ""
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
               },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
+              {
+                "color": "red",
+                "value": 80
               }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 0,
-          "y": 3
-        },
-        "id": 3,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
+            ]
           }
         },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus1(LACP MPLs Trans 6730 Link BGP): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus1(LACP MPLs Trans 6730 Link BGP): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "B",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus1(LACP ): RX Power",
-        "type": "timeseries"
+        "overrides": []
       },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 12,
-          "y": 3
-        },
-        "id": 4,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus1(LACP MPLs Trans 6730 Link BGP): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus2(LACP MPLs Trans 6730 Link BGP): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "B",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus2(LACP ): RX Power",
-        "type": "timeseries"
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 3
       },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 0,
-          "y": 9
-        },
-        "id": 5,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus3(MPLS-TRANS-6730-HI OLts): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "a",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus3(MPLS-TRANS-6730-HI OLts): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "b",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus3(MPLS-TRANS-6730-HI): RX Power",
-        "type": "timeseries"
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
       },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
           },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 12,
-          "y": 9
-        },
-        "id": 6,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
           },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus1(LACP MPLs Trans 6730 Link BGP): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
           }
         },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus4(MPLS-TRANS-6730-HI OLts): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
+        {
+          "application": {
+            "filter": "TX-POWER"
           },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus4(MPLS-TRANS-6730-HI OLts): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "B",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus1(LACP MPLs Trans 6730 Link BGP): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
           }
-        ],
-        "title": "Interface sfp-sfpplus4(MPLS-TRANS-6730-HI): RX Power",
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 0,
-          "y": 15
-        },
-        "id": 7,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus5(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-01): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "a",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus5(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-01): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "b",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus5(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP): RX Power",
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 12,
-          "y": 15
-        },
-        "id": 8,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus6(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-02): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "a",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus6(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-02): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "b",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus6(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP): RX Power",
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 0,
-          "y": 21
-        },
-        "id": 9,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus7(Link Circuito Torre Tres Rios DESATIVADO): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "a",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus7(Link Circuito Torre Tres Rios DESATIVADO): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "b",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus7(Link Circuito Torre Tres Rios): RX Power",
-        "type": "timeseries"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 6,
-          "w": 12,
-          "x": 12,
-          "y": 21
-        },
-        "id": 10,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "hide": false,
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "a",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [],
-            "group": {
-              "filter": "SWITCH"
-            },
-            "host": {
-              "filter": "SW-01 MPLS CDP TR CCR1072"
-            },
-            "item": {
-              "filter": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "b",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power",
-        "type": "timeseries"
-      }
-    ],
-    "preload": false,
-    "refresh": "30s",
-    "schemaVersion": 42,
-    "tags": [],
-    "templating": {
-      "list": []
+        }
+      ],
+      "title": "Interface sfp-sfpplus1(LACP ): RX Power",
+      "type": "timeseries"
     },
-    "time": {
-      "from": "now-1h",
-      "to": "now"
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 3
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus1(LACP MPLs Trans 6730 Link BGP): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus2(LACP MPLs Trans 6730 Link BGP): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus2(LACP ): RX Power",
+      "type": "timeseries"
     },
-    "timepicker": {},
-    "timezone": "",
-    "title": "HISTÓRICO POTÊNCIA",
-    "uid": "dd8402f8-614a-416a-999e-7b76cf9a4e63",
-    "version": 4,
-    "weekStart": ""
-  }
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus3(MPLS-TRANS-6730-HI OLts): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "a",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus3(MPLS-TRANS-6730-HI OLts): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "b",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus3(MPLS-TRANS-6730-HI): RX Power",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus4(MPLS-TRANS-6730-HI OLts): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus4(MPLS-TRANS-6730-HI OLts): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus4(MPLS-TRANS-6730-HI): RX Power",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 15
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus5(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-01): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "a",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus5(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-01): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "b",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus5(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP): RX Power",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 15
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus6(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-02): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "a",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus6(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP VLAN 667 Fibra-02): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "b",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus6(Link Circuito MPLS-07 Vila /MPLS-05 Chiador / MPLS-06 Santana LACP): RX Power",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 0,
+        "y": 21
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus7(Link Circuito Torre Tres Rios DESATIVADO): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "a",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus7(Link Circuito Torre Tres Rios DESATIVADO): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "b",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus7(Link Circuito Torre Tres Rios): RX Power",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 12,
+        "x": 12,
+        "y": 21
+      },
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "a",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "b",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "30s",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "HISTÓRICO POTÊNCIA",
+  "uid": "dd8402f8-614a-416a-999e-7b76cf9a4e63",
+  "weekStart": ""
 }
