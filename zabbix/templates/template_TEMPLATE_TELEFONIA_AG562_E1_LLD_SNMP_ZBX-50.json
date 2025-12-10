@@ -1,70 +1,621 @@
 {
-  "proxyid": "0",
-  "host": "TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0",
-  "flags": "0",
-  "templateid": "10732",
-  "description": "Template desenvolvido para Aligera AG562\r\nCurrent running firmware is: AG562 - 5.46\r\nDesenvolvido por Douglas Boldrini\r\n\r\nLink: https://aligera.com.br/gateway-ag561/",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "e5bc342cfdec4428ae802bab8a7ee167",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "40",
-      "name": "Templates-SBS",
-      "uuid": "61c7592baccc46468e9ad8f7efdf6ea2"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10733",
-      "proxyid": "0",
-      "host": "E1-Aligera",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "E1-Aligera",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "e5bc342cfdec4428ae802bab8a7ee167",
+        "template": "TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0",
+        "name": "TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0",
+        "description": "Template desenvolvido para Aligera AG562\nCurrent running firmware is: AG562 - 5.46\nDesenvolvido por Douglas Boldrini\n\nLink: https://aligera.com.br/gateway-ag561/",
+        "groups": [
+          {
+            "name": "Templates-SBS"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "f25f1922d79c4c90b031326e71a96a8d",
+            "name": "Name",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "ALIGERA-MIB::deviceName.0",
+            "key": "deviceName",
+            "delay": "84600s",
+            "history": "7d",
+            "value_type": "CHAR",
+            "trends": "0",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Geral"
+              }
+            ]
+          },
+          {
+            "uuid": "09d7ef31f88a4dcb9fe639e88682788e",
+            "name": "Uptime",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "1.3.6.1.2.1.1.3.0",
+            "key": "e1StatsTime",
+            "delay": "84600s",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "uptime",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.01"
+                ]
+              }
+            ],
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Geral"
+              }
+            ]
+          },
+          {
+            "uuid": "ad8b4e08c18b4e31ab180f73e8d30e22",
+            "name": "Perda de Pacote",
+            "type": "SIMPLE",
+            "key": "icmppingloss[,,,,]",
+            "delay": "120s",
+            "history": "7d",
+            "trends": "90d",
+            "units": "%",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Discovery Interface"
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "b196f5d2d1454c82ae244f31a7763408",
+                "expression": "avg(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmppingloss[,,,,],#3)>35",
+                "name": "{HOSTNAME} com perda de pacote",
+                "priority": "WARNING",
+                "description": "Perda de Pacotes acima de 50%"
+              }
+            ]
+          },
+          {
+            "uuid": "a6bf3dbc2515426598106d05876055cd",
+            "name": "Latencia Ping",
+            "type": "SIMPLE",
+            "key": "icmppingsec",
+            "delay": "120s",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "ms",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Discovery Interface"
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "0aa61930a07c459ab0094dae7e4f75e3",
+                "expression": "avg(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmppingsec,2m)>100",
+                "name": "{HOSTNAME} esta com latência (>100ms)",
+                "priority": "WARNING",
+                "description": "Latência a cima de 100ms"
+              }
+            ]
+          },
+          {
+            "uuid": "6030a6e68ab04bbc88c45e9655fe8564",
+            "name": "Ping",
+            "type": "SIMPLE",
+            "key": "icmpping[{HOST.IP},64,20,63,50]",
+            "delay": "120s",
+            "history": "7d",
+            "valuemap": {
+              "name": "E1-ALIGERA-STATUS-NETWROK"
+            },
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Discovery Interface"
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "baab4538ff184900ae12455f03bcc640",
+                "expression": "sum(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmpping[{HOST.IP},64,20,63,50],60s)=0",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "sum(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmpping[{HOST.IP},64,20,63,50],60s)=1",
+                "name": "{HOSTNAME} não responde (2m)",
+                "priority": "DISASTER"
+              }
+            ]
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "ae53e6233dd94616874c00cfc9437b23",
+            "name": "Descoberta LLD Channel",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#CHANNAME},ALIGERA-MIB::chanIndex,{#CHANSTATUS},ALIGERA-MIB::chanStatus]",
+            "key": "chan.discovery",
+            "delay": "84600s",
+            "filter": {
+              "evaltype": "AND",
+              "conditions": [
+                {
+                  "macro": "{#CHANSTATUS}",
+                  "value": ".*",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#CHANSTATUS}",
+                  "value": "(0|3)",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "item_prototypes": [
+              {
+                "uuid": "34815acc684444fea0675acac0825e2f",
+                "name": "Channel $1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::chanStatus.{#SNMPINDEX}",
+                "key": "chanStatus[{#CHANNAME}]",
+                "delay": "120s",
+                "valuemap": {
+                  "name": "E1-ALIGERA-STATUS-CHANNEL"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Channel Status"
+                  },
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Channel"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "4e6f5982cadf4798885dac2bc96a26fb",
+                    "expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/chanStatus[{#CHANNAME}])=0",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/chanStatus[{#CHANNAME}])=1",
+                    "name": "Channel {#CHANNAME} de {HOST.NAME}: BLOCKED",
+                    "priority": "DISASTER",
+                    "description": "Channel Status (0 =BLOCKED, 1 =IDLE, 2 =BUSY, 3 =NA)",
+                    "manual_close": "YES"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "aac89dc02a2e4b07b974b17e4f662776",
+            "name": "Descoberta LLD Events",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#EVENTSDESCR},ALIGERA-MIB::e1Index]",
+            "key": "e1Index.discovery",
+            "delay": "84600s",
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "04120917367e463886e765f3cd531f6d",
+                "name": "AIS Events E$1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::e1AISEvents.{#SNMPINDEX}",
+                "key": "e1AISEvents[{#EVENTSDESCR}]",
+                "delay": "120s",
+                "history": "30d",
+                "trends": "90d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Events"
+                  }
+                ]
+              },
+              {
+                "uuid": "71424d48cf714ee3940b8290c1426910",
+                "name": "Alarms Status E$1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::e1Alarms.{#SNMPINDEX}",
+                "key": "e1Alarms[{#EVENTSDESCR}]",
+                "delay": "120s",
+                "history": "30d",
+                "trends": "90d",
+                "valuemap": {
+                  "name": "E1-ALIGERA-STATUS-ALARM"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Events"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "35732efde12448afbed8fa0e3081a812",
+                    "expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=2",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=0",
+                    "name": "E1({#EVENTSDESCR}) Alarms do {HOST.NAME}: AIS",
+                    "priority": "HIGH",
+                    "description": "Recepção de indicação de alarme. O modem envia este alarme para o E1 quando perde o sinal remoto. O AG561 pode enviar esse sinal para o E1 quando o keepalive_host está fora do ar;",
+                    "manual_close": "YES"
+                  },
+                  {
+                    "uuid": "6bd8f452d5254cf68538031cb77f2047",
+                    "expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=3",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=0",
+                    "name": "E1({#EVENTSDESCR}) Alarms do {HOST.NAME}: BFAE",
+                    "priority": "AVERAGE",
+                    "description": "Erro de alinhamento do quadro do E1. O sinal do E1 existe, mas o quadro está mal configurado;",
+                    "manual_close": "YES"
+                  },
+                  {
+                    "uuid": "437ac46b2d1a430ba88a5276f375aa0e",
+                    "expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=1",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=0",
+                    "name": "E1({#EVENTSDESCR}) Alarms do {HOST.NAME}: LoS",
+                    "priority": "DISASTER",
+                    "description": "Sem sinal na recepção do E1",
+                    "manual_close": "YES"
+                  },
+                  {
+                    "uuid": "dc1278f685024a7e92570e0bbe9424b4",
+                    "expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=4",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=0",
+                    "name": "E1({#EVENTSDESCR}) Alarms do {HOST.NAME}: MFAE",
+                    "priority": "AVERAGE",
+                    "description": "Erro de alinhamento de multiquadro do E1. O equipamento está configurado para verificar CRC, mas o quadro E1 que está sendo recebido não tem CRC;",
+                    "manual_close": "YES"
+                  },
+                  {
+                    "uuid": "0603df07b5294ce08cff646ff0ef2c65",
+                    "expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=5",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/e1Alarms[{#EVENTSDESCR}])=0",
+                    "name": "E1({#EVENTSDESCR}) Alarms do {HOST.NAME}: RAI",
+                    "priority": "INFO",
+                    "description": "Indicação de alarme remoto. O lado remoto está indicando algum alarme na recepção do E1, pode ser LoS, AIS, BFAE etc, no E1 remoto",
+                    "manual_close": "YES"
+                  }
+                ]
+              },
+              {
+                "uuid": "b0ff3217b8354267af31da864e734c25",
+                "name": "Code Violations E$1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::e1CodeViolations.{#SNMPINDEX}",
+                "key": "e1CodeViolations[{#EVENTSDESCR}]",
+                "delay": "120s",
+                "history": "30d",
+                "trends": "90d",
+                "description": "Code Violations: Erro de violação da codificação de linha. Geralmente é incrementada em virtude de problemas físicos, tais como cabos e/ou conectores;",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Events"
+                  }
+                ]
+              },
+              {
+                "uuid": "c196384b325a469a9e11de9de117b254",
+                "name": "Los Events E$1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::e1LOSEvents.{#SNMPINDEX}",
+                "key": "e1LOSEvents[{#EVENTSDESCR}]",
+                "delay": "120s",
+                "history": "30d",
+                "trends": "90d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Events"
+                  }
+                ]
+              },
+              {
+                "uuid": "2f92a8c647a84ccabada965a09f6de64",
+                "name": "RAI Events E$1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::e1RAIEvents.{#SNMPINDEX}",
+                "key": "e1RAIEvents[{#EVENTSDESCR}]",
+                "delay": "120s",
+                "history": "30d",
+                "trends": "90d",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Events"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "3165a5032c3f45059f78c3435c2d275c",
+            "name": "Descoberta LLD Interfaces",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFDESCR},IF-MIB::ifDescr]",
+            "key": "ifDescr.discovery",
+            "delay": "84600s",
+            "filter": {
+              "evaltype": "AND",
+              "conditions": [
+                {
+                  "macro": "{#IFDESCR}",
+                  "value": ".*",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#IFDESCR}",
+                  "value": "(lo|tunl0)",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime": "15d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "c3c2b1e80d7b4933894d3f9be5cddff1",
+                "name": "Alias Interface $1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "IF-MIB::ifAlias.{#SNMPINDEX}",
+                "key": "ifAlias[{#IFDESCR}]",
+                "value_type": "CHAR",
+                "trends": "0",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Interface"
+                  }
+                ]
+              },
+              {
+                "uuid": "aed21f54ebd842d094c1c434d16c4a51",
+                "name": "Interface \"$1\" Inbound",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "IF-MIB::ifInOctets.{#SNMPINDEX}",
+                "key": "ifInOctets[{#IFDESCR}]",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Interface"
+                  },
+                  {
+                    "tag": "Application",
+                    "value": "Transferencia"
+                  }
+                ]
+              },
+              {
+                "uuid": "63609672d3b549d8a10e815e1eecaa2e",
+                "name": "Status Operacional $1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "IF-MIB::ifOperStatus.{#SNMPINDEX}",
+                "key": "ifOperStatus[{#IFDESCR}]",
+                "valuemap": {
+                  "name": "E1-ALIGERA-STATUS-NETWROK"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Interface"
+                  }
+                ]
+              },
+              {
+                "uuid": "79abc36b481844afbeb03f8e99c3d0db",
+                "name": "Interface \"$1\" Outbound",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "IF-MIB::ifOutOctets.{#SNMPINDEX}",
+                "key": "ifOutOctets[{#IFDESCR}]",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Discovery Interface"
+                  },
+                  {
+                    "tag": "Application",
+                    "value": "Transferencia"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "valuemaps": [
+          {
+            "uuid": "f9149fc70edc4e65ac732f34719c22ef",
+            "name": "E1-ALIGERA-STATUS-ALARM",
+            "mappings": [
+              {
+                "value": "0",
+                "newvalue": "OK"
+              },
+              {
+                "value": "1",
+                "newvalue": "LOS"
+              },
+              {
+                "value": "2",
+                "newvalue": "AIS"
+              },
+              {
+                "value": "3",
+                "newvalue": "BFAE"
+              },
+              {
+                "value": "4",
+                "newvalue": "MFAE"
+              },
+              {
+                "value": "5",
+                "newvalue": "RAI"
+              }
+            ]
+          },
+          {
+            "uuid": "c2f8e4645c8b4422987c9e4004263075",
+            "name": "E1-ALIGERA-STATUS-CHANNEL",
+            "mappings": [
+              {
+                "value": "0",
+                "newvalue": "BLOCKED"
+              },
+              {
+                "value": "1",
+                "newvalue": "IDLE"
+              },
+              {
+                "value": "2",
+                "newvalue": "BUSY"
+              },
+              {
+                "value": "3",
+                "newvalue": "N/A"
+              }
+            ]
+          },
+          {
+            "uuid": "ae2497a4711b4bb289225b9396aea8c4",
+            "name": "E1-ALIGERA-STATUS-NETWROK",
+            "mappings": [
+              {
+                "value": "0",
+                "newvalue": "DOWN"
+              },
+              {
+                "value": "1",
+                "newvalue": "UP"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
