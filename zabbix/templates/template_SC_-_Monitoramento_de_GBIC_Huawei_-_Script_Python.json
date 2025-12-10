@@ -1,173 +1,536 @@
 {
-  "proxyid": "0",
-  "host": "SC - Monitoramento de GBIC Huawei - Script Python",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "SC - Monitoramento de GBIC Huawei - Script Python",
-  "flags": "0",
-  "templateid": "10686",
-  "description": "",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "a5964cc1f5c94148bf66219f839b2186",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [
-    {
-      "hostmacroid": "7830",
-      "hostid": "10686",
-      "macro": "{$SNMP_PORT}",
-      "value": "161",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    }
-  ],
-  "groups": [
-    {
-      "groupid": "25",
-      "name": "GBICS",
-      "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10689",
-      "proxyid": "0",
-      "host": "ROUTER-BGP",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ROUTER-BGP",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10692",
-      "proxyid": "0",
-      "host": "CONCENTRADOR PPPOE NE8K",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "CONCENTRADOR PPPOE NE8K",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10731",
-      "proxyid": "0",
-      "host": "ROUTER-BGP - VS CDN",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ROUTER-BGP - VS CDN",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10816",
-      "proxyid": "0",
-      "host": "ROUTER-PPPOE - BKP",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "ROUTER-PPPOE - BKP",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "a5964cc1f5c94148bf66219f839b2186",
+        "template": "SC - Monitoramento de GBIC Huawei - Script Python",
+        "name": "SC - Monitoramento de GBIC Huawei - Script Python",
+        "groups": [
+          {
+            "name": "GBICS"
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "5be42ccb38974a998a1d63c295e17bfa",
+            "name": "Discovery GBIC's[LANE]",
+            "type": "EXTERNAL",
+            "key": "huawei_gbicss[{HOST.IP},{$SNMP_PORT},{$SNMP_COMMUNITY}]",
+            "delay": "6h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFNAME}",
+                  "value": "100GE|40GE|25GE",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "item_prototypes": [
+              {
+                "uuid": "00bce2ee692b4bdfafd9806fa8f39e1b",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 1 - RX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "gbic.rxlane1[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\1"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "RX-POWER"
+                  },
+                  {
+                    "tag": "{#IFNAME}({#IFALIAS})"
+                  }
+                ]
+              },
+              {
+                "uuid": "4887c3c075ed40bcaa6b880440304a33",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 2 - RX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "gbic.rxlane2[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\2"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "RX-POWER"
+                  },
+                  {
+                    "tag": "{#IFNAME}({#IFALIAS})"
+                  }
+                ]
+              },
+              {
+                "uuid": "2979bdf05f444e1db60e7b20a3d8dabf",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 3 - RX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "gbic.rxlane3[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\3"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "RX-POWER"
+                  },
+                  {
+                    "tag": "{#IFNAME}({#IFALIAS})"
+                  }
+                ]
+              },
+              {
+                "uuid": "76be6c3625b44671962ec685f2a1aff8",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 4 - RX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "gbic.rxlane4[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\4"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "RX-POWER"
+                  },
+                  {
+                    "tag": "{#IFNAME}({#IFALIAS})"
+                  }
+                ]
+              },
+              {
+                "uuid": "986684fd2a8b4408ab7aa979d68882f3",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 1 - TX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "gbic.txlane1[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\1"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TX-POWER"
+                  }
+                ]
+              },
+              {
+                "uuid": "ea958b5b99d84231a705f923389eb4d4",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 2 - TX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "gbic.txlane2[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\2"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TX-POWER"
+                  }
+                ]
+              },
+              {
+                "uuid": "5059b5ad193548faaf267b4d0be79861",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 3 - TX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "gbic.txlane3[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\3"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TX-POWER"
+                  }
+                ]
+              },
+              {
+                "uuid": "55c80a41c15a444c8f54447361f17e57",
+                "name": "{#IFNAME}({#IFALIAS}) - LANE 4 - TX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "gbic.txlane44[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "!dbm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\4"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TX-POWER"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "4f7d6e52a17a445e9c9f62b102ed075b",
+            "name": "Discovery GBIC's",
+            "type": "EXTERNAL",
+            "key": "huawei_gbics[{HOST.IP},{$SNMP_PORT},{$SNMP_COMMUNITY}]",
+            "delay": "6h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFNAME}",
+                  "value": "10GE",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#IFNAME}",
+                  "value": "Gigabit",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "item_prototypes": [
+              {
+                "uuid": "71643129127741dabcea91cec861f7e6",
+                "name": "{#IFNAME}({#IFALIAS}) - RX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "gbic.rx[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "RX-POWER"
+                  },
+                  {
+                    "tag": "{#IFNAME}({#IFALIAS})"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "1a1ec2be8fff46d8b981cc0542e37db3",
+                    "expression": "last(/SC - Monitoramento de GBIC Huawei - Script Python/gbic.rx[{#SNMPINDEX}])<=-18",
+                    "name": "{#IFNAME} - {#IFALIAS} - SINAL  RX ACIMA DE -18 dBm",
+                    "priority": "AVERAGE",
+                    "manual_close": "YES",
+                    "tags": [
+                      {
+                        "tag": "RX-POWER"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "8ccccd52bb4143fd97e721e1dfc943ce",
+                "name": "{#IFNAME}({#IFALIAS}) - TEMPERATURA",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.5.{#SNMPINDEX}",
+                "key": "gbic.temperaature[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "ºC",
+                "preprocessing": [
+                  {
+                    "type": "STR_REPLACE",
+                    "parameters": [
+                      "-255",
+                      "0"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TEMPERTURA-SFP"
+                  },
+                  {
+                    "tag": "{#IFNAME}({#IFALIAS})"
+                  }
+                ]
+              },
+              {
+                "uuid": "5c11fc01ddb1424890e0879654830c24",
+                "name": "{#IFNAME}({#IFALIAS}) - TX POWER",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "gbic.tx[{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "trends": "90d",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "TX-POWER"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "7bd1607e11374f8d933569620dd1dfda",
+                    "expression": "last(/SC - Monitoramento de GBIC Huawei - Script Python/gbic.tx[{#SNMPINDEX}])<=-18",
+                    "name": "{#IFNAME} - {#IFALIAS} - SINAL  TX ACIMA DE -18 dBm",
+                    "priority": "AVERAGE",
+                    "manual_close": "YES",
+                    "tags": [
+                      {
+                        "tag": "RX-POWER"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$SNMP_PORT}",
+            "value": "161"
+          }
+        ]
+      }
+    ]
+  }
 }
