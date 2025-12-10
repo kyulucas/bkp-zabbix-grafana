@@ -1,1456 +1,1416 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": false,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "visao-de-instalacoes-dia",
-    "url": "/d/eegimem5528e8d1/visao-de-instalacoes-dia",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-11-27T06:37:06-05:00",
-    "updated": "2025-11-28T09:03:43-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 3,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
       }
-    }
+    ]
   },
-  "dashboard": {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "type": "dashboard"
-        }
-      ]
-    },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": 75,
-    "links": [],
-    "panels": [
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "noValue": "Total",
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 9,
-          "w": 3,
-          "x": 0,
-          "y": 0
-        },
-        "id": 3,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT SUM(Total) AS Total_Geral \r\nFROM (\r\n      SELECT COUNT(*) AS Total \r\n       FROM ALTAREDE.OS \r\n          WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                AND STATUS = 'A' \r\n                      AND EXCLUIDO = 'N'\r\n                          \r\n                          UNION ALL\r\n                          \r\nSELECT COUNT(A.COD_PEDIDO) AS Total \r\n    FROM PEDIDO_INSTALACAO A\r\n        LEFT JOIN CLIENTE B ON B.COD_CLIENTE = A.COD_CLIENTE \r\n            WHERE A.EXCLUIDO = 'N' \r\n                  AND A.STATUS IN ('P', 'L') \r\n                        AND B.COD_CLIENTE IS NOT NULL \r\n                              AND B.NOME IS NOT NULL\r\n                              ) AS t\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "type": "stat"
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
       },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "noValue": "Baixados",
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "red",
-                  "value": 0
-                },
-                {
-                  "color": "green",
-                  "value": 80
-                }
-              ]
-            }
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
           },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 9,
-          "w": 3,
-          "x": 3,
-          "y": 0
-        },
-        "id": 4,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select count(*) as Baixados from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = 'F' and EXCLUIDO = 'N' and DATA_CONCLUSAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CONCLUSAO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Baixados from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_INSTALACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_INSTALACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "noValue": "Abertos",
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "red",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 9,
-          "w": 3,
-          "x": 6,
-          "y": 0
-        },
-        "id": 6,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select count(*) as Aberos from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = 'A' and EXCLUIDO = 'N' and DATA_CADASTRO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CADASTRO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Total from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_GERACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_GERACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "noValue": "Encaminhados",
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 9,
-          "w": 3,
-          "x": 9,
-          "y": 0
-        },
-        "id": 8,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT SUM(Total) AS Encaminhados FROM (\r\n      SELECT COUNT(*) AS Total \r\n          FROM ALTAREDE.OS \r\n              WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                    AND EXCLUIDO = 'N' \r\n                          AND DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                \r\n                                    UNION ALL\r\n                                    \r\nSELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n        WHERE DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n              AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}' \r\n                    AND EXCLUIDO = 'N'\r\n                    ) AS t\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "fillOpacity": 80,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
+          "mappings": [],
+          "noValue": "Total",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
               },
-              "lineWidth": 1,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
+              {
+                "color": "red",
+                "value": 80
               }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": [
-            {
-              "__systemRef": "hideSeriesFrom",
-              "matcher": {
-                "id": "byNames",
-                "options": {
-                  "mode": "exclude",
-                  "names": [
-                    "Abertas"
-                  ],
-                  "prefix": "All except:",
-                  "readOnly": true
-                }
-              },
-              "properties": []
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "Abertas"
-              },
-              "properties": [
-                {
-                  "id": "color",
-                  "value": {
-                    "fixedColor": "dark-red",
-                    "mode": "fixed"
-                  }
-                },
-                {
-                  "id": "custom.transform",
-                  "value": "negative-Y"
-                }
-              ]
-            }
-          ]
-        },
-        "gridPos": {
-          "h": 9,
-          "w": 8,
-          "x": 12,
-          "y": 0
-        },
-        "id": 17,
-        "options": {
-          "barRadius": 0,
-          "barWidth": 0.97,
-          "fullHighlight": false,
-          "groupWidth": 0.7,
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": false
-          },
-          "orientation": "auto",
-          "showValue": "always",
-          "stacking": "normal",
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "single",
-            "sort": "none"
-          },
-          "xField": "Data",
-          "xTickLabelRotation": 0,
-          "xTickLabelSpacing": 0
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT \r\n    Data,\r\n        SUM(Abertas) AS Abertas,\r\n            SUM(Baixadas) AS Baixadas\r\n            FROM (\r\n                  -- Contagem de ordens abertas\r\n                      SELECT \r\n                              DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y') AS Data, \r\n                                      COUNT(*) AS Abertas, \r\n                                              0 AS Baixadas\r\n                                                  FROM ALTAREDE.OS \r\n                                                      WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                                            AND STATUS = 'A' \r\n                                                                  AND EXCLUIDO = 'N' \r\n                                                                        AND DATA_CADASTRO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                                              AND DATA_CADASTRO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                                                  GROUP BY DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y')\r\n                                                                                  \r\n                                                                                      UNION ALL\r\n                                                                              \r\n-- Contagem de pedidos de instala\\u00e7\\u00e3o gerados\r\nSELECT \r\nDATE_FORMAT(DATA_GERACAO, '%d/%m/%Y') AS Data, \r\n        COUNT(*) AS Abertas, \r\n                0 AS Baixadas\r\n                    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                        WHERE STATUS = 'I' \r\n                              AND EXCLUIDO = 'N'\r\n                                    AND DATA_GERACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                          AND DATA_GERACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                              GROUP BY DATE_FORMAT(DATA_GERACAO, '%d/%m/%Y')\r\n                                              \r\n                                                  UNION ALL\r\n                                                  \r\n-- Contagem de ordens conclu\\u00eddas (baixadas)\r\nSELECT \r\n        DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y') AS Data, \r\n                0 AS Abertas, \r\n                        COUNT(*) AS Baixadas\r\n                            FROM ALTAREDE.OS \r\n                                WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                      AND STATUS = 'F' \r\n                                            AND EXCLUIDO = 'N' \r\n                                                  AND DATA_CONCLUSAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                        AND DATA_CONCLUSAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                            GROUP BY DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y')\r\n                                                            \r\n                                                                UNION ALL\r\n                                                                \r\n-- Contagem de instala\\u00e7\\u00f5es conclu\\u00eddas\r\nSELECT \r\n        DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y') AS Data, \r\n                0 AS Abertas, \r\n                        COUNT(*) AS Baixadas\r\n                            FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                                WHERE STATUS = 'I' \r\n                                      AND EXCLUIDO = 'N'\r\n                                            AND DATA_INSTALACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                  AND DATA_INSTALACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                      GROUP BY DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y')\r\n                                                      \r\n                                                      ) AS t\r\n                                                      GROUP BY Data\r\n                                                      ORDER BY STR_TO_DATE(Data,'%d/%m/%Y');\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "timeFrom": "now-7d",
-        "title": "Proporção Abertos/Realizados",
-        "transparent": true,
-        "type": "barchart"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                }
-              ]
-            }
-          },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "Abertas"
-              },
-              "properties": [
-                {
-                  "id": "color",
-                  "value": {
-                    "fixedColor": "dark-red",
-                    "mode": "fixed"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        "gridPos": {
-          "h": 9,
-          "w": 4,
-          "x": 20,
-          "y": 0
-        },
-        "id": 18,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "auto",
-          "orientation": "horizontal",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "textMode": "auto",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT \r\n    Data,\r\n        SUM(Abertas) AS Abertas,\r\n        SUM(Baixadas) AS Baixadas\r\n         FROM (\r\n               -- Contagem de ordens abertas\r\n                   SELECT \r\n                           DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y') AS Data, \r\n                                   COUNT(*) AS Abertas, \r\n                                           0 AS Baixadas\r\n                                               FROM ALTAREDE.OS \r\n                                                   WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                                         AND STATUS = 'A' \r\n                                                               AND EXCLUIDO = 'N' \r\n                                                                     AND DATA_CADASTRO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                                           AND DATA_CADASTRO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                                               GROUP BY DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y')\r\n                                                                               \r\n                                                                                   UNION ALL\r\n                                                                                   \r\n-- Contagem de pedidos de instala\\u00e7\\u00e3o gerados\r\nSELECT       \r\n  DATE_FORMAT(DATA_GERACAO, '%d/%m/%Y') AS Data,\r\n        COUNT(*) AS Abertas, \r\n                0 AS Baixadas\r\n                    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                        WHERE STATUS = 'I' \r\n                              AND EXCLUIDO = 'N'\r\n                                    AND DATA_GERACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                          AND DATA_GERACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                              GROUP BY DATE_FORMAT(DATA_GERACAO, '%d/%m/%Y')\r\n                                                  \r\n                                                  UNION ALL\r\n                                                  \r\n-- Contagem de ordens conclu\\u00eddas (baixadas)\r\n    SELECT \r\n            DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y') AS Data, \r\n                    0 AS Abertas, \r\n                            COUNT(*) AS Baixadas\r\n                                FROM ALTAREDE.OS \r\n                                    WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                          AND STATUS = 'F' \r\n                                                AND EXCLUIDO = 'N' \r\n                                                      AND DATA_CONCLUSAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                            AND DATA_CONCLUSAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                                GROUP BY DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y')\r\n                                                                \r\n                                                                    UNION ALL\r\n                                                                    \r\n-- Contagem de instala\\u00e7\\u00f5es conclu\\u00eddas\r\n    SELECT \r\n            DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y') AS Data, \r\n                    0 AS Abertas, \r\n                            COUNT(*) AS Baixadas\r\n                                FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                                    WHERE STATUS = 'I' \r\n                                          AND EXCLUIDO = 'N'\r\n                                                AND DATA_INSTALACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                      AND DATA_INSTALACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                          GROUP BY DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y')\r\n                                                          ) AS t\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "timeFrom": "now-7d",
-        "transformations": [
-          {
-            "id": "organize",
-            "options": {
-              "excludeByName": {},
-              "includeByName": {},
-              "indexByName": {
-                "Abertas": 2,
-                "Baixadas": 1,
-                "Data": 0
-              },
-              "renameByName": {}
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "stat"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "custom": {
-              "align": "center",
-              "cellOptions": {
-                "mode": "basic",
-                "type": "color-background"
-              },
-              "filterable": true,
-              "footer": {
-                "reducers": []
-              },
-              "inspect": false
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "#333333",
-                  "value": 0
-                }
-              ]
-            }
-          },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "PRIORIDADE"
-              },
-              "properties": [
-                {
-                  "id": "mappings",
-                  "value": [
-                    {
-                      "options": {
-                        "1": {
-                          "color": "dark-green",
-                          "index": 0,
-                          "text": "Normal 🟢"
-                        },
-                        "2": {
-                          "color": "dark-yellow",
-                          "index": 1,
-                          "text": "Alta 🟡"
-                        },
-                        "3": {
-                          "color": "dark-red",
-                          "index": 2,
-                          "text": "Urgente 🔴"
-                        }
-                      },
-                      "type": "value"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "PEDIDO"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 768
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "LOGIN"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 623
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "CLIENTE"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 936
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "ATENDENTE"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 619
-                }
-              ]
-            }
-          ]
-        },
-        "gridPos": {
-          "h": 29,
-          "w": 24,
-          "x": 0,
-          "y": 9
-        },
-        "id": 19,
-        "options": {
-          "cellHeight": "sm",
-          "showHeader": true,
-          "sortBy": [
-            {
-              "desc": false,
-              "displayName": "AGENDAMENTO"
-            }
-          ]
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT \r\n    A.ID_OS AS PEDIDO,\r\n        F.DESCRICAO AS SERVICO,  -- Pegando a descri\\u00e7\\u00e3o do servi\\u00e7o\r\n            A.LOGIN, \r\n                D.NOME AS CLIENTE, \r\n                    C.NOME AS ATENDENTE,  \r\n                        E.NOME AS TECNICO, \r\n                            DATE_FORMAT(A.DATA_AGENDADA, '%d/%m/%Y') AS AGENDAMENTO \r\n                            FROM OS AS A \r\n                            LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                            LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_ATENDENTE\r\n                            LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                            LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                            LEFT JOIN TIPO_SERVICO AS F ON F.COD_TIPOSERVICO = A.COD_TIPOSERVICO\r\n                            WHERE A.COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                              AND A.STATUS = 'A' \r\n                                AND A.EXCLUIDO = 'N'\r\n                                  AND E.NOME IN (${tecnico})\r\n                                  \r\n                                  UNION ALL\r\n              \r\nSELECT \r\n    A.COD_PEDIDO AS PEDIDO, \r\n        'INSTALACAO' AS SERVICO,  -- Definindo \\\"INSTALACAO\\\" como servi\\u00e7o fixo\r\n            A.LOGIN, \r\n                D.NOME AS CLIENTE, \r\n                    C.NOME AS ATENDENTE, \r\n                        E.NOME AS TECNICO,  \r\n                            DATE_FORMAT(A.DATA_PREVISTA, '%d/%m/%Y') AS AGENDAMENTO \r\n                            FROM PEDIDO_INSTALACAO AS A \r\n                             LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                             LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_VENDEDOR  \r\n                             LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                             LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                            WHERE A.EXCLUIDO = 'N' \r\n                              AND A.STATUS IN ('P', 'L') \r\n                              AND D.COD_CLIENTE IS NOT NULL \r\n                              AND D.NOME IS NOT NULL\r\n                              AND E.NOME IN (${tecnico})\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "table"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "custom": {
-              "align": "center",
-              "cellOptions": {
-                "mode": "basic",
-                "type": "color-background"
-              },
-              "filterable": true,
-              "footer": {
-                "reducers": []
-              },
-              "inspect": false
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "#333333",
-                  "value": 0
-                }
-              ]
-            }
-          },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "PRIORIDADE"
-              },
-              "properties": [
-                {
-                  "id": "mappings",
-                  "value": [
-                    {
-                      "options": {
-                        "1": {
-                          "color": "dark-green",
-                          "index": 0,
-                          "text": "Normal 🟢"
-                        },
-                        "2": {
-                          "color": "dark-yellow",
-                          "index": 1,
-                          "text": "Alta 🟡"
-                        },
-                        "3": {
-                          "color": "dark-red",
-                          "index": 2,
-                          "text": "Urgente 🔴"
-                        }
-                      },
-                      "type": "value"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "PEDIDO"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 768
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "LOGIN"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 623
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "CLIENTE"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 936
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "ATENDENTE"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 619
-                }
-              ]
-            }
-          ]
-        },
-        "gridPos": {
-          "h": 16,
-          "w": 24,
-          "x": 0,
-          "y": 38
-        },
-        "id": 23,
-        "options": {
-          "cellHeight": "sm",
-          "showHeader": true,
-          "sortBy": [
-            {
-              "desc": false,
-              "displayName": "TECNICO"
-            }
-          ]
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT \r\n    A.ID_OS AS PEDIDO, \r\n        A.LOGIN, \r\n            D.NOME AS CLIENTE, \r\n                C.NOME AS ATENDENTE,  \r\n                    E.NOME AS TECNICO \r\n                    FROM OS AS A \r\n                    LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                    LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_ATENDENTE\r\n                    LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                    LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                    WHERE A.COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                      AND A.STATUS = 'F' \r\n                        AND A.EXCLUIDO = 'N'\r\n                          AND E.NOME IN (${tecnico})\r\n                            AND A.DATA_CONCLUSAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                              AND A.DATA_CONCLUSAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                \r\n                                UNION ALL\r\n                                \r\n                                SELECT \r\n                                    A.COD_PEDIDO AS PEDIDO, \r\n                                        A.LOGIN, \r\n                                            D.NOME AS CLIENTE, \r\n                                                C.NOME AS ATENDENTE, \r\n                                                    E.NOME AS TECNICO  \r\n                                                    FROM PEDIDO_INSTALACAO AS A \r\n                                                    LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                                                    LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_VENDEDOR  \r\n                                                    LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                                                    LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                                                    WHERE A.EXCLUIDO = 'N' \r\n                                                      AND A.STATUS = 'I' \r\n                                                        AND D.COD_CLIENTE IS NOT NULL \r\n                                                          AND D.NOME IS NOT NULL\r\n                                                            AND E.NOME IN (${tecnico})\r\n                                                              AND A.DATA_INSTALACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                                AND A.DATA_INSTALACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "table"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ceg530d34voxsa"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-green"
-                },
-                {
-                  "color": "dark-yellow",
-                  "value": 30
-                },
-                {
-                  "color": "dark-orange",
-                  "value": 40
-                },
-                {
-                  "color": "dark-red",
-                  "value": 50
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 5,
-          "w": 3,
-          "x": 0,
-          "y": 54
-        },
-        "id": 2,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "icon": "clipboard-list",
-          "iconPosition": "content",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "prefix": "",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "subtitle": "",
-          "suffix": "",
-          "textMode": "value"
-        },
-        "pluginVersion": "1.2.3",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "ceg530d34voxsa"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT SUM(Total) AS Total_Geral \r\nFROM (\r\n    SELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.OS \r\n    WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n      AND STATUS = 'A' \r\n      AND EXCLUIDO = 'N'\r\n\r\n    UNION ALL\r\n\r\n    SELECT COUNT(A.COD_PEDIDO) AS Total \r\n    FROM PEDIDO_INSTALACAO A\r\n    LEFT JOIN CLIENTE B ON B.COD_CLIENTE = A.COD_CLIENTE \r\n    WHERE A.EXCLUIDO = 'N' \r\n      AND A.STATUS IN ('P', 'L') \r\n      AND B.COD_CLIENTE IS NOT NULL \r\n      AND B.NOME IS NOT NULL\r\n) AS t;\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "orchestracities-iconstat-panel"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ceg530d34voxsa"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-red"
-                },
-                {
-                  "color": "dark-red",
-                  "value": 10
-                },
-                {
-                  "color": "dark-yellow",
-                  "value": 15
-                },
-                {
-                  "color": "dark-green",
-                  "value": 20
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 5,
-          "w": 3,
-          "x": 3,
-          "y": 54
-        },
-        "id": 5,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "icon": "clipboard-check",
-          "iconPosition": "content",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "prefix": "",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "subtitle": "",
-          "suffix": "",
-          "textMode": "value"
-        },
-        "pluginVersion": "1.2.3",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "ceg530d34voxsa"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select count(*) as Total from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = \"F\" and EXCLUIDO = \"N\" and DATA_CONCLUSAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CONCLUSAO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Total from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_INSTALACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_INSTALACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "orchestracities-iconstat-panel"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ceg530d34voxsa"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-green"
-                },
-                {
-                  "color": "dark-green",
-                  "value": 10
-                },
-                {
-                  "color": "dark-yellow",
-                  "value": 15
-                },
-                {
-                  "color": "dark-red",
-                  "value": 20
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 5,
-          "w": 3,
-          "x": 6,
-          "y": 54
-        },
-        "id": 7,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "icon": "clipboard",
-          "iconPosition": "content",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "prefix": "",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "subtitle": "",
-          "suffix": "",
-          "textMode": "value"
-        },
-        "pluginVersion": "1.2.3",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "ceg530d34voxsa"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select count(*) as Total from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = \"A\" and EXCLUIDO = \"N\" and DATA_CADASTRO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CADASTRO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Total from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_GERACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_GERACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "orchestracities-iconstat-panel"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ceg530d34voxsa"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "dark-red"
-                },
-                {
-                  "color": "dark-red",
-                  "value": 10
-                },
-                {
-                  "color": "dark-yellow",
-                  "value": 15
-                },
-                {
-                  "color": "dark-green",
-                  "value": 20
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 5,
-          "w": 3,
-          "x": 9,
-          "y": 54
-        },
-        "id": 9,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "icon": "car-side",
-          "iconPosition": "content",
-          "justifyMode": "auto",
-          "orientation": "auto",
-          "prefix": "",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "subtitle": "",
-          "suffix": "",
-          "textMode": "value"
-        },
-        "pluginVersion": "1.2.3",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "ceg530d34voxsa"
-            },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT SUM(Total) AS Total_Geral FROM (\r\n    SELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.OS \r\n    WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n      AND EXCLUIDO = \"N\" \r\n      AND DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n      AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\n    UNION ALL\r\n\r\n    SELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n    WHERE DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n      AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}' \r\n      AND EXCLUIDO = 'N'\r\n) AS t;",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "orchestracities-iconstat-panel"
-      },
-      {
-        "collapsed": false,
-        "gridPos": {
-          "h": 1,
-          "w": 24,
-          "x": 0,
-          "y": 59
-        },
-        "id": 16,
-        "panels": [],
-        "title": "Detalhamento das instalações em aberto",
-        "type": "row"
-      },
-      {
-        "collapsed": false,
-        "gridPos": {
-          "h": 1,
-          "w": 24,
-          "x": 0,
-          "y": 60
-        },
-        "id": 21,
-        "panels": [],
-        "title": "Detalhamento das instalações baixadas",
-        "type": "row"
-      }
-    ],
-    "preload": false,
-    "refresh": "1m",
-    "schemaVersion": 42,
-    "tags": [],
-    "templating": {
-      "list": [
-        {
-          "current": {
-            "text": "All",
-            "value": [
-              "$__all"
             ]
-          },
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
           "datasource": {
             "type": "mysql",
             "uid": "bf5cl81i2yz28d"
           },
-          "definition": "select a.NOME from FUNCIONARIO as a\njoin FUNCAO_FUNCIONARIO as b on b.COD_FUNCIONARIO = a.COD_FUNCIONARIO\ngroup by a.NOME",
-          "includeAll": true,
-          "label": "tecnico",
-          "multi": true,
-          "name": "tecnico",
-          "options": [],
-          "query": "select a.NOME from FUNCIONARIO as a\njoin FUNCAO_FUNCIONARIO as b on b.COD_FUNCIONARIO = a.COD_FUNCIONARIO\ngroup by a.NOME",
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT SUM(Total) AS Total_Geral \r\nFROM (\r\n      SELECT COUNT(*) AS Total \r\n       FROM ALTAREDE.OS \r\n          WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                AND STATUS = 'A' \r\n                      AND EXCLUIDO = 'N'\r\n                          \r\n                          UNION ALL\r\n                          \r\nSELECT COUNT(A.COD_PEDIDO) AS Total \r\n    FROM PEDIDO_INSTALACAO A\r\n        LEFT JOIN CLIENTE B ON B.COD_CLIENTE = A.COD_CLIENTE \r\n            WHERE A.EXCLUIDO = 'N' \r\n                  AND A.STATUS IN ('P', 'L') \r\n                        AND B.COD_CLIENTE IS NOT NULL \r\n                              AND B.NOME IS NOT NULL\r\n                              ) AS t\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
         }
-      ]
+      ],
+      "type": "stat"
     },
-    "time": {
-      "from": "now/d",
-      "to": "now/d"
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "noValue": "Baixados",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "green",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 3,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(*) as Baixados from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = 'F' and EXCLUIDO = 'N' and DATA_CONCLUSAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CONCLUSAO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Baixados from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_INSTALACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_INSTALACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
     },
-    "timepicker": {},
-    "timezone": "browser",
-    "title": "Visão de Instalações (Dia)",
-    "uid": "eegimem5528e8d1",
-    "version": 3,
-    "weekStart": ""
-  }
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "noValue": "Abertos",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 6,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(*) as Aberos from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = 'A' and EXCLUIDO = 'N' and DATA_CADASTRO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CADASTRO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Total from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_GERACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_GERACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "noValue": "Encaminhados",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 3,
+        "x": 9,
+        "y": 0
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT SUM(Total) AS Encaminhados FROM (\r\n      SELECT COUNT(*) AS Total \r\n          FROM ALTAREDE.OS \r\n              WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                    AND EXCLUIDO = 'N' \r\n                          AND DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                \r\n                                    UNION ALL\r\n                                    \r\nSELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n        WHERE DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n              AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}' \r\n                    AND EXCLUIDO = 'N'\r\n                    ) AS t\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "Abertas"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": []
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Abertas"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.transform",
+                "value": "negative-Y"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 12,
+        "y": 0
+      },
+      "id": 17,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "always",
+        "stacking": "normal",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xField": "Data",
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    Data,\r\n        SUM(Abertas) AS Abertas,\r\n            SUM(Baixadas) AS Baixadas\r\n            FROM (\r\n                  -- Contagem de ordens abertas\r\n                      SELECT \r\n                              DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y') AS Data, \r\n                                      COUNT(*) AS Abertas, \r\n                                              0 AS Baixadas\r\n                                                  FROM ALTAREDE.OS \r\n                                                      WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                                            AND STATUS = 'A' \r\n                                                                  AND EXCLUIDO = 'N' \r\n                                                                        AND DATA_CADASTRO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                                              AND DATA_CADASTRO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                                                  GROUP BY DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y')\r\n                                                                                  \r\n                                                                                      UNION ALL\r\n                                                                              \r\n-- Contagem de pedidos de instala\\u00e7\\u00e3o gerados\r\nSELECT \r\nDATE_FORMAT(DATA_GERACAO, '%d/%m/%Y') AS Data, \r\n        COUNT(*) AS Abertas, \r\n                0 AS Baixadas\r\n                    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                        WHERE STATUS = 'I' \r\n                              AND EXCLUIDO = 'N'\r\n                                    AND DATA_GERACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                          AND DATA_GERACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                              GROUP BY DATE_FORMAT(DATA_GERACAO, '%d/%m/%Y')\r\n                                              \r\n                                                  UNION ALL\r\n                                                  \r\n-- Contagem de ordens conclu\\u00eddas (baixadas)\r\nSELECT \r\n        DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y') AS Data, \r\n                0 AS Abertas, \r\n                        COUNT(*) AS Baixadas\r\n                            FROM ALTAREDE.OS \r\n                                WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                      AND STATUS = 'F' \r\n                                            AND EXCLUIDO = 'N' \r\n                                                  AND DATA_CONCLUSAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                        AND DATA_CONCLUSAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                            GROUP BY DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y')\r\n                                                            \r\n                                                                UNION ALL\r\n                                                                \r\n-- Contagem de instala\\u00e7\\u00f5es conclu\\u00eddas\r\nSELECT \r\n        DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y') AS Data, \r\n                0 AS Abertas, \r\n                        COUNT(*) AS Baixadas\r\n                            FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                                WHERE STATUS = 'I' \r\n                                      AND EXCLUIDO = 'N'\r\n                                            AND DATA_INSTALACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                  AND DATA_INSTALACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                      GROUP BY DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y')\r\n                                                      \r\n                                                      ) AS t\r\n                                                      GROUP BY Data\r\n                                                      ORDER BY STR_TO_DATE(Data,'%d/%m/%Y');\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "timeFrom": "now-7d",
+      "title": "Proporção Abertos/Realizados",
+      "transparent": true,
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Abertas"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-red",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 4,
+        "x": 20,
+        "y": 0
+      },
+      "id": 18,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    Data,\r\n        SUM(Abertas) AS Abertas,\r\n        SUM(Baixadas) AS Baixadas\r\n         FROM (\r\n               -- Contagem de ordens abertas\r\n                   SELECT \r\n                           DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y') AS Data, \r\n                                   COUNT(*) AS Abertas, \r\n                                           0 AS Baixadas\r\n                                               FROM ALTAREDE.OS \r\n                                                   WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                                         AND STATUS = 'A' \r\n                                                               AND EXCLUIDO = 'N' \r\n                                                                     AND DATA_CADASTRO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                                           AND DATA_CADASTRO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                                               GROUP BY DATE_FORMAT(DATA_CADASTRO, '%d/%m/%Y')\r\n                                                                               \r\n                                                                                   UNION ALL\r\n                                                                                   \r\n-- Contagem de pedidos de instala\\u00e7\\u00e3o gerados\r\nSELECT       \r\n  DATE_FORMAT(DATA_GERACAO, '%d/%m/%Y') AS Data,\r\n        COUNT(*) AS Abertas, \r\n                0 AS Baixadas\r\n                    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                        WHERE STATUS = 'I' \r\n                              AND EXCLUIDO = 'N'\r\n                                    AND DATA_GERACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                          AND DATA_GERACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                              GROUP BY DATE_FORMAT(DATA_GERACAO, '%d/%m/%Y')\r\n                                                  \r\n                                                  UNION ALL\r\n                                                  \r\n-- Contagem de ordens conclu\\u00eddas (baixadas)\r\n    SELECT \r\n            DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y') AS Data, \r\n                    0 AS Abertas, \r\n                            COUNT(*) AS Baixadas\r\n                                FROM ALTAREDE.OS \r\n                                    WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                                          AND STATUS = 'F' \r\n                                                AND EXCLUIDO = 'N' \r\n                                                      AND DATA_CONCLUSAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                            AND DATA_CONCLUSAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                                GROUP BY DATE_FORMAT(DATA_CONCLUSAO, '%d/%m/%Y')\r\n                                                                \r\n                                                                    UNION ALL\r\n                                                                    \r\n-- Contagem de instala\\u00e7\\u00f5es conclu\\u00eddas\r\n    SELECT \r\n            DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y') AS Data, \r\n                    0 AS Abertas, \r\n                            COUNT(*) AS Baixadas\r\n                                FROM ALTAREDE.PEDIDO_INSTALACAO\r\n                                    WHERE STATUS = 'I' \r\n                                          AND EXCLUIDO = 'N'\r\n                                                AND DATA_INSTALACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                      AND DATA_INSTALACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                                          GROUP BY DATE_FORMAT(DATA_INSTALACAO, '%d/%m/%Y')\r\n                                                          ) AS t\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "timeFrom": "now-7d",
+      "transformations": [
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Abertas": 2,
+              "Baixadas": 1,
+              "Data": 0
+            },
+            "renameByName": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "mode": "basic",
+              "type": "color-background"
+            },
+            "filterable": true,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#333333",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "PRIORIDADE"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Normal 🟢"
+                      },
+                      "2": {
+                        "color": "dark-yellow",
+                        "index": 1,
+                        "text": "Alta 🟡"
+                      },
+                      "3": {
+                        "color": "dark-red",
+                        "index": 2,
+                        "text": "Urgente 🔴"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "PEDIDO"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 768
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "LOGIN"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 623
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CLIENTE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 936
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ATENDENTE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 619
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 29,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "id": 19,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "AGENDAMENTO"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    A.ID_OS AS PEDIDO,\r\n        F.DESCRICAO AS SERVICO,  -- Pegando a descri\\u00e7\\u00e3o do servi\\u00e7o\r\n            A.LOGIN, \r\n                D.NOME AS CLIENTE, \r\n                    C.NOME AS ATENDENTE,  \r\n                        E.NOME AS TECNICO, \r\n                            DATE_FORMAT(A.DATA_AGENDADA, '%d/%m/%Y') AS AGENDAMENTO \r\n                            FROM OS AS A \r\n                            LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                            LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_ATENDENTE\r\n                            LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                            LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                            LEFT JOIN TIPO_SERVICO AS F ON F.COD_TIPOSERVICO = A.COD_TIPOSERVICO\r\n                            WHERE A.COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                              AND A.STATUS = 'A' \r\n                                AND A.EXCLUIDO = 'N'\r\n                                  AND E.NOME IN (${tecnico})\r\n                                  \r\n                                  UNION ALL\r\n              \r\nSELECT \r\n    A.COD_PEDIDO AS PEDIDO, \r\n        'INSTALACAO' AS SERVICO,  -- Definindo \\\"INSTALACAO\\\" como servi\\u00e7o fixo\r\n            A.LOGIN, \r\n                D.NOME AS CLIENTE, \r\n                    C.NOME AS ATENDENTE, \r\n                        E.NOME AS TECNICO,  \r\n                            DATE_FORMAT(A.DATA_PREVISTA, '%d/%m/%Y') AS AGENDAMENTO \r\n                            FROM PEDIDO_INSTALACAO AS A \r\n                             LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                             LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_VENDEDOR  \r\n                             LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                             LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                            WHERE A.EXCLUIDO = 'N' \r\n                              AND A.STATUS IN ('P', 'L') \r\n                              AND D.COD_CLIENTE IS NOT NULL \r\n                              AND D.NOME IS NOT NULL\r\n                              AND E.NOME IN (${tecnico})\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "mode": "basic",
+              "type": "color-background"
+            },
+            "filterable": true,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#333333",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "PRIORIDADE"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "1": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "Normal 🟢"
+                      },
+                      "2": {
+                        "color": "dark-yellow",
+                        "index": 1,
+                        "text": "Alta 🟡"
+                      },
+                      "3": {
+                        "color": "dark-red",
+                        "index": 2,
+                        "text": "Urgente 🔴"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "PEDIDO"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 768
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "LOGIN"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 623
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CLIENTE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 936
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ATENDENTE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 619
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 24,
+        "x": 0,
+        "y": 38
+      },
+      "id": 23,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "TECNICO"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    A.ID_OS AS PEDIDO, \r\n        A.LOGIN, \r\n            D.NOME AS CLIENTE, \r\n                C.NOME AS ATENDENTE,  \r\n                    E.NOME AS TECNICO \r\n                    FROM OS AS A \r\n                    LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                    LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_ATENDENTE\r\n                    LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                    LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                    WHERE A.COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n                      AND A.STATUS = 'F' \r\n                        AND A.EXCLUIDO = 'N'\r\n                          AND E.NOME IN (${tecnico})\r\n                            AND A.DATA_CONCLUSAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                              AND A.DATA_CONCLUSAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n                                \r\n                                UNION ALL\r\n                                \r\n                                SELECT \r\n                                    A.COD_PEDIDO AS PEDIDO, \r\n                                        A.LOGIN, \r\n                                            D.NOME AS CLIENTE, \r\n                                                C.NOME AS ATENDENTE, \r\n                                                    E.NOME AS TECNICO  \r\n                                                    FROM PEDIDO_INSTALACAO AS A \r\n                                                    LEFT JOIN ENDERECO_LOGIN AS B ON B.LOGIN = A.LOGIN\r\n                                                    LEFT JOIN FUNCIONARIO AS C ON C.COD_FUNCIONARIO = A.COD_VENDEDOR  \r\n                                                    LEFT JOIN CLIENTE AS D ON D.COD_CLIENTE = A.COD_CLIENTE\r\n                                                    LEFT JOIN FUNCIONARIO AS E ON E.COD_FUNCIONARIO = A.COD_TECNICO\r\n                                                    WHERE A.EXCLUIDO = 'N' \r\n                                                      AND A.STATUS = 'I' \r\n                                                        AND D.COD_CLIENTE IS NOT NULL \r\n                                                          AND D.NOME IS NOT NULL\r\n                                                            AND E.NOME IN (${tecnico})\r\n                                                              AND A.DATA_INSTALACAO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n                                                                AND A.DATA_INSTALACAO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "ceg530d34voxsa"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green"
+              },
+              {
+                "color": "dark-yellow",
+                "value": 30
+              },
+              {
+                "color": "dark-orange",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 50
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 0,
+        "y": 54
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "icon": "clipboard-list",
+        "iconPosition": "content",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "value"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "ceg530d34voxsa"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT SUM(Total) AS Total_Geral \r\nFROM (\r\n    SELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.OS \r\n    WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n      AND STATUS = 'A' \r\n      AND EXCLUIDO = 'N'\r\n\r\n    UNION ALL\r\n\r\n    SELECT COUNT(A.COD_PEDIDO) AS Total \r\n    FROM PEDIDO_INSTALACAO A\r\n    LEFT JOIN CLIENTE B ON B.COD_CLIENTE = A.COD_CLIENTE \r\n    WHERE A.EXCLUIDO = 'N' \r\n      AND A.STATUS IN ('P', 'L') \r\n      AND B.COD_CLIENTE IS NOT NULL \r\n      AND B.NOME IS NOT NULL\r\n) AS t;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "ceg530d34voxsa"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red"
+              },
+              {
+                "color": "dark-red",
+                "value": 10
+              },
+              {
+                "color": "dark-yellow",
+                "value": 15
+              },
+              {
+                "color": "dark-green",
+                "value": 20
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 3,
+        "y": 54
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "icon": "clipboard-check",
+        "iconPosition": "content",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "value"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "ceg530d34voxsa"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(*) as Total from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = \"F\" and EXCLUIDO = \"N\" and DATA_CONCLUSAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CONCLUSAO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Total from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_INSTALACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_INSTALACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "ceg530d34voxsa"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green"
+              },
+              {
+                "color": "dark-green",
+                "value": 10
+              },
+              {
+                "color": "dark-yellow",
+                "value": 15
+              },
+              {
+                "color": "dark-red",
+                "value": 20
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 6,
+        "y": 54
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "icon": "clipboard",
+        "iconPosition": "content",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "value"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "ceg530d34voxsa"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select count(*) as Total from ALTAREDE.OS \r\nwhere COD_TIPOSERVICO in ('1', '3', '4', '9', '17') and STATUS = \"A\" and EXCLUIDO = \"N\" and DATA_CADASTRO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_CADASTRO <='${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\nUNION all\r\n\r\nselect count(*) as Total from ALTAREDE.PEDIDO_INSTALACAO\r\nwhere STATUS = 'I' and DATA_GERACAO >='${__from:date:YYYY-MM-DD 00:00:00}' and DATA_GERACAO <='${__to:date:YYYY-MM-DD 23:59:59}' and EXCLUIDO = 'N'",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "ceg530d34voxsa"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red"
+              },
+              {
+                "color": "dark-red",
+                "value": 10
+              },
+              {
+                "color": "dark-yellow",
+                "value": 15
+              },
+              {
+                "color": "dark-green",
+                "value": 20
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 3,
+        "x": 9,
+        "y": 54
+      },
+      "id": 9,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "icon": "car-side",
+        "iconPosition": "content",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "prefix": "",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "subtitle": "",
+        "suffix": "",
+        "textMode": "value"
+      },
+      "pluginVersion": "1.2.3",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "ceg530d34voxsa"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT SUM(Total) AS Total_Geral FROM (\r\n    SELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.OS \r\n    WHERE COD_TIPOSERVICO IN ('1', '3', '4', '9', '17') \r\n      AND EXCLUIDO = \"N\" \r\n      AND DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n      AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}'\r\n\r\n    UNION ALL\r\n\r\n    SELECT COUNT(*) AS Total \r\n    FROM ALTAREDE.PEDIDO_INSTALACAO\r\n    WHERE DATA_ENCAMINHAMENTO >= '${__from:date:YYYY-MM-DD 00:00:00}' \r\n      AND DATA_ENCAMINHAMENTO <= '${__to:date:YYYY-MM-DD 23:59:59}' \r\n      AND EXCLUIDO = 'N'\r\n) AS t;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "orchestracities-iconstat-panel"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 59
+      },
+      "id": 16,
+      "panels": [],
+      "title": "Detalhamento das instalações em aberto",
+      "type": "row"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 60
+      },
+      "id": 21,
+      "panels": [],
+      "title": "Detalhamento das instalações baixadas",
+      "type": "row"
+    }
+  ],
+  "preload": false,
+  "refresh": "1m",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "mysql",
+          "uid": "bf5cl81i2yz28d"
+        },
+        "definition": "select a.NOME from FUNCIONARIO as a\njoin FUNCAO_FUNCIONARIO as b on b.COD_FUNCIONARIO = a.COD_FUNCIONARIO\ngroup by a.NOME",
+        "includeAll": true,
+        "label": "tecnico",
+        "multi": true,
+        "name": "tecnico",
+        "options": [],
+        "query": "select a.NOME from FUNCIONARIO as a\njoin FUNCAO_FUNCIONARIO as b on b.COD_FUNCIONARIO = a.COD_FUNCIONARIO\ngroup by a.NOME",
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now/d",
+    "to": "now/d"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Visão de Instalações (Dia)",
+  "uid": "eegimem5528e8d1",
+  "weekStart": ""
 }
