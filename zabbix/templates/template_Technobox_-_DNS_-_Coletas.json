@@ -1,101 +1,309 @@
 {
-  "proxyid": "0",
-  "host": "Technobox - DNS - Coletas",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Technobox - DNS - Coletas",
-  "flags": "0",
-  "templateid": "10807",
-  "description": "Template para monitoramento de interfaces de rede, CPU e memória RAM de servidores DNS Technobox via SNMP.\r\n\r\nEste template monitora:\r\n- Interfaces de rede (descoberta automática via IF-MIB)\r\n- Tráfego de entrada e saída das interfaces\r\n- Erros e descartes nas interfaces\r\n- Status operacional e administrativo das interfaces\r\n- Uso de CPU\r\n- Uso de memória RAM\r\n\r\nOIDs baseados em IF-MIB e HOST-RESOURCES-MIB.\r\n\r\n#=======================================\r\nCriado por: kyulucas\r\nData: 01/12/2025\r\n#=======================================",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "891b3e10da274b56b637f225be5382d4",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "49",
-      "name": "Technobox - DNS",
-      "uuid": "9a8c032b388f4d81a5b4fef524f87d84"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10805",
-      "proxyid": "0",
-      "host": "TechnoBox DNS-02-COLETAS",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "TechnoBox DNS-02-COLETAS",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10806",
-      "proxyid": "0",
-      "host": "TechnoBox DNS-01-COLETAS",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "TechnoBox DNS-01-COLETAS",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "891b3e10da274b56b637f225be5382d4",
+        "template": "Technobox - DNS - Coletas",
+        "name": "Technobox - DNS - Coletas",
+        "description": "Template para monitoramento de interfaces de rede, CPU e memória RAM de servidores DNS Technobox via SNMP.\n\nEste template monitora:\n- Interfaces de rede (descoberta automática via IF-MIB)\n- Tráfego de entrada e saída das interfaces\n- Erros e descartes nas interfaces\n- Status operacional e administrativo das interfaces\n- Uso de CPU\n- Uso de memória RAM\n\nOIDs baseados em IF-MIB e HOST-RESOURCES-MIB.\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
+        "groups": [
+          {
+            "name": "Technobox - DNS"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "06e198622d6c49fd80544f342c008143",
+            "name": "CPU - Load Average (1 minuto)",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2021.10.1.3.1",
+            "key": "cpu.load.1min",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "description": "Load Average do sistema nos últimos 1 minuto. Baseado em UCD-SNMP-MIB laLoad.1. Indica a carga média do sistema (não é percentual de CPU)."
+          },
+          {
+            "uuid": "d551ea8aeb0646f9af46467f9a2b8336",
+            "name": "CPU - Load Average (5 minutos)",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2021.10.1.3.2",
+            "key": "cpu.load.5min",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "description": "Load Average do sistema nos últimos 5 minutos. Baseado em UCD-SNMP-MIB laLoad.2. Indica a carga média do sistema (não é percentual de CPU)."
+          },
+          {
+            "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+            "name": "CPU - Load Average (15 minutos)",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2021.10.1.3.3",
+            "key": "cpu.load.15min",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "description": "Load Average do sistema nos últimos 15 minutos. Baseado em UCD-SNMP-MIB laLoad.3. Indica a carga média do sistema (não é percentual de CPU)."
+          },
+          {
+            "uuid": "b8e16a7608ed4496b49a7fd487ab84a0",
+            "name": "Memória RAM - Disponível",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2021.4.6.0",
+            "key": "memory.available",
+            "history": "7d",
+            "trends": "90d",
+            "units": "KB",
+            "description": "Memória RAM disponível do sistema em KB. Baseado em UCD-SNMP-MIB memAvailReal.0."
+          },
+          {
+            "uuid": "46c155fbd46048b3829bddb1e74f1831",
+            "name": "Memória RAM - Livre",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2021.4.11.0",
+            "key": "memory.free",
+            "history": "7d",
+            "trends": "90d",
+            "units": "KB",
+            "description": "Memória RAM livre do sistema em KB. Baseado em UCD-SNMP-MIB memTotalFree.0."
+          },
+          {
+            "uuid": "489435ff643f4bc0a92ae44485cabeb4",
+            "name": "Memória RAM - Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2021.4.5.0",
+            "key": "memory.total",
+            "history": "7d",
+            "trends": "90d",
+            "units": "KB",
+            "description": "Memória RAM total do sistema em KB. Baseado em UCD-SNMP-MIB memTotalReal.0."
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "8a4710a44bf94380a05b1049ede5d67c",
+            "name": "Descoberta de Interfaces de Rede",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]",
+            "key": "net.if.discovery",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFTYPE}",
+                  "value": "^6$",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "9334ba8846ff467387ea4be263f90138",
+                "name": "Interface {#IFDESCR} - Status Administrativo",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.7.{#SNMPINDEX}",
+                "key": "net.if.admin.status[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "0",
+                "description": "Status administrativo da interface {#IFDESCR}. Valores: 1=up (habilitada), 2=down (desabilitada), 3=testing (em teste)."
+              },
+              {
+                "uuid": "bdb2352954d64a4198464a3aaa51ed92",
+                "name": "Interface {#IFDESCR} - Descartados de Entrada",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.13.{#SNMPINDEX}",
+                "key": "net.if.in.discards[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Pacotes descartados na entrada da interface {#IFDESCR}. Contador de pacotes recebidos mas descartados (ifInDiscards)."
+              },
+              {
+                "uuid": "30e878f74c7647618c66c35198560ce1",
+                "name": "Interface {#IFDESCR} - Erros de Entrada",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.14.{#SNMPINDEX}",
+                "key": "net.if.in.errors[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Erros de entrada na interface {#IFDESCR}. Contador de pacotes recebidos com erros (ifInErrors)."
+              },
+              {
+                "uuid": "63ba2773795846b79e5cd400ecd5216c",
+                "name": "Interface {#IFDESCR} - Tráfego de Entrada",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                "key": "net.if.in[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "units": "bps",
+                "description": "Tráfego de entrada na interface {#IFDESCR} em bits por segundo. Contador de octetos recebidos na interface (ifInOctets) convertido para taxa por segundo e multiplicado por 8 para obter bits.",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "97bf68efddc8409ba2e3577f48e9b786",
+                "name": "Interface {#IFDESCR} - Descartados de Saída",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.19.{#SNMPINDEX}",
+                "key": "net.if.out.discards[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Pacotes descartados na saída da interface {#IFDESCR}. Contador de pacotes para envio mas descartados (ifOutDiscards)."
+              },
+              {
+                "uuid": "03e161a9ec444bdd86c1c7217d956070",
+                "name": "Interface {#IFDESCR} - Erros de Saída",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.20.{#SNMPINDEX}",
+                "key": "net.if.out.errors[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Erros de saída na interface {#IFDESCR}. Contador de pacotes enviados com erros (ifOutErrors)."
+              },
+              {
+                "uuid": "44e3e2548ae348269d61f23507e23b0a",
+                "name": "Interface {#IFDESCR} - Tráfego de Saída",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                "key": "net.if.out[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "units": "bps",
+                "description": "Tráfego de saída na interface {#IFDESCR} em bits por segundo. Contador de octetos enviados na interface (ifOutOctets) convertido para taxa por segundo e multiplicado por 8 para obter bits.",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "2ad94462d4044704b2047dca4253103c",
+                "name": "Interface {#IFDESCR} - Velocidade",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                "key": "net.if.speed[{#IFDESCR}]",
+                "delay": "1h",
+                "history": "30d",
+                "trends": "0",
+                "units": "bps",
+                "description": "Velocidade máxima da interface {#IFDESCR} em bits por segundo (ifSpeed)."
+              },
+              {
+                "uuid": "ea59139398db4a7baf624f97172ff4e2",
+                "name": "Interface {#IFDESCR} - Status Operacional",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                "key": "net.if.status[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "0",
+                "description": "Status operacional da interface {#IFDESCR}. Valores: 1=up (operacional), 2=down (inoperacional), 3=testing (teste), 4=unknown (desconhecido), 5=dormant (dormente), 6=notPresent (não presente), 7=lowerLayerDown (camada inferior inoperacional)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
