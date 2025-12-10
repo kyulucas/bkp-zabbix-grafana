@@ -1,809 +1,769 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": false,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "sinais-opticos-graph",
-    "url": "/d/UQ5gIo0Vz/sinais-opticos-graph",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-11-27T06:39:40-05:00",
-    "updated": "2025-12-02T09:24:48-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 4,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      }
-    }
-  },
-  "dashboard": {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "datasource",
-            "uid": "grafana"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "target": {
-            "limit": 100,
-            "matchAny": false,
-            "tags": [],
-            "type": "dashboard"
-          },
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
           "type": "dashboard"
-        }
-      ]
-    },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": 93,
-    "links": [],
-    "panels": [
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "custom": {
-              "align": "center",
-              "cellOptions": {
-                "type": "auto"
-              },
-              "footer": {
-                "reducers": []
-              },
-              "inspect": false
-            },
-            "decimals": 2,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "dBm"
-          },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "RX POWER"
-              },
-              "properties": [
-                {
-                  "id": "custom.cellOptions",
-                  "value": {
-                    "mode": "gradient",
-                    "type": "color-background"
-                  }
-                },
-                {
-                  "id": "thresholds",
-                  "value": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "dark-red",
-                        "value": 0
-                      },
-                      {
-                        "color": "dark-green",
-                        "value": -39
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "INTERFACE"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 386
-                }
-              ]
-            }
-          ]
-        },
-        "gridPos": {
-          "h": 7,
-          "w": 12,
-          "x": 0,
-          "y": 0
-        },
-        "id": 2,
-        "options": {
-          "cellHeight": "sm",
-          "showHeader": true,
-          "sortBy": []
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [
-              {
-                "$$hashKey": "object:250",
-                "def": {
-                  "category": "Alias",
-                  "defaultParams": [
-                    "/(.*)/",
-                    "$1"
-                  ],
-                  "name": "replaceAlias",
-                  "params": [
-                    {
-                      "name": "regexp",
-                      "type": "string"
-                    },
-                    {
-                      "name": "newAlias",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "params": [
-                  "/(?:$host:)(.*)( RX Power)/",
-                  "$1"
-                ],
-                "text": "replaceAlias(/(?:$host:)(.*)( RX Power)/, $1)"
-              }
-            ],
-            "group": {
-              "filter": "/.*/"
-            },
-            "host": {
-              "filter": "$host"
-            },
-            "item": {
-              "filter": "/.*: RX Power/"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "transformations": [
-          {
-            "id": "reduce",
-            "options": {
-              "reducers": [
-                "lastNotNull"
-              ]
-            }
-          },
-          {
-            "id": "organize",
-            "options": {
-              "excludeByName": {},
-              "indexByName": {},
-              "renameByName": {
-                "Field": "INTERFACE",
-                "Last *": "RX POWER"
-              }
-            }
-          }
-        ],
-        "type": "table"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "custom": {
-              "align": "center",
-              "cellOptions": {
-                "type": "auto"
-              },
-              "footer": {
-                "reducers": []
-              },
-              "inspect": false
-            },
-            "decimals": 2,
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "dBm"
-          },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "TX POWER"
-              },
-              "properties": [
-                {
-                  "id": "custom.cellOptions",
-                  "value": {
-                    "mode": "gradient",
-                    "type": "color-background"
-                  }
-                },
-                {
-                  "id": "thresholds",
-                  "value": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "color": "dark-red",
-                        "value": 0
-                      },
-                      {
-                        "color": "dark-green",
-                        "value": -39
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "INTERFACE"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 386
-                }
-              ]
-            }
-          ]
-        },
-        "gridPos": {
-          "h": 7,
-          "w": 12,
-          "x": 12,
-          "y": 0
-        },
-        "id": 6,
-        "options": {
-          "cellHeight": "sm",
-          "showHeader": true,
-          "sortBy": []
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [
-              {
-                "$$hashKey": "object:250",
-                "def": {
-                  "category": "Alias",
-                  "defaultParams": [
-                    "/(.*)/",
-                    "$1"
-                  ],
-                  "name": "replaceAlias",
-                  "params": [
-                    {
-                      "name": "regexp",
-                      "type": "string"
-                    },
-                    {
-                      "name": "newAlias",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "params": [
-                  "/(?:$host:)(.*)( RX Power)/",
-                  "$1"
-                ],
-                "text": "replaceAlias(/(?:$host:)(.*)( RX Power)/, $1)"
-              }
-            ],
-            "group": {
-              "filter": "/.*/"
-            },
-            "host": {
-              "filter": "$host"
-            },
-            "item": {
-              "filter": "/.*: TX Power/"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": true,
-              "disableDataAlignment": false,
-              "minSeverity": 3,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "transformations": [
-          {
-            "id": "reduce",
-            "options": {
-              "reducers": [
-                "lastNotNull"
-              ]
-            }
-          },
-          {
-            "id": "organize",
-            "options": {
-              "excludeByName": {},
-              "includeByName": {},
-              "indexByName": {},
-              "renameByName": {
-                "Field": "INTERFACE",
-                "Last *": "TX POWER"
-              }
-            }
-          }
-        ],
-        "type": "table"
-      },
-      {
-        "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
-            },
-            "custom": {
-              "axisBorderShow": false,
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "barWidthFactor": 0.6,
-              "drawStyle": "line",
-              "fillOpacity": 7,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
-              },
-              "insertNulls": false,
-              "lineInterpolation": "smooth",
-              "lineWidth": 3,
-              "pointSize": 8,
-              "scaleDistribution": {
-                "type": "linear"
-              },
-              "showPoints": "auto",
-              "showValues": false,
-              "spanNulls": true,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
-              },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 8,
-          "w": 24,
-          "x": 0,
-          "y": 7
-        },
-        "id": 5,
-        "maxPerRow": 2,
-        "options": {
-          "legend": {
-            "calcs": [
-              "lastNotNull",
-              "min"
-            ],
-            "displayMode": "table",
-            "placement": "bottom",
-            "showLegend": true
-          },
-          "tooltip": {
-            "hideZeros": false,
-            "mode": "multi",
-            "sort": "none"
-          }
-        },
-        "pluginVersion": "12.3.0",
-        "repeat": "optico",
-        "repeatDirection": "h",
-        "targets": [
-          {
-            "application": {
-              "filter": "RX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [
-              {
-                "$$hashKey": "object:38",
-                "def": {
-                  "category": "Alias",
-                  "defaultParams": [
-                    "/(.*)/",
-                    "$1"
-                  ],
-                  "name": "replaceAlias",
-                  "params": [
-                    {
-                      "name": "regexp",
-                      "type": "string"
-                    },
-                    {
-                      "name": "newAlias",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "params": [
-                  "$host:",
-                  " "
-                ],
-                "text": "replaceAlias($host:,  )"
-              }
-            ],
-            "group": {
-              "filter": "/.*/"
-            },
-            "hide": false,
-            "host": {
-              "filter": "$host"
-            },
-            "item": {
-              "filter": "$optico RX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          },
-          {
-            "application": {
-              "filter": "TX-POWER"
-            },
-            "countTriggersBy": "",
-            "datasource": {
-              "type": "alexanderzobnin-zabbix-datasource",
-              "uid": "VQ2csaink"
-            },
-            "evaltype": "0",
-            "functions": [
-              {
-                "$$hashKey": "object:59",
-                "def": {
-                  "category": "Alias",
-                  "defaultParams": [
-                    "/(.*)/",
-                    "$1"
-                  ],
-                  "name": "replaceAlias",
-                  "params": [
-                    {
-                      "name": "regexp",
-                      "type": "string"
-                    },
-                    {
-                      "name": "newAlias",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "params": [
-                  "$host:",
-                  " "
-                ],
-                "text": "replaceAlias($host:,  )"
-              }
-            ],
-            "group": {
-              "filter": "/.*/"
-            },
-            "hide": false,
-            "host": {
-              "filter": "$host"
-            },
-            "item": {
-              "filter": "$optico TX Power"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "B",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            },
-            "triggers": {
-              "acknowledged": 2
-            }
-          }
-        ],
-        "title": "$optico",
-        "type": "timeseries"
+        "type": "dashboard"
       }
-    ],
-    "preload": false,
-    "refresh": "",
-    "schemaVersion": 42,
-    "tags": [],
-    "templating": {
-      "list": [
-        {
-          "current": {
-            "text": "SW MPLS ALBERTO TORRES",
-            "value": "SW MPLS ALBERTO TORRES"
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
           },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "RX POWER"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-green",
+                      "value": -39
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "INTERFACE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 386
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
+            "uid": "VQ2csaink"
           },
-          "definition": "",
-          "includeAll": false,
-          "label": "EQUIPAMENTO",
-          "name": "host",
-          "options": [],
-          "query": {
-            "application": "",
-            "group": "SWITCH",
-            "host": "/.*/",
-            "item": "",
-            "itemTag": "",
-            "queryType": "host"
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:250",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(?:$host:)(.*)( RX Power)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(?:$host:)(.*)( RX Power)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
           },
-          "refresh": 1,
-          "regex": "",
-          "type": "query"
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*: RX Power/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
         },
         {
-          "current": {
-            "text": "All",
-            "value": "$__all"
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Field": "INTERFACE",
+              "Last *": "RX POWER"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
           },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "TX POWER"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "mode": "gradient",
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-green",
+                      "value": -39
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "INTERFACE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 386
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "VQ2csaink"
           },
-          "definition": "",
-          "hide": 2,
-          "includeAll": true,
-          "label": "optico",
-          "name": "optico",
-          "options": [],
-          "query": {
-            "application": "TX-POWER",
-            "group": "/.*/",
-            "host": "$host",
-            "item": "/.*: TX POWER/",
-            "itemTag": "Application: TX-POWER",
-            "queryType": "item"
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:250",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "/(?:$host:)(.*)( RX Power)/",
+                "$1"
+              ],
+              "text": "replaceAlias(/(?:$host:)(.*)( RX Power)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
           },
-          "refresh": 1,
-          "regex": "/(.*)(?: TX Power)/",
-          "type": "query"
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "/.*: TX Power/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
         }
-      ]
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Field": "INTERFACE",
+              "Last *": "TX POWER"
+            }
+          }
+        }
+      ],
+      "type": "table"
     },
-    "time": {
-      "from": "now-6h",
-      "to": "now"
-    },
-    "timepicker": {},
-    "timezone": "",
-    "title": "SINAIS OPTICOS GRAPH",
-    "uid": "UQ5gIo0Vz",
-    "version": 4,
-    "weekStart": ""
-  }
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 7,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 3,
+            "pointSize": 8,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 5,
+      "maxPerRow": 2,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "min"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0",
+      "repeat": "optico",
+      "repeatDirection": "h",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:38",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$host:",
+                " "
+              ],
+              "text": "replaceAlias($host:,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "$optico RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "TX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:59",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "$host:",
+                " "
+              ],
+              "text": "replaceAlias($host:,  )"
+            }
+          ],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$host"
+          },
+          "item": {
+            "filter": "$optico TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "$optico",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "SW MPLS ALBERTO TORRES",
+          "value": "SW MPLS ALBERTO TORRES"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "definition": "",
+        "includeAll": false,
+        "label": "EQUIPAMENTO",
+        "name": "host",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "SWITCH",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "type": "query"
+      },
+      {
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "aefq119i80pa8a"
+        },
+        "definition": "",
+        "hide": 2,
+        "includeAll": true,
+        "label": "optico",
+        "name": "optico",
+        "options": [],
+        "query": {
+          "application": "TX-POWER",
+          "group": "/.*/",
+          "host": "$host",
+          "item": "/.*: TX POWER/",
+          "itemTag": "Application: TX-POWER",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(.*)(?: TX Power)/",
+        "type": "query"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "SINAIS OPTICOS GRAPH",
+  "uid": "UQ5gIo0Vz",
+  "weekStart": ""
 }
