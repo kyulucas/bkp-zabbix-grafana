@@ -1,70 +1,440 @@
 {
-  "proxyid": "0",
-  "host": "Cisco_3500",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Cisco_3500",
-  "flags": "0",
-  "templateid": "10701",
-  "description": "",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "d4159d93ea1b4c7d80d1ada836e002c3",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "32",
-      "name": "Templates SNMP Devices",
-      "uuid": "f1537448b0da4ebb870d18790c1cec56"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10698",
-      "proxyid": "0",
-      "host": "N3k Cisco CPD-02 Data Center",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "N3k Cisco CPD-02 Data Center",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "d4159d93ea1b4c7d80d1ada836e002c3",
+        "template": "Cisco_3500",
+        "name": "Cisco_3500",
+        "templates": [
+          {
+            "name": "Cisco General"
+          },
+          {
+            "name": "Cisco_Traps"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Templates SNMP Devices"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "a14fe6e089114f728d205acbada5c8d8",
+            "name": "System Temperature",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.2.1.92.1.1.1.0",
+            "key": "systemTemperature",
+            "delay": "60",
+            "units": "°C",
+            "description": "System temperature scalar value.\n\nOID: .1.3.6.1.2.1.92.1.1.1.0\nThis is a scalar OID, not a table, so we use a direct item instead of discovery.",
+            "tags": [
+              {
+                "tag": "Application",
+                "value": "Temperature"
+              }
+            ]
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "c4e71d4c569d4c82b63a0915e5be3ef6",
+            "name": "FAN",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.13.1.4.1.2]",
+            "key": "ciscoEnvMonFanStatusDescr",
+            "delay": "300",
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "description": "CISCO-ENVMON-MIB::ciscoEnvMonFanStatusDescr\n\nTextual description of the fan being instrumented.",
+            "item_prototypes": [
+              {
+                "uuid": "fbcb120a842c440b963d5603acd7711b",
+                "name": "Status of FAN \"$1\"",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.13.1.4.1.3.{#SNMPINDEX}",
+                "key": "ciscoEnvMonFanState[\"{#SNMPVALUE}\"]",
+                "delay": "60",
+                "description": "CISCO-ENVMON-MIB::ciscoEnvMonFanState\n\nThe current state of the fan being instrumented.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "FAN Sensors"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "d465c73b7ea048e99a84c5ee82cc618e",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonFanState[\"{#SNMPVALUE}\"])=3",
+                    "name": "Status of FAN \"{#SNMPVALUE}\" is critical",
+                    "priority": "AVERAGE"
+                  },
+                  {
+                    "uuid": "974dc756b77b40a89cc381396b87c6d7",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonFanState[\"{#SNMPVALUE}\"])=2",
+                    "name": "Status of FAN \"{#SNMPVALUE}\" is non-operable",
+                    "priority": "WARNING"
+                  },
+                  {
+                    "uuid": "eb4157c5760540209cbf35d2281995ad",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonFanState[\"{#SNMPVALUE}\"])=6",
+                    "name": "Status of FAN \"{#SNMPVALUE}\" is not functioning",
+                    "priority": "AVERAGE"
+                  },
+                  {
+                    "uuid": "09be7cafd8c7462fa02b97880de111b4",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonFanState[\"{#SNMPVALUE}\"])=4",
+                    "name": "Status of FAN \"{#SNMPVALUE}\" is shutdown",
+                    "priority": "HIGH"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "de82cdc715cd4f058558b5daae980b8b",
+            "name": "Power Supplies",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.13.1.5.1.2]",
+            "key": "ciscoEnvMonSupplyStatusDescr",
+            "delay": "300",
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "description": "CISCO-ENVMON-MIB::ciscoEnvMonSupplyStatusDescr\n\nTextual description of the power supply being instrumented.",
+            "item_prototypes": [
+              {
+                "uuid": "dbef46c954ef48e2baeb228e791b30dc",
+                "name": "Status of Power Supply \"$1\"",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.13.1.5.1.3.{#SNMPINDEX}",
+                "key": "ciscoEnvMonSupplyState[\"{#SNMPVALUE}\"]",
+                "delay": "60",
+                "description": "CISCO-ENVMON-MIB::ciscoEnvMonSupplyState\n\nThe current state of the power supply being instrumented.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Power Supplies"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "6951f144068042d49979a3042216fa35",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonSupplyState[\"{#SNMPVALUE}\"])=3",
+                    "name": "Status of Power Supply \"{#SNMPVALUE}\" is critical",
+                    "priority": "AVERAGE"
+                  },
+                  {
+                    "uuid": "b28a8c03571b49eab5c7b88989c7c194",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonSupplyState[\"{#SNMPVALUE}\"])=2",
+                    "name": "Status of Power Supply \"{#SNMPVALUE}\" is non-operable",
+                    "priority": "WARNING"
+                  },
+                  {
+                    "uuid": "d11833a001394614975037dbd727ddb7",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonSupplyState[\"{#SNMPVALUE}\"])=6",
+                    "name": "Status of Power Supply \"{#SNMPVALUE}\" is not functioning",
+                    "priority": "AVERAGE"
+                  },
+                  {
+                    "uuid": "12f477a381c2404a98ca505738e085f4",
+                    "expression": "last(/Cisco_3500/ciscoEnvMonSupplyState[\"{#SNMPVALUE}\"])=4",
+                    "name": "Status of Power Supply \"{#SNMPVALUE}\" is shutdown",
+                    "priority": "HIGH"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "f0eed4c1b5ce444aa6eb79c820bba7bb",
+            "name": "Flash Devices",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#SNMPVALUE},.1.3.6.1.4.1.9.9.10.1.1.2.1.8]",
+            "key": "ciscoFlashDeviceDescr",
+            "delay": "300",
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "description": "CISCO-FLASH-MIB::ciscoFlashDeviceDescr\n\nDescription of a Flash device. The description is meant to explain what the Flash device and its purpose is. Current values are:\nSystem flash - for the primary Flash used to store full system images.\nBoot flash - for the secondary Flash used to store bootstrap images.\n\nThe device description will always be available for a removable device, even when the device has been removed.",
+            "item_prototypes": [
+              {
+                "uuid": "265b087c697041ec99010f3b1e372a92",
+                "name": "Size of Flash Device \"$1\"",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.10.1.1.2.1.2.{#SNMPINDEX}",
+                "key": "ciscoFlashDeviceSize[\"{#SNMPVALUE}\"]",
+                "delay": "3600",
+                "units": "B",
+                "description": "CISCO-FLASH-MIB::ciscoFlashDeviceSize\n\nTotal size of the Flash device. For a removable device, the size will be zero if the device has been removed.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Flash Devices"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "5823776b9ae8449cbe5b48bd2eac0393",
+            "name": "Process Memory",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#CPUID},.1.3.6.1.4.1.9.9.109.1.1.1.1.12]",
+            "key": "cpmCPUMemoryUsed",
+            "delay": "300",
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "description": "CISCO-PROCESS-MIB::cpmCPUMemoryUsed\n\nDiscovery rule for process/supervisor memory. NOTE: This MIB returns memory associated with the supervisor process, NOT the total system RAM.\nThe Cisco Nexus 3000 does not expose total system RAM via SNMP in this NX-OS version (6.0(2)U6(7)).\nCISCO-MEMORY-POOL-MIB is not available on this device.\nOID: .1.3.6.1.4.1.9.9.109.1.1.1.1.12.1",
+            "item_prototypes": [
+              {
+                "uuid": "9b250265846a49c58129737a02166cc5",
+                "name": "Process Memory - Free",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.109.1.1.1.1.13.{#SNMPINDEX}",
+                "key": "processMemoryFree[{#SNMPINDEX}]",
+                "delay": "60",
+                "units": "KB",
+                "description": "CISCO-PROCESS-MIB::cpmCPUMemoryFree\n\nFree memory available to the supervisor process. This is NOT the total system RAM.\nTotal system RAM is not available via SNMP on this NX-OS version.\nOID: .1.3.6.1.4.1.9.9.109.1.1.1.1.13.1",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Memory"
+                  }
+                ]
+              },
+              {
+                "uuid": "be9ccdafda8a4031afb1b86b013b0e98",
+                "name": "Process Memory - Total",
+                "type": "CALCULATED",
+                "key": "processMemoryTotal[{#SNMPINDEX}]",
+                "delay": "60",
+                "units": "KB",
+                "params": "last(//processMemoryFree[{#SNMPINDEX}])+last(//processMemoryUsed[{#SNMPINDEX}])",
+                "description": "Total process memory (free + used). This is NOT the total system RAM.\nTotal system RAM is not available via SNMP on this NX-OS version.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Memory"
+                  }
+                ]
+              },
+              {
+                "uuid": "4e246ddbcc6e4195a704154915c9ffea",
+                "name": "Process Memory - Used",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.109.1.1.1.1.12.{#SNMPINDEX}",
+                "key": "processMemoryUsed[{#SNMPINDEX}]",
+                "delay": "60",
+                "units": "KB",
+                "description": "CISCO-PROCESS-MIB::cpmCPUMemoryUsed\n\nMemory used by the supervisor process. This is NOT the total system RAM.\nTotal system RAM is not available via SNMP on this NX-OS version.\nOID: .1.3.6.1.4.1.9.9.109.1.1.1.1.12.1",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Memory"
+                  }
+                ]
+              },
+              {
+                "uuid": "81b418061b3a42e58da0a36a0ada936c",
+                "name": "Process Memory - Utilization",
+                "type": "CALCULATED",
+                "key": "processMemoryUtil[{#SNMPINDEX}]",
+                "delay": "60",
+                "value_type": "FLOAT",
+                "units": "%",
+                "params": "last(//processMemoryUsed[{#SNMPINDEX}])/(last(//processMemoryFree[{#SNMPINDEX}])+last(//processMemoryUsed[{#SNMPINDEX}]))*100",
+                "description": "Process memory utilization percentage. Calculated as (used / total) * 100.\nThis is process memory, not total system RAM.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Memory"
+                  }
+                ]
+              }
+            ],
+            "trigger_prototypes": [
+              {
+                "uuid": "aed259fc38e845c79ef3102c12f15cc5",
+                "expression": "last(/Cisco_3500/processMemoryUsed[{#SNMPINDEX}])>last(/Cisco_3500/processMemoryTotal[{#SNMPINDEX}])*0.9",
+                "name": "High utilization of Process Memory",
+                "priority": "AVERAGE",
+                "description": "High process memory utilization. Note: This is process memory, not total system RAM."
+              }
+            ]
+          },
+          {
+            "uuid": "76fdf7fc4c9e485a9ad089b4e0847b49",
+            "name": "CPU",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#CPUID},.1.3.6.1.4.1.9.9.109.1.1.1.1.7]",
+            "key": "cpmCPUTotal1minRev",
+            "delay": "300",
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "description": "CISCO-PROCESS-MIB::cpmCPUTotal1minRev\n\nDiscovery rule for CPU usage. Discovers all CPU instances based on the 1-minute CPU usage OID.",
+            "item_prototypes": [
+              {
+                "uuid": "9f1b7b73aa4543a1b714b2e1d54c148a",
+                "name": "CPU #{#SNMPINDEX} Usage 1min",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.109.1.1.1.1.7.{#SNMPINDEX}",
+                "key": "cpmCPUTotal1minRev[{#SNMPINDEX}]",
+                "delay": "60",
+                "units": "%",
+                "description": "CISCO-PROCESS-MIB::cpmCPUTotal1minRev\n\nThe overall CPU busy percentage in the last 1 minute period. OID: .1.3.6.1.4.1.9.9.109.1.1.1.1.7.1",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "CPU"
+                  }
+                ]
+              },
+              {
+                "uuid": "be44a950d6c84eebb52cf37aa1e965ca",
+                "name": "CPU #{#SNMPINDEX} Usage 5min",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.109.1.1.1.1.8.{#SNMPINDEX}",
+                "key": "cpmCPUTotal5minRev[{#SNMPINDEX}]",
+                "delay": "300",
+                "units": "%",
+                "description": "CISCO-PROCESS-MIB::cpmCPUTotal5minRev\n\nThe overall CPU busy percentage in the last 5 minute period.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "CPU"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "aac129b21a334eeaad4b4c706841736b",
+                    "expression": "last(/Cisco_3500/cpmCPUTotal5minRev[{#SNMPINDEX}])>95",
+                    "name": "High CPU #{#SNMPINDEX} Usage",
+                    "priority": "HIGH"
+                  }
+                ]
+              },
+              {
+                "uuid": "ddea3749311043d89f3c7ca17c7f4a67",
+                "name": "CPU #{#SNMPINDEX} Usage 5sec",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.9.9.109.1.1.1.1.6.{#SNMPINDEX}",
+                "key": "cpmCPUTotal5secRev[{#SNMPINDEX}]",
+                "delay": "30",
+                "status": "DISABLED",
+                "units": "%",
+                "description": "CISCO-PROCESS-MIB::cpmCPUTotal5secRev\n\nThe overall CPU busy percentage in the last 5 second period.",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "CPU"
+                  }
+                ]
+              }
+            ],
+            "graph_prototypes": [
+              {
+                "uuid": "cdce2790c12740c880f2b73b49b84a36",
+                "name": "CPU #{#SNMPINDEX} Usage",
+                "graph_items": [
+                  {
+                    "color": "00C800",
+                    "item": {
+                      "host": "Cisco_3500",
+                      "key": "cpmCPUTotal1minRev[{#SNMPINDEX}]"
+                    }
+                  },
+                  {
+                    "sortorder": "1",
+                    "color": "C80000",
+                    "item": {
+                      "host": "Cisco_3500",
+                      "key": "cpmCPUTotal5minRev[{#SNMPINDEX}]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
