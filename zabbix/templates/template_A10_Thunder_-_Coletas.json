@@ -1,70 +1,647 @@
 {
-  "proxyid": "0",
-  "host": "A10 Thunder - Coletas",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "A10 Thunder - Coletas",
-  "flags": "0",
-  "templateid": "10811",
-  "description": "Template para monitoramento de interfaces de rede, CPU, memória RAM, temperatura e métricas específicas do A10 Thunder via SNMP.\r\n\r\nEste template monitora:\r\n- Interfaces de rede (descoberta automática via IF-MIB)\r\n- Tráfego de entrada e saída das interfaces\r\n- Erros e descartes nas interfaces\r\n- Status operacional e administrativo das interfaces\r\n- Uso de CPU por processador (descoberta automática via HOST-RESOURCES-MIB)\r\n- Uso de memória RAM (HOST-RESOURCES-MIB)\r\n- Sensores de temperatura (descoberta automática via LM-SENSORS-MIB)\r\n- Métricas específicas do A10 Thunder (baseadas no template original A10 CGNAT)\r\n\r\nOIDs baseados em IF-MIB, HOST-RESOURCES-MIB, LM-SENSORS-MIB e A10-AX-MIB.\r\n\r\nMÉTRICAS A10 INCLUÍDAS (OIDs do template original A10 CGNAT):\r\n- Portas NAT TCP usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.6.1.0\r\n- Portas NAT UDP usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.6.3.0\r\n- Portas NAT TCP livres: .1.3.6.1.4.1.22610.2.4.3.18.4.14.4.0\r\n- Portas NAT UDP livres: .1.3.6.1.4.1.22610.2.4.3.18.4.14.6.0\r\n- Sessões de dados usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.1.0\r\n- Sessões de dados livres: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.2.0\r\n- Sessões SMP usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.3.0\r\n- Sessões SMP livres: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.4.0\r\n- Radius Entries usadas: .1.3.6.1.4.1.22610.2.4.11.139.18.5.0\r\n- Radius Entries livres: .1.3.6.1.4.1.22610.2.4.11.139.18.6.0\r\n\r\nNOTA: Para usar OIDs numéricos diretamente no Zabbix, não é necessário importar as MIBs no servidor.\r\nAs MIBs são úteis apenas para facilitar a leitura em snmpwalk/snmpget.\r\n\r\n#=======================================\r\nCriado por: kyulucas\r\nData: 01/12/2025\r\nBaseado no template original A10 CGNAT\r\n#=======================================",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "2b9f9d1f814244deb030ba16cefc84ca",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "51",
-      "name": "A10 Thunder",
-      "uuid": "6c92f3f890c844dbbdef071cdf3a5aff"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10694",
-      "proxyid": "0",
-      "host": "A10 THUNDER",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "A10 THUNDER",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "2b9f9d1f814244deb030ba16cefc84ca",
+        "template": "A10 Thunder - Coletas",
+        "name": "A10 Thunder - Coletas",
+        "description": "Template para monitoramento de interfaces de rede, CPU, memória RAM, temperatura e métricas específicas do A10 Thunder via SNMP.\n\nEste template monitora:\n- Interfaces de rede (descoberta automática via IF-MIB)\n- Tráfego de entrada e saída das interfaces\n- Erros e descartes nas interfaces\n- Status operacional e administrativo das interfaces\n- Uso de CPU por processador (descoberta automática via HOST-RESOURCES-MIB)\n- Uso de memória RAM (HOST-RESOURCES-MIB)\n- Sensores de temperatura (descoberta automática via LM-SENSORS-MIB)\n- Métricas específicas do A10 Thunder (baseadas no template original A10 CGNAT)\n\nOIDs baseados em IF-MIB, HOST-RESOURCES-MIB, LM-SENSORS-MIB e A10-AX-MIB.\n\nMÉTRICAS A10 INCLUÍDAS (OIDs do template original A10 CGNAT):\n- Portas NAT TCP usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.6.1.0\n- Portas NAT UDP usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.6.3.0\n- Portas NAT TCP livres: .1.3.6.1.4.1.22610.2.4.3.18.4.14.4.0\n- Portas NAT UDP livres: .1.3.6.1.4.1.22610.2.4.3.18.4.14.6.0\n- Sessões de dados usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.1.0\n- Sessões de dados livres: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.2.0\n- Sessões SMP usadas: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.3.0\n- Sessões SMP livres: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.4.0\n- Radius Entries usadas: .1.3.6.1.4.1.22610.2.4.11.139.18.5.0\n- Radius Entries livres: .1.3.6.1.4.1.22610.2.4.11.139.18.6.0\n\nNOTA: Para usar OIDs numéricos diretamente no Zabbix, não é necessário importar as MIBs no servidor.\nAs MIBs são úteis apenas para facilitar a leitura em snmpwalk/snmpget.\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\nBaseado no template original A10 CGNAT\n#=======================================",
+        "groups": [
+          {
+            "name": "A10 Thunder"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "855b9996d7164028b7f0eaabea03b371",
+            "name": "Total de conexões atuais",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.1.0",
+            "key": "axAppGlobalTotalCurrentConnections",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Total de conexões atuais. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.1.0"
+          },
+          {
+            "uuid": "4b2a2f9bb8ee48afbc5e1325c901f792",
+            "name": "Total de novas conexões",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.2.0",
+            "key": "axAppGlobalTotalNewConnections",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Total de novas conexões. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.2.0"
+          },
+          {
+            "uuid": "bee8088e48d14c009c93bb9629991150",
+            "name": "Total de novas conexões L4",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.3.0",
+            "key": "axAppGlobalTotalNewL4Connections",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Total de novas conexões L4. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.3.0"
+          },
+          {
+            "uuid": "3563088ceda54b82bf1a4d7c3c625b78",
+            "name": "Total de novas conexões L7",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.4.0",
+            "key": "axAppGlobalTotalNewL7Connections",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Total de novas conexões L7. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.4.0"
+          },
+          {
+            "uuid": "c433446486a3440e9ebeddaf477891c8",
+            "name": "Total de conexões SSL",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.6.0",
+            "key": "axAppGlobalTotalSSLConnections",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Total de conexões SSL. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.6.0"
+          },
+          {
+            "uuid": "6aa9e7a7c1f744fcbae917072f9702be",
+            "name": "Conexão global agregada por segundo.",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.24.0",
+            "key": "axGlobalAggregateCps",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Conexão global agregada por segundo. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.24.0"
+          },
+          {
+            "uuid": "54a79726943f4d85842446d88e13df62",
+            "name": "Global System Throughput",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.2.13.0",
+            "key": "axGlobalTotalThroughput",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "bps",
+            "description": "Global System Throughput em bits por segundo. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.2.13.0",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "8"
+                ]
+              },
+              {
+                "type": "CHANGE_PER_SECOND",
+                "parameters": [
+                  ""
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "bc11a99a0a6e4cda96c1e4def015d743",
+            "name": "O número de portas TCP NAT usadas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.6.1.0",
+            "key": "axIpNatLsnNatPortTcpNatPortUsed",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de portas NAT TCP usadas. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.6.1.0"
+          },
+          {
+            "uuid": "b710ad4a098e49dab3d084518603f36c",
+            "name": "O número de portas UDP NAT usadas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.6.3.0",
+            "key": "axIpNatLsnNatPortUdpNatPortUsed",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de portas NAT UDP usadas. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.6.3.0"
+          },
+          {
+            "uuid": "1618f2970896463386e1461da5ca3cd4",
+            "name": "O número de sessões de dados gratuitas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.5.2.0",
+            "key": "axIpNatLsnSessionDataSessionsFree",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de sessões de dados livres/disponíveis. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.2.0"
+          },
+          {
+            "uuid": "135ae032bc7c4df7a05c7e60256be41f",
+            "name": "O número de sessões de dados usadas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.5.1.0",
+            "key": "axIpNatLsnSessionDataSessionsUsed",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de sessões de dados usadas. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.1.0"
+          },
+          {
+            "uuid": "79c0cb737c1e48c781e998274132f526",
+            "name": "The LSN CPS",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.5.5.0",
+            "key": "axIpNatLsnSessionLsnCps",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "The LSN CPS (Large Scale NAT Connections Per Second). OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.5.0"
+          },
+          {
+            "uuid": "2356cf3aeb6949c8935989c4921bf628",
+            "name": "O número de sessões SMP gratuitas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.5.4.0",
+            "key": "axIpNatLsnSessionSmpSessionsFree",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de sessões SMP (Symmetric Multiprocessing) livres/disponíveis. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.4.0"
+          },
+          {
+            "uuid": "41937745f48c4d25b112e7b78d64dd40",
+            "name": "O número de sessões SMP usadas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.1.5.3.0",
+            "key": "axIpNatLsnSessionSmpSessionsUsed",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de sessões SMP (Symmetric Multiprocessing) usadas. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.1.5.3.0"
+          },
+          {
+            "uuid": "c8cf9a3b3360441ba2b33f649bac9009",
+            "name": "O número total de portas nat tcp liberadas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.14.4.0",
+            "key": "axIpNatLsnTCPNatPortFree",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número total de portas NAT TCP livres/disponíveis. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.14.4.0"
+          },
+          {
+            "uuid": "da60de575ef348988320a7dc6d7dba47",
+            "name": "O número total de portas nat udp liberadas",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.18.4.14.6.0",
+            "key": "axIpNatLsnUDPNatPortFree",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número total de portas NAT UDP livres/disponíveis. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.18.4.14.6.0"
+          },
+          {
+            "uuid": "6f3d6d61caff405f9a7e367862bf8cc0",
+            "name": "Conexão da camada 7 por segundo",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.1.4.1.1.12.6.115.104.97.114.101.100",
+            "key": "axL3vGlobalStatsL7ConnectionCps",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Conexão da camada 7 por segundo. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.1.4.1.1.12.6.115.104.97.114.101.100"
+          },
+          {
+            "uuid": "07d52994f24f4bbd9acb62eaa2b05814",
+            "name": "Numeros de Pacotes TCP",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.11.6.0",
+            "key": "axNetStatTCPReceive",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Números de Pacotes TCP recebidos. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.11.6.0"
+          },
+          {
+            "uuid": "820e4125d2424d4ebcde3b74ee421e33",
+            "name": "Falha na contagem do cookie TCP SYN enviado",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.11.5.0",
+            "key": "axNetStatTCPSYNCookieSentFail",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Falha na contagem do cookie TCP SYN enviado. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.11.5.0"
+          },
+          {
+            "uuid": "803ab56d3565445d991211ea360e43e2",
+            "name": "A contagem de pacotes TCP SYN recebidos",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.11.3.0",
+            "key": "axNetStatTCPSynRcv",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "A contagem de pacotes TCP SYN recebidos. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.11.3.0"
+          },
+          {
+            "uuid": "a217d18b6f3844f6a9d0e4968dbabd86",
+            "name": "Numeros de Pacotes UDP",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.3.11.7.0",
+            "key": "axNetStatUDPReceive",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Números de Pacotes UDP recebidos. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.3.11.7.0"
+          },
+          {
+            "uuid": "f2ea638b357746d99ebc2f21bce6a32a",
+            "name": "Utilização de Temperatura",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.5.1.0",
+            "key": "axSysHwPhySystemTemp",
+            "delay": "20m",
+            "history": "90d",
+            "units": "°C",
+            "description": "Utilização de Temperatura do sistema. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.1.5.1.0"
+          },
+          {
+            "uuid": "f39e3c3eee9a4570b7f7fae6636d5c5b",
+            "name": "Utilização média da CPU",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.3.4.0",
+            "key": "hwAvgDuty1min",
+            "delay": "20m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "%",
+            "description": "Utilização média da CPU em percentual. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.1.3.4.0"
+          },
+          {
+            "uuid": "c934fbdf48664bf8849416f36e950a92",
+            "name": "Memória Total",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.2.1.0",
+            "key": "hwMemoryDevSize64",
+            "delay": "10m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "bytes",
+            "description": "Memória total do sistema em bytes. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.1.2.1.0"
+          },
+          {
+            "uuid": "e8e8bf0548b5487e84e2a34b85121d49",
+            "name": "Memória Livre",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.1.2.2.0",
+            "key": "hwMemoryFree64",
+            "delay": "10m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "bytes",
+            "description": "Memória livre do sistema em bytes. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.1.2.2.0"
+          },
+          {
+            "uuid": "fedbc6267b824a0c8423d32493346adb",
+            "name": "Memória Utilizada em %",
+            "type": "CALCULATED",
+            "key": "hwMemoryFree64_percent",
+            "delay": "2m",
+            "history": "30d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "%",
+            "params": "(last(//hwMemoryFree64)*100)/last(//hwMemoryDevSize64)",
+            "description": "Memória utilizada em percentual. Item calculado do template original A10 CGNAT."
+          },
+          {
+            "uuid": "e5d194b883b1455389c55ec7e01c72ce",
+            "name": "Memória Livre em %",
+            "type": "CALCULATED",
+            "key": "hwMemoryUsed64",
+            "delay": "2m",
+            "history": "30d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "%",
+            "params": "((last(//hwMemoryDevSize64)-last(//hwMemoryFree64))/(last(//hwMemoryDevSize64)))*100",
+            "description": "Memória livre em percentual. Item calculado do template original A10 CGNAT."
+          },
+          {
+            "uuid": "abccc7a4fe0842cbac106bf3250104fe",
+            "name": "Radius Entries Free",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.11.139.18.6.0",
+            "key": "radiusEntriesFree",
+            "delay": "10m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de entradas Radius livres/disponíveis. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.11.139.18.6.0"
+          },
+          {
+            "uuid": "4e0ab9254652402e8f8491b85c5ca704",
+            "name": "Raadius Entries Used",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.22610.2.4.11.139.18.5.0",
+            "key": "radiusEntriesUsed",
+            "delay": "10m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Número de entradas Radius usadas. OID do template original A10 CGNAT: .1.3.6.1.4.1.22610.2.4.11.139.18.5.0"
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "f584cadadb8b49c28a4c95f34237749e",
+            "name": "Descoberta de Processadores",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#CPUINDEX},1.3.6.1.2.1.25.3.2.1.1,{#CPUDESCR},1.3.6.1.2.1.25.3.2.1.3,{#DEVICETYPE},1.3.6.1.2.1.25.3.2.1.2]",
+            "key": "cpu.discovery",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#DEVICETYPE}",
+                  "value": "^HOST-RESOURCES-MIB::hrDeviceTypes\\.3$",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "e085a89f983d4716ba989252f49cdd70",
+                "name": "CPU {#CPUDESCR} - Uso",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.25.3.3.1.2.{#CPUINDEX}",
+                "key": "cpu.load[{#CPUINDEX}]",
+                "history": "7d",
+                "trends": "90d",
+                "units": "%",
+                "description": "Uso de CPU do processador {#CPUDESCR} em percentual. Baseado em HOST-RESOURCES-MIB hrProcessorLoad. Valores de 0 a 100."
+              }
+            ]
+          },
+          {
+            "uuid": "a84d8fec188e4d71a8f86b6beedfdadb",
+            "name": "Descoberta de Interfaces de Rede",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]",
+            "key": "net.if.discovery",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFTYPE}",
+                  "value": "^6$",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "1adcf56ea99748319df25bd26f30ccf3",
+                "name": "Interface {#IFDESCR} - Status Administrativo",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.7.{#SNMPINDEX}",
+                "key": "net.if.admin.status[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "0",
+                "description": "Status administrativo da interface {#IFDESCR}. Valores: 1=up (habilitada), 2=down (desabilitada), 3=testing (em teste)."
+              },
+              {
+                "uuid": "a962f458600b4c05b255e877d63bbb09",
+                "name": "Interface {#IFDESCR} - Descartados de Entrada",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.13.{#SNMPINDEX}",
+                "key": "net.if.in.discards[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Pacotes descartados na entrada da interface {#IFDESCR}. Contador de pacotes recebidos mas descartados (ifInDiscards)."
+              },
+              {
+                "uuid": "4ce98ed0561c462ba092353de9e52df4",
+                "name": "Interface {#IFDESCR} - Erros de Entrada",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.14.{#SNMPINDEX}",
+                "key": "net.if.in.errors[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Erros de entrada na interface {#IFDESCR}. Contador de pacotes recebidos com erros (ifInErrors)."
+              },
+              {
+                "uuid": "80bce1fc31ea435085f7a925aa62f895",
+                "name": "Interface {#IFDESCR} - Tráfego de Entrada",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                "key": "net.if.in[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "units": "bps",
+                "description": "Tráfego de entrada na interface {#IFDESCR} em bits por segundo. Contador de octetos recebidos na interface (ifInOctets) convertido para taxa por segundo e multiplicado por 8 para obter bits.",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "4cf7e682c4f445d78fe3f26e106ce6f5",
+                "name": "Interface {#IFDESCR} - Descartados de Saída",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.19.{#SNMPINDEX}",
+                "key": "net.if.out.discards[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Pacotes descartados na saída da interface {#IFDESCR}. Contador de pacotes para envio mas descartados (ifOutDiscards)."
+              },
+              {
+                "uuid": "a080c43c6b474e778e9d7e04224c8fc3",
+                "name": "Interface {#IFDESCR} - Erros de Saída",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.20.{#SNMPINDEX}",
+                "key": "net.if.out.errors[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "description": "Erros de saída na interface {#IFDESCR}. Contador de pacotes enviados com erros (ifOutErrors)."
+              },
+              {
+                "uuid": "7269735ca53b4bc387043b29190e4661",
+                "name": "Interface {#IFDESCR} - Tráfego de Saída",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                "key": "net.if.out[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "90d",
+                "units": "bps",
+                "description": "Tráfego de saída na interface {#IFDESCR} em bits por segundo. Contador de octetos enviados na interface (ifOutOctets) convertido para taxa por segundo e multiplicado por 8 para obter bits.",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "eb38dc33a26b477e9be15079b4b0f189",
+                "name": "Interface {#IFDESCR} - Velocidade",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                "key": "net.if.speed[{#IFDESCR}]",
+                "delay": "1h",
+                "history": "30d",
+                "trends": "0",
+                "units": "bps",
+                "description": "Velocidade máxima da interface {#IFDESCR} em bits por segundo (ifSpeed)."
+              },
+              {
+                "uuid": "d4ca19f5a40e44b2b1f71145619ebeec",
+                "name": "Interface {#IFDESCR} - Status Operacional",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                "key": "net.if.status[{#IFDESCR}]",
+                "history": "7d",
+                "trends": "0",
+                "description": "Status operacional da interface {#IFDESCR}. Valores: 1=up (operacional), 2=down (inoperacional), 3=testing (teste), 4=unknown (desconhecido), 5=dormant (dormente), 6=notPresent (não presente), 7=lowerLayerDown (camada inferior inoperacional)."
+              }
+            ]
+          },
+          {
+            "uuid": "444057411dc247baa4c3f00542d2eb6b",
+            "name": "Descoberta de Sensores de Temperatura",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#TEMPINDEX},1.3.6.1.4.1.2021.13.16.2.1.1,{#TEMPDEVICE},1.3.6.1.4.1.2021.13.16.2.1.2]",
+            "key": "temp.discovery",
+            "delay": "1h",
+            "lifetime": "30d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "72cc61bebf1d406a9a53676becb2160c",
+                "name": "Temperatura {#TEMPDEVICE}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2021.13.16.2.1.3.{#TEMPINDEX}",
+                "key": "temp.value[{#TEMPINDEX}]",
+                "history": "7d",
+                "trends": "90d",
+                "units": "°C",
+                "description": "Temperatura do sensor {#TEMPDEVICE} em graus Celsius. Baseado em LM-SENSORS-MIB lmTempSensorsValue. Valor em milidegrees (divide por 1000 para obter °C).",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.001"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
