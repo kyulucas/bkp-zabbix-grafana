@@ -1,70 +1,287 @@
 {
-  "proxyid": "0",
-  "host": "Intelbras Switches - SG 2404D MR L2",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Intelbras Switches - SG 2404D MR L2",
-  "flags": "0",
-  "templateid": "10770",
-  "description": "This template is designed for Intelbras SG 2404D MR L2+ switch. \r\n\r\n#=======================================\r\nGithub: https://github.com/arthurcadore/zabbixTemplates\r\nData: 17/10/2023\r\n#=======================================",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "eb2a756206ec4a16a985080f20ccddce",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "42",
-      "name": "Switches Intelbras - Capacitação Redes",
-      "uuid": "7d9b9033ef5e409f8dd158865d918a18"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10711",
-      "proxyid": "0",
-      "host": "CPD-02 RACK-02 SG 2404MR GERENCIA",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "CPD-02 RACK-02 SG 2404MR GERENCIA",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "eb2a756206ec4a16a985080f20ccddce",
+        "template": "Intelbras Switches - SG 2404D MR L2",
+        "name": "Intelbras Switches - SG 2404D MR L2",
+        "description": "This template is designed for Intelbras SG 2404D MR L2+ switch. \n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 17/10/2023\n#=======================================",
+        "groups": [
+          {
+            "name": "Switches Intelbras - Capacitação Redes"
+          }
+        ],
+        "items": [
+          {
+            "uuid": "10c82485048f4630a0d0e44ff780b6ca",
+            "name": "SNMP Description",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+            "key": "HostDescription",
+            "history": "90d",
+            "value_type": "TEXT",
+            "trends": "0"
+          },
+          {
+            "uuid": "d22d9df0cb3541b5aeb10cf0f09aadce",
+            "name": "SNMP Host Name",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+            "key": "hostSNMPname",
+            "history": "3d",
+            "value_type": "TEXT",
+            "trends": "0"
+          },
+          {
+            "uuid": "3f7991233ce841679dc595a01b0df450",
+            "name": "System Uptime",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+            "key": "HostUptime",
+            "history": "3d",
+            "trends": "30d"
+          },
+          {
+            "uuid": "3f3d87730a4e44d091cfb54c485a5506",
+            "name": "SNMP Contact",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+            "key": "SNMPcontact",
+            "history": "3d",
+            "value_type": "TEXT",
+            "trends": "0"
+          },
+          {
+            "uuid": "3a6e5187a11046d08d64283c36323c45",
+            "name": "SNMP Location",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+            "key": "SNMPlocation",
+            "history": "3d",
+            "value_type": "TEXT",
+            "trends": "0"
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "922a21f320a84c6597d5d4bd354f0033",
+            "name": "Port Discovery",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18]",
+            "key": "snmp.port.discovery",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#IFDESCR}",
+                  "value": "^(port \\d+: Gigabit Copper|Fiber)$",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "lifetime": "3d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "f792544073024ec98f69a20c07162be3",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - Port Description",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.2.{#SNMPINDEX}",
+                "key": "ifDescription[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "1d",
+                "value_type": "TEXT",
+                "trends": "0"
+              },
+              {
+                "uuid": "eb88b914f9b540368b8fb72b23f6a77c",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - MTU",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.4.{#SNMPINDEX}",
+                "key": "ifMTUValue[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "3d",
+                "trends": "30d"
+              },
+              {
+                "uuid": "c5fa460f71a04b6f939e90f3389e4aaf",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - Data Rate",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                "key": "ifNegociationValue[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "3d",
+                "trends": "30d"
+              },
+              {
+                "uuid": "9db941025782414ab9536ad37cadc7d3",
+                "name": "Tráfego de Entrada na Interface Porta {#SNMPINDEX} - {#IFALIAS}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                "key": "ifOctetsIN[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "3d",
+                "trends": "30d",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "48d2e191761449cfbf866155257fffb6",
+                "name": "Tráfego de Saída na Interface Porta {#SNMPINDEX} - {#IFALIAS}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                "key": "ifOctetsOut[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "3d",
+                "trends": "30d",
+                "units": "bps",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "05c91876ff8d4dbcaa4648b76ec7855d",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - Operation Status",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                "key": "ifOperStatus[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "3d",
+                "trends": "30d"
+              },
+              {
+                "uuid": "62e5c1e76b8b43a7acb3ce121378da24",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - STP Port Cost",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.5.{#SNMPINDEX}",
+                "key": "ifstpportcost[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "1d"
+              },
+              {
+                "uuid": "b6507ddc10154fe5b92140b6b28fe446",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - STP Port Priority",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.2.{#SNMPINDEX}",
+                "key": "ifstpportprior[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "1d"
+              },
+              {
+                "uuid": "1994e5e823924668be0292763a6778c9",
+                "name": "Porta {#SNMPINDEX} - {#IFALIAS} - STP Status",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.3.{#SNMPINDEX}",
+                "key": "ifstpstatus[{#IFDESCR}]",
+                "delay": "3m",
+                "history": "1d"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
