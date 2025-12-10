@@ -1,348 +1,308 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": false,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "monitoramento-tv-link-dedicado",
-    "url": "/d/q6Ljv7l7k/monitoramento-tv-link-dedicado",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-11-27T06:33:22-05:00",
-    "updated": "2025-12-05T15:08:07-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 11,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      }
-    }
-  },
-  "dashboard": {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "datasource",
-            "uid": "grafana"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "target": {
-            "limit": 100,
-            "matchAny": false,
-            "tags": [],
-            "type": "dashboard"
-          },
-          "type": "dashboard"
-        }
-      ]
-    },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": 60,
-    "links": [],
-    "panels": [
+  "annotations": {
+    "list": [
       {
+        "builtIn": 1,
         "datasource": {
-          "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "ff5clh86a2mf4a"
+          "type": "datasource",
+          "uid": "grafana"
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "mappings": [
-              {
-                "options": {
-                  "0": {
-                    "color": "dark-red",
-                    "index": 1,
-                    "text": "❌"
-                  },
-                  "1": {
-                    "index": 0,
-                    "text": "✅"
-                  }
-                },
-                "type": "value"
-              }
-            ],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "#5f6ae333",
-                  "value": 0
-                },
-                {
-                  "color": "#F2495C",
-                  "value": 80
-                }
-              ]
-            },
-            "unit": "none"
-          },
-          "overrides": []
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
         },
-        "gridPos": {
-          "h": 34,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 103,
-        "options": {
-          "colorMode": "background",
-          "graphMode": "none",
-          "justifyMode": "center",
-          "orientation": "auto",
-          "percentChangeColorMode": "standard",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
-          },
-          "showPercentChange": false,
-          "text": {
-            "titleSize": 30,
-            "valueSize": 100
-          },
-          "textMode": "value_and_name",
-          "wideLayout": true
-        },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "application": {
-              "filter": ""
-            },
-            "countTriggersBy": "",
-            "evaltype": "0",
-            "functions": [
-              {
-                "added": true,
-                "def": {
-                  "category": "Alias",
-                  "defaultParams": [
-                    "/(.*)/",
-                    "$1"
-                  ],
-                  "name": "replaceAlias",
-                  "params": [
-                    {
-                      "name": "regexp",
-                      "type": "string"
-                    },
-                    {
-                      "name": "newAlias",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "params": [
-                  "DEDICADO - ",
-                  " "
-                ],
-                "text": "replaceAlias(/(.*)/, $1)"
-              },
-              {
-                "added": true,
-                "def": {
-                  "category": "Alias",
-                  "defaultParams": [
-                    "/(.*)/",
-                    "$1"
-                  ],
-                  "name": "replaceAlias",
-                  "params": [
-                    {
-                      "name": "regexp",
-                      "type": "string"
-                    },
-                    {
-                      "name": "newAlias",
-                      "type": "string"
-                    }
-                  ]
-                },
-                "params": [
-                  ": ICMP ping",
-                  " "
-                ],
-                "text": "replaceAlias(/(.*)/, $1)"
-              }
-            ],
-            "group": {
-              "filter": "DEDICADO"
-            },
-            "host": {
-              "filter": "/.*/"
-            },
-            "item": {
-              "filter": "ICMP ping"
-            },
-            "itemTag": {
-              "filter": ""
-            },
-            "macro": {
-              "filter": ""
-            },
-            "options": {
-              "count": false,
-              "disableDataAlignment": false,
-              "showDisabledItems": false,
-              "skipEmptyValues": false,
-              "useTrends": "default",
-              "useZabbixValueMapping": false
-            },
-            "proxy": {
-              "filter": ""
-            },
-            "queryType": "0",
-            "refId": "A",
-            "resultFormat": "time_series",
-            "schema": 12,
-            "table": {
-              "skipEmptyValues": false
-            },
-            "tags": {
-              "filter": ""
-            },
-            "textFilter": "",
-            "trigger": {
-              "filter": ""
-            }
-          }
-        ],
-        "transformations": [
-          {
-            "id": "joinByField",
-            "options": {}
-          },
-          {
-            "id": "organize",
-            "options": {
-              "excludeByName": {
-                "2025186 servidor do jogo ": true,
-                "Acessa Telecomunicacoes Resende ": true,
-                "DISCAP INDUSTRIA ": false,
-                "LOCALIZA RENT A CAR SA ": true,
-                "RIO PARAIBA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": true,
-                "Serval - servicos e equipamentos industriais ltda ": true,
-                "Time": true
-              },
-              "includeByName": {},
-              "indexByName": {},
-              "renameByName": {
-                " 2016123 - Connection Tres Rios ": "",
-                " 2016238 - Nova Kaeru ": "",
-                " 2017877 - Serval - servicos e equipamentos industriais ltda ": "2017877 - Serval",
-                " 2018674 - Connection Santana do Deserto ": "2018674 - Connection Santana",
-                " 20211293 - SIMAPPEL ": "",
-                " 20231516 - UBS Santana do Deserto ": "",
-                " 20231979 - POSTO SOL DA DUTRA LTDA ": "20231979 - POSTO SOL DA DUTRA",
-                " 20232268 - SOARES INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "20232268 - SOARES INDUSTRIA LTDA",
-                " 20241599 - NOVA VIAGEM IND. E COM. DE EMBALAGENS LTDA ": "20241599 - COM. DE EMBALAGENS LTDA",
-                " 20241774 - PLUMATEX COLCHOES INDUSTRIAL LTDA ": "20241774 - PLUMATEX LTDA",
-                " 2024503 - RIO PARAIBA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "2024503 - RIO PARAIBA EMBALAGENS LTDA",
-                " 20252143 - TRANSCOUTO TRANSPORTE E LOGISTICA UNIPESSOAL LTDA ": "20252143 - TRANSCOUTO LTDA",
-                "2017656 - Oscar J. Nunes ": "",
-                "2023717 - Grafica Centro-Sul ": "",
-                "Acessa Telecomunicacoes Resende ": "Acessa -",
-                "Agro Unione LTDA ": "Agro Unione - 2017116",
-                "Agua Mineral PIEDADE ": "Água Piedade - 2016241",
-                "Base Ind. Colchoes ": "Base Ind. - 2021494",
-                "Camera Clima Ao Vivo BMP ": "Câmera Clima ao Vivo - climaaovivo",
-                "Condor S-A ": "Condor - 2020258",
-                "Connection Levy ": "Connect Levy - 20201175",
-                "Connection Santana do Deserto ": "Connect Santana - 2018674",
-                "Connection Tres Rios ": "Connect TR - 2016123",
-                "DEDICADO - 2017656 - Oscar J. Nunes ": "",
-                "DEDICADO - 2023717 - Grafica Centro-Sul ": "",
-                "DISCAP INDUSTRIA ": "Discap - 2018950",
-                "Da Silva Comercio ": "Da Silva Com. - 2017570",
-                "Dedicado sossego ": "Dedicado Sossego - 192.168.150.2",
-                "Grupo Mill ": "Grupo Mil - 2016525",
-                "Hotel Fazenda Santa Helena ": "Hotel Santa Helena - 20201240",
-                "Itanet ": "Itanet - 202138",
-                "J CLEAN DISTRIBUIDORA ": "J Clean - 201786",
-                "LOCALIZA RENT A CAR SA ": "Localiza - 20222985",
-                "Master LOC ": "Master LOC - 20241717",
-                "NOVA VIAGEM IND. E COM. DE EMBALAGENS LTDA ": "Nova Viagem Ind. - 20241599",
-                "Nova Kaeru ": "Nova Kaeru - 2016238",
-                "PLUMATEX COLCHOES INDUSTRIAL LTDA ": "Plumatex - 20241774",
-                "POSTO SOL DA DUTRA LTDA ": "Posto Sol Dutra - 20231979",
-                "Policlinica Walter Gomes ": "Policl. Walter G. - 20221809",
-                "Prefeitura de chiador ": "Prefeitura Chiador - 60.60.107.2",
-                "Prefeitura de chiador2 ": "Prefeitura Chiador2 - 60.60.108.2",
-                "RADIO E TELEVISAO ": "Radio e TV - 2023275",
-                "RIO PARAIBA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "Rio Paraiba Embalagens - 2024503",
-                "SANTA-FE-ENERGETICA ": "Santa Fé Energia - 20211797",
-                "SIMAPPEL ": "Simappel - 20211293",
-                "SOARES INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "Soares - 20232268",
-                "SOEGAR ": "Soegar - 2021457",
-                "SR Embalagens ": "SR Embalagens - 20171156",
-                "Santana do Deserto Sede ": "Santana Sede - 20231478",
-                "Sec. Saude Terminal Rodoviario ": "Termin. Rodoviário - 2024222",
-                "Serval - servicos e equipamentos industriais ltda ": "Serval - 2017877",
-                "TRANSCOUTO TRANSPORTE E LOGISTICA UNIPESSOAL LTDA ": "Transcouto - 20252143",
-                "Talkd Solucoes ": "Talkd Soluções - 20252273",
-                "UBS Santana do Deserto ": "UBS Santana - 20231516",
-                "Ultrax Pac LTDA ": "Ultrax Pac - 2017658",
-                "cliente_semparar ": "Três Irmãos - 202315"
-              }
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "stat"
+        "type": "dashboard"
       }
-    ],
-    "preload": false,
-    "refresh": "",
-    "schemaVersion": 42,
-    "tags": [
-      "outros",
-      "ZABBIX SERVER DASH"
-    ],
-    "templating": {
-      "list": []
-    },
-    "time": {
-      "from": "now-5m",
-      "to": "now"
-    },
-    "timepicker": {},
-    "timezone": "",
-    "title": "MONITORAMENTO TV LINK DEDICADO",
-    "uid": "q6Ljv7l7k",
-    "version": 11,
-    "weekStart": ""
-  }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "❌"
+                },
+                "1": {
+                  "index": 0,
+                  "text": "✅"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "#5f6ae333",
+                "value": 0
+              },
+              {
+                "color": "#F2495C",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 34,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 103,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {
+          "titleSize": 30,
+          "valueSize": 100
+        },
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "DEDICADO - ",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": ICMP ping",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "joinByField",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "2025186 servidor do jogo ": true,
+              "Acessa Telecomunicacoes Resende ": true,
+              "DISCAP INDUSTRIA ": false,
+              "LOCALIZA RENT A CAR SA ": true,
+              "RIO PARAIBA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": true,
+              "Serval - servicos e equipamentos industriais ltda ": true,
+              "Time": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              " 2016123 - Connection Tres Rios ": "",
+              " 2016238 - Nova Kaeru ": "",
+              " 2017877 - Serval - servicos e equipamentos industriais ltda ": "2017877 - Serval",
+              " 2018674 - Connection Santana do Deserto ": "2018674 - Connection Santana",
+              " 20211293 - SIMAPPEL ": "",
+              " 20231516 - UBS Santana do Deserto ": "",
+              " 20231979 - POSTO SOL DA DUTRA LTDA ": "20231979 - POSTO SOL DA DUTRA",
+              " 20232268 - SOARES INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "20232268 - SOARES INDUSTRIA LTDA",
+              " 20241599 - NOVA VIAGEM IND. E COM. DE EMBALAGENS LTDA ": "20241599 - COM. DE EMBALAGENS LTDA",
+              " 20241774 - PLUMATEX COLCHOES INDUSTRIAL LTDA ": "20241774 - PLUMATEX LTDA",
+              " 2024503 - RIO PARAIBA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "2024503 - RIO PARAIBA EMBALAGENS LTDA",
+              " 20252143 - TRANSCOUTO TRANSPORTE E LOGISTICA UNIPESSOAL LTDA ": "20252143 - TRANSCOUTO LTDA",
+              "2017656 - Oscar J. Nunes ": "",
+              "2023717 - Grafica Centro-Sul ": "",
+              "Acessa Telecomunicacoes Resende ": "Acessa -",
+              "Agro Unione LTDA ": "Agro Unione - 2017116",
+              "Agua Mineral PIEDADE ": "Água Piedade - 2016241",
+              "Base Ind. Colchoes ": "Base Ind. - 2021494",
+              "Camera Clima Ao Vivo BMP ": "Câmera Clima ao Vivo - climaaovivo",
+              "Condor S-A ": "Condor - 2020258",
+              "Connection Levy ": "Connect Levy - 20201175",
+              "Connection Santana do Deserto ": "Connect Santana - 2018674",
+              "Connection Tres Rios ": "Connect TR - 2016123",
+              "DEDICADO - 2017656 - Oscar J. Nunes ": "",
+              "DEDICADO - 2023717 - Grafica Centro-Sul ": "",
+              "DISCAP INDUSTRIA ": "Discap - 2018950",
+              "Da Silva Comercio ": "Da Silva Com. - 2017570",
+              "Dedicado sossego ": "Dedicado Sossego - 192.168.150.2",
+              "Grupo Mill ": "Grupo Mil - 2016525",
+              "Hotel Fazenda Santa Helena ": "Hotel Santa Helena - 20201240",
+              "Itanet ": "Itanet - 202138",
+              "J CLEAN DISTRIBUIDORA ": "J Clean - 201786",
+              "LOCALIZA RENT A CAR SA ": "Localiza - 20222985",
+              "Master LOC ": "Master LOC - 20241717",
+              "NOVA VIAGEM IND. E COM. DE EMBALAGENS LTDA ": "Nova Viagem Ind. - 20241599",
+              "Nova Kaeru ": "Nova Kaeru - 2016238",
+              "PLUMATEX COLCHOES INDUSTRIAL LTDA ": "Plumatex - 20241774",
+              "POSTO SOL DA DUTRA LTDA ": "Posto Sol Dutra - 20231979",
+              "Policlinica Walter Gomes ": "Policl. Walter G. - 20221809",
+              "Prefeitura de chiador ": "Prefeitura Chiador - 60.60.107.2",
+              "Prefeitura de chiador2 ": "Prefeitura Chiador2 - 60.60.108.2",
+              "RADIO E TELEVISAO ": "Radio e TV - 2023275",
+              "RIO PARAIBA INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "Rio Paraiba Embalagens - 2024503",
+              "SANTA-FE-ENERGETICA ": "Santa Fé Energia - 20211797",
+              "SIMAPPEL ": "Simappel - 20211293",
+              "SOARES INDUSTRIA E COMERCIO DE EMBALAGENS LTDA ": "Soares - 20232268",
+              "SOEGAR ": "Soegar - 2021457",
+              "SR Embalagens ": "SR Embalagens - 20171156",
+              "Santana do Deserto Sede ": "Santana Sede - 20231478",
+              "Sec. Saude Terminal Rodoviario ": "Termin. Rodoviário - 2024222",
+              "Serval - servicos e equipamentos industriais ltda ": "Serval - 2017877",
+              "TRANSCOUTO TRANSPORTE E LOGISTICA UNIPESSOAL LTDA ": "Transcouto - 20252143",
+              "Talkd Solucoes ": "Talkd Soluções - 20252273",
+              "UBS Santana do Deserto ": "UBS Santana - 20231516",
+              "Ultrax Pac LTDA ": "Ultrax Pac - 2017658",
+              "cliente_semparar ": "Três Irmãos - 202315"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 42,
+  "tags": [
+    "outros",
+    "ZABBIX SERVER DASH"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-30m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "MONITORAMENTO TV LINK DEDICADO",
+  "uid": "q6Ljv7l7k",
+  "weekStart": ""
 }
