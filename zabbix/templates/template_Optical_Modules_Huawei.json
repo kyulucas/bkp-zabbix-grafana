@@ -1,134 +1,1264 @@
 {
-  "proxyid": "0",
-  "host": "Optical Modules Huawei",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Optical Modules Huawei",
-  "flags": "0",
-  "templateid": "10696",
-  "description": "## Overview\r\n\r\nTemplate with single lane discovery and multi lane devices.\r\n\r\n\r\n  \r\nCréditos à https://github.com/GustavoIFelippe\r\n\r\n\r\n\r\n## Author\r\n\r\ngustavo10telecom",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "f6c031abaebb45929dba607260ff45b3",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [
-    {
-      "hostmacroid": "7848",
-      "hostid": "10696",
-      "macro": "{$ATTENUATIONFACTOR}",
-      "value": "-2",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7849",
-      "hostid": "10696",
-      "macro": "{$SNMP_COMMUNITY}",
-      "value": "dEz_sW_@ro",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7850",
-      "hostid": "10696",
-      "macro": "{$TRANSCEIVER_TEMP_WARN}",
-      "value": "70",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    }
-  ],
-  "groups": [
-    {
-      "groupid": "35",
-      "name": "Templates Huawei",
-      "uuid": "31a2c7b235b1462495f4bad087ee8943"
-    },
-    {
-      "groupid": "26",
-      "name": "Templates/Modules",
-      "uuid": "57b7ae836ca64446ba2c296389c009b7"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10695",
-      "proxyid": "0",
-      "host": "SW - 6730 CORE LINK BGP",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "SW - 6730 CORE LINK BGP",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10697",
-      "proxyid": "0",
-      "host": "SW - 6730 OLTS",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "SW - 6730 OLTS",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "f6c031abaebb45929dba607260ff45b3",
+        "template": "Optical Modules Huawei",
+        "name": "Optical Modules Huawei",
+        "description": "## Overview\n\nTemplate with single lane discovery and multi lane devices.\n\n\n  \nCréditos à https://github.com/GustavoIFelippe\n\n\n\n## Author\n\ngustavo10telecom",
+        "groups": [
+          {
+            "name": "Templates/Modules"
+          },
+          {
+            "name": "Templates Huawei"
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "c5600c6b8835487ea10f66f7b215dcbb",
+            "name": "Network Optical Modules Multi Lane",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#ENTPHYSICALNAME},ENTITY-MIB::entPhysicalName,{#IFVOLTAGE},1.3.6.1.4.1.2011.5.25.31.1.1.3.1.6]",
+            "key": "net.optical.ml.discovery",
+            "delay": "1h",
+            "filter": {
+              "evaltype": "FORMULA",
+              "formula": "(A or B) and C",
+              "conditions": [
+                {
+                  "macro": "{#ENTPHYSICALNAME}",
+                  "value": "40GE",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#ENTPHYSICALNAME}",
+                  "value": "100GE",
+                  "formulaid": "B"
+                },
+                {
+                  "macro": "{#IFVOLTAGE}",
+                  "value": "-1",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "formulaid": "C"
+                }
+              ]
+            },
+            "lifetime": "1d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "2ac9ca89a8044f9ca52bc165f13e1302",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane0",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\1"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "def2f2d5586741b086df7f411c1ba576",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\2"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "4708954c22a64d57a0d9b2eec58d44d9",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane2",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\3"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "bd9d1924df214b009dd247376546ddf3",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Lane3",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\4"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "2c4ba167905949da982f07fdfa25673a",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane0",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\1"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "654817ca49124ab3bc3fe1791c2099a8",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane1",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\2"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "f7787853c7e740f491102ada195a257f",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane2",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\3"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "5cc0fce9bb0d44c8af00263ec8bc00e2",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Lane3",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "REGEX",
+                    "parameters": [
+                      "([^\\,\\s]*),([^\\,\\s]*),([^,\\s]*),([^,\\s]*)",
+                      "\\4"
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "591022ae6a9e46ec85861154c46f2040",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.14.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxHighThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "5364ae850766456e90a2246ed3c806ab",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.21.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxHighWarnThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "b5ee7dbbd9da4a5381b42e6112398a3d",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.13.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxLowThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "ce98751bf08e411680eae3fda93e5e59",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.20.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "59a63571ab2543d18385eaf5f9e7ced8",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Temperature",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.5.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "ºC",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "3b39a434e5254408b1b0fc7584fec7e2",
+                    "expression": "last(/Optical Modules Huawei/hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}])\n>=\n{$TRANSCEIVER_TEMP_WARN}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/Optical Modules Huawei/hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}])\n<\n{$TRANSCEIVER_TEMP_WARN}",
+                    "name": "High Temperature on Optical Module ML: {#ENTPHYSICALNAME}",
+                    "priority": "HIGH",
+                    "manual_close": "YES"
+                  }
+                ]
+              },
+              {
+                "uuid": "3e4b2ddec3e442f3a626ecf0d7f16359",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.16.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxHighThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "ce19e65f43174b809fdb8184b0f39ca3",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.23.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxHighWarnThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "9a6b4f520abf46fb9978324016336af9",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.15.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxLowThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "a129b5ab53eb4084b7d9826243a33e5e",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.22.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}]",
+                "delay": "30m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "d2c99159597e4b72917294df21ff6a66",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Vendor Name",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.24.{#SNMPINDEX}",
+                "key": "hwEntityOpticalVenderNameML[{#ENTPHYSICALNAME}]",
+                "delay": "1h",
+                "history": "30d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "993e7600b7814600b73d9f5fed7e6be0",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Type",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.25.{#SNMPINDEX}",
+                "key": "hwEntityOpticalVenderPnML[{#ENTPHYSICALNAME}]",
+                "delay": "1h",
+                "history": "30d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              }
+            ],
+            "trigger_prototypes": [
+              {
+                "uuid": "58bb482b68ab402d9b889e55226507d0",
+                "expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}])) \n <= \n(last(/Optical Modules Huawei/hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}])))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]))\n<> -40)",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}])) \n >\n(last(/Optical Modules Huawei/hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}])))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]))\n<> -40)",
+                "name": "Low Rx Signal on Optical Module ML: {#ENTPHYSICALNAME}",
+                "priority": "DISASTER",
+                "manual_close": "YES"
+              },
+              {
+                "uuid": "c1a33f14d3f44525988d02d212be0c46",
+                "expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}])) \n <= \n(last(/Optical Modules Huawei/hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}])))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}])) \n<> -40)",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}])) \n >\n(last(/Optical Modules Huawei/hwEntityOpticalTxLowWarnThresholdML[{#ENTPHYSICALNAME}])))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}])) \n<> -40)",
+                "name": "Low Tx Signal on Optical Module ML: {#ENTPHYSICALNAME}",
+                "priority": "DISASTER",
+                "manual_close": "YES"
+              },
+              {
+                "uuid": "7ed747166ddf44f3a13d922ab2a373d5",
+                "expression": "((change(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) <= {$ATTENUATIONFACTOR}) \nor\n(change(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) <= {$ATTENUATIONFACTOR}) \nor\n(change(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) <= {$ATTENUATIONFACTOR}) \nor\n(change(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]) <= {$ATTENUATIONFACTOR}))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) \nor\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) \nor\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) \nor\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]))\n<> -40)",
+                "recovery_mode": "NONE",
+                "name": "Signal Atenuation on Optical Module ML: {#ENTPHYSICALNAME}",
+                "priority": "HIGH",
+                "manual_close": "YES"
+              }
+            ],
+            "graph_prototypes": [
+              {
+                "uuid": "416886c1eb604ff096ffebb5725cd88a",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Rx Signals",
+                "graph_items": [
+                  {
+                    "drawtype": "BOLD_LINE",
+                    "color": "59DF00",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalRxHighThresholdML[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "1",
+                    "color": "FF0000",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "2",
+                    "color": "0040FF",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "3",
+                    "color": "FFFF00",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "4",
+                    "color": "BF00FF",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "5",
+                    "drawtype": "BOLD_LINE",
+                    "color": "CC6600",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalRxLowThresholdML[{#ENTPHYSICALNAME}]"
+                    }
+                  }
+                ]
+              },
+              {
+                "uuid": "6e26289c89fd4805a8feba4a1f339e57",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Temperature",
+                "graph_items": [
+                  {
+                    "drawtype": "BOLD_LINE",
+                    "color": "FF0000",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalTemperatureML[{#ENTPHYSICALNAME}]"
+                    }
+                  }
+                ]
+              },
+              {
+                "uuid": "75f3002b8fb340e191e86d5eb5ca83b8",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Tx Signals",
+                "graph_items": [
+                  {
+                    "drawtype": "BOLD_LINE",
+                    "color": "59DF00",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalTxHighThresholdML[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "1",
+                    "color": "FF0000",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneTxPowerMLLane0[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "2",
+                    "color": "0040FF",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneTxPowerMLLane1[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "3",
+                    "color": "FFFF00",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneTxPowerMLLane2[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "4",
+                    "color": "BF00FF",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneTxPowerMLLane3[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "5",
+                    "drawtype": "BOLD_LINE",
+                    "color": "CC6600",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalTxLowThresholdML[{#ENTPHYSICALNAME}]"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "309b42251f964d49a73d0f4fc9ef5498",
+            "name": "Network Optical Modules Single Lane",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#ENTPHYSICALNAME},ENTITY-MIB::entPhysicalName,{#IFVOLTAGE},1.3.6.1.4.1.2011.5.25.31.1.1.3.1.6]",
+            "key": "net.optical.sl.discovery",
+            "delay": "1h",
+            "filter": {
+              "evaltype": "AND",
+              "conditions": [
+                {
+                  "macro": "{#ENTPHYSICALNAME}",
+                  "value": "XG",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#IFVOLTAGE}",
+                  "value": "-1",
+                  "operator": "NOT_MATCHES_REGEX",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime": "1d",
+            "enabled_lifetime_type": "DISABLE_NEVER",
+            "item_prototypes": [
+              {
+                "uuid": "69be48daa36b4d7889283ee43d335544",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.32.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "848b25ed45d4431882be536b463a41ea",
+                    "expression": "(change(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n <= \n{$ATTENUATIONFACTOR})\n\nand\n\n(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                    "recovery_mode": "NONE",
+                    "name": "Signal Atenuation on Optical Module SL: {#ENTPHYSICALNAME}",
+                    "priority": "HIGH",
+                    "manual_close": "YES"
+                  }
+                ]
+              },
+              {
+                "uuid": "cab5f495cf164f5892e26a7684a54a23",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.33.{#SNMPINDEX}",
+                "key": "hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "288ca9c3b96b4ea09c50ea5d5521e0cf",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.14.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxHighThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "47f42d30939a4b329ba0d5b60318db7f",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower High Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.21.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxHighWarnThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "82168de0d68745feabc072e275c5c2eb",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.13.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "0a14442ed20a4d6bb2c0b41e4425fb98",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: RxPower Low Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.20.{#SNMPINDEX}",
+                "key": "hwEntityOpticalRxLowWarnThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "a9e9da7ab4854ed2ac11dac64a52d7ee",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Temperature",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.4.1.2011.5.25.31.1.1.3.1.5.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTemperature[{#ENTPHYSICALNAME}]",
+                "delay": "5m",
+                "history": "30d",
+                "value_type": "FLOAT",
+                "units": "°C",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "1e61d47ce40044b0997bdcd007f940d7",
+                    "expression": "last(/Optical Modules Huawei/hwEntityOpticalTemperature[{#ENTPHYSICALNAME}])\n>=\n{$TRANSCEIVER_TEMP_WARN}",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/Optical Modules Huawei/hwEntityOpticalTemperature[{#ENTPHYSICALNAME}])\n>\n{$TRANSCEIVER_TEMP_WARN}",
+                    "name": "High Temperature on Optical Module SL: {#ENTPHYSICALNAME}",
+                    "priority": "HIGH"
+                  }
+                ]
+              },
+              {
+                "uuid": "5c8d618c7b0a4b5c85a2edb680bf0e6e",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.16.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxHighThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "ad68cdb519f94f62b52cdef5d34587cc",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower High Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.23.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxHighWarnThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "71e48c85dc814013adb190a745b4f550",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.15.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "9fae1c129708463e87b458446996bd3c",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: TxPower Low Warning Threshold",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.22.{#SNMPINDEX}",
+                "key": "hwEntityOpticalTxLowWarnThreshold[{#ENTPHYSICALNAME}]",
+                "delay": "10m",
+                "history": "10d",
+                "value_type": "FLOAT",
+                "units": "dBm",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "0.01"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "5f9b00f29cdd4b16b6ea1ad84be37e61",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Vendor Name",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.24.{#SNMPINDEX}",
+                "key": "hwEntityOpticalVenderName[{#ENTPHYSICALNAME}]",
+                "delay": "1h",
+                "history": "30d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "0a261feed73d41848be7e2954abadfba",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Type",
+                "type": "SNMP_AGENT",
+                "snmp_oid": ".1.3.6.1.4.1.2011.5.25.31.1.1.3.1.25.{#SNMPINDEX}",
+                "key": "hwEntityOpticalVenderPn[{#ENTPHYSICALNAME}]",
+                "delay": "1h",
+                "history": "30d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Transceiver Data Interface SL: {#ENTPHYSICALNAME}"
+                  }
+                ]
+              }
+            ],
+            "trigger_prototypes": [
+              {
+                "uuid": "9bb66a5c490042c4a39f4c2949322270",
+                "expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n <= \n(last(/Optical Modules Huawei/hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))\nand\n(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n >\n(last(/Optical Modules Huawei/hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))\nand\n(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                "name": "Low Rx Signal on Optical Module SL: {#ENTPHYSICALNAME}",
+                "priority": "DISASTER",
+                "manual_close": "YES"
+              },
+              {
+                "uuid": "77735e0bfeb244479d0394490b0e9459",
+                "expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}])\n <= \n(last(/Optical Modules Huawei/hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))\nand\n(last(/Optical Modules Huawei/hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}])\n >\n(last(/Optical Modules Huawei/hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))\nand\n(last(/Optical Modules Huawei/hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                "name": "Low Tx Signal on Optical Module SL: {#ENTPHYSICALNAME}",
+                "priority": "DISASTER",
+                "manual_close": "YES"
+              }
+            ],
+            "graph_prototypes": [
+              {
+                "uuid": "6348c4362fff46cf8ac1cec0185d65c2",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Rx Signals (SL)",
+                "graph_items": [
+                  {
+                    "color": "59DF00",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalRxHighThreshold[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "1",
+                    "color": "0040FF",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "2",
+                    "color": "CC6600",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]"
+                    }
+                  }
+                ]
+              },
+              {
+                "uuid": "f98d108afb744fb69cbdc665512abcd0",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Temperature (SL)",
+                "graph_items": [
+                  {
+                    "drawtype": "BOLD_LINE",
+                    "color": "FF0000",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalTemperature[{#ENTPHYSICALNAME}]"
+                    }
+                  }
+                ]
+              },
+              {
+                "uuid": "e793de2d12134c2eb33f2b69b9db6655",
+                "name": "Optical Module Interface {#ENTPHYSICALNAME}: Tx Signals (SL)",
+                "graph_items": [
+                  {
+                    "color": "59DF00",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalLaneTxPower[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "1",
+                    "color": "0040FF",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalTxHighThreshold[{#ENTPHYSICALNAME}]"
+                    }
+                  },
+                  {
+                    "sortorder": "2",
+                    "color": "CC6600",
+                    "item": {
+                      "host": "Optical Modules Huawei",
+                      "key": "hwEntityOpticalTxLowThreshold[{#ENTPHYSICALNAME}]"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$ATTENUATIONFACTOR}",
+            "value": "-2"
+          },
+          {
+            "macro": "{$SNMP_COMMUNITY}",
+            "value": "dEz_sW_@ro"
+          },
+          {
+            "macro": "{$TRANSCEIVER_TEMP_WARN}",
+            "value": "70"
+          }
+        ]
+      }
+    ]
+  }
 }
