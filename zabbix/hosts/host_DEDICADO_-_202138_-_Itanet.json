@@ -1,57 +1,109 @@
 {
-  "hostid": "10741",
-  "proxyid": "0",
-  "host": "DEDICADO - 202138 - Itanet",
-  "status": "0",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "DEDICADO - 202138 - Itanet",
-  "flags": "0",
-  "templateid": "0",
-  "description": "",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "custom_interfaces": "0",
-  "uuid": "",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "inventory_mode": "-1",
-  "active_available": "0",
-  "assigned_proxyid": "0",
-  "macros": [],
-  "groups": [
-    {
-      "groupid": "37",
-      "name": "DEDICADO",
-      "flags": "0",
-      "uuid": "d8321ebe8c5c4adf9b37e479fdd3b6bf"
-    }
-  ],
-  "interfaces": [
-    {
-      "interfaceid": "79",
-      "hostid": "10741",
-      "main": "1",
-      "type": "1",
-      "useip": "1",
-      "ip": "127.0.0.1",
-      "dns": "",
-      "port": "10050",
-      "available": "0",
-      "error": "",
-      "errors_from": "0",
-      "disable_until": "0",
-      "details": []
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "host_groups": [
+      {
+        "uuid": "5259598992794341ad1b1a0877d02906",
+        "name": "BGP"
+      },
+      {
+        "uuid": "33d4ee1c6c2d4a3ba57bba12c563d12d",
+        "name": "BRAS"
+      },
+      {
+        "uuid": "c5c6321ff8424a5facab349b39f6f222",
+        "name": "CDN"
+      },
+      {
+        "uuid": "fa1c4f14941b49de9545cf8f0eba00bb",
+        "name": "CGNAT"
+      },
+      {
+        "uuid": "3c6453cf1d7a4182b214ae19aa71c60f",
+        "name": "DATACOM"
+      },
+      {
+        "uuid": "d8321ebe8c5c4adf9b37e479fdd3b6bf",
+        "name": "DEDICADO"
+      },
+      {
+        "uuid": "3e9ba32fb1f94dbb91568fc841f39b4a",
+        "name": "ENERGIA"
+      },
+      {
+        "uuid": "dc579cd7a1a34222933f24f52a68bcd8",
+        "name": "Linux servers"
+      },
+      {
+        "uuid": "884d24163e2b4fa394ec3517c46fc7c4",
+        "name": "OLT"
+      },
+      {
+        "uuid": "41f45bc3b7e84a3f83cd022e6585a558",
+        "name": "PPPOE"
+      },
+      {
+        "uuid": "455523c91c344982af2a5a60de9c78ca",
+        "name": "PROXMOX"
+      },
+      {
+        "uuid": "7e5fed39012d41f2a1dd53cafc63d5d7",
+        "name": "RETIFICADORA HUAWEI"
+      },
+      {
+        "uuid": "4ad6175df71f4299ba09c1555a236844",
+        "name": "SERVIDOR"
+      },
+      {
+        "uuid": "19c25e4f82664dd1bd63fff55d2edd2d",
+        "name": "Storage"
+      },
+      {
+        "uuid": "feb352d4afce409f8ee5c1801731740f",
+        "name": "SWITCH"
+      },
+      {
+        "uuid": "8f0833fc091f4d6788c591dc0653ce65",
+        "name": "TechnoBox DNS"
+      },
+      {
+        "uuid": "59f2d6c18f6c4a02b81c0faff4f3fa4e",
+        "name": "Telefonia"
+      },
+      {
+        "uuid": "698dc19d489c4e4db73e28a713eab07b",
+        "name": "teste"
+      },
+      {
+        "uuid": "6f6799aa69e844b4b3918f779f2abf08",
+        "name": "Zabbix servers"
+      }
+    ],
+    "hosts": [
+      {
+        "host": "DEDICADO - 202138 - Itanet",
+        "name": "DEDICADO - 202138 - Itanet",
+        "status": "DISABLED",
+        "templates": [
+          {
+            "name": "ping.cgnat"
+          },
+          {
+            "name": "potencia-onu"
+          }
+        ],
+        "groups": [
+          {
+            "name": "DEDICADO"
+          }
+        ],
+        "interfaces": [
+          {
+            "interface_ref": "if1"
+          }
+        ],
+        "inventory_mode": "DISABLED"
+      }
+    ]
+  }
 }
