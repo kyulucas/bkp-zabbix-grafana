@@ -1,392 +1,427 @@
 {
-  "proxyid": "0",
-  "host": "Template Module Interfaces SNMP",
-  "status": "3",
-  "ipmi_authtype": "-1",
-  "ipmi_privilege": "2",
-  "ipmi_username": "",
-  "ipmi_password": "",
-  "maintenanceid": "0",
-  "maintenance_status": "0",
-  "maintenance_type": "0",
-  "maintenance_from": "0",
-  "name": "Template Module Interfaces SNMP",
-  "flags": "0",
-  "templateid": "10687",
-  "description": "Template Module Interfaces\r\n\r\nMIBs used:\r\nIF-MIB\r\n\r\nTemplate tooling version used: 0.36",
-  "tls_connect": "1",
-  "tls_accept": "1",
-  "tls_issuer": "",
-  "tls_subject": "",
-  "tls_psk_identity": "",
-  "tls_psk": "",
-  "custom_interfaces": "0",
-  "uuid": "809cd59886464ff3ad0a66d16fb1f2aa",
-  "vendor_name": "",
-  "vendor_version": "",
-  "proxy_groupid": "0",
-  "monitored_by": "0",
-  "macros": [
-    {
-      "hostmacroid": "7831",
-      "hostid": "10687",
-      "macro": "{$IF.ERRORS.WARN}",
-      "value": "2",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7832",
-      "hostid": "10687",
-      "macro": "{$IF.UTIL.MAX}",
-      "value": "90",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7833",
-      "hostid": "10687",
-      "macro": "{$IFCONTROL}",
-      "value": "1",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7834",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFADMINSTATUS.MATCHES}",
-      "value": "^.*",
-      "description": "Ignore notPresent(6)",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7835",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFADMINSTATUS.NOT_MATCHES}",
-      "value": "^2$",
-      "description": "Ignore down(2) administrative status",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7836",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFALIAS.MATCHES}",
-      "value": ".*",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7837",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFALIAS.NOT_MATCHES}",
-      "value": "CHANGE_IF_NEEDED",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7838",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFDESCR.MATCHES}",
-      "value": ".*",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7839",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFDESCR.NOT_MATCHES}",
-      "value": "CHANGE_IF_NEEDED",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7840",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFNAME.MATCHES}",
-      "value": "^.*$",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7841",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFNAME.NOT_MATCHES}",
-      "value": "(^Software Loopback Interface|^NULL[0-9.]*$|^[Ll]o[0-9.]*$|^[Ss]ystem$|^Nu[0-9.]*$|^veth[0-9a-z]+$|docker[0-9]+|br-[a-z0-9]{12})",
-      "description": "Filter out loopbacks, nulls, docker veth links and docker0 bridge by default",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7842",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFOPERSTATUS.MATCHES}",
-      "value": "^.*$",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7843",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFOPERSTATUS.NOT_MATCHES}",
-      "value": "^6$",
-      "description": "Ignore notPresent(6)",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7844",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFTYPE.MATCHES}",
-      "value": ".*",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    },
-    {
-      "hostmacroid": "7845",
-      "hostid": "10687",
-      "macro": "{$NET.IF.IFTYPE.NOT_MATCHES}",
-      "value": "CHANGE_IF_NEEDED",
-      "description": "",
-      "type": "0",
-      "automatic": "0"
-    }
-  ],
-  "groups": [
-    {
-      "groupid": "26",
-      "name": "Templates/Modules",
-      "uuid": "57b7ae836ca64446ba2c296389c009b7"
-    }
-  ],
-  "hosts": [
-    {
-      "hostid": "10698",
-      "proxyid": "0",
-      "host": "N3k Cisco CPD-02 Data Center",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "N3k Cisco CPD-02 Data Center",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10824",
-      "proxyid": "0",
-      "host": "EDD - Casas Bahia",
-      "status": "1",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "EDD - Casas Bahia",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10825",
-      "proxyid": "0",
-      "host": "EDD - Condor",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "EDD - Condor",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10826",
-      "proxyid": "0",
-      "host": "EDD - Sem Parar",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "EDD - Sem Parar",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10827",
-      "proxyid": "0",
-      "host": "EDD - Itanet",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "EDD - Itanet",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10828",
-      "proxyid": "0",
-      "host": "EDD - Prefeitura Chiador 2",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "EDD - Prefeitura Chiador 2",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    },
-    {
-      "hostid": "10829",
-      "proxyid": "0",
-      "host": "EDD - Prefeitura Chiador 1",
-      "status": "0",
-      "ipmi_authtype": "-1",
-      "ipmi_privilege": "2",
-      "ipmi_username": "",
-      "ipmi_password": "",
-      "maintenanceid": "0",
-      "maintenance_status": "0",
-      "maintenance_type": "0",
-      "maintenance_from": "0",
-      "name": "EDD - Prefeitura Chiador 1",
-      "flags": "0",
-      "templateid": "0",
-      "description": "",
-      "tls_connect": "1",
-      "tls_accept": "1",
-      "tls_issuer": "",
-      "tls_subject": "",
-      "custom_interfaces": "0",
-      "uuid": "",
-      "vendor_name": "",
-      "vendor_version": "",
-      "proxy_groupid": "0",
-      "monitored_by": "0",
-      "inventory_mode": "-1",
-      "active_available": "0",
-      "assigned_proxyid": "0"
-    }
-  ]
+  "zabbix_export": {
+    "version": "7.0",
+    "template_groups": [
+      {
+        "uuid": "6c92f3f890c844dbbdef071cdf3a5aff",
+        "name": "A10 Thunder"
+      },
+      {
+        "uuid": "6e81bcd291e94cd38c02d1964c71d73d",
+        "name": "DATACOM TX-RX"
+      },
+      {
+        "uuid": "85dcfb92cf3f48e7bb9089342e98559c",
+        "name": "DM - Templates"
+      },
+      {
+        "uuid": "0d2c6f08c26b484381ca1c8e9f18bc4d",
+        "name": "GBICS"
+      },
+      {
+        "uuid": "950009e89a5745dea074690688766694",
+        "name": "HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a19",
+        "name": "Huawei - Fontes Retificadoras"
+      },
+      {
+        "uuid": "1b739b8fe8be49b28cf437f5d5ec9b41",
+        "name": "HUAWEI BGP"
+      },
+      {
+        "uuid": "69e5786504d64482ad0d54289032b456",
+        "name": "OLT_HUAWEI"
+      },
+      {
+        "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+        "name": "Switches Intelbras - Capacitação Redes"
+      },
+      {
+        "uuid": "9a8c032b388f4d81a5b4fef524f87d84",
+        "name": "Technobox - DNS"
+      },
+      {
+        "uuid": "7df96b18c230490a9a0a9e2307226338",
+        "name": "Templates"
+      },
+      {
+        "uuid": "61c7592baccc46468e9ad8f7efdf6ea2",
+        "name": "Templates-SBS"
+      },
+      {
+        "uuid": "a571c0d144b14fd4a87a9d9b2aa9fcd6",
+        "name": "Templates/Applications"
+      },
+      {
+        "uuid": "381f4baa52d64b59950b150f3a67ceca",
+        "name": "Templates/Cloud"
+      },
+      {
+        "uuid": "57b7ae836ca64446ba2c296389c009b7",
+        "name": "Templates/Modules"
+      },
+      {
+        "uuid": "36bff6c29af64692839d077febfc7079",
+        "name": "Templates/Network devices"
+      },
+      {
+        "uuid": "846977d1dfed4968bc5f8bdb363285bc",
+        "name": "Templates/Operating systems"
+      },
+      {
+        "uuid": "31a2c7b235b1462495f4bad087ee8943",
+        "name": "Templates Huawei"
+      },
+      {
+        "uuid": "f1537448b0da4ebb870d18790c1cec56",
+        "name": "Templates SNMP Devices"
+      }
+    ],
+    "templates": [
+      {
+        "uuid": "809cd59886464ff3ad0a66d16fb1f2aa",
+        "template": "Template Module Interfaces SNMP",
+        "name": "Template Module Interfaces SNMP",
+        "description": "Template Module Interfaces\n\nMIBs used:\nIF-MIB\n\nTemplate tooling version used: 0.36",
+        "groups": [
+          {
+            "name": "Templates/Modules"
+          }
+        ],
+        "discovery_rules": [
+          {
+            "uuid": "ea9babbf98cf48688aa00faf500e17aa",
+            "name": "Network interfaces discovery - FISICA",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#IFOPERSTATUS},1.3.6.1.2.1.2.2.1.8,{#IFADMINSTATUS},1.3.6.1.2.1.2.2.1.7,{#IFALIAS},1.3.6.1.2.1.31.1.1.1.18,{#IFNAME},1.3.6.1.2.1.31.1.1.1.1,{#IFDESCR},1.3.6.1.2.1.2.2.1.2,{#IFTYPE},1.3.6.1.2.1.2.2.1.3]",
+            "key": "net.if.discovery",
+            "delay": "1h",
+            "filter": {
+              "evaltype": "AND",
+              "conditions": [
+                {
+                  "macro": "{#IFNAME}",
+                  "value": "@Network interfaces for discovery",
+                  "formulaid": "A"
+                },
+                {
+                  "macro": "{#IFOPERSTATUS}",
+                  "value": "1",
+                  "formulaid": "B"
+                }
+              ]
+            },
+            "lifetime_type": "DELETE_IMMEDIATELY",
+            "lifetime": "0",
+            "description": "Discovering interfaces from IF-MIB.",
+            "item_prototypes": [
+              {
+                "uuid": "2c7296aa56884ef48bb66c25097848f9",
+                "name": "Interface {#IFNAME}({#IFALIAS}): Pacotes de entrada com erros",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.2.2.1.14.{#SNMPINDEX}",
+                "key": "net.if.in.errors[ifInErrors.{#SNMPINDEX}]",
+                "delay": "3m",
+                "history": "30d",
+                "trends": "90d",
+                "description": "MIB: IF-MIB\nThe current operational state of the interface.\n- The testing(3) state indicates that no operational packet scan be passed\n- If ifAdminStatus is down(2) then ifOperStatus should be down(2)\n- If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic\n- It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)\n- It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state\n- It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.",
+                "valuemap": {
+                  "name": "IF-MIB::ifOperStatus"
+                },
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "erro_entrada"
+                  }
+                ]
+              },
+              {
+                "uuid": "633cdf45222b454198ec66308aa7a55d",
+                "name": "Trafego de Entrada na Interface {#IFNAME}({#IFALIAS})",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.6.{#SNMPINDEX}",
+                "key": "net.if.in[ifHCInOctets.{#SNMPINDEX}]",
+                "history": "30d",
+                "trends": "90d",
+                "units": "bps",
+                "description": "MIB: IF-MIB\nThe total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets. Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Fisica"
+                  },
+                  {
+                    "tag": "Application",
+                    "value": "Network interfaces"
+                  }
+                ]
+              },
+              {
+                "uuid": "9037dd45e90a45baa58014d20db3ab0f",
+                "name": "Trafego de Saida na Interface {#IFNAME}({#IFALIAS})",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.10.{#SNMPINDEX}",
+                "key": "net.if.out[ifHCOutOctets.{#SNMPINDEX}]",
+                "history": "30d",
+                "trends": "90d",
+                "units": "bps",
+                "description": "MIB: IF-MIB\nThe total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifOutOctets.Discontinuities in the value of this counter can occur at re-initialization of the management system, and at other times as indicated by the value of ifCounterDiscontinuityTime.",
+                "preprocessing": [
+                  {
+                    "type": "CHANGE_PER_SECOND",
+                    "parameters": [
+                      ""
+                    ]
+                  },
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "8"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "Fisica"
+                  },
+                  {
+                    "tag": "Application",
+                    "value": "Network interfaces"
+                  }
+                ]
+              },
+              {
+                "uuid": "b63cb94bb9954ee4ab56d2a7d25d5957",
+                "name": "Interface {#IFNAME}({#IFALIAS}): Speed",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.31.1.1.1.15.{#SNMPINDEX}",
+                "key": "net.if.speed[ifHighSpeed.{#SNMPINDEX}]",
+                "delay": "5m",
+                "history": "7d",
+                "trends": "0",
+                "units": "bps",
+                "description": "MIB: IF-MIB\nAn estimate of the interface's current bandwidth in units of 1,000,000 bits per second. If this object reports a value of `n' then the speed of the interface is somewhere in the range of `n-500,000' to`n+499,999'.  For interfaces which do not vary in bandwidth or for those where no accurate estimation can be made, this object should contain the nominal bandwidth. For a sub-layer which has no concept of bandwidth, this object should be zero.",
+                "preprocessing": [
+                  {
+                    "type": "MULTIPLIER",
+                    "parameters": [
+                      "1000000"
+                    ]
+                  },
+                  {
+                    "type": "DISCARD_UNCHANGED_HEARTBEAT",
+                    "parameters": [
+                      "1h"
+                    ]
+                  }
+                ],
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "speed"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "07264bafbf1e484fbbacc088d00b781b",
+                    "expression": "(last(/Template Module Interfaces SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#1)<>last(/Template Module Interfaces SNMP/net.if.speed[ifHighSpeed.{#SNMPINDEX}],#2))=1",
+                    "name": "{#IFNAME}({#IFALIAS}) - ALTERAÇÃO NA VELOCIDADE DA PORTA",
+                    "priority": "AVERAGE"
+                  }
+                ]
+              },
+              {
+                "uuid": "0ac3b237358a4df69712d3829341766b",
+                "name": "Interface {#IFNAME}({#IFALIAS}): Operational status",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                "key": "net.if.status[ifOperStatus.{#SNMPINDEX}]",
+                "history": "7d",
+                "trends": "0",
+                "description": "MIB: IF-MIB\nThe current operational state of the interface.\n- The testing(3) state indicates that no operational packet scan be passed\n- If ifAdminStatus is down(2) then ifOperStatus should be down(2)\n- If ifAdminStatus is changed to up(1) then ifOperStatus should change to up(1) if the interface is ready to transmit and receive network traffic\n- It should change todormant(5) if the interface is waiting for external actions (such as a serial line waiting for an incoming connection)\n- It should remain in the down(2) state if and only if there is a fault that prevents it from going to the up(1) state\n- It should remain in the notPresent(6) state if the interface has missing(typically, hardware) components.",
+                "valuemap": {
+                  "name": "IF-MIB::ifOperStatus"
+                },
+                "tags": [
+                  {
+                    "tag": "Application",
+                    "value": "operacional-status"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "35d62eb5323141a3a3f3afc4c9250243",
+                    "expression": "{$IFCONTROL:\"{#IFNAME}\"}=1 and (last(/Template Module Interfaces SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])=2 and (last(/Template Module Interfaces SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#1)<>last(/Template Module Interfaces SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}],#2))=1)",
+                    "recovery_mode": "RECOVERY_EXPRESSION",
+                    "recovery_expression": "last(/Template Module Interfaces SNMP/net.if.status[ifOperStatus.{#SNMPINDEX}])<>2 or {$IFCONTROL:\"{#IFNAME}\"}=0",
+                    "name": "Interface {#IFNAME}({#IFALIAS}): Link down",
+                    "opdata": "Current state: {ITEM.LASTVALUE1}",
+                    "priority": "AVERAGE",
+                    "description": "This trigger expression works as follows:\n1. Can be triggered if operations status is down.\n2. {$IFCONTROL:\"{#IFNAME}\"}=1 - user can redefine Context macro to value - 0. That marks this interface as not important. No new trigger will be fired if this interface is down.\n3. {TEMPLATE_NAME:METRIC.diff()}=1) - trigger fires only if operational status was up(1) sometime before. (So, do not fire 'ethernal off' interfaces.)\n\nWARNING: if closed manually - won't fire again on next poll, because of .diff.",
+                    "manual_close": "YES"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$IF.ERRORS.WARN}",
+            "value": "2"
+          },
+          {
+            "macro": "{$IF.UTIL.MAX}",
+            "value": "90"
+          },
+          {
+            "macro": "{$IFCONTROL}",
+            "value": "1"
+          },
+          {
+            "macro": "{$NET.IF.IFADMINSTATUS.MATCHES}",
+            "value": "^.*",
+            "description": "Ignore notPresent(6)"
+          },
+          {
+            "macro": "{$NET.IF.IFADMINSTATUS.NOT_MATCHES}",
+            "value": "^2$",
+            "description": "Ignore down(2) administrative status"
+          },
+          {
+            "macro": "{$NET.IF.IFALIAS.MATCHES}",
+            "value": ".*"
+          },
+          {
+            "macro": "{$NET.IF.IFALIAS.NOT_MATCHES}",
+            "value": "CHANGE_IF_NEEDED"
+          },
+          {
+            "macro": "{$NET.IF.IFDESCR.MATCHES}",
+            "value": ".*"
+          },
+          {
+            "macro": "{$NET.IF.IFDESCR.NOT_MATCHES}",
+            "value": "CHANGE_IF_NEEDED"
+          },
+          {
+            "macro": "{$NET.IF.IFNAME.MATCHES}",
+            "value": "^.*$"
+          },
+          {
+            "macro": "{$NET.IF.IFNAME.NOT_MATCHES}",
+            "value": "(^Software Loopback Interface|^NULL[0-9.]*$|^[Ll]o[0-9.]*$|^[Ss]ystem$|^Nu[0-9.]*$|^veth[0-9a-z]+$|docker[0-9]+|br-[a-z0-9]{12})",
+            "description": "Filter out loopbacks, nulls, docker veth links and docker0 bridge by default"
+          },
+          {
+            "macro": "{$NET.IF.IFOPERSTATUS.MATCHES}",
+            "value": "^.*$"
+          },
+          {
+            "macro": "{$NET.IF.IFOPERSTATUS.NOT_MATCHES}",
+            "value": "^6$",
+            "description": "Ignore notPresent(6)"
+          },
+          {
+            "macro": "{$NET.IF.IFTYPE.MATCHES}",
+            "value": ".*"
+          },
+          {
+            "macro": "{$NET.IF.IFTYPE.NOT_MATCHES}",
+            "value": "CHANGE_IF_NEEDED"
+          }
+        ],
+        "dashboards": [
+          {
+            "uuid": "b06fc59c5e744962b1ac5314e7e12cec",
+            "name": "Network interfaces",
+            "pages": [
+              {
+                "widgets": [
+                  {
+                    "type": "graphprototype",
+                    "width": "72",
+                    "height": "5",
+                    "fields": [
+                      {
+                        "type": "INTEGER",
+                        "name": "columns",
+                        "value": "1"
+                      },
+                      {
+                        "type": "STRING",
+                        "name": "reference",
+                        "value": "AAAAA"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "valuemaps": [
+          {
+            "uuid": "692e46f1836c4e2682a0dc882fec89a1",
+            "name": "IF-MIB::ifOperStatus",
+            "mappings": [
+              {
+                "value": "1",
+                "newvalue": "up"
+              },
+              {
+                "value": "2",
+                "newvalue": "down"
+              },
+              {
+                "value": "4",
+                "newvalue": "unknown"
+              },
+              {
+                "value": "5",
+                "newvalue": "dormant"
+              },
+              {
+                "value": "6",
+                "newvalue": "notPresent"
+              },
+              {
+                "value": "7",
+                "newvalue": "lowerLayerDown"
+              },
+              {
+                "value": "3",
+                "newvalue": "testing"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
