@@ -1,182 +1,788 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": false,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "testes-mysql-lucas",
-    "url": "/d/cegwyzpxsjbb4d/testes-mysql-lucas",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-11-27T06:37:56-05:00",
-    "updated": "2025-12-03T11:31:33-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 5,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      }
-    }
-  },
-  "dashboard": {
-    "annotations": {
-      "list": [
-        {
-          "builtIn": 1,
-          "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
-          },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "type": "dashboard"
-        }
-      ]
-    },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": 81,
-    "links": [],
-    "panels": [
+  "annotations": {
+    "list": [
       {
+        "builtIn": 1,
         "datasource": {
-          "type": "mysql",
-          "uid": "bf5cl81i2yz28d"
+          "type": "grafana",
+          "uid": "-- Grafana --"
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
-            },
-            "custom": {
-              "align": "auto",
-              "cellOptions": {
-                "type": "auto"
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
               },
-              "footer": {
-                "reducers": []
-              },
-              "inspect": false
-            },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 17,
+        "x": 0,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "afterRender": "// JavaScript para processar barras empilhadas e temperatura APÓS o Handlebars renderizar\r\n// Este código deve ser inserido no campo \"After Content Rendering\" do Grafana\r\n// Dashboard de Detalhamento das PONs\r\n\r\n(function () {\r\n  function calculateStackedBars() {\r\n    const stackedBars = document.querySelectorAll('.stacked-bar');\r\n\r\n    stackedBars.forEach(function (bar) {\r\n      const onlineSeg = bar.querySelector('.stacked-online');\r\n      const offlineSeg = bar.querySelector('.stacked-offline');\r\n\r\n      if (!onlineSeg || !offlineSeg) return;\r\n\r\n      const online = parseInt(onlineSeg.getAttribute('data-value')) || 0;\r\n      const offline = parseInt(offlineSeg.getAttribute('data-value')) || 0;\r\n      const total = parseInt(bar.getAttribute('data-total')) || 1;\r\n\r\n      // Calcula percentuais baseado no total\r\n      if (total > 0) {\r\n        const onlinePercent = (online / total) * 100;\r\n        const offlinePercent = (offline / total) * 100;\r\n\r\n        onlineSeg.style.width = onlinePercent + '%';\r\n        offlineSeg.style.width = offlinePercent + '%';\r\n        onlineSeg.style.display = online > 0 ? 'block' : 'none';\r\n        offlineSeg.style.display = offline > 0 ? 'block' : 'none';\r\n      }\r\n    });\r\n  }\r\n\r\n  function processTemperature() {\r\n    const tempCells = document.querySelectorAll('.temperatura-cell');\r\n\r\n    tempCells.forEach(function (cell) {\r\n      const tempValueSpan = cell.querySelector('.temp-value');\r\n      if (!tempValueSpan) return;\r\n\r\n      const tempStr = tempValueSpan.textContent.trim() || '';\r\n      // Extrai número da string (ex: \"52 °C\" -> 52)\r\n      const tempMatch = tempStr.match(/(\\d+)/);\r\n\r\n      if (tempMatch) {\r\n        const tempNum = parseInt(tempMatch[1]);\r\n        let tempIcon = cell.querySelector('.temp-icon');\r\n\r\n        // Cria ícone se não existir\r\n        if (!tempIcon) {\r\n          tempIcon = document.createElement('img');\r\n          tempIcon.className = 'temp-icon';\r\n          cell.insertBefore(tempIcon, tempValueSpan);\r\n        }\r\n\r\n        // Remove classes existentes\r\n        tempValueSpan.classList.remove('temp-normal', 'temp-high');\r\n\r\n        // Atualiza ícone e cor baseado na temperatura\r\n        if (tempNum >= 50) {\r\n          tempIcon.src = 'https://cdn-icons-png.flaticon.com/512/11792/11792086.png';\r\n          tempIcon.alt = 'Temperatura Alta';\r\n          tempValueSpan.classList.add('temp-high');\r\n        } else {\r\n          tempIcon.src = 'https://cdn-icons-png.flaticon.com/512/14397/14397261.png';\r\n          tempIcon.alt = 'Temperatura';\r\n          tempValueSpan.classList.add('temp-normal');\r\n        }\r\n      }\r\n    });\r\n  }\r\n\r\n  function init() {\r\n    calculateStackedBars();\r\n    processTemperature();\r\n  }\r\n\r\n  // Executa quando o DOM estiver pronto\r\n  if (document.readyState === 'loading') {\r\n    document.addEventListener('DOMContentLoaded', init);\r\n  } else {\r\n    init();\r\n  }\r\n\r\n  // Re-executa após delays para garantir que o Handlebars renderizou\r\n  setTimeout(init, 100);\r\n  setTimeout(init, 500);\r\n  setTimeout(init, 1000);\r\n})();\r\n",
+        "content": "<div class=\"dashboard-container\">\n  <div class=\"table-wrapper\">\n    <table class=\"pons-table\">\n      <tbody>\n        {{#each @root.data}}\n        {{#each this}}\n        <tr class=\"pon-row\" data-status=\"{{STATUS}}\">\n          <td class=\"pon-name\">{{PON}}</td>\n          <td class=\"conexoes-cell\">\n            <div class=\"conexoes-container\">\n              <div class=\"stacked-bar-wrapper\">\n                <div class=\"stacked-bar\" data-total=\"{{AUTENTICADAS}}\">\n                  <div class=\"stacked-segment stacked-online\" data-value=\"{{ONLINE}}\"></div>\n                  <div class=\"stacked-segment stacked-offline\" data-value=\"{{OFFLINE}}\"></div>\n                </div>\n              </div>\n              <div class=\"conexoes-values\">\n                <span class=\"value-online\">ONLINE: {{ONLINE}}</span>\n                <span class=\"value-offline\">OFFLINE: {{OFFLINE}}</span>\n                <span class=\"value-total\">Total: {{AUTENTICADAS}}</span>\n              </div>\n            </div>\n          </td>\n          <td class=\"temperatura-cell\">\n            <span class=\"temp-value\">{{lookup . \"TEMPERATURA\"}}</span>\n          </td>\n          <td class=\"potencia-cell\">{{lookup . \"POTÊNCIA DE SAÍDA\"}} dBm</td>\n          <td class=\"status-cell\">\n            {{#if (eq STATUS 1)}}\n            <div class=\"status-indicator status-up\">\n              <span class=\"status-dot\"></span>\n              <span class=\"status-text\">UP</span>\n            </div>\n            {{else}}\n            <div class=\"status-indicator status-down\">\n              <span class=\"status-dot\"></span>\n              <span class=\"status-text\">DOWN</span>\n            </div>\n            {{/if}}\n          </td>\n        </tr>\n        {{/each}}\n        {{/each}}\n      </tbody>\n    </table>\n  </div>\n</div>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "afterRender"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "styles": "@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');\r\n\r\n* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody, html {\r\n  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;\r\n  background: #0F1419;\r\n  color: #E4E7EB;\r\n  width: 100%;\r\n  height: 100%;\r\n  overflow: hidden;\r\n  margin: 0;\r\n  padding: 0;\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}\r\n\r\n.dashboard-container {\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  overflow: hidden;\r\n  padding: clamp(16px, 2vw, 24px);\r\n}\r\n\r\n.dashboard-header {\r\n  margin-bottom: clamp(16px, 2vw, 24px);\r\n  padding-bottom: clamp(12px, 1.5vw, 16px);\r\n  border-bottom: 2px solid rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.dashboard-title {\r\n  font-size: clamp(20px, 2.5vw, 28px);\r\n  font-weight: 700;\r\n  color: #F9FAFB;\r\n  letter-spacing: 0.5px;\r\n  text-transform: uppercase;\r\n}\r\n\r\n.table-wrapper {\r\n  flex: 1;\r\n  overflow: auto;\r\n  scroll-behavior: smooth;\r\n  scrollbar-width: thin;\r\n  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;\r\n}\r\n\r\n.table-wrapper::-webkit-scrollbar {\r\n  width: 8px;\r\n  height: 8px;\r\n}\r\n\r\n.table-wrapper::-webkit-scrollbar-track {\r\n  background: transparent;\r\n}\r\n\r\n.table-wrapper::-webkit-scrollbar-thumb {\r\n  background: rgba(255, 255, 255, 0.1);\r\n  border-radius: 4px;\r\n}\r\n\r\n.table-wrapper::-webkit-scrollbar-thumb:hover {\r\n  background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n.pons-table {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  background: #1A1F2E;\r\n  border-radius: clamp(12px, 1.25vw, 16px);\r\n  overflow: hidden;\r\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);\r\n}\r\n\r\n.pons-table thead {\r\n  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 10;\r\n}\r\n\r\n.pons-table th {\r\n  padding: clamp(8px, 1vw, 12px) clamp(12px, 1.5vw, 16px);\r\n  text-align: left;\r\n  font-weight: 600;\r\n  font-size: clamp(12px, 1.25vw, 14px);\r\n  color: #F9FAFB;\r\n  text-transform: uppercase;\r\n  letter-spacing: 0.5px;\r\n  border-bottom: 2px solid rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.pons-table tbody tr {\r\n  border-bottom: 1px solid rgba(255, 255, 255, 0.05);\r\n  transition: all 0.2s ease;\r\n}\r\n\r\n.pons-table tbody tr:hover {\r\n  background: rgba(255, 255, 255, 0.03);\r\n}\r\n\r\n.pons-table tbody tr:last-child {\r\n  border-bottom: none;\r\n}\r\n\r\n.pons-table td {\r\n  padding: clamp(6px, 0.75vw, 10px) clamp(12px, 1.5vw, 16px);\r\n  font-size: clamp(13px, 1.25vw, 15px);\r\n  color: #D1D5DB;\r\n  vertical-align: middle;\r\n}\r\n\r\n/* Colunas específicas */\r\n.col-pon {\r\n  min-width: 120px;\r\n  width: 15%;\r\n}\r\n\r\n.col-conexoes {\r\n  min-width: 300px;\r\n  width: 35%;\r\n}\r\n\r\n.col-temperatura,\r\n.col-potencia {\r\n  min-width: 120px;\r\n  width: 15%;\r\n}\r\n\r\n.col-status {\r\n  min-width: 100px;\r\n  width: 10%;\r\n  text-align: center;\r\n}\r\n\r\n.pon-name {\r\n  font-weight: 600;\r\n  color: #F9FAFB;\r\n  font-family: 'Courier New', monospace;\r\n}\r\n\r\n/* Container de conexões com barra empilhada */\r\n.conexoes-cell {\r\n  padding: clamp(6px, 0.75vw, 10px) !important;\r\n}\r\n\r\n.conexoes-container {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: stretch;\r\n  gap: clamp(6px, 0.75vw, 8px);\r\n  min-width: 0;\r\n}\r\n\r\n/* Barra empilhada */\r\n.stacked-bar-wrapper {\r\n  width: 100%;\r\n  min-width: 150px;\r\n}\r\n\r\n.stacked-bar {\r\n  height: clamp(18px, 2vw, 22px);\r\n  background: rgba(255, 255, 255, 0.05);\r\n  border-radius: clamp(4px, 0.5vw, 6px);\r\n  overflow: hidden;\r\n  position: relative;\r\n  display: flex;\r\n  width: 100%;\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.stacked-bar:hover {\r\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 0 12px rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.stacked-segment {\r\n  height: 100%;\r\n  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);\r\n  position: relative;\r\n  min-width: 2px;\r\n}\r\n\r\n.stacked-online {\r\n  background: linear-gradient(90deg, #10B981 0%, #059669 100%);\r\n  box-shadow: 0 0 8px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);\r\n  border-right: 1px solid rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.stacked-online::after {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.25) 50%, transparent 100%);\r\n  animation: shimmer 2.5s infinite;\r\n  pointer-events: none;\r\n}\r\n\r\n.stacked-offline {\r\n  background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);\r\n  box-shadow: 0 0 8px rgba(239, 68, 68, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);\r\n}\r\n\r\n.stacked-offline::after {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);\r\n  animation: shimmer 2.5s infinite;\r\n  pointer-events: none;\r\n}\r\n\r\n@keyframes shimmer {\r\n  0% {\r\n    transform: translateX(-100%);\r\n  }\r\n  100% {\r\n    transform: translateX(100%);\r\n  }\r\n}\r\n\r\n/* Valores de conexões horizontalmente */\r\n.conexoes-values {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n  gap: clamp(8px, 1vw, 12px);\r\n  font-size: clamp(10px, 1vw, 12px);\r\n  line-height: 1.2;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.value-online {\r\n  color: #10B981;\r\n  font-weight: 600;\r\n  white-space: nowrap;\r\n}\r\n\r\n.value-offline {\r\n  color: #EF4444;\r\n  font-weight: 600;\r\n  white-space: nowrap;\r\n}\r\n\r\n.value-total {\r\n  color: #D1D5DB;\r\n  font-weight: 500;\r\n  white-space: nowrap;\r\n}\r\n\r\n/* Temperatura com ícone */\r\n.temperatura-cell {\r\n  display: flex;\r\n  align-items: center;\r\n  gap: clamp(6px, 0.75vw, 10px);\r\n  font-weight: 500;\r\n  font-family: 'Courier New', monospace;\r\n}\r\n\r\n.temp-icon {\r\n  width: clamp(20px, 2vw, 24px);\r\n  height: clamp(20px, 2vw, 24px);\r\n  flex-shrink: 0;\r\n  object-fit: contain;\r\n}\r\n\r\n.temp-value {\r\n  font-size: clamp(13px, 1.25vw, 15px);\r\n  transition: color 0.3s ease;\r\n}\r\n\r\n.temp-value.temp-normal {\r\n  color: #10B981;\r\n}\r\n\r\n.temp-value.temp-high {\r\n  color: #EF4444;\r\n  font-weight: 600;\r\n}\r\n\r\n/* Potência */\r\n.potencia-cell {\r\n  font-weight: 500;\r\n  color: #D1D5DB;\r\n  font-family: 'Courier New', monospace;\r\n}\r\n\r\n/* Status Indicator */\r\n.status-cell {\r\n  text-align: center !important;\r\n}\r\n\r\n.status-indicator {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  gap: clamp(6px, 0.75vw, 8px);\r\n  padding: clamp(4px, 0.5vw, 6px) clamp(10px, 1.25vw, 12px);\r\n  border-radius: clamp(16px, 2vw, 20px);\r\n  font-weight: 600;\r\n  font-size: clamp(11px, 1.1vw, 13px);\r\n  text-transform: uppercase;\r\n  letter-spacing: 0.5px;\r\n}\r\n\r\n.status-dot {\r\n  width: clamp(8px, 1vw, 10px);\r\n  height: clamp(8px, 1vw, 10px);\r\n  border-radius: 50%;\r\n  display: inline-block;\r\n  animation: pulse-dot 2s ease-in-out infinite;\r\n}\r\n\r\n.status-up {\r\n  background: rgba(16, 185, 129, 0.15);\r\n  color: #10B981;\r\n}\r\n\r\n.status-up .status-dot {\r\n  background: #10B981;\r\n  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);\r\n}\r\n\r\n.status-down {\r\n  background: rgba(239, 68, 68, 0.15);\r\n  color: #EF4444;\r\n}\r\n\r\n.status-down .status-dot {\r\n  background: #EF4444;\r\n  box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);\r\n}\r\n\r\n@keyframes pulse-dot {\r\n  0%, 100% {\r\n    opacity: 1;\r\n    transform: scale(1);\r\n  }\r\n  50% {\r\n    opacity: 0.7;\r\n    transform: scale(0.95);\r\n  }\r\n}\r\n\r\n/* Linhas com status DOWN - estilo diferenciado */\r\n.pon-row[data-status=\"2\"] {\r\n  opacity: 0.7;\r\n  background: rgba(239, 68, 68, 0.03);\r\n}\r\n\r\n.pon-row[data-status=\"2\"]:hover {\r\n  opacity: 0.9;\r\n  background: rgba(239, 68, 68, 0.05);\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 1400px) {\r\n  .col-conexoes {\r\n    min-width: 280px;\r\n  }\r\n}\r\n\r\n@media (max-width: 1200px) {\r\n  .pons-table {\r\n    font-size: 12px;\r\n  }\r\n  \r\n  .conexoes-container {\r\n    gap: 6px;\r\n  }\r\n  \r\n  .stacked-bar-wrapper {\r\n    width: 100%;\r\n  }\r\n  \r\n  .conexoes-values {\r\n    gap: 6px;\r\n    font-size: 10px;\r\n  }\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .dashboard-container {\r\n    padding: 12px;\r\n  }\r\n  \r\n  .pons-table {\r\n    display: block;\r\n    overflow-x: auto;\r\n    white-space: nowrap;\r\n  }\r\n  \r\n  .pons-table thead,\r\n  .pons-table tbody,\r\n  .pons-table tr,\r\n  .pons-table td,\r\n  .pons-table th {\r\n    display: block;\r\n  }\r\n  \r\n  .pons-table thead {\r\n    display: none;\r\n  }\r\n  \r\n  .pons-table tr {\r\n    margin-bottom: 16px;\r\n    border: 1px solid rgba(255, 255, 255, 0.1);\r\n    border-radius: 8px;\r\n    padding: 12px;\r\n  }\r\n  \r\n  .pons-table td {\r\n    padding: 8px 0;\r\n    border-bottom: 1px solid rgba(255, 255, 255, 0.05);\r\n  }\r\n  \r\n  .pons-table td:before {\r\n    content: attr(data-label) \": \";\r\n    font-weight: 600;\r\n    color: #9CA3AF;\r\n    margin-right: 8px;\r\n  }\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
           },
-          "overrides": [
-            {
-              "matcher": {
-                "id": "byName",
-                "options": "tempo_conectado"
-              },
-              "properties": [
-                {
-                  "id": "custom.width",
-                  "value": 293
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: AUTENTICADAS_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
                 },
-                {
-                  "id": "unit",
-                  "value": ""
-                }
-              ]
-            }
-          ]
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         },
-        "gridPos": {
-          "h": 9,
-          "w": 24,
-          "x": 0,
-          "y": 0
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: ONLINE_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         },
-        "id": 1,
-        "options": {
-          "cellHeight": "sm",
-          "showHeader": true,
-          "sortBy": []
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: OFFLINE_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         },
-        "pluginVersion": "12.3.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "bf5cl81i2yz28d"
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: TEMPERATURA_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: POTENCIA_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": false,
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/Status da interface  GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: Net_status"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "hide": true,
+          "host": {
+            "filter": "OLT HUAWEI MA5800X2 SANTANA"
+          },
+          "item": {
+            "filter": "/GPON 0/2/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: OCUPACAO_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "labelsToFields": true,
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/(?<item>(TOTAL\\s+\\w+|TEMPERATURA|TX POWER|Entrada|Saida|Status|OCUPACAO))/",
+            "source": "item"
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/(?<PON>GPON\\s+\\d+\\/\\d+/\\d+)/i",
+            "source": "item 1"
+          }
+        },
+        {
+          "id": "groupingToMatrix",
+          "options": {
+            "columnField": "item 2",
+            "rowField": "PON",
+            "valueField": "Last *"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Entrada": 6,
+              "PON\\item 2": 0,
+              "Saida": 7,
+              "Status": 8,
+              "TEMPERATURA": 4,
+              "TOTAL AUTENTICADAS": 1,
+              "TOTAL OFFLINE": 3,
+              "TOTAL ONLINE": 2,
+              "TX POWER": 5
             },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select \r\n  UserName as Login, \r\n  FramedIPAddress as IP,\r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status',\r\n  \r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado,\r\n\r\n  COALESCE(AcctStopTime, '-\\\\-') as data_desconexao\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
+            "renameByName": {
+              "Entrada": "ENTRADA",
+              "OCUPACAO": "OCUPAÇÃO",
+              "PON\\item 2": "PON",
+              "Saida": "SAÍDA",
+              "Status": "STATUS",
+              "TEMPERATURA": "TEMPERATURA",
+              "TOTAL AUTENTICADAS": "AUTENTICADAS",
+              "TOTAL OFFLINE": "OFFLINE",
+              "TOTAL ONLINE": "ONLINE",
+              "TX POWER": "POTÊNCIA DE SAÍDA"
             }
           }
-        ],
-        "transparent": true,
-        "type": "table"
-      }
-    ],
-    "preload": false,
-    "refresh": "",
-    "schemaVersion": 42,
-    "tags": [],
-    "templating": {
-      "list": []
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
     },
-    "time": {
-      "from": "now-6h",
-      "to": "now"
-    },
-    "timepicker": {},
-    "timezone": "browser",
-    "title": "Testes Mysql lucas",
-    "uid": "cegwyzpxsjbb4d",
-    "version": 5,
-    "weekStart": ""
-  }
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "tempo_conectado"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 293
+              },
+              {
+                "id": "unit",
+                "value": ""
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 1,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select \r\n  UserName as Login, \r\n  FramedIPAddress as IP,\r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status',\r\n  \r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado,\r\n\r\n  COALESCE(AcctStopTime, '-\\\\-') as data_desconexao\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Testes Mysql lucas",
+  "uid": "cegwyzpxsjbb4d",
+  "weekStart": ""
 }
