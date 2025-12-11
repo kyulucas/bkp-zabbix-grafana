@@ -1957,6 +1957,7 @@
               "type": "value"
             }
           ],
+          "noValue": "SFP's Links",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3629,7 +3630,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus9(): TX Power"
+            "filter": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): TX Power"
           },
           "itemTag": {
             "filter": ""
@@ -7335,7 +7336,7 @@
             "filter": "/.*/"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "/.*ICMP ping/"
           },
           "itemTag": {
             "filter": ""
@@ -11552,8 +11553,8 @@
     },
     {
       "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
+        "type": "influxdb",
+        "uid": "df6lam86kc4xsa"
       },
       "fieldConfig": {
         "defaults": {
@@ -11576,15 +11577,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-orange",
+                "color": "rgba(50, 172, 45, 0.97)",
                 "value": 0
               },
               {
-                "color": "red",
+                "color": "rgba(237, 129, 40, 0.89)",
                 "value": 8500
               },
               {
-                "color": "dark-red",
+                "color": "rgba(245, 54, 54, 0.9)",
                 "value": 9000
               }
             ]
@@ -11599,15 +11600,13 @@
         "x": 8,
         "y": 79
       },
-      "id": 236,
-      "interval": ">15s",
+      "id": 312,
+      "interval": "15s",
       "maxDataPoints": 100,
       "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
         "orientation": "horizontal",
-        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -11615,122 +11614,26 @@
           "fields": "",
           "values": false
         },
-        "showPercentChange": false,
-        "textMode": "auto",
-        "wideLayout": true
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "text": {}
       },
       "pluginVersion": "12.3.0",
       "targets": [
         {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
           "datasource": {
             "type": "influxdb",
-            "uid": "aefuercx8vz7kf"
+            "uid": "df6lam86kc4xsa"
           },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": ""
-          },
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "hide": false,
-          "host": {
-            "filter": ""
-          },
-          "item": {
-            "filter": ""
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "measurement": "total",
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "orderByTime": "ASC",
-          "policy": "default",
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "select": [
-            [
-              {
-                "params": [
-                  "value"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "mean"
-              },
-              {
-                "params": [
-                  " / 1000000 "
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": [
-            {
-              "key": "direction::tag",
-              "operator": "=",
-              "value": "incoming"
-            },
-            {
-              "condition": "AND",
-              "key": "resource::tag",
-              "operator": "=",
-              "value": "bps"
-            },
-            {
-              "condition": "AND",
-              "key": "app::tag",
-              "operator": "=",
-              "value": "fastnetmon"
-            }
-          ],
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
+          "query": "SELECT mean(\"value\")  / 1000000 FROM \"total\" WHERE \"direction\" = 'incoming' AND \"resource\" = 'bps' AND \"app\" =~ /^fastnetmon$/ AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": true,
+          "refId": "A",
+          "resultFormat": "time_series"
         }
       ],
-      "title": "MBPS IN - FASTNETMON",
-      "transparent": true,
-      "type": "stat"
+      "title": "MBPS IN",
+      "type": "gauge"
     }
   ],
   "preload": false,
