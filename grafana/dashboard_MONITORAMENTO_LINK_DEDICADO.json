@@ -92,7 +92,7 @@
             "filter": "/.*/"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "/.*ICMP ping/"
           },
           "itemTag": {
             "filter": ""
