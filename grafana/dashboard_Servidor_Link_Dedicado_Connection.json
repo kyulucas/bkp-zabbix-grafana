@@ -461,7 +461,7 @@
             "filter": "DEDICADO - 2016123 - Connection Tres Rios"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "Mikrotik: ICMP ping"
           },
           "itemTag": {
             "filter": ""
@@ -583,7 +583,7 @@
             "filter": "DEDICADO - 2016123 - Connection Tres Rios"
           },
           "item": {
-            "filter": "ICMP response time"
+            "filter": "Mikrotik: ICMP response time"
           },
           "itemTag": {
             "filter": ""
@@ -687,13 +687,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "LINK DEDICADO"
+            "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Tres Rios"
+            "filter": "DEDICADO - 2016123 - Connection Tres Rios"
           },
           "item": {
-            "filter": "Uptime"
+            "filter": "Mikrotik: Uptime (network)"
           },
           "itemTag": {
             "filter": ""
@@ -797,7 +797,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 11,
         "w": 8,
         "x": 8,
         "y": 5
@@ -940,7 +940,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 11,
         "w": 8,
         "x": 16,
         "y": 5
@@ -973,13 +973,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "LINK DEDICADO"
+            "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Tres Rios"
+            "filter": "DEDICADO - 2016123 - Connection Tres Rios"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface Discador TR Telecom(Tr Telecom 275Megas)"
+            "filter": "Trafego de Saida na Interface Discador TR Telecom(Tr Telecom 275Megas)"
           },
           "itemTag": {
             "filter": ""
@@ -1051,7 +1051,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 2,
         "w": 8,
         "x": 0,
         "y": 8
@@ -1101,7 +1101,7 @@
             "filter": "DEDICADO - 2016123 - Connection Tres Rios"
           },
           "item": {
-            "filter": "ICMP loss"
+            "filter": "Mikrotik: ICMP loss"
           },
           "itemTag": {
             "filter": ""
@@ -1144,12 +1144,483 @@
       "type": "bargauge"
     },
     {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 10
+      },
+      "id": 80,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(0, 169, 255), 0 0 4px rgb(0, 169, 255), 0 0 8px rgb(0, 169, 255); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/543/543234.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n        <div class=\"label\">CPU LOAD</div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const formattedValue = field.values.get(field.values.length - 1);\n    valor_total.innerHTML = `${formattedValue}%`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 2016123 - Connection Tres Rios"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 10
+      },
+      "id": 81,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(255, 173, 0), 0 0 4px rgb(255, 173, 0), 0 0 8px rgb(255, 173, 0); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/543/543238.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n        <div class=\"label\">USO DE RAM</div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const rawValue = field.values.get(field.values.length - 1);\n\n    // formatar com 2 casas decimais\n    const formattedValue = Number(rawValue).toFixed(2);\n\n    valor_total.innerHTML = `${formattedValue}%`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 2016123 - Connection Tres Rios"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 13
+      },
+      "id": 82,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(132, 131, 128), 0 0 4px rgb(132, 131, 128), 0 0 8px rgb(132, 131, 128); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/12159/12159501.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const formattedValue = field.values.get(field.values.length - 1);\n    valor_total.innerHTML = `${formattedValue}ºC`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 2016123 - Connection Tres Rios"
+          },
+          "item": {
+            "filter": "Device: Temperature"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 16
       },
       "id": 55,
       "panels": [],
@@ -1189,7 +1660,7 @@
         "h": 2,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 17
       },
       "id": 54,
       "options": {
@@ -1304,7 +1775,7 @@
         "h": 2,
         "w": 8,
         "x": 0,
-        "y": 15
+        "y": 19
       },
       "id": 56,
       "options": {
@@ -1411,7 +1882,7 @@
         "h": 2,
         "w": 16,
         "x": 8,
-        "y": 15
+        "y": 19
       },
       "id": 76,
       "options": {
@@ -1543,7 +2014,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 17
+        "y": 21
       },
       "id": 58,
       "options": {
@@ -1583,7 +2054,7 @@
             "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "Mikrotik: ICMP ping"
           },
           "itemTag": {
             "filter": ""
@@ -1665,7 +2136,7 @@
         "h": 3,
         "w": 2,
         "x": 3,
-        "y": 17
+        "y": 21
       },
       "id": 59,
       "options": {
@@ -1705,7 +2176,7 @@
             "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
           },
           "item": {
-            "filter": "ICMP response time"
+            "filter": "Mikrotik: ICMP response time"
           },
           "itemTag": {
             "filter": ""
@@ -1775,7 +2246,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 17
+        "y": 21
       },
       "id": 60,
       "options": {
@@ -1809,13 +2280,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "LINK DEDICADO"
+            "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Santana do Deserto"
+            "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
           },
           "item": {
-            "filter": "Uptime"
+            "filter": "Mikrotik: Uptime (network)"
           },
           "itemTag": {
             "filter": ""
@@ -1916,13 +2387,38 @@
             ]
           }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "Trafego de Entrada na Interface VLAN 4000 Clientes Connect Transporte L2L Chegada (VLAN 400 Clientes Connect Transporte L2L Chegada )"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 7,
         "w": 8,
         "x": 8,
-        "y": 17
+        "y": 21
       },
       "id": 62,
       "options": {
@@ -1958,7 +2454,7 @@
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface VLAN 4000 Clientes Connect Transporte L2L Chegada (VLAN 400 Clientes Connect Transporte L2L Chegada )"
+            "filter": "/Trafego de Entrada na Interface VLAN 4000 .*/"
           },
           "itemTag": {
             "filter": ""
@@ -1979,63 +2475,6 @@
           },
           "queryType": "0",
           "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "Network interfaces"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "hide": false,
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Entrada na Interface VLAN 4000 Clientes Connect Transporte L2L  Saida OLT(VLAN 400 Clientes Connect Transporte L2L  Saida OLT)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2121,7 +2560,7 @@
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 17
+        "y": 21
       },
       "id": 78,
       "options": {
@@ -2157,7 +2596,7 @@
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface VLAN 4000 Clientes Connect Transporte L2L Chegada (VLAN 400 Clientes Connect Transporte L2L Chegada )"
+            "filter": "/Trafego de Saida na Interface VLAN 4000 .*/"
           },
           "itemTag": {
             "filter": ""
@@ -2193,66 +2632,9 @@
           "triggers": {
             "acknowledged": 2
           }
-        },
-        {
-          "application": {
-            "filter": "Network interfaces"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "hide": false,
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Saida na Interface VLAN 4000 Clientes Connect Transporte L2L  Saida OLT(VLAN 400 Clientes Connect Transporte L2L  Saida OLT)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
         }
       ],
-      "title": "Tráfego de entrada",
+      "title": "Tráfego de saida",
       "type": "timeseries"
     },
     {
@@ -2285,10 +2667,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 2,
         "w": 8,
         "x": 0,
-        "y": 20
+        "y": 24
       },
       "id": 61,
       "options": {
@@ -2335,7 +2717,7 @@
             "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
           },
           "item": {
-            "filter": "ICMP loss"
+            "filter": "Mikrotik: ICMP loss"
           },
           "itemTag": {
             "filter": ""
@@ -2378,6 +2760,320 @@
       "type": "bargauge"
     },
     {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 26
+      },
+      "id": 84,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(0, 169, 255), 0 0 4px rgb(0, 169, 255), 0 0 8px rgb(0, 169, 255); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/543/543234.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n        <div class=\"label\">CPU LOAD</div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const formattedValue = field.values.get(field.values.length - 1);\n    valor_total.innerHTML = `${formattedValue}%`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 26
+      },
+      "id": 85,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(255, 173, 0), 0 0 4px rgb(255, 173, 0), 0 0 8px rgb(255, 173, 0); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/543/543238.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n        <div class=\"label\">USO DE RAM</div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const rawValue = field.values.get(field.values.length - 1);\n\n    // formatar com 2 casas decimais\n    const formattedValue = Number(rawValue).toFixed(2);\n\n    valor_total.innerHTML = `${formattedValue}%`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
       "datasource": {
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
@@ -2410,7 +3106,7 @@
         "h": 2,
         "w": 16,
         "x": 8,
-        "y": 24
+        "y": 28
       },
       "id": 53,
       "options": {
@@ -2493,6 +3189,163 @@
       "type": "stat"
     },
     {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 29
+      },
+      "id": 83,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(132, 131, 128), 0 0 4px rgb(132, 131, 128), 0 0 8px rgb(132, 131, 128); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/12159/12159501.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const formattedValue = field.values.get(field.values.length - 1);\n    valor_total.innerHTML = `${formattedValue}ºC`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
+          },
+          "item": {
+            "filter": "Device: Temperature"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
       "datasource": {
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
@@ -2557,7 +3410,7 @@
         "h": 7,
         "w": 8,
         "x": 8,
-        "y": 26
+        "y": 30
       },
       "id": 74,
       "options": {
@@ -2587,13 +3440,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "LINK DEDICADO"
+            "filter": "SWITCH"
           },
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface vlan4000(Transporte Clientes  Fibra GPON TR-TELECOM)"
+            "filter": "/Trafego de Entrada na Interface VLAN 4001 .*/"
           },
           "itemTag": {
             "filter": ""
@@ -2614,63 +3467,6 @@
           },
           "queryType": "0",
           "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "Network interfaces"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "LINK DEDICADO"
-          },
-          "hide": false,
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Entrada na Interface vlan4001(Link Tr Telecom)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2756,7 +3552,7 @@
         "h": 7,
         "w": 8,
         "x": 16,
-        "y": 26
+        "y": 30
       },
       "id": 77,
       "options": {
@@ -2786,13 +3582,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "LINK DEDICADO"
+            "filter": "SWITCH"
           },
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface vlan4000(Transporte Clientes  Fibra GPON TR-TELECOM)"
+            "filter": "/Trafego de Saida na Interface VLAN 4001 .*/"
           },
           "itemTag": {
             "filter": ""
@@ -2828,63 +3624,6 @@
           "triggers": {
             "acknowledged": 2
           }
-        },
-        {
-          "application": {
-            "filter": "Network interfaces"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "LINK DEDICADO"
-          },
-          "hide": false,
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Saida na Interface vlan4001(Link Tr Telecom)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
         }
       ],
       "title": "Tráfego de saida",
@@ -2896,7 +3635,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 33
+        "y": 37
       },
       "id": 15,
       "panels": [],
@@ -2936,7 +3675,7 @@
         "h": 2,
         "w": 24,
         "x": 0,
-        "y": 34
+        "y": 38
       },
       "id": 65,
       "options": {
@@ -3051,7 +3790,7 @@
         "h": 2,
         "w": 8,
         "x": 0,
-        "y": 36
+        "y": 40
       },
       "id": 12,
       "options": {
@@ -3166,7 +3905,7 @@
         "h": 2,
         "w": 16,
         "x": 8,
-        "y": 36
+        "y": 40
       },
       "id": 67,
       "options": {
@@ -3298,7 +4037,7 @@
         "h": 3,
         "w": 3,
         "x": 0,
-        "y": 38
+        "y": 42
       },
       "id": 7,
       "options": {
@@ -3338,7 +4077,7 @@
             "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
-            "filter": "SNMP agent availability"
+            "filter": "Mikrotik: ICMP ping"
           },
           "itemTag": {
             "filter": ""
@@ -3420,7 +4159,7 @@
         "h": 3,
         "w": 2,
         "x": 3,
-        "y": 38
+        "y": 42
       },
       "id": 6,
       "options": {
@@ -3457,10 +4196,10 @@
             "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Levy"
+            "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
-            "filter": "ICMP response time"
+            "filter": "Mikrotik: ICMP response time"
           },
           "itemTag": {
             "filter": ""
@@ -3530,7 +4269,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 38
+        "y": 42
       },
       "id": 4,
       "options": {
@@ -3567,10 +4306,10 @@
             "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Levy"
+            "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
-            "filter": "Uptime"
+            "filter": "Mikrotik: Uptime (network)"
           },
           "itemTag": {
             "filter": ""
@@ -3674,10 +4413,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 11,
         "w": 8,
         "x": 8,
-        "y": 38
+        "y": 42
       },
       "id": 43,
       "options": {
@@ -3710,7 +4449,7 @@
             "filter": "DEDICADO"
           },
           "host": {
-            "filter": "levy"
+            "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
             "filter": "Trafego de Entrada na Interface www.trbandalarga.com.br()"
@@ -3817,10 +4556,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 11,
         "w": 8,
         "x": 16,
-        "y": 38
+        "y": 42
       },
       "id": 73,
       "options": {
@@ -3850,10 +4589,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "LINK DEDICADO"
+            "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Levy"
+            "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
             "filter": "Trafego de Saida na Interface www.trbandalarga.com.br()"
@@ -3928,10 +4667,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
+        "h": 2,
         "w": 8,
         "x": 0,
-        "y": 41
+        "y": 45
       },
       "id": 8,
       "options": {
@@ -3975,10 +4714,10 @@
             "filter": "DEDICADO"
           },
           "host": {
-            "filter": "Connection Levy"
+            "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
-            "filter": "ICMP loss"
+            "filter": "Mikrotik: ICMP loss"
           },
           "itemTag": {
             "filter": ""
@@ -4019,6 +4758,477 @@
       ],
       "title": "Perda de Pacotes",
       "type": "bargauge"
+    },
+    {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 47
+      },
+      "id": 86,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(0, 169, 255), 0 0 4px rgb(0, 169, 255), 0 0 8px rgb(0, 169, 255); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/543/543234.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n        <div class=\"label\">CPU LOAD</div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const formattedValue = field.values.get(field.values.length - 1);\n    valor_total.innerHTML = `${formattedValue}%`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 20201175 - Connection Levy"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 47
+      },
+      "id": 87,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(255, 173, 0), 0 0 4px rgb(255, 173, 0), 0 0 8px rgb(255, 173, 0); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/543/543238.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n        <div class=\"label\">USO DE RAM</div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const rawValue = field.values.get(field.values.length - 1);\n\n    // formatar com 2 casas decimais\n    const formattedValue = Number(rawValue).toFixed(2);\n\n    valor_total.innerHTML = `${formattedValue}%`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 20201175 - Connection Levy"
+          },
+          "item": {
+            "filter": "Memory utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
+    },
+    {
+      "datasource": {},
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 0,
+        "y": 50
+      },
+      "id": 88,
+      "options": {
+        "SVGBaseFix": true,
+        "add100Percentage": true,
+        "calcsMutation": "standard",
+        "centerAlignContent": true,
+        "codeData": "{\n  \"text\": \"Random text\"\n}",
+        "css": ".card {\n    display: flex;\n    align-items: center;\n    background-color: #000513; /* Cor de fundo do cartão que combina com o efeito neon */\n    border-radius: 20px;\n    box-shadow: 0 0 2px rgb(132, 131, 128), 0 0 4px rgb(132, 131, 128), 0 0 8px rgb(132, 131, 128); /* Cor neon */\n    color: #ffffff; /* Cor do texto */\n    position: relative;\n    overflow: hidden;\n}\n\n.image-container {\n    flex: 0 0 auto;\n    margin-right: 15px;\n}\n\n.image-container img {\n    margin-left: 15px;\n    border-radius: 10px;\n    height: 50px;\n    width: 50px; /* garante proporção fixa */\n    object-fit: contain; /* evita distorção */\n}\n.data-container {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: flex-end;\n    overflow: hidden;\n    padding-right: 10px;\n    text-align: center;\n}\n#total-value {\n    font-size: clamp(25px, 1.25vw, 50px); /* Tamanho inicial e final do texto */\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n\n.label {\n    font-size: clamp(10px, 1.25vw, 15px); /* Tamanho inicial e final do subtexto */\n    color: #ffffff; /* Cor do subtexto */\n    margin-top: 10px;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    width: 100%;\n}\n",
+        "dynamicData": false,
+        "dynamicFieldDisplayValues": false,
+        "dynamicHtmlGraphics": false,
+        "dynamicProps": false,
+        "html": "<div id=\"total-card\" class=\"card\">\n    <!--Se não conter icone exclua as linhas 3,4 e 5 !-->\n    <div class=\"image-container\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/12159/12159501.png\" alt=\"Icone.png\">\n    </div>\n    <div class=\"data-container\">\n        <div id=\"total-value\"></div>\n    </div>\n</div>",
+        "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+        "onInitOnResize": false,
+        "onRender": "const valor_total = htmlNode.getElementById('total-value');\n\nif (valor_total) {\n  const field = data.series[0]?.fields[0]; // pega o primeiro mesmo\n  if (field && field.values.length > 0) {\n    const formattedValue = field.values.get(field.values.length - 1);\n    valor_total.innerHTML = `${formattedValue}ºC`;\n  } else {\n    valor_total.innerHTML = 'Sem valor';\n  }\n}\n",
+        "overflow": "hidden",
+        "panelupdateOnMount": true,
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull",
+            "last",
+            "firstNotNull",
+            "first",
+            "min",
+            "max",
+            "mean",
+            "sum",
+            "count",
+            "range",
+            "delta",
+            "step",
+            "diff",
+            "logmin",
+            "allIsZero",
+            "allIsNull",
+            "diffperc"
+          ]
+        },
+        "renderOnMount": true,
+        "rootCSS": "",
+        "useGrafanaScrollbar": true
+      },
+      "pluginVersion": "2.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 20201175 - Connection Levy"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {
+              "Last *": "TOTAL"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "gapit-htmlgraphics-panel"
     }
   ],
   "preload": false,
