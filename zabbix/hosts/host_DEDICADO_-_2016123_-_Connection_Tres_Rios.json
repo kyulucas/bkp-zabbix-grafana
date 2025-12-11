@@ -85,10 +85,7 @@
         "name": "DEDICADO - 2016123 - Connection Tres Rios",
         "templates": [
           {
-            "name": "potencia-onu"
-          },
-          {
-            "name": "Template Module ICMP Ping"
+            "name": "Template Net Mikrotik SNMPv2"
           }
         ],
         "groups": [
@@ -100,6 +97,15 @@
           {
             "ip": "170.80.224.131",
             "interface_ref": "if1"
+          },
+          {
+            "type": "SNMP",
+            "ip": "170.80.224.131",
+            "port": "161",
+            "details": {
+              "community": "ConnectionSNMP"
+            },
+            "interface_ref": "if2"
           }
         ],
         "inventory_mode": "DISABLED"
