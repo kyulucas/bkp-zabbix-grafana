@@ -127,7 +127,7 @@
             "filter": "/.*/"
           },
           "host": {
-            "filter": "ROUTER-BGP - ADM BGP"
+            "filter": "ROUTER-PPPOE - BKP"
           },
           "item": {
             "filter": "USO DE CPU"
@@ -284,7 +284,7 @@
             "filter": "/.*/"
           },
           "host": {
-            "filter": "ROUTER-BGP - ADM BGP"
+            "filter": "ROUTER-PPPOE - BKP"
           },
           "item": {
             "filter": "MEMORIA UTILIZADA EM %"
@@ -441,7 +441,7 @@
             "filter": "/.*/"
           },
           "host": {
-            "filter": "ROUTER-BGP - ADM BGP"
+            "filter": "ROUTER-PPPOE - BKP"
           },
           "item": {
             "filter": "TEMPERATURA"
