@@ -85,10 +85,10 @@
         "name": "DEDICADO - 20171156 - SR Embalagens",
         "templates": [
           {
-            "name": "ping.cgnat"
+            "name": "potencia-onu"
           },
           {
-            "name": "potencia-onu"
+            "name": "Template Module ICMP Ping"
           }
         ],
         "groups": [
@@ -98,6 +98,7 @@
         ],
         "interfaces": [
           {
+            "ip": "170.80.224.18",
             "interface_ref": "if1"
           }
         ],
