@@ -1,0 +1,1430 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "gridPos": {
+        "h": 21,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "mapConfig": {
+          "centerLat": -22.11276915454443,
+          "centerLng": -43.20946455001832,
+          "geofences": [],
+          "licenseKey": "O2T6-G4A1-BUAL-33NI",
+          "pops": [
+            {
+              "equipment": [],
+              "iconUrl": "https://cdn-icons-png.flaticon.com/512/6410/6410301.png",
+              "id": "pop-1765391840420",
+              "lat": -22.109319567644373,
+              "lng": -43.21134679019451,
+              "name": "CPD-01 TR TELECOM"
+            }
+          ],
+          "routes": [
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.109223828746973,
+                  -43.21142122149468
+                ],
+                [
+                  -22.1090149448103,
+                  -43.21137830615044
+                ],
+                [
+                  -22.109024891671464,
+                  -43.2108847796917
+                ],
+                [
+                  -22.109435199082245,
+                  -43.21084991097451
+                ],
+                [
+                  -22.109236115712136,
+                  -43.21031212806702
+                ],
+                [
+                  -22.108281215273777,
+                  -43.20999026298524
+                ],
+                [
+                  -22.10750535390727,
+                  -43.20865988731385
+                ],
+                [
+                  -22.108778560058813,
+                  -43.20846676826478
+                ],
+                [
+                  -22.110071648292283,
+                  -43.20861697196961
+                ],
+                [
+                  -22.110011967557842,
+                  -43.209582567214966
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": true,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765390426771",
+              "name": "CIRCUITO TR / ALBERTO TORRES",
+              "zabbixItemDownload": "Trafego de Entrada na Interface XGigabitEthernet0/0/24(Circuito Link BGP Core-6730 POP-ALBERTO TORRES / POP-BMP  (eth-trunk 60) Fibra Tr-Telecom)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Optical Module Interface XGigabitEthernet0/0/24: RxPower",
+              "zabbixItemSpeed": "Interface XGigabitEthernet0/0/24(Circuito Link BGP Core-6730 POP-ALBERTO TORRES / POP-BMP  (eth-trunk 60) Fibra Tr-Telecom): Speed",
+              "zabbixItemStatus": "Interface XGigabitEthernet0/0/24(Circuito Link BGP Core-6730 POP-ALBERTO TORRES / POP-BMP  (eth-trunk 60) Fibra Tr-Telecom): Operational status",
+              "zabbixItemTemperature": "Optical Module Interface XGigabitEthernet0/0/24: Temperature",
+              "zabbixItemTxDbm": "Optical Module Interface XGigabitEthernet0/0/24: TxPower",
+              "zabbixItemUpload": "Trafego de Saida na Interface XGigabitEthernet0/0/24(Circuito Link BGP Core-6730 POP-ALBERTO TORRES / POP-BMP  (eth-trunk 60) Fibra Tr-Telecom)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.10921834043157,
+                  -43.21202874183655
+                ],
+                [
+                  -22.108343015166348,
+                  -43.211878538131714
+                ],
+                [
+                  -22.108601634560113,
+                  -43.21290850639343
+                ],
+                [
+                  -22.109476958220302,
+                  -43.21314454078675
+                ],
+                [
+                  -22.1086613158913,
+                  -43.21370244026185
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": true,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765395367798",
+              "name": "CIRCUITO BMP FIBRA 1 (ALTAREDE-Swap)",
+              "zabbixItemDownload": "Trafego de Entrada na Interface XGigabitEthernet0/0/23(Circuito Link BGP Core-6730 POP-BMP (eth-trunk 20) Fibra AltaRede SWAP)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Optical Module Interface XGigabitEthernet0/0/23: RxPower",
+              "zabbixItemSpeed": "Interface XGigabitEthernet0/0/23(Circuito Link BGP Core-6730 POP-BMP (eth-trunk 20) Fibra AltaRede SWAP): Speed",
+              "zabbixItemStatus": "Interface XGigabitEthernet0/0/23(Circuito Link BGP Core-6730 POP-BMP (eth-trunk 20) Fibra AltaRede SWAP): Operational status",
+              "zabbixItemTemperature": "Optical Module Interface XGigabitEthernet0/0/23: Temperature",
+              "zabbixItemTxDbm": "Optical Module Interface XGigabitEthernet0/0/23: TxPower",
+              "zabbixItemUpload": "Trafego de Saida na Interface XGigabitEthernet0/0/23(Circuito Link BGP Core-6730 POP-BMP (eth-trunk 20) Fibra AltaRede SWAP)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.200201014843064,
+                  -43.15414667129517
+                ],
+                [
+                  -22.200360061439977,
+                  -43.15624952316285
+                ],
+                [
+                  -22.199246731478038,
+                  -43.157837390899665
+                ],
+                [
+                  -22.19567276383824,
+                  -43.15894758169724
+                ],
+                [
+                  -22.193764129073376,
+                  -43.15864717428757
+                ],
+                [
+                  -22.1916908183,
+                  -43.161442279815674
+                ],
+                [
+                  -22.19117388428976,
+                  -43.16238641738892
+                ],
+                [
+                  -22.186441861478862,
+                  -43.16517591476441
+                ],
+                [
+                  -22.18365824419349,
+                  -43.1677508354187
+                ],
+                [
+                  -22.179959924500032,
+                  -43.16779375076295
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765396162848",
+              "name": "CIRCUITO ALBERTO TORRES / BMP",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 ))",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 ))"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.108980652606565,
+                  -43.211382329463966
+                ],
+                [
+                  -22.108538016467953,
+                  -43.2113340497017
+                ],
+                [
+                  -22.107772103463553,
+                  -43.211258947849274
+                ],
+                [
+                  -22.10715041777207,
+                  -43.21126967668533
+                ],
+                [
+                  -22.10575479333722,
+                  -43.21100145578385
+                ],
+                [
+                  -22.10547130094742,
+                  -43.2109209895134
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765396782623",
+              "name": "TRÊS RIOS / LEVY",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.030217781865858,
+                  -43.205301761627204
+                ],
+                [
+                  -22.026316383673482,
+                  -43.209593296051025
+                ],
+                [
+                  -22.020702958943122,
+                  -43.21744680404663
+                ],
+                [
+                  -22.011386571706854,
+                  -43.22555780410767
+                ],
+                [
+                  -22.002587199193236,
+                  -43.23658704757691
+                ],
+                [
+                  -21.99876467718848,
+                  -43.24014902114868
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765397025454",
+              "name": "CIRCUITO / LEVY X S PEREIRA",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): Operational status",
+              "zabbixItemTxDbm": "Trafego de Saida na Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB)",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.107187722106197,
+                  -43.19354295730591
+                ],
+                [
+                  -22.107187722106197,
+                  -43.19658994674683
+                ],
+                [
+                  -22.107227510061993,
+                  -43.19839239120484
+                ],
+                [
+                  -22.107983479089775,
+                  -43.20066690444947
+                ],
+                [
+                  -22.108142629947764,
+                  -43.203799724578865
+                ],
+                [
+                  -22.10790390359344,
+                  -43.20504426956177
+                ],
+                [
+                  -22.107307085939937,
+                  -43.20620298385621
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765397620300",
+              "name": "CIRCUITO POP VILA (FIBRA 1 - Sentido Upa)",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -21.953744545621333,
+                  -43.16691398620606
+                ],
+                [
+                  -21.961710542776416,
+                  -43.16794395446778
+                ],
+                [
+                  -21.96617130612206,
+                  -43.175840377807624
+                ],
+                [
+                  -21.977004005328936,
+                  -43.18150520324707
+                ],
+                [
+                  -21.980827113625665,
+                  -43.18699836730958
+                ],
+                [
+                  -21.98305721258318,
+                  -43.19970130920411
+                ],
+                [
+                  -21.988313735767882,
+                  -43.206567764282234
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765397863217",
+              "name": "CIRCUITO CHIADOR / SANTANA",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.104645783479146,
+                  -43.18573236465455
+                ],
+                [
+                  -22.10452641739341,
+                  -43.17976713180542
+                ],
+                [
+                  -22.10492430395306,
+                  -43.174874782562256
+                ],
+                [
+                  -22.105361977872402,
+                  -43.16998243331909
+                ],
+                [
+                  -22.107033083982646,
+                  -43.15131425857544
+                ],
+                [
+                  -22.107828841838614,
+                  -43.14564943313599
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765398352478",
+              "name": "CIRCUITO VILA / CHIADOR",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -21.956989434913815,
+                  -43.31059455871583
+                ],
+                [
+                  -21.96861937521877,
+                  -43.28913688659668
+                ],
+                [
+                  -21.961609662157667,
+                  -43.26132774353028
+                ],
+                [
+                  -21.95937922638123,
+                  -43.23592185974121
+                ],
+                [
+                  -21.956352150402044,
+                  -43.22064399719239
+                ],
+                [
+                  -21.95412163210768,
+                  -43.20416450500488
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765398579657",
+              "name": "CIRCUITO SIMÃO PEREIRA / SANTANA",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.16679754105514,
+                  -43.289651870727546
+                ],
+                [
+                  -22.16854745967216,
+                  -43.26991081237794
+                ],
+                [
+                  -22.153433808227323,
+                  -43.24416160583496
+                ],
+                [
+                  -22.145001276116307,
+                  -43.23884010314942
+                ],
+                [
+                  -22.137651278290413,
+                  -43.229742050170906
+                ],
+                [
+                  -22.124762175157166,
+                  -43.21394920349121
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": true,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765398747022",
+              "name": "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1",
+              "zabbixItemDownload": "Trafego de Entrada na Interface XGigabitEthernet0/0/17(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Optical Module Interface XGigabitEthernet0/0/17: RxPower",
+              "zabbixItemSpeed": "Interface XGigabitEthernet0/0/17(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2): Speed",
+              "zabbixItemStatus": "Interface XGigabitEthernet0/0/17(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2): Operational status",
+              "zabbixItemTemperature": "Optical Module Interface XGigabitEthernet0/0/17: Temperature",
+              "zabbixItemTxDbm": "Optical Module Interface XGigabitEthernet0/0/17: TxPower",
+              "zabbixItemUpload": "Trafego de Saida na Interface XGigabitEthernet0/0/17(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.16360740003959,
+                  -43.29222679138184
+                ],
+                [
+                  -22.154857281922155,
+                  -43.29222679138184
+                ],
+                [
+                  -22.147856795638123,
+                  -43.2766056060791
+                ],
+                [
+                  -22.13349511523417,
+                  -43.24828147888184
+                ],
+                [
+                  -22.12951700542545,
+                  -43.240385055542
+                ],
+                [
+                  -22.125061389089375,
+                  -43.2326602935791
+                ],
+                [
+                  -22.120605631876572,
+                  -43.22047233581544
+                ],
+                [
+                  -22.1174228619145,
+                  -43.214120864868164
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": true,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765398851423",
+              "name": "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2",
+              "zabbixItemDownload": "Trafego de Entrada na Interface XGigabitEthernet0/0/18(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Optical Module Interface XGigabitEthernet0/0/18: RxPower",
+              "zabbixItemSpeed": "Interface XGigabitEthernet0/0/18(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2): Speed",
+              "zabbixItemStatus": "Interface XGigabitEthernet0/0/18(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2): Operational status",
+              "zabbixItemTemperature": "Optical Module Interface XGigabitEthernet0/0/18: Temperature",
+              "zabbixItemTxDbm": "Optical Module Interface XGigabitEthernet0/0/18: TxPower",
+              "zabbixItemUpload": "Trafego de Saida na Interface XGigabitEthernet0/0/18(Link Circuito POP Paraiba do  sul Eth-Trunk 53 OLT-5800x2)"
+            },
+            {
+              "alertThresholds": {},
+              "colors": {
+                "alert": "#F59E0B",
+                "down": "#EF4444",
+                "online": "#10B981"
+              },
+              "coordinates": [
+                [
+                  -22.1406765261251,
+                  -43.09679031372071
+                ],
+                [
+                  -22.132084106273687,
+                  -43.08649063110352
+                ],
+                [
+                  -22.099300803817645,
+                  -43.07241439819337
+                ],
+                [
+                  -22.086885719822778,
+                  -43.07207107543946
+                ]
+              ],
+              "enableDownload": true,
+              "enableRxDbm": true,
+              "enableSpeed": true,
+              "enableStatus": true,
+              "enableTemperature": false,
+              "enableTxDbm": true,
+              "enableUpload": true,
+              "id": "route-1765399005052",
+              "name": "CIRCUITO BMP / CHIADOR",
+              "zabbixItemDownload": "Trafego de Entrada na Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP)",
+              "zabbixItemId": "",
+              "zabbixItemOnlineValue": "1",
+              "zabbixItemRxDbm": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): RX Power",
+              "zabbixItemSpeed": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): Speed",
+              "zabbixItemStatus": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): Operational status",
+              "zabbixItemTxDbm": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): TX Power",
+              "zabbixItemUpload": "Trafego de Saida na Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP)"
+            }
+          ],
+          "routesListOpenByDefault": true,
+          "showStatsCard": true,
+          "tileProvider": "cartodb-dark",
+          "useFreeMode": false,
+          "zoom": 15
+        }
+      },
+      "pluginVersion": "1.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 CORE LINK BGP"
+          },
+          "item": {
+            "filter": "/.*0\\/0\\/23/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW - 6730 CORE LINK BGP"
+          },
+          "item": {
+            "filter": "/.*0\\/0\\/24/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
+          },
+          "item": {
+            "filter": "/.*sfpplus2/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-01 MPLS CDP TR CCR1072"
+          },
+          "item": {
+            "filter": "/.*sfpplus8/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
+          },
+          "item": {
+            "filter": "/.*sfpplus9/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+          },
+          "item": {
+            "filter": "/.*sfpplus1/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+          },
+          "item": {
+            "filter": "/.*sfpplus1/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+          },
+          "item": {
+            "filter": "/.*sfpplus12/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+          },
+          "item": {
+            "filter": "/.*sfpplus7/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "I",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "/.*0\\/0\\/17/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "J",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "/.*0\\/0\\/18/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "K",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+          },
+          "item": {
+            "filter": "/.*sfpplus2/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "L",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "hide": false,
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "/.*0\\/0\\/10/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "M",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "zumee-map-panel"
+    }
+  ],
+  "preload": false,
+  "refresh": "30s",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Mapa Rede",
+  "uid": "adfnb7t",
+  "weekStart": ""
+}
