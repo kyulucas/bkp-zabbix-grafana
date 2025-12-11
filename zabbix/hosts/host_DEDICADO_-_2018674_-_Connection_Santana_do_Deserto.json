@@ -85,10 +85,7 @@
         "name": "DEDICADO - 2018674 - Connection Santana do Deserto",
         "templates": [
           {
-            "name": "ping.cgnat"
-          },
-          {
-            "name": "potencia-onu"
+            "name": "Template Net Mikrotik SNMPv2"
           }
         ],
         "groups": [
@@ -98,7 +95,17 @@
         ],
         "interfaces": [
           {
+            "ip": "170.80.227.32",
             "interface_ref": "if1"
+          },
+          {
+            "type": "SNMP",
+            "ip": "170.80.227.32",
+            "port": "161",
+            "details": {
+              "community": "ConnectionSNMP"
+            },
+            "interface_ref": "if2"
           }
         ],
         "inventory_mode": "DISABLED"
