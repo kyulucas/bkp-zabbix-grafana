@@ -99,7 +99,15 @@
             "key": "battsChargeStatus",
             "history": "7d",
             "trends": "0",
-            "description": "Estado de carga do grupo de baterias. Valores: 1=floatCharge (carregamento flutuante - energia elétrica), 2=boostCharge (carregamento rápido - energia elétrica), 3=disCharge (descarregando - modo bateria), 4=hibernating (hibernando), 7=offline (offline), 255=unknown (desconhecido)."
+            "description": "Estado de carga do grupo de baterias. Valores: 1=floatCharge (carregamento flutuante - energia elétrica), 2=boostCharge (carregamento rápido - energia elétrica), 3=disCharge (descarregando - modo bateria), 4=hibernating (hibernando), 7=offline (offline), 255=unknown (desconhecido).",
+            "triggers": [
+              {
+                "uuid": "2ce5556517e1468fb826c4b2725ccac5",
+                "expression": "last(/Huawei - Fontes Retificadoras/battsChargeStatus)>=3",
+                "name": "OPERANDO VIA BATERIA",
+                "priority": "HIGH"
+              }
+            ]
           },
           {
             "uuid": "1994e5e823924668be0292763a6778cb",
