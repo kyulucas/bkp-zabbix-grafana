@@ -7091,16 +7091,20 @@
         "problemTimeline": true,
         "resizedColumns": [
           {
-            "id": "name",
-            "value": 224.90625
-          },
-          {
             "id": "host",
             "value": 259.28125
           },
           {
             "id": "value",
             "value": 105.00000762939453
+          },
+          {
+            "id": "name",
+            "value": 396.90625
+          },
+          {
+            "id": "age",
+            "value": 170
           }
         ],
         "severityField": false,
@@ -7203,7 +7207,7 @@
           },
           "textFilter": "",
           "trigger": {
-            "filter": "Unavailable by ICMP ping"
+            "filter": ""
           }
         }
       ],
