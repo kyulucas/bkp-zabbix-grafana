@@ -99,6 +99,42 @@
             "trends": "0",
             "url": "https://webhook.trtelecom.net/webhook/Ping-cgnat",
             "post_type": "JSON",
+            "posts": "{\n\"login\": \"{HOST.NAME}\"\n}",
+            "triggers": [
+              {
+                "uuid": "db2db005012d455088da2d763a47cea9",
+                "expression": "max(/ping.cgnat/ping.cgnat3,#3)=0",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "last(/ping.cgnat/ping.cgnat3)=1",
+                "name": "PERDA DE COMUNICAÇÃO PING",
+                "priority": "HIGH"
+              }
+            ]
+          },
+          {
+            "uuid": "beed27d5d629403e85e393a2da6bba35",
+            "name": "ICMP loss",
+            "type": "HTTP_AGENT",
+            "key": "ping.icmploss",
+            "delay": "2m",
+            "value_type": "FLOAT",
+            "trends": "0",
+            "units": "%",
+            "url": "https://webhook.trtelecom.net/webhook/icmp-loss-cgnat",
+            "post_type": "JSON",
+            "posts": "{\n\"login\": \"{HOST.NAME}\"\n}"
+          },
+          {
+            "uuid": "7d447ba2823444b2902e8104c02db3a8",
+            "name": "ICMP response time",
+            "type": "HTTP_AGENT",
+            "key": "ping.responsetime",
+            "delay": "2m",
+            "value_type": "FLOAT",
+            "trends": "0",
+            "units": "ms",
+            "url": "https://webhook.trtelecom.net/webhook/response-time-cgnat",
+            "post_type": "JSON",
             "posts": "{\n\"login\": \"{HOST.NAME}\"\n}"
           }
         ]
