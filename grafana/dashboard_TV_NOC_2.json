@@ -2304,7 +2304,7 @@
         "x": 0,
         "y": 14
       },
-      "id": 148,
+      "id": 150,
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
@@ -2651,10 +2651,10 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus9(): RX Power"
+            "filter": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): RX Power"
           },
           "itemTag": {
-            "filter": "Application: RX-POWER"
+            "filter": ""
           },
           "macro": {
             "filter": ""
