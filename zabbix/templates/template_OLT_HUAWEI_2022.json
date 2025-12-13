@@ -496,13 +496,26 @@
                     "tag": "Application",
                     "value": "OFFLINE_PON"
                   }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "9773a224c418430490d262beb44879a8",
+                    "expression": "change(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=8\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"],#2) > 0",
+                    "name": "8+ Clientes ficaram off na PON {#GPON}",
+                    "priority": "WARNING",
+                    "tags": [
+                      {
+                        "tag": "QUEDA_PON"
+                      }
+                    ]
+                  }
                 ]
               }
             ],
             "trigger_prototypes": [
               {
                 "uuid": "b3acf33c5aed475db615a3abdba0b2ef",
-                "expression": "last(/OLT_HUAWEI_2022/hwGponDeviceOltControlOntNum.[{#SNMPINDEX}])>=2 and last(/OLT_HUAWEI_2022/interface.[\"{#GPON}\"])<=2 and last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=2",
+                "expression": "last(/OLT_HUAWEI_2022/hwGponDeviceOltControlOntNum.[{#SNMPINDEX}])>=3\nand last(/OLT_HUAWEI_2022/interface.[\"{#GPON}\"])>0\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>0\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=last(/OLT_HUAWEI_2022/hwGponDeviceOltControlOntNum.[{#SNMPINDEX}])*0.9",
                 "name": "Queda massiva detecada em {#GPON}",
                 "priority": "WARNING",
                 "tags": [
