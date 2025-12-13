@@ -906,21 +906,16 @@
         ]
       },
       "gridPos": {
-        "h": 13,
-        "w": 22,
-        "x": 1,
+        "h": 14,
+        "w": 24,
+        "x": 0,
         "y": 12
       },
-      "id": 10,
+      "id": 11,
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": [
-          {
-            "desc": false,
-            "displayName": "RX POWER"
-          }
-        ]
+        "sortBy": []
       },
       "pluginVersion": "12.3.0",
       "targets": [
@@ -1263,10 +1258,10 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus9(): RX Power"
+            "filter": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): RX Power"
           },
           "itemTag": {
-            "filter": "Application: RX-POWER"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -2086,7 +2081,7 @@
         "h": 5,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 26
       },
       "id": 9,
       "options": {
