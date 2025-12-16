@@ -85,7 +85,7 @@
         "name": "PVE-DELL-R610 2",
         "templates": [
           {
-            "name": "Linux by Zabbix agent"
+            "name": "Linux by SNMP"
           },
           {
             "name": "Proxmox VE by HTTP"
