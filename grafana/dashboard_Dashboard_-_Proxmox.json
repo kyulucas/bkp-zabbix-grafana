@@ -167,7 +167,7 @@
             "filter": "ICMP ping"
           },
           "itemTag": {
-            "filter": "Application: Status"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -340,7 +340,7 @@
             "filter": "ICMP response time"
           },
           "itemTag": {
-            "filter": "Application: Status"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -499,7 +499,7 @@
             "filter": "ICMP loss"
           },
           "itemTag": {
-            "filter": "Application: Status"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -553,7 +553,6 @@
         "mode": "html"
       },
       "pluginVersion": "12.3.0",
-      "transparent": true,
       "type": "text"
     },
     {
@@ -581,7 +580,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-blue",
+                "color": "#1F60C4",
                 "value": 0
               },
               {
@@ -595,180 +594,73 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Máquina"
+              "options": "Uptime"
             },
-            "properties": []
+            "properties": [
+              {
+                "id": "unit",
+                "value": "dtdhms"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1f60c4",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Memory, total"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bytes"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1f60c4",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Memory, used"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "bytes"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
           }
         ]
       },
       "gridPos": {
-        "h": 10,
-        "w": 8,
-        "x": 1,
+        "h": 11,
+        "w": 11,
+        "x": 0,
         "y": 18
       },
       "id": 77,
       "options": {
         "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CPU, usage",
-                " "
-              ],
-              "text": "replaceAlias(/(.*)/, $1)"
-            }
-          ],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "host": {
-            "filter": "PROXMOX-1"
-          },
-          "item": {
-            "filter": "/.*: CPU, usage/"
-          },
-          "itemTag": {
-            "filter": "/node:/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "labelsToFields": false,
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Last *": true
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {
-              "Field": "Máquina",
-              "Last *": "Uso de CPU"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "yellow",
-                "value": 50
-              },
-              {
-                "color": "dark-red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 9,
-        "y": 18
-      },
-      "id": 78,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": []
       },
       "pluginVersion": "12.3.0",
       "targets": [
@@ -783,388 +675,13 @@
             "filter": "PROXMOX"
           },
           "host": {
-            "filter": "PROXMOX-1"
+            "filter": "$Node"
           },
           "item": {
             "filter": "/.*CPU, usage/"
           },
           "itemTag": {
             "filter": "/node:/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "labelsToFields": false,
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
-              "Last *": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {
-              "Field": "Máquina",
-              "Last *": "CPU"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-blue",
-                "value": 0
-              }
-            ]
-          },
-          "unit": "dtdhms"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 11,
-        "y": 18
-      },
-      "id": 79,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "host": {
-            "filter": "PROXMOX-1"
-          },
-          "item": {
-            "filter": "/^Node \\[.*?\\]: Uptime$/i"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "labelsToFields": false,
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
-              "Last *": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {
-              "Field": "Máquina",
-              "Last *": "Uptime"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-blue",
-                "value": 0
-              }
-            ]
-          },
-          "unit": "bytes"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 13,
-        "y": 18
-      },
-      "id": 80,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "host": {
-            "filter": "PROXMOX-1"
-          },
-          "item": {
-            "filter": "/.* Memory, total/"
-          },
-          "itemTag": {
-            "filter": "/PVE/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "labelsToFields": false,
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
-              "Last *": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {
-              "Field": "Máquina",
-              "Last *": "Memória Total"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-blue",
-                "value": 0
-              }
-            ]
-          },
-          "unit": "bytes"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 15,
-        "y": 18
-      },
-      "id": 81,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "host": {
-            "filter": "PROXMOX-1"
-          },
-          "item": {
-            "filter": "/.* Memory, used/"
-          },
-          "itemTag": {
-            "filter": "/PVE/"
           },
           "macro": {
             "filter": ""
@@ -1202,22 +719,22 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
-            "filter": "PROXMOX - NODE 2"
+            "filter": "$Node"
           },
           "item": {
-            "filter": "Node [PVE-02]: Memory, used"
+            "filter": "/Node(.*): Uptime/"
           },
           "itemTag": {
-            "filter": "/PVE/"
+            "filter": "/node:/"
           },
           "macro": {
             "filter": ""
@@ -1255,22 +772,22 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
-            "filter": "PROXMOX - NODE 3 - PBS"
+            "filter": "$Node"
           },
           "item": {
-            "filter": "Node [PVE-03-PBS]: Memory, used"
+            "filter": "/.*Memory, total/"
           },
           "itemTag": {
-            "filter": "/PVE/"
+            "filter": "/node:/"
           },
           "macro": {
             "filter": ""
@@ -1308,22 +825,22 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
-            "filter": "PROXMOX - NODE 4"
+            "filter": "$Node"
           },
           "item": {
-            "filter": "Node [PVE-04-DELL2950]: Memory, used"
+            "filter": "/.*Memory, used/"
           },
           "itemTag": {
-            "filter": "/PVE/"
+            "filter": "/node:/"
           },
           "macro": {
             "filter": ""
@@ -1353,136 +870,191 @@
           "trigger": {
             "filter": ""
           }
-        },
+        }
+      ],
+      "transformations": [
         {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Linux servers"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX - NODE 5"
-          },
-          "item": {
-            "filter": "Node [PVE-05-DELL1950]: Memory, used"
-          },
-          "itemTag": {
-            "filter": "/PVE/"
-          },
-          "macro": {
-            "filter": ""
-          },
+          "id": "reduce",
           "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "E",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
+            "labelsToFields": true,
+            "reducers": [
+              "lastNotNull"
+            ]
           }
         },
         {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Linux servers"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX - NODE 6"
-          },
-          "item": {
-            "filter": "Node [PVE-R610]: Memory, used"
-          },
-          "itemTag": {
-            "filter": "/PVE/"
-          },
-          "macro": {
-            "filter": ""
-          },
+          "id": "extractFields",
           "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "F",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/Node\\s+\\[[^\\]]+\\]:\\s+(?<item>CPU,\\s*usage|Uptime|Memory,\\s*(?:used|total))/",
+            "source": "item"
           }
         },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/(?<NODE>Node\\s+\\[[^\\]]+\\])/i",
+            "source": "item 1"
+          }
+        },
+        {
+          "id": "groupingToMatrix",
+          "options": {
+            "columnField": "item 2",
+            "rowField": "NODE",
+            "valueField": "Last *"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": false,
+              "Last *": false,
+              "host": false,
+              "item 2": false,
+              "item_key": false
+            },
+            "includeByName": {},
+            "indexByName": {},
+            "renameByName": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "applyToRow": false,
+              "mode": "gradient",
+              "type": "color-background"
+            },
+            "filterable": false,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false,
+            "wrapText": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "200": {
+                  "color": "dark-blue",
+                  "index": 0,
+                  "text": "UP"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Host"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-blue",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 133
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 5,
+        "x": 11,
+        "y": 18
+      },
+      "hideTimeOverride": true,
+      "id": 84,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.3.0",
+      "targets": [
         {
           "application": {
             "filter": ""
           },
           "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": API service status",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
-            "filter": "PROXMOX - NODE 7"
+            "filter": "/.*/"
           },
           "item": {
-            "filter": "Node [PVE-DELL-R410]: Memory, used"
+            "filter": "API service status"
           },
           "itemTag": {
-            "filter": "/PVE/"
+            "filter": "component: system"
           },
           "macro": {
             "filter": ""
@@ -1493,66 +1065,13 @@
             "showDisabledItems": false,
             "skipEmptyValues": false,
             "useTrends": "default",
-            "useZabbixValueMapping": false
+            "useZabbixValueMapping": true
           },
           "proxy": {
             "filter": ""
           },
           "queryType": "0",
-          "refId": "G",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Linux servers"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX - NODE 7"
-          },
-          "item": {
-            "filter": "Node [PVE-HP-DL360]: Memory, used"
-          },
-          "itemTag": {
-            "filter": "/PVE/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "H",
+          "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -1567,6 +1086,7 @@
           }
         }
       ],
+      "timeFrom": "24h",
       "transformations": [
         {
           "id": "reduce",
@@ -1581,14 +1101,14 @@
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Field": true,
+              "Field": false,
               "Last *": false
             },
             "includeByName": {},
             "indexByName": {},
             "renameByName": {
-              "Field": "Máquina",
-              "Last *": "Memória usada"
+              "Field": "Host",
+              "Last *": "API Status"
             }
           }
         }
@@ -1628,15 +1148,28 @@
           },
           "unit": "bytes"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Máquina"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 204
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 17,
+        "h": 5,
+        "w": 5,
+        "x": 16,
         "y": 18
       },
-      "id": 82,
+      "id": 89,
       "options": {
         "cellHeight": "sm",
         "showHeader": true
@@ -1653,9 +1186,62 @@
             "uid": "aefq119i80pa8a"
           },
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": Size",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Storage ",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
@@ -1706,9 +1292,62 @@
             "uid": "aefq119i80pa8a"
           },
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": Size",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Storage ",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
@@ -1755,10 +1394,64 @@
           },
           "countTriggersBy": "",
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": Size",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Storage",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
+          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1812,14 +1505,14 @@
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Field": true,
+              "Field": false,
               "Last *": false
             },
             "includeByName": {},
             "indexByName": {},
             "renameByName": {
               "Field": "Máquina",
-              "Last *": "Disco total"
+              "Last *": "Tamanho"
             }
           }
         }
@@ -1862,12 +1555,12 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 19,
+        "h": 5,
+        "w": 3,
+        "x": 21,
         "y": 18
       },
-      "id": 85,
+      "id": 90,
       "options": {
         "cellHeight": "sm",
         "showHeader": true
@@ -1886,7 +1579,7 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
@@ -1939,7 +1632,7 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
           "hide": false,
           "host": {
@@ -1988,8 +1681,9 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Linux servers"
+            "filter": "PROXMOX"
           },
+          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -2066,518 +1760,6 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "applyToRow": false,
-              "mode": "gradient",
-              "type": "color-background"
-            },
-            "filterable": false,
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false,
-            "wrapText": false
-          },
-          "mappings": [
-            {
-              "options": {
-                "200": {
-                  "color": "dark-blue",
-                  "index": 0,
-                  "text": "UP"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-red",
-                "value": 0
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 2,
-        "x": 21,
-        "y": 18
-      },
-      "hideTimeOverride": true,
-      "id": 84,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "host": {
-            "filter": "PROXMOX-1"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-2"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-4"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-5"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "D",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-6"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "E",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-8"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "F",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-9"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "G",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "PROXMOX"
-          },
-          "hide": false,
-          "host": {
-            "filter": "PROXMOX-10"
-          },
-          "item": {
-            "filter": "API service status"
-          },
-          "itemTag": {
-            "filter": "/.*/"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": true
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "H",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "timeFrom": "24h",
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "labelsToFields": false,
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
-              "Last *": false
-            },
-            "includeByName": {},
-            "indexByName": {},
-            "renameByName": {
-              "Field": "Host",
-              "Last *": "API Status"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
             "mode": "palette-classic"
           },
           "custom": {
@@ -2635,7 +1817,7 @@
         "h": 6,
         "w": 24,
         "x": 0,
-        "y": 28
+        "y": 29
       },
       "id": 68,
       "options": {
@@ -2712,7 +1894,7 @@
         "h": 2,
         "w": 12,
         "x": 0,
-        "y": 34
+        "y": 35
       },
       "id": 3,
       "options": {
@@ -2733,7 +1915,7 @@
         "h": 2,
         "w": 12,
         "x": 12,
-        "y": 34
+        "y": 35
       },
       "id": 23,
       "options": {
@@ -2814,7 +1996,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 36
+        "y": 37
       },
       "id": 25,
       "options": {
@@ -3164,7 +2346,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 36
+        "y": 37
       },
       "id": 76,
       "options": {
@@ -3567,7 +2749,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 43
+        "y": 44
       },
       "id": 86,
       "options": {
@@ -3706,7 +2888,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 43
+        "y": 44
       },
       "id": 87,
       "options": {
@@ -3785,7 +2967,7 @@
         "h": 2,
         "w": 24,
         "x": 0,
-        "y": 50
+        "y": 51
       },
       "id": 22,
       "options": {
@@ -3850,7 +3032,7 @@
         "h": 25,
         "w": 9,
         "x": 2,
-        "y": 52
+        "y": 53
       },
       "id": 71,
       "options": {
@@ -4035,7 +3217,7 @@
         "h": 25,
         "w": 3,
         "x": 11,
-        "y": 52
+        "y": 53
       },
       "id": 72,
       "options": {
@@ -4165,7 +3347,7 @@
         "h": 25,
         "w": 3,
         "x": 14,
-        "y": 52
+        "y": 53
       },
       "id": 73,
       "options": {
@@ -4295,7 +3477,7 @@
         "h": 25,
         "w": 3,
         "x": 17,
-        "y": 52
+        "y": 53
       },
       "id": 74,
       "options": {
@@ -4425,7 +3607,7 @@
         "h": 25,
         "w": 3,
         "x": 20,
-        "y": 52
+        "y": 53
       },
       "id": 75,
       "options": {
@@ -4578,7 +3760,7 @@
         "h": 5,
         "w": 24,
         "x": 0,
-        "y": 77
+        "y": 78
       },
       "id": 70,
       "options": {
@@ -4654,7 +3836,7 @@
         "h": 2,
         "w": 12,
         "x": 0,
-        "y": 82
+        "y": 83
       },
       "id": 61,
       "options": {
@@ -4675,7 +3857,7 @@
         "h": 2,
         "w": 12,
         "x": 12,
-        "y": 82
+        "y": 83
       },
       "id": 62,
       "options": {
@@ -4756,7 +3938,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 84
+        "y": 85
       },
       "id": 64,
       "options": {
@@ -4894,7 +4076,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 84
+        "y": 85
       },
       "id": 65,
       "options": {
@@ -4969,7 +4151,7 @@
     }
   ],
   "preload": false,
-  "refresh": "10s",
+  "refresh": "30s",
   "schemaVersion": 42,
   "tags": [
     "CPT-02 TR TELECOM"
@@ -5005,8 +4187,8 @@
       },
       {
         "current": {
-          "text": "PROXMOX-1",
-          "value": "PROXMOX-1"
+          "text": "PVE-DELL-2950",
+          "value": "PVE-DELL-2950"
         },
         "definition": "",
         "description": "Selecione a node que quer ler",
