@@ -85,7 +85,7 @@
         "name": "PVE-HPE-DL360",
         "templates": [
           {
-            "name": "Linux by Zabbix agent"
+            "name": "Linux by SNMP"
           },
           {
             "name": "Proxmox VE by HTTP"
