@@ -110,62 +110,6 @@
         ],
         "items": [
           {
-            "name": "API service status",
-            "type": "SCRIPT",
-            "key": "proxmox.api.available",
-            "delay": "5m",
-            "params": "try {\n  var params = JSON.parse(value);\n  var req = new HttpRequest();\n  req.addHeader('Authorization: PVEAPIToken=' + params.token + '=' + params.secret);\n  req.get(encodeURI('https://' + params.url + ':' + params.port + '/api2/json/version'));\n} catch (error) {\n\tZabbix.log(3, \"Proxmox API failed: \" + params.url + \" Error: \" + error);\n\tif (!Number.isInteger(error))\n\t\treturn 520;\n}\nreturn req.getStatus();",
-            "description": "Get API service status.",
-            "preprocessing": [
-              {
-                "type": "DISCARD_UNCHANGED_HEARTBEAT",
-                "parameters": [
-                  "12h"
-                ]
-              }
-            ],
-            "timeout": "10s",
-            "parameters": [
-              {
-                "name": "port",
-                "value": "{$PVE.URL.PORT}"
-              },
-              {
-                "name": "secret",
-                "value": "{$PVE.TOKEN.SECRET}"
-              },
-              {
-                "name": "token",
-                "value": "{$PVE.TOKEN.ID}"
-              },
-              {
-                "name": "url",
-                "value": "{$PVE.URL.HOST}"
-              }
-            ],
-            "tags": [
-              {
-                "tag": "component",
-                "value": "system"
-              }
-            ],
-            "triggers": [
-              {
-                "expression": "last(/Pull PBS -02/proxmox.api.available) <> 200",
-                "name": "Proxmox VE: API service not available",
-                "opdata": "Current value: {ITEM.LASTVALUE1}",
-                "priority": "HIGH",
-                "description": "The API service is not available. Check your network and authorization settings.",
-                "tags": [
-                  {
-                    "tag": "scope",
-                    "value": "availability"
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "name": "Get cluster resources",
             "type": "HTTP_AGENT",
             "key": "proxmox.cluster.resources",
