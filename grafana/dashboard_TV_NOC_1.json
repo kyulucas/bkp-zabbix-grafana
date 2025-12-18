@@ -2120,7 +2120,7 @@
         ]
       },
       "gridPos": {
-        "h": 15,
+        "h": 16,
         "w": 10,
         "x": 0,
         "y": 8
@@ -2619,10 +2619,10 @@
           },
           "hide": false,
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-02): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/13: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3278,7 +3278,7 @@
         ]
       },
       "gridPos": {
-        "h": 15,
+        "h": 16,
         "w": 4,
         "x": 10,
         "y": 8
@@ -3777,10 +3777,10 @@
           },
           "hide": false,
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-02): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/13: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -5602,7 +5602,7 @@
         "h": 14,
         "w": 14,
         "x": 0,
-        "y": 23
+        "y": 24
       },
       "id": 284,
       "options": {
