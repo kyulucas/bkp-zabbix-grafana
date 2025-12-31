@@ -103,7 +103,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -227,7 +227,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -339,7 +339,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -472,7 +472,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -593,7 +593,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -709,7 +709,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -795,6 +795,27 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 6,
         "w": 4,
@@ -823,7 +844,7 @@
         "needleLengthNeg": 0,
         "needleTickGap": 0.05,
         "needleWidth": 5,
-        "operatorName": "last",
+        "operatorName": "mean",
         "outerEdgeColor": "#0099cc",
         "padding": 0.05,
         "pivotColor": "#999999",
@@ -857,7 +878,7 @@
         "zeroNeedleAngle": 40,
         "zeroTickAngle": 60
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "2.0.1",
       "targets": [
         {
           "application": {
@@ -1056,7 +1077,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -1180,6 +1201,27 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
       "gridPos": {
         "h": 6,
         "w": 4,
@@ -1242,7 +1284,7 @@
         "zeroNeedleAngle": 40,
         "zeroTickAngle": 60
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "2.0.1",
       "targets": [
         {
           "application": {
@@ -1363,7 +1405,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -1474,7 +1516,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -1601,7 +1643,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -1648,7 +1690,7 @@
             "filter": "$Host"
           },
           "item": {
-            "filter": "/Space utilization/"
+            "filter": "/.* Space: Used, in %/"
           },
           "itemTag": {
             "filter": ""
@@ -1739,7 +1781,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -1863,7 +1905,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -2093,7 +2135,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "repeat": "Disk",
       "repeatDirection": "v",
       "targets": [
@@ -2270,7 +2312,7 @@
         "sizing": "auto",
         "text": {}
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "repeat": "Disk",
       "repeatDirection": "v",
       "targets": [
@@ -2498,7 +2540,7 @@
           "sort": "desc"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "repeat": "Filesystem",
       "repeatDirection": "v",
       "targets": [
@@ -2521,7 +2563,7 @@
             "filter": "$Host"
           },
           "item": {
-            "filter": "/Total space/"
+            "filter": "/.* Space: Total/"
           },
           "itemTag": {
             "filter": "/Application: Filesystem/"
@@ -2578,7 +2620,7 @@
             "filter": "$Host"
           },
           "item": {
-            "filter": "/Used space(?!, in %)/"
+            "filter": "/.* Space: Used/"
           },
           "itemTag": {
             "filter": "/Application: Filesystem/"
@@ -2697,7 +2739,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "repeat": "Network",
       "repeatDirection": "v",
       "targets": [
@@ -2884,7 +2926,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "repeat": "Network",
       "repeatDirection": "v",
       "targets": [
@@ -3067,7 +3109,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "repeat": "Network",
       "repeatDirection": "v",
       "targets": [
@@ -3136,7 +3178,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 56
+        "y": 35
       },
       "id": 29,
       "panels": [],
@@ -3152,7 +3194,7 @@
         "h": 12,
         "w": 24,
         "x": 0,
-        "y": 57
+        "y": 36
       },
       "id": 17,
       "options": {
@@ -3335,7 +3377,7 @@
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
+          "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - group",
         "includeAll": true,
@@ -3363,7 +3405,7 @@
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
+          "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - host",
         "includeAll": false,
@@ -3385,16 +3427,12 @@
       {
         "allowCustomValue": true,
         "current": {
-          "text": [
-            "All"
-          ],
-          "value": [
-            "$__all"
-          ]
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
+          "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
         "includeAll": true,
@@ -3422,7 +3460,7 @@
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
+          "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
         "includeAll": true,
@@ -3446,21 +3484,15 @@
         "allowCustomValue": true,
         "current": {
           "text": [
-            "Interface eno1",
-            "Interface eno2",
-            "Interface eno3",
-            "Interface eno4"
+            "All"
           ],
           "value": [
-            "Interface eno1",
-            "Interface eno2",
-            "Interface eno3",
-            "Interface eno4"
+            "$__all"
           ]
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
-          "uid": "aefq119i80pa8a"
+          "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
         "includeAll": true,
@@ -3483,7 +3515,7 @@
     ]
   },
   "time": {
-    "from": "now-3h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {},
