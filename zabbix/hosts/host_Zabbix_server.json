@@ -103,7 +103,7 @@
         ],
         "inventory": {
           "name": "Zabbix",
-          "os": "Linux version 6.1.0-41-amd64 (debian-kernel@lists.debian.org) (gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0, GNU ld (GNU Binutils fo",
+          "os": "Linux version 6.1.0-42-amd64 (debian-kernel@lists.debian.org) (gcc-12 (Debian 12.2.0-14+deb12u1) 12.2.0, GNU ld (GNU Binutils fo",
           "location_lat": "56.97612",
           "location_lon": "24.16553"
         },
