@@ -543,7 +543,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -1827,7 +1827,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -2099,7 +2099,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.1",
       "targets": [
         {
           "application": {
@@ -3471,7 +3471,8 @@
   "schemaVersion": 42,
   "tags": [
     "OLT",
-    "DASH"
+    "DASH",
+    "POP SIMÃO PEREIRA"
   ],
   "templating": {
     "list": [
