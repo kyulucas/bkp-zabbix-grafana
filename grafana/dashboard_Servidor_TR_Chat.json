@@ -87,7 +87,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -202,7 +202,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -317,7 +317,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -432,7 +432,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -564,7 +564,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -682,7 +682,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -792,7 +792,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -908,7 +908,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1023,7 +1023,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1138,7 +1138,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1279,7 +1279,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1402,7 +1402,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1644,7 +1644,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1759,7 +1759,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1874,7 +1874,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -1983,7 +1983,7 @@
         "enablePagination": false,
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -2170,7 +2170,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -2343,7 +2343,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -2506,7 +2506,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -2690,7 +2690,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -2884,7 +2884,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -3054,7 +3054,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -3361,7 +3361,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -3508,7 +3508,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -3656,7 +3656,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -3791,7 +3791,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -3975,7 +3975,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -4119,7 +4119,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -4282,7 +4282,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -4312,6 +4312,32 @@
                 "\\/([^/.]+)"
               ],
               "text": "setAliasByRegex()"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": CPU percent usage",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
             }
           ],
           "group": {
@@ -4646,7 +4672,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -5010,7 +5036,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -5380,7 +5406,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -5739,7 +5765,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
@@ -6064,7 +6090,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.3.2+security-01",
       "targets": [
         {
           "application": {
