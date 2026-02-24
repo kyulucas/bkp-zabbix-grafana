@@ -83,6 +83,7 @@
       {
         "host": "PVE-DELL-1950",
         "name": "PVE-DELL-1950",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "Linux by SNMP"
