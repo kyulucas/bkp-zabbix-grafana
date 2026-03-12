@@ -110,7 +110,7 @@
             "port": "161",
             "details": {
               "version": "SNMPV1",
-              "community": "TRTELECOM2025"
+              "community": "TRTELECOM2025re"
             },
             "interface_ref": "if2"
           }
