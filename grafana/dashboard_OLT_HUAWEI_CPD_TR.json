@@ -865,7 +865,7 @@
         {
           "id": "groupingToMatrix",
           "options": {
-            "columnField": "item_key 2",
+            "columnField": "item_key 1",
             "emptyValue": "zero",
             "rowField": "item",
             "valueField": "Last *"
@@ -3410,13 +3410,13 @@
             "delimiter": ",",
             "format": "regexp",
             "regExp": "/(?<PON>GPON\\s+\\d+\\/\\d+/\\d+)/i",
-            "source": "item 1"
+            "source": "item"
           }
         },
         {
           "id": "groupingToMatrix",
           "options": {
-            "columnField": "item 2",
+            "columnField": "item 1",
             "rowField": "PON",
             "valueField": "Last *"
           }
@@ -3440,6 +3440,7 @@
             "renameByName": {
               "Entrada": "ENTRADA",
               "OCUPACAO": "OCUPAÇÃO",
+              "PON\\item 1": "PON",
               "PON\\item 2": "PON",
               "Saida": "SAÍDA",
               "Status": "STATUS",
