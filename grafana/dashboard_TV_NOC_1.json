@@ -103,7 +103,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -228,7 +228,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -340,7 +340,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -480,7 +480,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -610,7 +610,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -740,7 +740,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -867,7 +867,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -902,7 +902,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -977,7 +976,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -1052,7 +1050,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -1127,7 +1124,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -1202,7 +1198,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -1277,7 +1272,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
@@ -1353,7 +1347,6 @@
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "OLT HUAWEI MA5800X2 PARAIBA"
           },
@@ -1425,7 +1418,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -1497,7 +1489,6 @@
           "group": {
             "filter": "SERVIDOR"
           },
-          "hide": false,
           "host": {
             "filter": "SERVIDOR GERENCIAMENTO INTERNO"
           },
@@ -1608,7 +1599,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1738,7 +1729,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1869,7 +1860,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1995,7 +1986,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2131,7 +2122,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2166,7 +2157,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -2241,7 +2231,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -2316,12 +2305,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): RX Power"
+            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ): RX Power"
           },
           "itemTag": {
             "filter": ""
@@ -2392,7 +2380,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-01 MPLS CDP TR CCR1072"
           },
@@ -2459,7 +2446,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X S PEREIRA"
+                "CIRCUITO / LEVY X PARAIBUNA"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -2467,7 +2454,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -2542,7 +2528,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -2617,7 +2602,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -2692,7 +2676,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -2767,7 +2750,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -2842,7 +2824,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -2917,7 +2898,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -2992,7 +2972,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -3067,7 +3046,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -3143,7 +3121,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -3169,6 +3146,80 @@
           },
           "queryType": "0",
           "refId": "P",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / PARAIBUNA X SIMÃO"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): RX Power"
+          },
+          "itemTag": {
+            "filter": "Application: RX-POWER"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "DD",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -3263,7 +3314,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "RX POWER"
+              "options": "TX POWER"
             },
             "properties": [
               {
@@ -3291,7 +3342,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3326,7 +3377,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -3401,7 +3451,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -3476,15 +3525,14 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): TX Power"
+            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ): TX Power"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "Application: TX-POWER"
           },
           "macro": {
             "filter": ""
@@ -3552,7 +3600,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-01 MPLS CDP TR CCR1072"
           },
@@ -3619,7 +3666,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X S PEREIRA"
+                "CIRCUITO / LEVY X PARAIBUNA"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -3627,7 +3674,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -3702,7 +3748,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -3777,7 +3822,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -3852,7 +3896,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -3927,7 +3970,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -4002,7 +4044,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -4077,7 +4118,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4152,7 +4192,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4227,7 +4266,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -4303,7 +4341,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4344,6 +4381,80 @@
           "triggers": {
             "acknowledged": 2
           }
+        },
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:285",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "paraibuna x simao"
+              ],
+              "text": "setAlias(LINK DEDICADO ITANET)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): TX Power"
+          },
+          "itemTag": {
+            "filter": "Application: TX-POWER"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "DD",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
         }
       ],
       "transformations": [
@@ -4368,7 +4479,7 @@
             "renameByName": {
               "Field": "INTERFACE",
               "Last (not null)": "RX - POWER",
-              "Last *": "RX POWER"
+              "Last *": "TX POWER"
             }
           }
         }
@@ -4426,7 +4537,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4725,7 +4836,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4760,7 +4871,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP PARAIBA HW"
           },
@@ -4832,7 +4942,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP SIMAO PEREIRA"
           },
@@ -4904,7 +5013,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP CHIADOR"
           },
@@ -4976,7 +5084,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP BMP"
           },
@@ -5048,7 +5155,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "Adicionar rack TR"
           },
@@ -5120,7 +5226,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Altarede Sistemas"
           },
@@ -5192,7 +5297,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -5264,7 +5368,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP SANTANA"
           },
@@ -5336,7 +5439,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -5408,7 +5510,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP ALBERTO TORRES"
           },
@@ -5480,7 +5581,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP CPD TR RACK 1 HW"
           },
@@ -5552,7 +5652,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP CPD TR RACK 2 HW"
           },
@@ -5578,6 +5677,77 @@
           },
           "queryType": "0",
           "refId": "L",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Paraibuna"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "ENERGIA"
+          },
+          "host": {
+            "filter": "ENERGIA POP PARAIBUNA"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "M",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5717,7 +5887,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -5778,7 +5947,6 @@
           "group": {
             "filter": "CGNATS"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -5839,7 +6007,6 @@
           "group": {
             "filter": "PPPOE"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -5900,7 +6067,6 @@
           "group": {
             "filter": "SERVIDOR"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -5961,7 +6127,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6022,7 +6187,6 @@
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6083,7 +6247,6 @@
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6144,7 +6307,6 @@
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6205,7 +6367,6 @@
           "group": {
             "filter": "Nobreak"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6266,7 +6427,6 @@
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6327,7 +6487,6 @@
           "group": {
             "filter": "VMWARE"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6388,7 +6547,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -6495,7 +6653,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -6528,7 +6686,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -6596,7 +6753,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -6671,7 +6827,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -6807,7 +6962,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -6842,7 +6997,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -6915,7 +7069,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -6983,7 +7136,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -7299,7 +7451,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -7538,7 +7690,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.1",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -7598,7 +7750,6 @@
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -7645,7 +7796,6 @@
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -7692,7 +7842,6 @@
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -7739,7 +7888,6 @@
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -7788,7 +7936,6 @@
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -7896,7 +8043,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Levy Gasparian\n</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -7917,7 +8064,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Vila Isabel</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -7973,7 +8120,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -7989,7 +8136,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -8089,7 +8235,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8105,7 +8251,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -8205,7 +8350,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8221,7 +8366,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -8336,7 +8480,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8352,7 +8496,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -8468,7 +8611,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8484,7 +8627,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -8599,7 +8741,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8615,7 +8757,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -8715,7 +8856,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8731,7 +8872,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -8831,7 +8971,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8847,7 +8987,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -8947,7 +9086,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -8963,7 +9102,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -9078,7 +9216,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9094,7 +9232,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -9210,7 +9347,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9226,7 +9363,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -9341,7 +9477,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9357,7 +9493,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -9463,7 +9598,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9479,7 +9614,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -9579,7 +9713,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9595,7 +9729,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -9703,7 +9836,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9719,7 +9852,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -9821,7 +9953,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9837,7 +9969,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -9937,7 +10068,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -9953,7 +10084,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -10061,7 +10191,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -10077,7 +10207,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -10202,7 +10331,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -10345,7 +10474,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -10490,7 +10619,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -10633,7 +10762,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -10778,7 +10907,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -10921,7 +11050,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -11065,7 +11194,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -11208,7 +11337,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -11352,7 +11481,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -11495,7 +11624,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -11657,7 +11786,7 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "TV NOC 1",
   "uid": "GhVEAqm7k51",
   "weekStart": ""
