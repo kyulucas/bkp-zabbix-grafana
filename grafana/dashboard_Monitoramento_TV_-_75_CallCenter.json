@@ -76,7 +76,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -205,7 +205,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -316,7 +316,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -436,7 +436,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -556,7 +556,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -676,7 +676,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -786,7 +786,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -896,7 +896,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1016,7 +1016,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1136,7 +1136,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1256,7 +1256,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1395,7 +1395,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1540,7 +1540,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1556,7 +1556,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -1609,7 +1608,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -1662,7 +1660,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -1715,7 +1712,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -1842,7 +1838,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1858,12 +1854,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface sfp-sfpplus11(VLAN OSPF + MPLS Link Fibra TrTelecom Link Chegar POP Alberto Torres ( ANEL Custo 300 ))"
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus11(VLAN OSPF + MPLS Link Fibra TrTelecom Link Chegar POP Alberto Torres)"
           },
           "itemTag": {
             "filter": ""
@@ -1911,12 +1906,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface sfp-sfpplus11(VLAN OSPF + MPLS Link Fibra TrTelecom Link Chegar POP Alberto Torres ( ANEL Custo 300 ))"
+            "filter": "Trafego de Saida na Interface sfp-sfpplus11(VLAN OSPF + MPLS Link Fibra TrTelecom Link Chegar POP Alberto Torres)"
           },
           "itemTag": {
             "filter": ""
@@ -2038,7 +2032,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2054,7 +2048,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
@@ -2107,7 +2100,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
@@ -2160,7 +2152,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
@@ -2213,7 +2204,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-08 MPLS POP BMP CCR2004"
           },
@@ -2340,7 +2330,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2465,7 +2455,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -2598,7 +2587,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2641,7 +2630,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -2724,7 +2712,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -2807,7 +2794,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -2890,7 +2876,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -2946,7 +2931,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -3002,7 +2986,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -3055,7 +3038,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3136,7 +3118,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3179,7 +3161,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -3262,7 +3243,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -3345,7 +3325,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -3428,7 +3407,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -3561,7 +3539,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3604,7 +3582,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -3687,7 +3664,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -3770,7 +3746,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -3853,7 +3828,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -3936,7 +3910,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -4019,7 +3992,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -4102,7 +4074,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -4158,7 +4129,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -4214,7 +4184,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -4267,7 +4236,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4347,7 +4315,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4390,7 +4358,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -4473,7 +4440,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -4526,7 +4492,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4606,7 +4571,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4649,7 +4614,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4732,7 +4696,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4815,7 +4778,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4898,7 +4860,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -4981,7 +4942,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -5064,7 +5024,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -5195,7 +5154,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -5320,7 +5279,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -5403,7 +5361,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -5486,7 +5443,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -5615,7 +5571,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -5679,7 +5635,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -5738,7 +5693,7 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "Monitoramento TV - 75 CallCenter",
   "uid": "t22312",
   "weekStart": ""
