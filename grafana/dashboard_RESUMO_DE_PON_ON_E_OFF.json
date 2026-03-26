@@ -346,7 +346,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -439,7 +439,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "$OLT"
           },
@@ -514,7 +513,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "$OLT"
           },
@@ -589,7 +587,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "$OLT"
           },
@@ -674,13 +671,13 @@
             "delimiter": ",",
             "format": "regexp",
             "regExp": "/(?<PON>GPON\\s+\\d+\\/\\d+/\\d+)/i",
-            "source": "item 1"
+            "source": "item"
           }
         },
         {
           "id": "groupingToMatrix",
           "options": {
-            "columnField": "item 2",
+            "columnField": "item 1",
             "rowField": "PON",
             "valueField": "Last *"
           }
@@ -691,19 +688,15 @@
             "excludeByName": {},
             "includeByName": {},
             "indexByName": {
-              "Entrada": 6,
-              "PON\\item 2": 0,
-              "Saida": 7,
-              "Status": 8,
-              "TEMPERATURA": 4,
+              "PON\\item 1": 0,
               "TOTAL AUTENTICADAS": 1,
               "TOTAL OFFLINE": 3,
-              "TOTAL ONLINE": 2,
-              "TX POWER": 5
+              "TOTAL ONLINE": 2
             },
             "renameByName": {
               "Entrada": "ENTRADA",
               "OCUPACAO": "OCUPAÇÃO",
+              "PON\\item 1": "PON",
               "PON\\item 2": "PON",
               "Saida": "SAÍDA",
               "Status": "STATUS",
@@ -747,6 +740,7 @@
         },
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       },
       {
@@ -774,6 +768,7 @@
         },
         "refresh": 1,
         "regex": "/(?:GPON 0/)(.*)(?:/)/",
+        "regexApplyTo": "value",
         "sort": 3,
         "type": "query"
       }
@@ -796,7 +791,7 @@
       "1d"
     ]
   },
-  "timezone": "",
+  "timezone": "browser",
   "title": "RESUMO DE PON ON E OFF",
   "uid": "bem1zf3gt3shsa",
   "weekStart": ""
