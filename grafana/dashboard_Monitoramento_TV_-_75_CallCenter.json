@@ -3548,37 +3548,10 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2138",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
@@ -3586,171 +3559,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface bridge VLAN700()"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "G",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2159",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Saida na Interface bridge VLAN700()"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "H",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2180",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Entrada na Interface sfp-sfpplus12(Link OLT CPD LEVY 10GB)"
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus1(SW-01 MPLS 2004 Mikrotk CPD TR-TELECOM 10GB)"
           },
           "itemTag": {
             "filter": ""
@@ -3782,9 +3591,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         },
         {
@@ -3794,37 +3600,10 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2201",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
@@ -3832,7 +3611,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface sfp-sfpplus12(Link OLT CPD LEVY 10GB)"
+            "filter": "Trafego de Saida na Interface sfp-sfpplus1(SW-01 MPLS 2004 Mikrotk CPD TR-TELECOM 10GB)"
           },
           "itemTag": {
             "filter": ""
@@ -3864,9 +3643,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         },
         {
@@ -3876,45 +3652,18 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2222",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface sfp-sfpplus12(Link OLT CPD S.Pereira 10GB)"
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus12(Link OLT CPD LEVY 10GB)"
           },
           "itemTag": {
             "filter": ""
@@ -3946,9 +3695,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         },
         {
@@ -3958,45 +3704,18 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2243",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface sfp-sfpplus1(Link BGP Chegada POP LEVY (FIBRA))"
+            "filter": "Trafego de Saida na Interface sfp-sfpplus12(Link OLT CPD LEVY 10GB)"
           },
           "itemTag": {
             "filter": ""
@@ -4028,9 +3747,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         },
         {
@@ -4040,45 +3756,18 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:2264",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-03 MPLS CPD LEVY:",
-                " "
-              ],
-              "text": "replaceAlias(SW-03 MPLS CPD LEVY:,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface sfp-sfpplus1(Link BGP Chegada POP LEVY (FIBRA))"
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus1(Link Chegada POP LEVY)"
           },
           "itemTag": {
             "filter": ""
@@ -4110,9 +3799,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         },
         {
@@ -4122,7 +3808,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4130,10 +3816,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface VLAN 800(Gerencia dos Clientes OLT-S.Pereira)"
+            "filter": "Trafego de Saida na Interface sfp-sfpplus1(Link Chegada POP LEVY)"
           },
           "itemTag": {
             "filter": ""
@@ -4165,9 +3851,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         },
         {
@@ -4177,7 +3860,111 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus12(Link Saida POP Simao Pereira)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface sfp-sfpplus12(Link Saida POP Simao Pereira)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4188,7 +3975,7 @@
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface VLAN 800(Gerencia da OLT-S.Pereira)"
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus1(Link BGP Chegada POP LEVY /  PARAIBUNA (FIBRA))"
           },
           "itemTag": {
             "filter": ""
@@ -4197,9 +3984,60 @@
             "filter": ""
           },
           "options": {
-            "count": true,
+            "count": false,
             "disableDataAlignment": false,
-            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "I",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface sfp-sfpplus1(Link BGP Chegada POP LEVY /  PARAIBUNA (FIBRA))"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
             "showDisabledItems": false,
             "skipEmptyValues": false,
             "useTrends": "default",
@@ -4221,13 +4059,114 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
           },
-          "triggers": {
-            "acknowledged": 2
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus12(Link OLT CPD S.Pereira 10GB)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "K",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface sfp-sfpplus12(Link OLT CPD S.Pereira 10GB)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "L",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
           }
         }
       ],
-      "title": "CIRCUITO LEVY / S. PEREIRA (OLT'S)",
+      "title": "CIRCUITO LEVY / PARAIBUNA / S. PEREIRA (OLT'S)",
       "transparent": true,
       "type": "timeseries"
     },
@@ -5587,7 +5526,7 @@
             "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface XGigabitEthernet0/0/24(EMERGENCIA VILA)"
+            "filter": "Trafego de Entrada na Interface XGigabitEthernet0/0/13(Link LACP Eth-Trunk 5 POP Vila Isabel)"
           },
           "itemTag": {
             "filter": ""
@@ -5639,7 +5578,7 @@
             "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface XGigabitEthernet0/0/24(EMERGENCIA VILA)"
+            "filter": "Trafego de Saida na Interface XGigabitEthernet0/0/13(Link LACP Eth-Trunk 5 POP Vila Isabel)"
           },
           "itemTag": {
             "filter": ""
@@ -5660,6 +5599,110 @@
           },
           "queryType": "0",
           "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface XGigabitEthernet0/0/14(Link LACP Eth-Trunk 5 POP Vila Isabel)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface XGigabitEthernet0/0/14(Link LACP Eth-Trunk 5 POP Vila Isabel)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
