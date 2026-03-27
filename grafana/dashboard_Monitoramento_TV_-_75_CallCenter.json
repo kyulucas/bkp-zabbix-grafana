@@ -182,7 +182,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
+        "w": 2,
         "x": 0,
         "y": 2
       },
@@ -294,7 +294,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 3,
+        "x": 2,
         "y": 2
       },
       "id": 131,
@@ -414,7 +414,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 5,
+        "x": 4,
         "y": 2
       },
       "id": 132,
@@ -534,7 +534,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 7,
+        "x": 6,
         "y": 2
       },
       "id": 133,
@@ -654,7 +654,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 9,
+        "x": 8,
         "y": 2
       },
       "id": 134,
@@ -764,7 +764,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 11,
+        "x": 10,
         "y": 2
       },
       "id": 135,
@@ -874,7 +874,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 13,
+        "x": 12,
         "y": 2
       },
       "id": 136,
@@ -994,7 +994,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 15,
+        "x": 14,
         "y": 2
       },
       "id": 137,
@@ -1114,7 +1114,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 17,
+        "x": 16,
         "y": 2
       },
       "id": 138,
@@ -1234,7 +1234,7 @@
       "gridPos": {
         "h": 2,
         "w": 2,
-        "x": 19,
+        "x": 18,
         "y": 2
       },
       "id": 159,
@@ -1335,6 +1335,126 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "POP PARAIBUNA",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 2,
+        "x": 20,
+        "y": 2
+      },
+      "id": 167,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "BRAS"
+          },
+          "host": {
+            "filter": "CONCENTRADOR PPPOE NE8K"
+          },
+          "item": {
+            "filter": "VLAN-801"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
             "fixedColor": "transparent",
             "mode": "fixed"
           },
@@ -1372,8 +1492,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 3,
-        "x": 21,
+        "w": 2,
+        "x": 22,
         "y": 2
       },
       "id": 164,
