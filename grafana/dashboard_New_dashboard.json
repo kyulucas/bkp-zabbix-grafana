@@ -1,480 +1,1604 @@
 {
-  "meta": {
-    "type": "db",
-    "canSave": true,
-    "canEdit": true,
-    "canAdmin": true,
-    "canStar": true,
-    "canDelete": true,
-    "slug": "new-dashboard",
-    "url": "/d/ad66pv5/new-dashboard",
-    "expires": "0001-01-01T00:00:00Z",
-    "created": "2025-12-04T15:55:33-05:00",
-    "updated": "2025-12-05T08:32:30-05:00",
-    "updatedBy": "admin",
-    "createdBy": "admin",
-    "version": 5,
-    "hasAcl": false,
-    "isFolder": false,
-    "apiVersion": "v0alpha1",
-    "folderId": 0,
-    "folderUid": "",
-    "folderTitle": "General",
-    "folderUrl": "",
-    "provisioned": false,
-    "provisionedExternalId": "",
-    "annotationsPermissions": {
-      "dashboard": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
-      },
-      "organization": {
-        "canAdd": true,
-        "canEdit": true,
-        "canDelete": true
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
       }
-    }
+    ]
   },
-  "dashboard": {
-    "annotations": {
-      "list": [
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "ackEventColor": "rgb(56, 219, 156)",
+        "ackField": false,
+        "ageField": false,
+        "allowDangerousHTML": false,
+        "customLastChangeFormat": false,
+        "descriptionAtNewLine": false,
+        "descriptionField": true,
+        "fontSize": "100%",
+        "highlightBackground": false,
+        "highlightNewEvents": false,
+        "highlightNewerThan": "1h",
+        "hostField": true,
+        "hostGroups": false,
+        "hostProxy": false,
+        "hostTechNameField": false,
+        "lastChangeFormat": "",
+        "layout": "table",
+        "markAckEvents": false,
+        "okEventColor": "rgb(56, 189, 113)",
+        "opdataField": false,
+        "pageSize": 100,
+        "problemTimeline": true,
+        "resizedColumns": [
+          {
+            "id": "lastchange",
+            "value": 230
+          },
+          {
+            "id": "name",
+            "value": 338.53125
+          },
+          {
+            "id": "host",
+            "value": 455.828125
+          },
+          {
+            "id": "value",
+            "value": 144.953125
+          }
+        ],
+        "severityField": false,
+        "showDatasourceName": false,
+        "showTags": false,
+        "sortProblems": "lastchange",
+        "statusField": true,
+        "statusIcon": false,
+        "triggerSeverity": [
+          {
+            "color": "rgb(108, 108, 108)",
+            "priority": 0,
+            "severity": "Not classified",
+            "show": true
+          },
+          {
+            "color": "rgb(120, 158, 183)",
+            "priority": 1,
+            "severity": "Information",
+            "show": true
+          },
+          {
+            "color": "rgb(175, 180, 36)",
+            "priority": 2,
+            "severity": "Warning",
+            "show": true
+          },
+          {
+            "color": "rgb(255, 137, 30)",
+            "priority": 3,
+            "severity": "Average",
+            "show": true
+          },
+          {
+            "color": "rgb(255, 101, 72)",
+            "priority": 4,
+            "severity": "High",
+            "show": true
+          },
+          {
+            "color": "rgb(215, 0, 0)",
+            "priority": 5,
+            "severity": "Disaster",
+            "show": true
+          }
+        ]
+      },
+      "pluginVersion": "6.0.3",
+      "targets": [
         {
-          "builtIn": 1,
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
           "datasource": {
-            "type": "grafana",
-            "uid": "-- Grafana --"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
           },
-          "enable": true,
-          "hide": true,
-          "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "type": "dashboard"
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CGNATS"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "PPPOE"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SERVIDOR"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": "Application: Network"
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": "Application: Net_status"
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": "Application: Network interfaces"
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Nobreak"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "I",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": "Application: Battery"
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "OLT"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "J",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": "Application: ONLINE_PON"
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "VMWARE"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "K",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "aefq119i80pa8a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Telefonia"
+          },
+          "host": {
+            "filter": "/.*/"
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "acknowledged": 2,
+            "count": false,
+            "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "5",
+          "refId": "L",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "showProblems": "problems",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
-      ]
+      ],
+      "title": "PROBLEMS GERAIS",
+      "type": "alexanderzobnin-zabbix-triggers-panel"
     },
-    "editable": true,
-    "fiscalYearStartMonth": 0,
-    "graphTooltip": 0,
-    "id": 108,
-    "links": [],
-    "panels": [
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ef642uf0e3ym8c"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
           },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 3,
-          "w": 24,
-          "x": 0,
-          "y": 0
-        },
-        "id": 1,
-        "options": {
-          "afterRender": "",
-          "content": "<div class=\"titulo-container\">\r\n  <h1 class=\"titulo\">{{{ @root.NOME}}}</h1>\r\n</div>",
-          "contentPartials": [],
-          "defaultContent": "The query didn't return any results.",
-          "editor": {
-            "format": "auto",
-            "language": "html"
-          },
-          "editors": [
-            "styles"
-          ],
-          "externalStyles": [],
-          "helpers": "",
-          "renderMode": "everyRow",
-          "styles": ".titulo-container {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n  min-height: 60px;\r\n  padding: 20px 24px;\r\n  background: #1A1A2A;\r\n  border: 1px solid rgba(34, 197, 94, 0.2);\r\n  border-radius: 12px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.titulo-container::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  height: 3px;\r\n  background: linear-gradient(90deg, #22C55E, rgba(34, 197, 94, 0.6));\r\n}\r\n\r\n.titulo {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, \"Segoe UI\", Arial, sans-serif;\r\n  text-align: center;\r\n  font-size: 20px;\r\n  font-weight: 600;\r\n  color: #E5E7EB;\r\n  \r\n  padding: 0;\r\n  margin: 0;\r\n  \r\n  background: none;\r\n  border: none;\r\n  border-radius: 0;\r\n  \r\n  letter-spacing: 0.8px;\r\n  line-height: 1.5;\r\n  \r\n  box-shadow: none;\r\n}\r\n\r\n.titulo:hover {\r\n  /* Sem efeitos */\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 768px) {\r\n  .titulo {\r\n    font-size: 16px;\r\n  }\r\n  \r\n  .titulo-container {\r\n    padding: 16px 20px;\r\n    min-height: 50px;\r\n  }\r\n}",
-          "wrap": true
-        },
-        "pluginVersion": "6.2.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "datasource": {
-              "type": "mysql",
-              "uid": "ef642uf0e3ym8c"
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
             },
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "SELECT NOME\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_CLIENTE = '1.11290'\r\n",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
+            "filterable": true,
+            "footer": {
+              "reducers": []
             },
-            "table": "CLIENTE"
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
           }
-        ],
-        "transparent": true,
-        "type": "marcusolsson-dynamictext-panel"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "AUTENTICADAS"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "gauge"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 128
+              },
+              {
+                "id": "custom.align",
+                "value": "center"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1eb68b",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ONLINE"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "center"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "gauge"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#00e09f",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "OFFLINE"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "center"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "gauge"
+                }
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#2e8b71",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 128
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "TEMPERATURA"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "center"
+              },
+              {
+                "id": "unit",
+                "value": "celsius"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "POTÊNCIA DE SAÍDA"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "center"
+              },
+              {
+                "id": "unit",
+                "value": "dBm"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "STATUS"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "index": 2,
+                        "text": "🔴 DOWN"
+                      },
+                      "1": {
+                        "index": 0,
+                        "text": "🟢 UP"
+                      },
+                      "2": {
+                        "index": 1,
+                        "text": "🔴 DOWN"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              },
+              {
+                "id": "custom.align",
+                "value": "center"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "OCUPAÇÃO"
+            },
+            "properties": [
+              {
+                "id": "custom.align",
+                "value": "center"
+              },
+              {
+                "id": "unit",
+                "value": "percent"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "gauge"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "percentage",
+                  "steps": [
+                    {
+                      "color": "#00e09f",
+                      "value": 0
+                    },
+                    {
+                      "color": "#f5ff00",
+                      "value": 40
+                    },
+                    {
+                      "color": "#ff9e00",
+                      "value": 60
+                    },
+                    {
+                      "color": "#ff0000",
+                      "value": 80
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "min",
+                "value": 0
+              },
+              {
+                "id": "max",
+                "value": 100
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "PON"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 171
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ENTRADA"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decbits"
+              },
+              {
+                "id": "custom.align",
+                "value": "center"
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "SAÍDA"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decbits"
+              },
+              {
+                "id": "custom.align",
+                "value": "center"
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 2,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "OFFLINE"
+          }
+        ]
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": "/GPON 0/$PLACA/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: AUTENTICADAS_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": "/GPON 0/$PLACA/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: ONLINE_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": "/GPON 0/$PLACA/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: OFFLINE_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "performance_schema",
+          "datasource": {
+            "type": "mysql",
+            "uid": "eelvlbtb2pam8c"
+          },
+          "editorMode": "code",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": "/.*/"
+          },
+          "host": {
+            "filter": "$OLT"
+          },
+          "item": {
+            "filter": "/GPON 0/$PLACA/(.*)/"
+          },
+          "itemTag": {
+            "filter": "Application: OCUPACAO_PON"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawQuery": true,
+          "rawSql": "\r\nSELECT \r\n   REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(\r\n        REPLACE(\r\n            REPLACE(\r\n                REPLACE(a.name, ' - TOTAL AUTENTICADAS', ''), \r\n                ' - TOTAL ONLINE', ''\r\n            ), \r\n            ' - TOTAL OFFLINE', ''\r\n        ), \r\n        ' - TEMPERATURA', ''\r\n    ),\r\n    ' - TX POWER', ''),\r\n    'Status da interface  ', ''),\r\n    'Trafego de Entrada na Interface ',''),\r\n    'Trafego de Saida na Interface ','') AS PON,\r\n    MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS AUTENTICADAS,\r\n        MAX(CASE WHEN t.value = 'ONLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS ONLINE,\r\n            MAX(CASE WHEN t.value = 'OFFLINE_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END) AS OFFLINE,\r\n    MAX(CASE WHEN t.value = 'TEMPERATURA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS TEMPERATURA,\r\n    MAX(CASE WHEN t.value = 'POTENCIA_PON' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS \"POTÊNCIA DE SAÍDA\",\r\n    MAX(CASE WHEN t.value = 'Net_status' \r\n             THEN (SELECT h.value FROM history_uint h WHERE h.itemid = a.itemid ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS STATUS,\r\n    MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Entrada%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS ENTRADA,\r\n        MAX(CASE WHEN t.value = 'Network' \r\n             THEN (SELECT h.value FROM history_uint h join items as z on z.itemid = h.itemid\r\n              WHERE h.itemid = a.itemid and z.name like '%Saida%' ORDER BY h.clock DESC LIMIT 1) \r\n        END) AS SAÍDA,\r\n        (MAX(CASE WHEN t.value = 'AUTENTICADAS_PON' \r\n             THEN (SELECT hu.value FROM history_uint hu WHERE hu.itemid = a.itemid ORDER BY hu.clock DESC LIMIT 1) \r\n        END)/128)*100 AS OCUPAÇÃO\r\nFROM items a\r\nINNER JOIN item_tag t \r\n    ON t.itemid = a.itemid\r\n    AND t.value IN ('AUTENTICADAS_PON', 'TEMPERATURA_PON', 'POTENCIA_PON', \r\n                    'OFFLINE_PON', 'ONLINE_PON', 'Net_status','Network')\r\nleft join hosts as c on c.hostid = a.hostid\r\nWHERE c.host = '$OLT' and a.flags = 4 and a.name like '%GPON%' AND SUBSTRING_INDEX(SUBSTRING_INDEX(a.name, '/', 2), '/', -1) = $PLACA\r\nGROUP BY PON",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "DETALHAMENTO DAS PON",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "labelsToFields": true,
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/(?<item>(TOTAL\\s+\\w+|TEMPERATURA|TX POWER|Entrada|Saida|Status|OCUPACAO))/",
+            "source": "item"
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/(?<PON>GPON\\s+\\d+\\/\\d+/\\d+)/i",
+            "source": "item"
+          }
+        },
+        {
+          "id": "groupingToMatrix",
+          "options": {
+            "columnField": "item 1",
+            "rowField": "PON",
+            "valueField": "Last *"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "PON\\item 1": 0,
+              "TOTAL AUTENTICADAS": 1,
+              "TOTAL OFFLINE": 3,
+              "TOTAL ONLINE": 2
+            },
+            "renameByName": {
+              "Entrada": "ENTRADA",
+              "OCUPACAO": "OCUPAÇÃO",
+              "PON\\item 1": "PON",
+              "PON\\item 2": "PON",
+              "Saida": "SAÍDA",
+              "Status": "STATUS",
+              "TEMPERATURA": "TEMPERATURA",
+              "TOTAL AUTENTICADAS": "AUTENTICADAS",
+              "TOTAL OFFLINE": "OFFLINE",
+              "TOTAL ONLINE": "ONLINE",
+              "TX POWER": "POTÊNCIA DE SAÍDA"
+            }
+          }
+        }
+      ],
+      "type": "table"
+    }
+  ],
+  "preload": false,
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "OLT HUAWEI MA5800X17 CPD TR",
+          "value": "OLT HUAWEI MA5800X17 CPD TR"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "definition": "",
+        "label": "OLT",
+        "name": "OLT",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "OLT",
+          "host": "/.*/",
+          "item": "",
+          "itemTag": "",
+          "queryType": "host"
+        },
+        "refresh": 1,
+        "regex": "",
+        "regexApplyTo": "value",
+        "type": "query"
       },
       {
+        "allowCustomValue": false,
+        "current": {
+          "text": "0.1",
+          "value": "0.1"
+        },
         "datasource": {
-          "type": "mysql",
-          "uid": "ef642uf0e3ym8c"
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
         },
-        "fieldConfig": {
-          "defaults": {
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
+        "definition": "",
+        "description": "",
+        "label": "PLACA",
+        "name": "PLACA",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/.*/",
+          "host": "$OLT",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
         },
-        "gridPos": {
-          "h": 5,
-          "w": 7,
-          "x": 0,
-          "y": 3
-        },
-        "id": 2,
-        "options": {
-          "afterRender": "",
-          "content": "<div class=\"status-card\" data-status=\"{{{ @root.Status}}}\">\n  <div class=\"icon-wrapper\">\n    <img class=\"equipment-icon icon-online\" src=\"https://cdn-icons-png.flaticon.com/512/2428/2428743.png\" alt=\"Online Icon\" />\n    <img class=\"equipment-icon icon-offline\" src=\"https://s3.trtelecom.net/grafana/EDIT.png\" alt=\"Offline Icon\" />\n  </div>\n  <div class=\"status-content\">\n    <div class=\"status-text\" style=\"color: {{#if (eq @root.Status \" Online\")}}#22C55E{{else}}#EF4444{{/if}};\">{{{\n      @root.Status}}}</div>\n    <div class=\"status-label\">STATUS DO<br>EQUIPAMENTO</div>\n  </div>\n</div>",
-          "contentPartials": [],
-          "defaultContent": "The query didn't return any results.",
-          "editor": {
-            "format": "auto",
-            "language": "html"
-          },
-          "editors": [
-            "styles"
-          ],
-          "externalStyles": [],
-          "helpers": "",
-          "renderMode": "everyRow",
-          "styles": ".status-card {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 120px;\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 28px 32px;\r\n  background: #1A1A2A !important;\r\n  border-radius: 16px;\r\n  border: 2px solid transparent;\r\n  gap: 20px;\r\n  position: relative;\r\n  overflow: hidden;\r\n}\r\n\r\n.status-card::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  height: 4px;\r\n  background: transparent;\r\n  transition: all 0.3s ease;\r\n}\r\n\r\n/* ONLINE - Verde */\r\n.status-card[data-status=\"Online\"],\r\n.status-card[data-status*=\"Online\"],\r\n.status-card.status-Online {\r\n  background: linear-gradient(135deg, #1A1A2A 0%, rgba(34, 197, 94, 0.05) 100%) !important;\r\n  border-color: rgba(34, 197, 94, 0.4) !important;\r\n  box-shadow: \r\n    0 0 0 1px rgba(34, 197, 94, 0.2) inset,\r\n    0 4px 20px rgba(34, 197, 94, 0.2) !important;\r\n}\r\n\r\n.status-card[data-status=\"Online\"]::before,\r\n.status-card[data-status*=\"Online\"]::before,\r\n.status-card.status-Online::before {\r\n  background: linear-gradient(90deg, #22C55E, rgba(34, 197, 94, 0.6)) !important;\r\n}\r\n\r\n/* OFFLINE - Vermelho */\r\n.status-card[data-status=\"Offline\"],\r\n.status-card[data-status*=\"Offline\"],\r\n.status-card.status-Offline {\r\n  background: linear-gradient(135deg, #1A1A2A 0%, rgba(239, 68, 68, 0.05) 100%) !important;\r\n  border-color: rgba(239, 68, 68, 0.4) !important;\r\n  box-shadow: \r\n    0 0 0 1px rgba(239, 68, 68, 0.2) inset,\r\n    0 4px 20px rgba(239, 68, 68, 0.2) !important;\r\n}\r\n\r\n.status-card[data-status=\"Offline\"]::before,\r\n.status-card[data-status*=\"Offline\"]::before,\r\n.status-card.status-Offline::before {\r\n  background: linear-gradient(90deg, #EF4444, rgba(239, 68, 68, 0.6)) !important;\r\n}\r\n\r\n.icon-wrapper {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-shrink: 0;\r\n  padding: 8px;\r\n  background: rgba(255, 255, 255, 0.03);\r\n  border-radius: 12px;\r\n  border: 1px solid rgba(255, 255, 255, 0.08);\r\n  position: relative;\r\n  min-width: 100px;\r\n  min-height: 100px;\r\n}\r\n\r\n.equipment-icon {\r\n  width: 85px !important;\r\n  height: 85px !important;\r\n  border-radius: 8px;\r\n  object-fit: contain;\r\n  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));\r\n  position: absolute;\r\n}\r\n\r\n/* Esconde offline por padrão, mostra online */\r\n.icon-offline {\r\n  display: none !important;\r\n}\r\n\r\n.icon-online {\r\n  display: block !important;\r\n}\r\n\r\n/* Quando estiver Online - mostra ícone online, esconde offline */\r\n.status-card[data-status=\"Online\"] .icon-online,\r\n.status-card[data-status*=\"Online\"] .icon-online {\r\n  display: block !important;\r\n}\r\n\r\n.status-card[data-status=\"Online\"] .icon-offline,\r\n.status-card[data-status*=\"Online\"] .icon-offline {\r\n  display: none !important;\r\n}\r\n\r\n/* Quando estiver Offline - mostra ícone offline, esconde online */\r\n.status-card[data-status=\"Offline\"] .icon-online,\r\n.status-card[data-status*=\"Offline\"] .icon-online {\r\n  display: none !important;\r\n}\r\n\r\n.status-card[data-status=\"Offline\"] .icon-offline,\r\n.status-card[data-status*=\"Offline\"] .icon-offline {\r\n  display: block !important;\r\n}\r\n\r\n.status-content {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-end;\r\n  text-align: right;\r\n  gap: 6px;\r\n}\r\n\r\n.status-text {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 42px !important;\r\n  font-weight: 800 !important;\r\n  line-height: 1 !important;\r\n  letter-spacing: 1px !important;\r\n  text-transform: uppercase !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n}\r\n\r\n/* FORÇA VERDE para ONLINE */\r\n.status-card[data-status=\"Online\"] .status-text,\r\n.status-card[data-status*=\"Online\"] .status-text,\r\n.status-card.status-Online .status-text,\r\n.status-text.status-Online {\r\n  color: #22C55E !important;\r\n  text-shadow: 0 0 20px rgba(34, 197, 94, 0.4) !important;\r\n}\r\n\r\n/* FORÇA VERMELHO para OFFLINE */\r\n.status-card[data-status=\"Offline\"] .status-text,\r\n.status-card[data-status*=\"Offline\"] .status-text,\r\n.status-card.status-Offline .status-text,\r\n.status-text.status-Offline {\r\n  color: #EF4444 !important;\r\n  text-shadow: 0 0 20px rgba(239, 68, 68, 0.4) !important;\r\n}\r\n\r\n.status-label {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\r\n  font-size: 11px;\r\n  font-weight: 600;\r\n  color: #6B7280;\r\n  text-transform: uppercase;\r\n  letter-spacing: 1.2px;\r\n  line-height: 1.5;\r\n  margin-top: 4px;\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 768px) {\r\n  .equipment-icon {\r\n    width: 70px !important;\r\n    height: 70px !important;\r\n  }\r\n  \r\n  .icon-wrapper {\r\n    min-width: 85px;\r\n    min-height: 85px;\r\n  }\r\n}",
-          "wrap": true
-        },
-        "pluginVersion": "6.2.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select \r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status'\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20171096'\r\nORDER BY RadAcctId desc\r\nlimit 1",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "marcusolsson-dynamictext-panel"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ef642uf0e3ym8c"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 4,
-          "w": 7,
-          "x": 7,
-          "y": 3
-        },
-        "id": 3,
-        "options": {
-          "afterRender": "",
-          "content": "<div id=\"total-card\" class=\"card\">\n  <div class=\"image-container\">\n    <img src=\"https://cdn-icons-png.flaticon.com/512/12669/12669745.png\" alt=\"Icone.png\">\n  </div>\n  <div class=\"data-container\">\n    <div id=\"total-value\">{{{ @root.tempo_conectado}}}</div>\n    <div class=\"label\">TEMPO DE ATIVIDADE</div>\n  </div>\n</div>",
-          "contentPartials": [],
-          "defaultContent": "The query didn't return any results.",
-          "editor": {
-            "format": "auto",
-            "language": "html"
-          },
-          "editors": [
-            "styles"
-          ],
-          "externalStyles": [],
-          "helpers": "",
-          "renderMode": "everyRow",
-          "styles": "/* ===== PADRÃO PARA AMBOS OS PAINÉIS ===== */\r\n.card,\r\n.status-card {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 100px;\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 20px 24px;\r\n  background: #1A1A2A !important;\r\n  border-radius: 16px;\r\n  border: 2px solid rgba(34, 197, 94, 0.3);\r\n  gap: 16px;\r\n  position: relative;\r\n  overflow: hidden;\r\n  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.1);\r\n}\r\n\r\n.card::before,\r\n.status-card::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  height: 4px;\r\n  background: linear-gradient(90deg, #22C55E, rgba(34, 197, 94, 0.6));\r\n}\r\n\r\n/* Status Online - Verde */\r\n.status-card[data-status=\"Online\"],\r\n.status-card[data-status*=\"Online\"] {\r\n  border-color: rgba(34, 197, 94, 0.3) !important;\r\n  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.1) !important;\r\n  background: #1A1A2A !important;\r\n}\r\n\r\n.status-card[data-status=\"Online\"]::before,\r\n.status-card[data-status*=\"Online\"]::before {\r\n  background: linear-gradient(90deg, #22C55E, rgba(34, 197, 94, 0.6));\r\n}\r\n\r\n/* Status Offline - Vermelho */\r\n.status-card[data-status=\"Offline\"],\r\n.status-card[data-status*=\"Offline\"] {\r\n  border-color: rgba(239, 68, 68, 0.3) !important;\r\n  box-shadow: 0 2px 10px rgba(239, 68, 68, 0.1) !important;\r\n  background: #1A1A2A !important;\r\n}\r\n\r\n.status-card[data-status=\"Offline\"]::before,\r\n.status-card[data-status*=\"Offline\"]::before {\r\n  background: linear-gradient(90deg, #EF4444, rgba(239, 68, 68, 0.6));\r\n}\r\n\r\n/* ===== ÍCONES (PADRÃO) ===== */\r\n.image-container,\r\n.icon-wrapper {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-shrink: 0;\r\n  padding: 6px;\r\n  background: rgba(255, 255, 255, 0.03) !important;\r\n  border-radius: 10px;\r\n  border: 1px solid rgba(255, 255, 255, 0.08);\r\n}\r\n\r\n.image-container img,\r\n.equipment-icon {\r\n  width: 56px;\r\n  height: 56px;\r\n  border-radius: 8px;\r\n  object-fit: contain;\r\n  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));\r\n}\r\n\r\n/* ===== CONTEÚDO (PADRÃO) ===== */\r\n.data-container {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  gap: 6px;\r\n}\r\n\r\n/* Valores principais */\r\n#total-value,\r\n.status-text {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 28px !important;\r\n  font-weight: 700 !important;\r\n  color: #E5E7EB !important;\r\n  line-height: 1.2 !important;\r\n  letter-spacing: 0.5px !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n  background: none !important;\r\n}\r\n\r\n/* Status Online - Verde no texto */\r\n.status-text.status-Online,\r\n.status-card[data-status=\"Online\"] .status-text,\r\n.status-card[data-status*=\"Online\"] .status-text {\r\n  color: #22C55E !important;\r\n}\r\n\r\n/* Status Offline - Vermelho no texto */\r\n.status-text.status-Offline,\r\n.status-card[data-status=\"Offline\"] .status-text,\r\n.status-card[data-status*=\"Offline\"] .status-text {\r\n  color: #EF4444 !important;\r\n}\r\n\r\n/* Labels (PADRÃO) */\r\n.label {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 11px !important;\r\n  font-weight: 600 !important;\r\n  color: #9CA3AF !important;\r\n  text-transform: uppercase !important;\r\n  letter-spacing: 1px !important;\r\n  line-height: 1.4 !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n  background: none !important;\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 768px) {\r\n  .card,\r\n  .status-card {\r\n    padding: 16px;\r\n    min-height: 90px;\r\n  }\r\n  \r\n  #total-value,\r\n  .status-text {\r\n    font-size: 22px;\r\n  }\r\n  \r\n  .image-container img,\r\n  .equipment-icon {\r\n    width: 48px;\r\n    height: 48px;\r\n  }\r\n  \r\n  .label {\r\n    font-size: 10px;\r\n  }\r\n}",
-          "wrap": true
-        },
-        "pluginVersion": "6.2.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select \r\n\r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado\r\n\r\n\r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "marcusolsson-dynamictext-panel"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ef642uf0e3ym8c"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 4,
-          "w": 7,
-          "x": 14,
-          "y": 3
-        },
-        "id": 4,
-        "options": {
-          "afterRender": "",
-          "content": "<div class=\"ip-card\">\n  <div class=\"icon-wrapper\">\n    <img class=\"ip-icon\" src=\"https://s3.trtelecom.net/grafana/wifi-router.png\" alt=\"IP Icon\" />\n  </div>\n  <div class=\"data-container\">\n    <div class=\"ip-value\">{{{ @root.Login}}}</div>\n    <div class=\"label\">LOGIN</div>\n  </div>\n</div>",
-          "contentPartials": [],
-          "defaultContent": "The query didn't return any results.",
-          "editor": {
-            "format": "auto",
-            "language": "markdown"
-          },
-          "editors": [
-            "styles"
-          ],
-          "externalStyles": [],
-          "helpers": "",
-          "renderMode": "everyRow",
-          "styles": ".ip-card {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 100px;\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 20px 24px;\r\n  background: #1A1A2A !important;\r\n  border-radius: 16px;\r\n  border: 2px solid rgba(34, 197, 94, 0.3);\r\n  gap: 16px;\r\n  position: relative;\r\n  overflow: hidden;\r\n  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.1);\r\n}\r\n\r\n.ip-card::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  height: 4px;\r\n  background: linear-gradient(90deg, #22C55E, rgba(34, 197, 94, 0.6));\r\n}\r\n\r\n.icon-wrapper {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-shrink: 0;\r\n  padding: 6px;\r\n  background: rgba(255, 255, 255, 0.03) !important;\r\n  border-radius: 10px;\r\n  border: 1px solid rgba(255, 255, 255, 0.08);\r\n}\r\n\r\n.ip-icon {\r\n  width: 56px;\r\n  height: 56px;\r\n  border-radius: 8px;\r\n  object-fit: contain;\r\n  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));\r\n}\r\n\r\n.data-container {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  gap: 6px;\r\n}\r\n\r\n.ip-value {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 28px !important;\r\n  font-weight: 700 !important;\r\n  color: #3B82F6 !important;\r\n  line-height: 1.2 !important;\r\n  letter-spacing: 0.5px !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n  background: none !important;\r\n  font-family: 'Courier New', monospace !important;\r\n}\r\n\r\n.label {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 11px !important;\r\n  font-weight: 600 !important;\r\n  color: #9CA3AF !important;\r\n  text-transform: uppercase !important;\r\n  letter-spacing: 1px !important;\r\n  line-height: 1.4 !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n  background: none !important;\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 768px) {\r\n  .ip-card {\r\n    padding: 16px;\r\n    min-height: 90px;\r\n  }\r\n  \r\n  .ip-value {\r\n    font-size: 22px;\r\n  }\r\n  \r\n  .ip-icon {\r\n    width: 48px;\r\n    height: 48px;\r\n  }\r\n  \r\n  .label {\r\n    font-size: 10px;\r\n  }\r\n}",
-          "wrap": true
-        },
-        "pluginVersion": "6.2.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select \r\n  UserName as Login\r\n\r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "marcusolsson-dynamictext-panel"
-      },
-      {
-        "datasource": {
-          "type": "mysql",
-          "uid": "ef642uf0e3ym8c"
-        },
-        "fieldConfig": {
-          "defaults": {
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
-                {
-                  "color": "green",
-                  "value": 0
-                },
-                {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
-          },
-          "overrides": []
-        },
-        "gridPos": {
-          "h": 4,
-          "w": 7,
-          "x": 0,
-          "y": 8
-        },
-        "id": 5,
-        "options": {
-          "afterRender": "",
-          "content": "<div class=\"ip-card\">\n  <div class=\"icon-wrapper\">\n    <img class=\"ip-icon\" src=\"https://s3.trtelecom.net/grafana/ip-address.png\" alt=\"IP Icon\" />\n  </div>\n  <div class=\"data-container\">\n    <div class=\"ip-value\">{{{ @root.IP}}}</div>\n    <div class=\"label\">IP</div>\n  </div>\n</div>",
-          "contentPartials": [],
-          "defaultContent": "The query didn't return any results.",
-          "editor": {
-            "format": "auto",
-            "language": "markdown"
-          },
-          "editors": [
-            "styles"
-          ],
-          "externalStyles": [],
-          "helpers": "",
-          "renderMode": "everyRow",
-          "styles": ".ip-card {\r\n  width: 100%;\r\n  height: 100%;\r\n  min-height: 100px;\r\n  display: flex;\r\n  align-items: center;\r\n  padding: 20px 24px;\r\n  background: #1A1A2A !important;\r\n  border-radius: 16px;\r\n  border: 2px solid rgba(34, 197, 94, 0.3);\r\n  gap: 16px;\r\n  position: relative;\r\n  overflow: hidden;\r\n  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.1);\r\n}\r\n\r\n.ip-card::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  height: 4px;\r\n  background: linear-gradient(90deg, #22C55E, rgba(34, 197, 94, 0.6));\r\n}\r\n\r\n.icon-wrapper {\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  flex-shrink: 0;\r\n  padding: 6px;\r\n  background: rgba(255, 255, 255, 0.03) !important;\r\n  border-radius: 10px;\r\n  border: 1px solid rgba(255, 255, 255, 0.08);\r\n}\r\n\r\n.ip-icon {\r\n  width: 56px;\r\n  height: 56px;\r\n  border-radius: 8px;\r\n  object-fit: contain;\r\n  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));\r\n}\r\n\r\n.data-container {\r\n  flex: 1;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  gap: 6px;\r\n}\r\n\r\n.ip-value {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 28px !important;\r\n  font-weight: 700 !important;\r\n  color: #3B82F6 !important;\r\n  line-height: 1.2 !important;\r\n  letter-spacing: 0.5px !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n  background: none !important;\r\n  font-family: 'Courier New', monospace !important;\r\n}\r\n\r\n.label {\r\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\r\n  font-size: 11px !important;\r\n  font-weight: 600 !important;\r\n  color: #9CA3AF !important;\r\n  text-transform: uppercase !important;\r\n  letter-spacing: 1px !important;\r\n  line-height: 1.4 !important;\r\n  margin: 0 !important;\r\n  padding: 0 !important;\r\n  background: none !important;\r\n}\r\n\r\n/* Responsividade */\r\n@media (max-width: 768px) {\r\n  .ip-card {\r\n    padding: 16px;\r\n    min-height: 90px;\r\n  }\r\n  \r\n  .ip-value {\r\n    font-size: 22px;\r\n  }\r\n  \r\n  .ip-icon {\r\n    width: 48px;\r\n    height: 48px;\r\n  }\r\n  \r\n  .label {\r\n    font-size: 10px;\r\n  }\r\n}",
-          "wrap": true
-        },
-        "pluginVersion": "6.2.0",
-        "targets": [
-          {
-            "dataset": "ALTAREDE",
-            "editorMode": "code",
-            "format": "table",
-            "rawQuery": true,
-            "rawSql": "select \r\n  FramedIPAddress as IP\r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
-            "refId": "A",
-            "sql": {
-              "columns": [
-                {
-                  "parameters": [],
-                  "type": "function"
-                }
-              ],
-              "groupBy": [
-                {
-                  "property": {
-                    "type": "string"
-                  },
-                  "type": "groupBy"
-                }
-              ],
-              "limit": 50
-            }
-          }
-        ],
-        "transparent": true,
-        "type": "marcusolsson-dynamictext-panel"
+        "refresh": 1,
+        "regex": "/(?:GPON 0/)(.*)(?:/)/",
+        "regexApplyTo": "value",
+        "sort": 3,
+        "type": "query"
       }
-    ],
-    "preload": false,
-    "schemaVersion": 42,
-    "tags": [],
-    "templating": {
-      "list": []
-    },
-    "time": {
-      "from": "now-6h",
-      "to": "now"
-    },
-    "timepicker": {},
-    "timezone": "browser",
-    "title": "New dashboard",
-    "uid": "ad66pv5",
-    "version": 5,
-    "weekStart": ""
-  }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "New dashboard",
+  "uid": "ad8scm8",
+  "weekStart": ""
 }
