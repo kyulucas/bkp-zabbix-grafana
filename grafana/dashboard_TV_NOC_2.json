@@ -45,6 +45,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -1917,6 +1918,126 @@
           "color": {
             "mode": "thresholds"
           },
+          "displayName": "POP PARAIBUNA",
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-purple",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 18,
+        "y": 3
+      },
+      "id": 154,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "BRAS"
+          },
+          "host": {
+            "filter": "CONCENTRADOR PPPOE NE8K"
+          },
+          "item": {
+            "filter": "VLAN-801"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "displayName": "SOMA DOS PPPOE:",
           "fieldMinMax": false,
           "mappings": [],
@@ -1934,8 +2055,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 6,
-        "x": 18,
+        "w": 4,
+        "x": 20,
         "y": 3
       },
       "id": 45,
@@ -3411,6 +3532,80 @@
           "triggers": {
             "acknowledged": 2
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / LEVY X PARAIBUNA F 2"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus5(): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
         }
       ],
       "transformations": [
@@ -4083,47 +4278,39 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "MEGANET-TELECOM",
           "mappings": [
             {
               "options": {
-                "1": {
-                  "index": 0,
-                  "text": "🔴  "
-                },
-                "2": {
-                  "index": 1,
-                  "text": "🔴  "
-                },
-                "3": {
-                  "index": 2,
-                  "text": "🔴  "
-                },
-                "4": {
-                  "index": 3,
-                  "text": "🔴  "
-                },
-                "5": {
-                  "index": 4,
-                  "text": "🔴  "
-                },
                 "6": {
-                  "index": 5,
-                  "text": "🟢"
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "GGNET R1 - ONLINE"
                 }
               },
               "type": "value"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "GGNET R1 - OFFLINE"
+                },
+                "to": 5
+              },
+              "type": "range"
             }
           ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
+                "color": "#c4162a00",
                 "value": 0
               },
               {
-                "color": "dark-green",
+                "color": "#37872d00",
                 "value": 1
               }
             ]
@@ -4137,7 +4324,7 @@
         "x": 20,
         "y": 25
       },
-      "id": 143,
+      "id": 151,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -4153,14 +4340,14 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "value",
         "wideLayout": true
       },
       "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Status"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -4176,7 +4363,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Megatelecom Telecomunicacoes/201.33.185.101 - Status do peer"
+            "filter": "/.*\\/177.155.141.254 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -4215,6 +4402,7 @@
           }
         }
       ],
+      "transparent": true,
       "type": "stat"
     },
     {
@@ -4483,47 +4671,39 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "GGNET R1",
           "mappings": [
             {
               "options": {
-                "1": {
-                  "index": 0,
-                  "text": "🔴  "
-                },
-                "2": {
-                  "index": 1,
-                  "text": "🔴  "
-                },
-                "3": {
-                  "index": 2,
-                  "text": "🔴  "
-                },
-                "4": {
-                  "index": 3,
-                  "text": "🔴  "
-                },
-                "5": {
-                  "index": 4,
-                  "text": "🔴  "
-                },
                 "6": {
-                  "index": 5,
-                  "text": "🟢"
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "GGNET R2 - ONLINE"
                 }
               },
               "type": "value"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "GGNET R2 - OFFLINE"
+                },
+                "to": 5
+              },
+              "type": "range"
             }
           ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
+                "color": "#c4162a00",
                 "value": 0
               },
               {
-                "color": "dark-green",
+                "color": "#37872d00",
                 "value": 1
               }
             ]
@@ -4537,7 +4717,7 @@
         "x": 20,
         "y": 27
       },
-      "id": 144,
+      "id": 152,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -4553,14 +4733,14 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "value",
         "wideLayout": true
       },
       "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Status"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -4576,7 +4756,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "ALT | GRUPO BRASIL TECPAR/177.155.141.254 - Status do peer"
+            "filter": "/.*\\/186.211.109.254 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -4615,6 +4795,7 @@
           }
         }
       ],
+      "transparent": true,
       "type": "stat"
     },
     {
@@ -4755,47 +4936,39 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "GGNET R2",
           "mappings": [
             {
               "options": {
-                "1": {
-                  "index": 0,
-                  "text": "🔴  "
-                },
-                "2": {
-                  "index": 1,
-                  "text": "🔴  "
-                },
-                "3": {
-                  "index": 2,
-                  "text": "🔴  "
-                },
-                "4": {
-                  "index": 3,
-                  "text": "🔴  "
-                },
-                "5": {
-                  "index": 4,
-                  "text": "🔴  "
-                },
                 "6": {
-                  "index": 5,
-                  "text": "🟢"
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "MEGANET R1 - ONLINE"
                 }
               },
               "type": "value"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "MEGANET R1 - OFFLINE"
+                },
+                "to": 5
+              },
+              "type": "range"
             }
           ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
+                "color": "#c4162a00",
                 "value": 0
               },
               {
-                "color": "dark-green",
+                "color": "#37872d00",
                 "value": 1
               }
             ]
@@ -4809,7 +4982,7 @@
         "x": 20,
         "y": 29
       },
-      "id": 145,
+      "id": 153,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -4825,14 +4998,14 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "value",
         "wideLayout": true
       },
       "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Status"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -4848,7 +5021,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "ALT | GRUPO BRASIL TECPAR/186.211.109.254 - Status do peer"
+            "filter": "/.*\\/201.33.185.101 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -4887,6 +5060,7 @@
           }
         }
       ],
+      "transparent": true,
       "type": "stat"
     },
     {
