@@ -2111,7 +2111,7 @@
         ]
       },
       "gridPos": {
-        "h": 16,
+        "h": 17,
         "w": 10,
         "x": 0,
         "y": 8
@@ -3235,6 +3235,80 @@
           "triggers": {
             "acknowledged": 2
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / LEVY X PARAIBUNA  F 2"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus5(): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "DDD",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
         }
       ],
       "transformations": [
@@ -3331,7 +3405,7 @@
         ]
       },
       "gridPos": {
-        "h": 16,
+        "h": 17,
         "w": 4,
         "x": 10,
         "y": 8
@@ -4440,6 +4514,80 @@
           },
           "queryType": "0",
           "refId": "DD",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / LEVY X PARAIBUNA F 2"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus5(): TX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5774,7 +5922,7 @@
         "h": 14,
         "w": 14,
         "x": 0,
-        "y": 24
+        "y": 25
       },
       "id": 284,
       "options": {
@@ -5783,6 +5931,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -7226,6 +7375,7 @@
         "ageField": true,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "130%",
@@ -7374,7 +7524,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 38
+        "y": 39
       },
       "id": 240,
       "panels": [],
@@ -7428,7 +7578,7 @@
         "h": 16,
         "w": 16,
         "x": 0,
-        "y": 39
+        "y": 40
       },
       "id": 291,
       "options": {
@@ -7676,7 +7826,7 @@
         "h": 9,
         "w": 8,
         "x": 16,
-        "y": 39
+        "y": 40
       },
       "id": 259,
       "options": {
@@ -8019,7 +8169,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 55
+        "y": 56
       },
       "id": 192,
       "panels": [],
@@ -8031,7 +8181,7 @@
         "h": 3,
         "w": 12,
         "x": 0,
-        "y": 56
+        "y": 57
       },
       "id": 292,
       "options": {
@@ -8052,7 +8202,7 @@
         "h": 3,
         "w": 12,
         "x": 12,
-        "y": 56
+        "y": 57
       },
       "id": 303,
       "options": {
@@ -8100,7 +8250,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 59
+        "y": 60
       },
       "id": 305,
       "options": {
@@ -8215,7 +8365,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 59
+        "y": 60
       },
       "id": 307,
       "options": {
@@ -8330,7 +8480,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 59
+        "y": 60
       },
       "id": 293,
       "options": {
@@ -8460,7 +8610,7 @@
         "h": 3,
         "w": 2,
         "x": 6,
-        "y": 59
+        "y": 60
       },
       "id": 294,
       "options": {
@@ -8591,7 +8741,7 @@
         "h": 3,
         "w": 2,
         "x": 8,
-        "y": 59
+        "y": 60
       },
       "id": 295,
       "options": {
@@ -8721,7 +8871,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 59
+        "y": 60
       },
       "id": 297,
       "options": {
@@ -8836,7 +8986,7 @@
         "h": 3,
         "w": 2,
         "x": 12,
-        "y": 59
+        "y": 60
       },
       "id": 308,
       "options": {
@@ -8951,7 +9101,7 @@
         "h": 3,
         "w": 2,
         "x": 14,
-        "y": 59
+        "y": 60
       },
       "id": 309,
       "options": {
@@ -9066,7 +9216,7 @@
         "h": 3,
         "w": 2,
         "x": 16,
-        "y": 59
+        "y": 60
       },
       "id": 300,
       "options": {
@@ -9196,7 +9346,7 @@
         "h": 3,
         "w": 2,
         "x": 18,
-        "y": 59
+        "y": 60
       },
       "id": 299,
       "options": {
@@ -9327,7 +9477,7 @@
         "h": 3,
         "w": 2,
         "x": 20,
-        "y": 59
+        "y": 60
       },
       "id": 301,
       "options": {
@@ -9457,7 +9607,7 @@
         "h": 3,
         "w": 2,
         "x": 22,
-        "y": 59
+        "y": 60
       },
       "id": 302,
       "options": {
@@ -9578,7 +9728,7 @@
         "h": 3,
         "w": 5,
         "x": 0,
-        "y": 62
+        "y": 63
       },
       "id": 296,
       "options": {
@@ -9693,7 +9843,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 62
+        "y": 63
       },
       "id": 306,
       "options": {
@@ -9816,7 +9966,7 @@
         "h": 3,
         "w": 4,
         "x": 8,
-        "y": 62
+        "y": 63
       },
       "id": 304,
       "options": {
@@ -9933,7 +10083,7 @@
         "h": 3,
         "w": 5,
         "x": 12,
-        "y": 62
+        "y": 63
       },
       "id": 298,
       "options": {
@@ -10048,7 +10198,7 @@
         "h": 3,
         "w": 3,
         "x": 17,
-        "y": 62
+        "y": 63
       },
       "id": 310,
       "options": {
@@ -10171,7 +10321,7 @@
         "h": 3,
         "w": 4,
         "x": 20,
-        "y": 62
+        "y": 63
       },
       "id": 311,
       "options": {
@@ -10315,7 +10465,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 65
+        "y": 66
       },
       "id": 200,
       "options": {
@@ -10458,7 +10608,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 65
+        "y": 66
       },
       "id": 211,
       "options": {
@@ -10603,7 +10753,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 70
+        "y": 71
       },
       "id": 201,
       "options": {
@@ -10746,7 +10896,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 70
+        "y": 71
       },
       "id": 202,
       "options": {
@@ -10891,7 +11041,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 70
+        "y": 71
       },
       "id": 213,
       "options": {
@@ -11034,7 +11184,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 70
+        "y": 71
       },
       "id": 212,
       "options": {
@@ -11178,7 +11328,7 @@
         "h": 5,
         "w": 6,
         "x": 0,
-        "y": 74
+        "y": 75
       },
       "id": 203,
       "options": {
@@ -11321,7 +11471,7 @@
         "h": 5,
         "w": 6,
         "x": 6,
-        "y": 74
+        "y": 75
       },
       "id": 204,
       "options": {
@@ -11465,7 +11615,7 @@
         "h": 5,
         "w": 6,
         "x": 12,
-        "y": 74
+        "y": 75
       },
       "id": 214,
       "options": {
@@ -11608,7 +11758,7 @@
         "h": 5,
         "w": 6,
         "x": 18,
-        "y": 74
+        "y": 75
       },
       "id": 215,
       "options": {
@@ -11733,7 +11883,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 79
+        "y": 80
       },
       "id": 312,
       "interval": "15s",
