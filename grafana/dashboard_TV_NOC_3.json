@@ -74,7 +74,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -202,7 +202,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -222,7 +222,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "ALT | GRUPO BRASIL TECPAR/177.155.141.254 - Status do peer"
+            "filter": "/.*\\/177.155.141.254 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -317,7 +317,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -445,7 +445,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -465,7 +465,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "ALT | GRUPO BRASIL TECPAR/186.211.109.254 - Status do peer"
+            "filter": "/.*\\/186.211.109.254 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -582,7 +582,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -602,7 +602,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Megatelecom Telecomunicacoes/201.33.185.101 - Status do peer"
+            "filter": "/.*\\/201.33.185.101 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -697,7 +697,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -825,7 +825,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -845,7 +845,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Megatelecom Telecomunicacoes/201.33.185.101 - Status do peer"
+            "filter": "/.*\\/201.33.185.101 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -968,7 +968,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1011,7 +1011,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -1094,7 +1093,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -1221,7 +1219,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1264,7 +1262,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -1347,7 +1344,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -1423,8 +1419,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 2,
-        "w": 24,
+        "h": 3,
+        "w": 12,
         "x": 0,
         "y": 9
       },
@@ -1446,7 +1442,113 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "semi-dark-blue",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "noValue": "Tráfegos PTT - (Somente via Meganet)",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "id": 52,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1532,7 +1634,7 @@
         "h": 2,
         "w": 12,
         "x": 0,
-        "y": 11
+        "y": 12
       },
       "id": 36,
       "options": {
@@ -1552,7 +1654,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1639,7 +1741,7 @@
         "h": 2,
         "w": 12,
         "x": 12,
-        "y": 11
+        "y": 12
       },
       "id": 37,
       "options": {
@@ -1659,7 +1761,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1776,7 +1878,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 14
       },
       "id": 42,
       "options": {
@@ -1794,7 +1896,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1837,7 +1939,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -1920,7 +2021,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -2030,7 +2130,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 14
       },
       "id": 12,
       "options": {
@@ -2048,7 +2148,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2091,12 +2191,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface 40GE0/3/3.2224(Trans-IX-SP VLAN 2224 IPV4)"
+            "filter": "Trafego de Entrada na Interface Eth-Trunk843.2224(Trans-IX-SP VLAN 2224 IPV4)"
           },
           "itemTag": {
             "filter": ""
@@ -2174,12 +2273,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface 40GE0/3/3.2224(Trans-IX-SP VLAN 2224 IPV4)"
+            "filter": "Trafego de Saida na Interface Eth-Trunk843.2224(Trans-IX-SP VLAN 2224 IPV4)"
           },
           "itemTag": {
             "filter": ""
@@ -2254,7 +2352,7 @@
         "h": 2,
         "w": 12,
         "x": 0,
-        "y": 18
+        "y": 19
       },
       "id": 38,
       "options": {
@@ -2274,7 +2372,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2361,7 +2459,7 @@
         "h": 2,
         "w": 12,
         "x": 12,
-        "y": 18
+        "y": 19
       },
       "id": 39,
       "options": {
@@ -2381,7 +2479,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2498,7 +2596,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 21
       },
       "id": 40,
       "options": {
@@ -2516,7 +2614,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2559,7 +2657,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -2642,7 +2739,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -2752,7 +2848,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 21
       },
       "id": 41,
       "options": {
@@ -2770,7 +2866,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2813,12 +2909,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface 40GE0/3/3.2225(Trans-IX-SP VLAN 2225 IPV6)"
+            "filter": "Trafego de Entrada na Interface Eth-Trunk843.2225(Trans-IX-SP VLAN 2225 IPV6)"
           },
           "itemTag": {
             "filter": ""
@@ -2896,12 +2991,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface 40GE0/3/3.2225(Trans-IX-SP VLAN 2225 IPV6)"
+            "filter": "Trafego de Saida na Interface Eth-Trunk843.2225(Trans-IX-SP VLAN 2225 IPV6)"
           },
           "itemTag": {
             "filter": ""
@@ -2970,7 +3064,7 @@
         "h": 2,
         "w": 9,
         "x": 0,
-        "y": 25
+        "y": 26
       },
       "id": 32,
       "options": {
@@ -2990,7 +3084,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3025,7 +3119,6 @@
           "group": {
             "filter": "teste"
           },
-          "hide": false,
           "host": {
             "filter": "trafego total"
           },
@@ -3105,7 +3198,7 @@
         "h": 2,
         "w": 6,
         "x": 9,
-        "y": 25
+        "y": 26
       },
       "id": 47,
       "options": {
@@ -3125,7 +3218,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3206,7 +3299,7 @@
         "h": 2,
         "w": 9,
         "x": 15,
-        "y": 25
+        "y": 26
       },
       "id": 33,
       "options": {
@@ -3226,7 +3319,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3261,7 +3354,6 @@
           "group": {
             "filter": "teste"
           },
-          "hide": false,
           "host": {
             "filter": "trafego total"
           },
@@ -3371,7 +3463,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 28
       },
       "id": 46,
       "options": {
@@ -3389,7 +3481,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3405,7 +3497,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -3458,7 +3549,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -3511,7 +3601,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -3564,12 +3653,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "/^Trafego de (Entrada|Saida) na Interface 40GE0\\/3\\/3\\.2224\\(.*\\)$/"
+            "filter": "/^Trafego de (Entrada|Saida) na Interface Eth-Trunk843\\.2224\\(.*\\)$/"
           },
           "itemTag": {
             "filter": ""
@@ -3617,12 +3705,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "/^Trafego de (Entrada|Saida) na Interface 40GE0\\/3\\/3\\.2225\\(.*\\)$/"
+            "filter": "/^Trafego de (Entrada|Saida) na Interface Eth-Trunk843\\.2225\\(.*\\)$/"
           },
           "itemTag": {
             "filter": ""
@@ -3670,7 +3757,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -3723,7 +3809,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -3776,7 +3861,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SWITCH HUAWEI 6730 LINK BGP"
           },
@@ -3829,7 +3913,6 @@
           "group": {
             "filter": "teste"
           },
-          "hide": false,
           "host": {
             "filter": "trafego total"
           },
