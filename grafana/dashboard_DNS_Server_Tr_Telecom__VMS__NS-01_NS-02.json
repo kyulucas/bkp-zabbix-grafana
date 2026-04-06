@@ -38,7 +38,7 @@
         "content": "<center><img src=\"https://uploaddeimagens.com.br/images/004/605/775/thumb/dns1.jpg?1694605560\" width=350\" height=\"200\"></center>\n\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -90,7 +90,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -203,7 +203,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -316,7 +316,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -426,7 +426,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -559,7 +559,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -669,7 +669,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -779,7 +779,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -889,7 +889,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -955,7 +955,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1022,7 +1021,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1140,7 +1139,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1262,7 +1261,6 @@
             "uid": "__expr__"
           },
           "expression": "$A - $B",
-          "hide": false,
           "refId": "C",
           "type": "math"
         }
@@ -1325,7 +1323,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1341,7 +1339,6 @@
           "group": {
             "filter": "TechnoBox DNS"
           },
-          "hide": false,
           "host": {
             "filter": "TechnoBox DNS-01-COLETAS"
           },
@@ -1392,7 +1389,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1459,7 +1455,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1569,7 +1565,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1679,7 +1675,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1789,7 +1785,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1855,7 +1851,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1906,7 +1901,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2048,7 +2043,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2192,7 +2187,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2333,7 +2328,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2380,7 +2375,7 @@
             "filter": "TechnoBox DNS-01-COLETAS"
           },
           "item": {
-            "filter": "Interface re0 - Tráfego de Entrada"
+            "filter": "Interface vtnet0 - Tráfego de Entrada"
           },
           "itemTag": {
             "filter": ""
@@ -2500,7 +2495,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2547,7 +2542,7 @@
             "filter": "TechnoBox DNS-01-COLETAS"
           },
           "item": {
-            "filter": "Interface re0 - Tráfego de Saída"
+            "filter": "Interface vtnet0 - Tráfego de Saída"
           },
           "itemTag": {
             "filter": ""
@@ -2625,7 +2620,6 @@
           "group": {
             "filter": "TechnoBox DNS"
           },
-          "hide": false,
           "host": {
             "filter": "TechnoBox DNS-01-COLETAS"
           },
@@ -2690,7 +2684,7 @@
         "content": "<center><img src=\"https://uploaddeimagens.com.br/images/004/605/776/thumb/dns2.jpg?1694605635\" width=350\" height=\"200\"></center>\n\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -2742,7 +2736,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2855,7 +2849,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2968,7 +2962,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3078,7 +3072,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3211,7 +3205,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3321,7 +3315,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3431,7 +3425,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3541,7 +3535,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3607,7 +3601,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -3674,7 +3667,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3792,7 +3785,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3914,7 +3907,6 @@
             "uid": "__expr__"
           },
           "expression": "$A - $B",
-          "hide": false,
           "refId": "C",
           "type": "math"
         }
@@ -3977,7 +3969,7 @@
         "showThresholdMarkers": true,
         "sizing": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -3993,7 +3985,6 @@
           "group": {
             "filter": "TechnoBox DNS"
           },
-          "hide": false,
           "host": {
             "filter": "TechnoBox DNS-02-COLETAS"
           },
@@ -4044,7 +4035,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4111,7 +4101,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4221,7 +4211,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4331,7 +4321,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4441,7 +4431,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4507,7 +4497,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -4558,7 +4547,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4700,7 +4689,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4844,7 +4833,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -4985,7 +4974,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -5152,7 +5141,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -5277,7 +5266,6 @@
           "group": {
             "filter": "DNS"
           },
-          "hide": false,
           "host": {
             "filter": "/DNS 02.*/"
           },
@@ -5341,7 +5329,7 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "DNS Server Tr Telecom / VMS / NS-01 NS-02",
   "uid": "f6140cf2-6895-44c2-995e-7308892e46e8",
   "weekStart": ""
