@@ -101,7 +101,7 @@
             "delay": "3m",
             "history": "90d",
             "units": "bps",
-            "params": "last(/ROUTER-BGP/net.if.in[ifHCInOctets.142])+last(/ROUTER-BGP/net.if.in[ifHCInOctets.149])+last(/ROUTER-BGP/net.if.in[ifHCInOctets.150])+last(/ROUTER-BGP/net.if.in[ifHCInOctets.139])+last(/ROUTER-BGP/net.if.in[ifHCInOctets.121])"
+            "params": "last(/ROUTER-BGP/net.if.in[ifHCInOctets.142])+\nlast(/ROUTER-BGP/net.if.in[ifHCInOctets.149])+\nlast(/ROUTER-BGP/net.if.in[ifHCInOctets.150])+\nlast(/ROUTER-BGP/net.if.in[ifHCInOctets.209])+\nlast(/ROUTER-BGP/net.if.in[ifHCInOctets.210])+\nlast(/ROUTER-BGP/net.if.in[ifHCInOctets.120])+\nlast(/ROUTER-BGP/net.if.in[ifHCInOctets.188])"
           },
           {
             "name": "Trafego de saida total",
@@ -110,7 +110,7 @@
             "delay": "3m",
             "history": "90d",
             "units": "bps",
-            "params": "last(/ROUTER-BGP/net.if.out[ifHCOutOctets.142])+last(/ROUTER-BGP/net.if.out[ifHCOutOctets.149])+last(/ROUTER-BGP/net.if.out[ifHCOutOctets.150])+last(/ROUTER-BGP/net.if.out[ifHCOutOctets.139])+last(/ROUTER-BGP/net.if.out[ifHCOutOctets.121])"
+            "params": "last(/ROUTER-BGP/net.if.out[ifHCOutOctets.142])+\nlast(/ROUTER-BGP/net.if.out[ifHCOutOctets.149])+\nlast(/ROUTER-BGP/net.if.out[ifHCOutOctets.150])+\nlast(/ROUTER-BGP/net.if.out[ifHCOutOctets.209])+\nlast(/ROUTER-BGP/net.if.out[ifHCOutOctets.210])+\nlast(/ROUTER-BGP/net.if.out[ifHCOutOctets.120])+\nlast(/ROUTER-BGP/net.if.out[ifHCOutOctets.188])"
           }
         ],
         "inventory_mode": "DISABLED"
