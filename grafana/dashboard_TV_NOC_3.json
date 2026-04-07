@@ -1266,7 +1266,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface Eth-Trunk843.325(Operadora-03 MegaNet Telecom)"
+            "filter": "Trafego de Entrada na Interface Eth-Trunk843.325(Operadora-01 MEGANET VLAN-325)"
           },
           "itemTag": {
             "filter": ""
@@ -1348,7 +1348,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface Eth-Trunk843.325(Operadora-03 MegaNet Telecom)"
+            "filter": "Trafego de Saida na Interface Eth-Trunk843.325(Operadora-01 MEGANET VLAN-325)"
           },
           "itemTag": {
             "filter": ""
@@ -1943,7 +1943,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface 40GE0/3/3.1966(Trans-IX-RJ VLAN 1966 IPV4)"
+            "filter": "Trafego de Entrada na Interface 40GE0/3/3.1966(Trans-IX-RJ-GGNET VLAN 1966 IPV4)"
           },
           "itemTag": {
             "filter": ""
@@ -2025,7 +2025,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface 40GE0/3/3.1966(Trans-IX-RJ VLAN 1966 IPV4)"
+            "filter": "Trafego de Saida na Interface 40GE0/3/3.1966(Trans-IX-RJ-GGNET VLAN 1966 IPV4)"
           },
           "itemTag": {
             "filter": ""
@@ -2195,7 +2195,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface Eth-Trunk843.2224(Trans-IX-SP VLAN 2224 IPV4)"
+            "filter": "Trafego de Entrada na Interface Eth-Trunk843.2224(Trans-IX-SP-MEGANET VLAN 2224 IPV4)"
           },
           "itemTag": {
             "filter": ""
@@ -2277,7 +2277,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface Eth-Trunk843.2224(Trans-IX-SP VLAN 2224 IPV4)"
+            "filter": "Trafego de Saida na Interface Eth-Trunk843.2224(Trans-IX-SP-MEGANET VLAN 2224 IPV4)"
           },
           "itemTag": {
             "filter": ""
@@ -2661,7 +2661,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface 40GE0/3/3.1967(Trans-IX-RJ VLAN 1966 IPV6)"
+            "filter": "Trafego de Entrada na Interface 40GE0/3/3.1967(Trans-IX-RJ-GGNET VLAN 1997 IPV6)"
           },
           "itemTag": {
             "filter": ""
@@ -2743,7 +2743,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface 40GE0/3/3.1967(Trans-IX-RJ VLAN 1966 IPV6)"
+            "filter": "Trafego de Saida na Interface 40GE0/3/3.1967(Trans-IX-RJ-GGNET VLAN 1997 IPV6)"
           },
           "itemTag": {
             "filter": ""
@@ -2913,7 +2913,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface Eth-Trunk843.2225(Trans-IX-SP VLAN 2225 IPV6)"
+            "filter": "Trafego de Entrada na Interface Eth-Trunk843.2225(Trans-IX-SP-MEGANET VLAN 2225 IPV6)"
           },
           "itemTag": {
             "filter": ""
@@ -2995,7 +2995,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface Eth-Trunk843.2225(Trans-IX-SP VLAN 2225 IPV6)"
+            "filter": "Trafego de Saida na Interface Eth-Trunk843.2225(Trans-IX-SP-MEGANET VLAN 2225 IPV6)"
           },
           "itemTag": {
             "filter": ""
