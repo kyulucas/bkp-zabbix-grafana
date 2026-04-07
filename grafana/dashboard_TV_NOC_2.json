@@ -122,7 +122,7 @@
           }
         ]
       },
-      "pluginVersion": "6.0.3",
+      "pluginVersion": "6.3.0",
       "targets": [
         {
           "application": {
@@ -2755,7 +2755,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): RX Power"
+            "filter": "Interface sfp-sfpplus9(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
           },
           "itemTag": {
             "filter": ""
@@ -3570,7 +3570,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus5(): RX Power"
+            "filter": "Interface sfp-sfpplus5(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
           },
           "itemTag": {
             "filter": ""
