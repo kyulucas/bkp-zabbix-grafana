@@ -57,7 +57,7 @@
         "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://technopedia.io/technopedia/wp-content/uploads/2022/05/800px-Mikrotik-logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 250px;\">\n    <h2 style=\"color: #d32f2f;\"> CCR2004-1G-12S+2XS </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (Inserir ISO/Firmware)\n    </p>\n</div>\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "transparent": true,
       "type": "text"
     },
@@ -126,7 +126,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -262,7 +262,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -450,7 +450,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -603,7 +603,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -749,7 +749,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -860,7 +860,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -976,7 +976,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1089,7 +1089,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 8,
         "x": 0,
         "y": 8
@@ -1099,7 +1099,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1252,7 +1252,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 8,
         "x": 8,
         "y": 8
@@ -1262,7 +1262,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1386,7 +1386,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 8,
         "x": 16,
         "y": 8
@@ -1396,7 +1396,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1487,7 +1487,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 15
       },
       "id": 17,
       "panels": [],
@@ -1560,7 +1560,7 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 14
+        "y": 16
       },
       "id": 31,
       "options": {
@@ -1578,7 +1578,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1703,7 +1703,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
@@ -1757,7 +1756,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 26
       },
       "id": 46,
       "panels": [],
@@ -1831,7 +1830,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 27
       },
       "id": 47,
       "options": {
@@ -1847,7 +1846,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -1944,6 +1943,7 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(.*)/",
+        "regexApplyTo": "value",
         "type": "query"
       },
       {
@@ -1970,6 +1970,7 @@
         },
         "refresh": 1,
         "regex": "/.sfpplus*/",
+        "regexApplyTo": "value",
         "type": "query"
       }
     ]
@@ -1979,7 +1980,7 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "SW-04 MPLS POP SIMAO PEREIRA CCR2004",
   "uid": "QN9H1M_GzQ5",
   "weekStart": ""
