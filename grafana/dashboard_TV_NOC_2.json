@@ -2755,7 +2755,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus9(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
+            "filter": "Interface sfp-sfpplus7(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
           },
           "itemTag": {
             "filter": ""
