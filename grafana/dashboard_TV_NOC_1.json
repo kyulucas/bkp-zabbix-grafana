@@ -3273,7 +3273,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus5(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
+            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
           },
           "itemTag": {
             "filter": ""
@@ -3329,7 +3329,10 @@
               "Last *": false
             },
             "includeByName": {},
-            "indexByName": {},
+            "indexByName": {
+              "Field": 0,
+              "Last": 1
+            },
             "renameByName": {
               "Field": "INTERFACE",
               "Last": "RX Power",
@@ -4567,7 +4570,7 @@
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus5(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): TX Power"
+            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): TX Power"
           },
           "itemTag": {
             "filter": ""
