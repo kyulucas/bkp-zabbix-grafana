@@ -85,10 +85,10 @@
         "name": "DEDICADO - 202315 - cliente_semparar",
         "templates": [
           {
-            "name": "ping.cgnat"
+            "name": "potencia-onu"
           },
           {
-            "name": "potencia-onu"
+            "name": "Template Module ICMP Ping"
           }
         ],
         "groups": [
@@ -98,6 +98,7 @@
         ],
         "interfaces": [
           {
+            "ip": "60.60.97.2",
             "interface_ref": "if1"
           }
         ],
