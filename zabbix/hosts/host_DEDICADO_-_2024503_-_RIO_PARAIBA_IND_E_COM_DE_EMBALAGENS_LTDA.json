@@ -85,10 +85,10 @@
         "name": "DEDICADO - 2024503 - RIO PARAIBA IND. E COM. DE EMBALAGENS LTDA",
         "templates": [
           {
-            "name": "potencia-onu"
+            "name": "ping.cgnat"
           },
           {
-            "name": "Template Module ICMP Ping"
+            "name": "potencia-onu"
           }
         ],
         "groups": [
