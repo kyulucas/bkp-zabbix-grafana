@@ -85,10 +85,10 @@
         "name": "DEDICADO - 20222985 - LOCALIZA RENT A CAR SA",
         "templates": [
           {
-            "name": "potencia-onu"
+            "name": "ping.cgnat"
           },
           {
-            "name": "Template Module ICMP Ping"
+            "name": "potencia-onu"
           }
         ],
         "groups": [
