@@ -163,7 +163,7 @@
           "proxy": {
             "filter": ""
           },
-          "queryType": "0",
+          "queryType": "2",
           "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
