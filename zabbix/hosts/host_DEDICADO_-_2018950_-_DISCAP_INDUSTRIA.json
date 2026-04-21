@@ -85,10 +85,10 @@
         "name": "DEDICADO - 2018950 - DISCAP INDUSTRIA",
         "templates": [
           {
-            "name": "potencia-onu"
+            "name": "ping.cgnat"
           },
           {
-            "name": "Template Module ICMP Ping"
+            "name": "potencia-onu"
           }
         ],
         "groups": [
