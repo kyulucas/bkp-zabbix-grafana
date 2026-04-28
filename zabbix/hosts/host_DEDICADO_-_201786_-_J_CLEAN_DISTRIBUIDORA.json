@@ -83,6 +83,7 @@
       {
         "host": "DEDICADO - 201786 - J CLEAN DISTRIBUIDORA",
         "name": "DEDICADO - 201786 - J CLEAN DISTRIBUIDORA",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "potencia-onu"
