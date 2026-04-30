@@ -73,7 +73,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -159,7 +159,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -245,7 +245,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -331,7 +331,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -478,7 +478,7 @@
         "xTickLabelRotation": 0,
         "xTickLabelSpacing": 0
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -578,7 +578,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -704,7 +704,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 768
+                "value": 218
               }
             ]
           },
@@ -716,7 +716,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 623
+                "value": 198
               }
             ]
           },
@@ -728,7 +728,7 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 936
+                "value": 434
               }
             ]
           },
@@ -740,7 +740,19 @@
             "properties": [
               {
                 "id": "custom.width",
-                "value": 619
+                "value": 485
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "SERVICO"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 219
               }
             ]
           }
@@ -763,7 +775,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -1400,6 +1412,7 @@
         "query": "select a.NOME from FUNCIONARIO as a\njoin FUNCAO_FUNCIONARIO as b on b.COD_FUNCIONARIO = a.COD_FUNCIONARIO\ngroup by a.NOME",
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
         "type": "query"
       }
     ]
