@@ -68,7 +68,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -103,7 +103,6 @@
           "group": {
             "filter": "teste"
           },
-          "hide": false,
           "host": {
             "filter": "trafego total"
           },
@@ -197,7 +196,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -232,7 +231,6 @@
           "group": {
             "filter": "teste"
           },
-          "hide": false,
           "host": {
             "filter": "trafego total"
           },
@@ -287,7 +285,7 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "palette-classic-by-name"
           },
           "custom": {
             "axisBorderShow": false,
@@ -298,7 +296,7 @@
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
-            "fillOpacity": 60,
+            "fillOpacity": 56,
             "gradientMode": "opacity",
             "hideFrom": {
               "legend": false,
@@ -307,7 +305,10 @@
             },
             "insertNulls": false,
             "lineInterpolation": "linear",
-            "lineWidth": 3,
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -339,12 +340,12 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 24,
         "x": 0,
         "y": 4
       },
-      "id": 4,
+      "id": 11,
       "options": {
         "legend": {
           "calcs": [
@@ -360,7 +361,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -376,7 +377,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -429,7 +429,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -482,7 +481,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -535,12 +533,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "/^Trafego de (Entrada|Saida) na Interface 40GE0\\/3\\/3\\.2224\\(.*\\)$/"
+            "filter": "/^Trafego de (Entrada|Saida) na Interface Eth-Trunk843\\.2224\\(.*\\)$/"
           },
           "itemTag": {
             "filter": ""
@@ -588,12 +585,11 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "/^Trafego de (Entrada|Saida) na Interface 40GE0\\/3\\/3\\.2225\\(.*\\)$/"
+            "filter": "/^Trafego de (Entrada|Saida) na Interface Eth-Trunk843\\.2225\\(.*\\)$/"
           },
           "itemTag": {
             "filter": ""
@@ -641,7 +637,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -694,7 +689,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -747,7 +741,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SWITCH HUAWEI 6730 LINK BGP"
           },
@@ -800,7 +793,6 @@
           "group": {
             "filter": "teste"
           },
-          "hide": false,
           "host": {
             "filter": "trafego total"
           },
@@ -902,22 +894,34 @@
                 "id": "color"
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "INTERFACE"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 819
+              }
+            ]
           }
         ]
       },
       "gridPos": {
-        "h": 14,
+        "h": 39,
         "w": 24,
         "x": 0,
-        "y": 12
+        "y": 13
       },
-      "id": 11,
+      "id": 10,
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -952,7 +956,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -1027,7 +1030,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -1102,12 +1104,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ( ANEL Custo 300 )): RX Power"
+            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ): RX Power"
           },
           "itemTag": {
             "filter": ""
@@ -1178,7 +1179,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-01 MPLS CDP TR CCR1072"
           },
@@ -1245,7 +1245,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X S PEREIRA"
+                "CIRCUITO / LEVY X PARAIBUNA"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -1253,12 +1253,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus9(SW-04 MPLS 2004 Mikrotk POP Simao Pereira 10GB): RX Power"
+            "filter": "Interface sfp-sfpplus7(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
           },
           "itemTag": {
             "filter": ""
@@ -1328,7 +1327,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -1403,7 +1401,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -1478,7 +1475,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -1553,7 +1549,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -1628,7 +1623,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -1703,7 +1697,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -1778,7 +1771,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -1853,7 +1845,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -1929,7 +1920,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -1955,6 +1945,154 @@
           },
           "queryType": "0",
           "refId": "P",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / PARAIBUNA X SIMÃO"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "DD",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / LEVY X PARAIBUNA F 2"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
+          },
+          "item": {
+            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2081,7 +2219,7 @@
         "h": 5,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 52
       },
       "id": 9,
       "options": {
@@ -2097,7 +2235,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "12.4.1",
       "targets": [
         {
           "application": {
@@ -2164,7 +2302,7 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "Call center - Tráfego total + fibras",
   "uid": "a6161916-11c6-4d81-ac24-cd5d0861acb7",
   "weekStart": ""
