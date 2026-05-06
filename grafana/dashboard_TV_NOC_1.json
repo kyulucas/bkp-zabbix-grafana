@@ -2111,7 +2111,7 @@
         ]
       },
       "gridPos": {
-        "h": 17,
+        "h": 19,
         "w": 10,
         "x": 0,
         "y": 8
@@ -3408,7 +3408,7 @@
         ]
       },
       "gridPos": {
-        "h": 17,
+        "h": 19,
         "w": 4,
         "x": 10,
         "y": 8
@@ -5921,11 +5921,622 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-purples"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "filterable": false,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-orange",
+                "value": -30
+              },
+              {
+                "color": "dark-green",
+                "value": -20
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 14,
+        "y": 25
+      },
+      "id": 228,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:581",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "LINK GGNET "
+              ],
+              "text": "setAlias(LINK GGNET )"
+            }
+          ],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "Interface 40GE0/3/3.1601(Link Operadora-02 GGNET (FIBRA VIADUTO VLAN 1601)): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:602",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "LINK MEGANET - FIBRA 1 ROTA VIADUTO"
+              ],
+              "text": "setAlias(LINK K2 - FIBRA 1 ROTA VIADUTO)"
+            }
+          ],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "Interface 40GE0/3/1(Link Operadora-02 K2 LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:623",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "LINK MEGANET - FIBRA 2 ROTA PROSCAN"
+              ],
+              "text": "setAlias(LINK K2 - FIBRA 2 ROTA PROSCAN)"
+            }
+          ],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "Interface 40GE0/3/2(Link Operadora-01 K2 LACP Fibra TrTelecom (Rua da ProsCan) Eth-Trunk 843): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Last (not null)": true,
+              "Last *": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Field": "LINK",
+              "Last (not null)": "RX - POWER",
+              "Last *": "STATUS"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-purples"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "color-background"
+            },
+            "filterable": false,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "decimals": 2,
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "#1e4516",
+                  "index": 0,
+                  "text": "OPERACIONAL"
+                },
+                "2": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "DOWN"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 19,
+        "y": 25
+      },
+      "id": 229,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": []
+      },
+      "pluginVersion": "12.4.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:60",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "LINK GGNET "
+              ],
+              "text": "setAlias(LINK GGNET )"
+            }
+          ],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "Interface 40GE0/3/3.1601(Link Operadora-02 GGNET (FIBRA VIADUTO VLAN 1601)): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "functions": [
+            {
+              "$$hashKey": "object:81",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "LINK K2 - FIBRA 1 ROTA VIADUTO"
+              ],
+              "text": "setAlias(LINK K2 - FIBRA 1 ROTA VIADUTO)"
+            }
+          ],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "Interface 40GE0/3/1(Link Operadora-02 K2 LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "options": {
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "VQ2csaink"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:102",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "LINK K2 - FIBRA 2 ROTA PROSCAN"
+              ],
+              "text": "setAlias(LINK K2 - FIBRA 2 ROTA PROSCAN)"
+            }
+          ],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "Interface 40GE0/3/2(Link Operadora-01 K2 LACP Fibra TrTelecom (Rua da ProsCan) Eth-Trunk 843): Operational status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
+            ]
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": true,
+              "Last (not null)": true,
+              "Last *": false
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Field": "LINK",
+              "Last (not null)": "RX - POWER",
+              "Last *": "STATUS"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "gridPos": {
         "h": 14,
         "w": 14,
         "x": 0,
-        "y": 25
+        "y": 27
       },
       "id": 284,
       "options": {
@@ -6754,617 +7365,6 @@
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
       },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "continuous-purples"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "filterable": false,
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "decimals": 2,
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-orange",
-                "value": -30
-              },
-              {
-                "color": "dark-green",
-                "value": -20
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 5,
-        "x": 14,
-        "y": 25
-      },
-      "id": 228,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true,
-        "sortBy": []
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "functions": [
-            {
-              "$$hashKey": "object:581",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK GGNET "
-              ],
-              "text": "setAlias(LINK GGNET )"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/3.1601(Link Operadora-02 GGNET (FIBRA VIADUTO VLAN 1601)): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "options": {
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:602",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK MEGANET - FIBRA 1 ROTA VIADUTO"
-              ],
-              "text": "setAlias(LINK K2 - FIBRA 1 ROTA VIADUTO)"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/1(Link Operadora-02 K2 LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:623",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK MEGANET - FIBRA 2 ROTA PROSCAN"
-              ],
-              "text": "setAlias(LINK K2 - FIBRA 2 ROTA PROSCAN)"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/2(Link Operadora-01 K2 LACP Fibra TrTelecom (Rua da ProsCan) Eth-Trunk 843): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Last (not null)": true,
-              "Last *": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "LINK",
-              "Last (not null)": "RX - POWER",
-              "Last *": "STATUS"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "continuous-purples"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "filterable": false,
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "decimals": 2,
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "#1e4516",
-                  "index": 0,
-                  "text": "OPERACIONAL"
-                },
-                "2": {
-                  "color": "dark-red",
-                  "index": 1,
-                  "text": "DOWN"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              }
-            ]
-          },
-          "unit": "none"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 5,
-        "x": 19,
-        "y": 25
-      },
-      "id": 229,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true,
-        "sortBy": []
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:60",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK GGNET "
-              ],
-              "text": "setAlias(LINK GGNET )"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/3.1601(Link Operadora-02 GGNET (FIBRA VIADUTO VLAN 1601)): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "functions": [
-            {
-              "$$hashKey": "object:81",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK K2 - FIBRA 1 ROTA VIADUTO"
-              ],
-              "text": "setAlias(LINK K2 - FIBRA 1 ROTA VIADUTO)"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/1(Link Operadora-02 K2 LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "options": {
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:102",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK K2 - FIBRA 2 ROTA PROSCAN"
-              ],
-              "text": "setAlias(LINK K2 - FIBRA 2 ROTA PROSCAN)"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/2(Link Operadora-01 K2 LACP Fibra TrTelecom (Rua da ProsCan) Eth-Trunk 843): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
-              "Last (not null)": true,
-              "Last *": false
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "LINK",
-              "Last (not null)": "RX - POWER",
-              "Last *": "STATUS"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
       "gridPos": {
         "h": 9,
         "w": 10,
@@ -7527,7 +7527,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 39
+        "y": 41
       },
       "id": 240,
       "panels": [],
@@ -7581,7 +7581,7 @@
         "h": 16,
         "w": 16,
         "x": 0,
-        "y": 40
+        "y": 42
       },
       "id": 291,
       "options": {
@@ -7826,10 +7826,10 @@
         ]
       },
       "gridPos": {
-        "h": 9,
+        "h": 12,
         "w": 8,
         "x": 16,
-        "y": 40
+        "y": 42
       },
       "id": 259,
       "options": {
@@ -8172,7 +8172,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 56
+        "y": 58
       },
       "id": 192,
       "panels": [],
@@ -8184,7 +8184,7 @@
         "h": 3,
         "w": 12,
         "x": 0,
-        "y": 57
+        "y": 59
       },
       "id": 292,
       "options": {
@@ -8205,7 +8205,7 @@
         "h": 3,
         "w": 12,
         "x": 12,
-        "y": 57
+        "y": 59
       },
       "id": 303,
       "options": {
@@ -8253,7 +8253,7 @@
         "h": 3,
         "w": 2,
         "x": 0,
-        "y": 60
+        "y": 62
       },
       "id": 305,
       "options": {
@@ -8368,7 +8368,7 @@
         "h": 3,
         "w": 2,
         "x": 2,
-        "y": 60
+        "y": 62
       },
       "id": 307,
       "options": {
@@ -8483,7 +8483,7 @@
         "h": 3,
         "w": 2,
         "x": 4,
-        "y": 60
+        "y": 62
       },
       "id": 293,
       "options": {
@@ -8613,7 +8613,7 @@
         "h": 3,
         "w": 2,
         "x": 6,
-        "y": 60
+        "y": 62
       },
       "id": 294,
       "options": {
@@ -8744,7 +8744,7 @@
         "h": 3,
         "w": 2,
         "x": 8,
-        "y": 60
+        "y": 62
       },
       "id": 295,
       "options": {
@@ -8874,7 +8874,7 @@
         "h": 3,
         "w": 2,
         "x": 10,
-        "y": 60
+        "y": 62
       },
       "id": 297,
       "options": {
@@ -8989,7 +8989,7 @@
         "h": 3,
         "w": 2,
         "x": 12,
-        "y": 60
+        "y": 62
       },
       "id": 308,
       "options": {
@@ -9104,7 +9104,7 @@
         "h": 3,
         "w": 2,
         "x": 14,
-        "y": 60
+        "y": 62
       },
       "id": 309,
       "options": {
@@ -9219,7 +9219,7 @@
         "h": 3,
         "w": 2,
         "x": 16,
-        "y": 60
+        "y": 62
       },
       "id": 300,
       "options": {
@@ -9349,7 +9349,7 @@
         "h": 3,
         "w": 2,
         "x": 18,
-        "y": 60
+        "y": 62
       },
       "id": 299,
       "options": {
@@ -9480,7 +9480,7 @@
         "h": 3,
         "w": 2,
         "x": 20,
-        "y": 60
+        "y": 62
       },
       "id": 301,
       "options": {
@@ -9610,7 +9610,7 @@
         "h": 3,
         "w": 2,
         "x": 22,
-        "y": 60
+        "y": 62
       },
       "id": 302,
       "options": {
@@ -9731,7 +9731,7 @@
         "h": 3,
         "w": 5,
         "x": 0,
-        "y": 63
+        "y": 65
       },
       "id": 296,
       "options": {
@@ -9846,7 +9846,7 @@
         "h": 3,
         "w": 3,
         "x": 5,
-        "y": 63
+        "y": 65
       },
       "id": 306,
       "options": {
@@ -9969,7 +9969,7 @@
         "h": 3,
         "w": 4,
         "x": 8,
-        "y": 63
+        "y": 65
       },
       "id": 304,
       "options": {
@@ -10086,7 +10086,7 @@
         "h": 3,
         "w": 5,
         "x": 12,
-        "y": 63
+        "y": 65
       },
       "id": 298,
       "options": {
@@ -10201,7 +10201,7 @@
         "h": 3,
         "w": 3,
         "x": 17,
-        "y": 63
+        "y": 65
       },
       "id": 310,
       "options": {
@@ -10324,7 +10324,7 @@
         "h": 3,
         "w": 4,
         "x": 20,
-        "y": 63
+        "y": 65
       },
       "id": 311,
       "options": {
@@ -10468,7 +10468,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 66
+        "y": 68
       },
       "id": 200,
       "options": {
@@ -10611,7 +10611,7 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 66
+        "y": 68
       },
       "id": 211,
       "options": {
@@ -10756,7 +10756,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 71
+        "y": 73
       },
       "id": 201,
       "options": {
@@ -10899,7 +10899,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 71
+        "y": 73
       },
       "id": 202,
       "options": {
@@ -11044,7 +11044,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 71
+        "y": 73
       },
       "id": 213,
       "options": {
@@ -11187,7 +11187,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 71
+        "y": 73
       },
       "id": 212,
       "options": {
@@ -11331,7 +11331,7 @@
         "h": 5,
         "w": 6,
         "x": 0,
-        "y": 75
+        "y": 77
       },
       "id": 203,
       "options": {
@@ -11474,7 +11474,7 @@
         "h": 5,
         "w": 6,
         "x": 6,
-        "y": 75
+        "y": 77
       },
       "id": 204,
       "options": {
@@ -11618,7 +11618,7 @@
         "h": 5,
         "w": 6,
         "x": 12,
-        "y": 75
+        "y": 77
       },
       "id": 214,
       "options": {
@@ -11761,7 +11761,7 @@
         "h": 5,
         "w": 6,
         "x": 18,
-        "y": 75
+        "y": 77
       },
       "id": 215,
       "options": {
@@ -11886,7 +11886,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 80
+        "y": 82
       },
       "id": 312,
       "interval": "15s",
