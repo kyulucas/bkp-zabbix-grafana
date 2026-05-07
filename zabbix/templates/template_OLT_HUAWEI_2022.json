@@ -500,8 +500,8 @@
                 "trigger_prototypes": [
                   {
                     "uuid": "9773a224c418430490d262beb44879a8",
-                    "expression": "change(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=8\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"],#2) > 0",
-                    "name": "8+ Clientes ficaram off na PON {#GPON}",
+                    "expression": "change(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=5\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"],#2) > 0",
+                    "name": "5+ Clientes ficaram off na PON {#GPON}",
                     "priority": "WARNING",
                     "tags": [
                       {
