@@ -6989,7 +6989,7 @@
             "skipEmptyValues": false
           },
           "tags": {
-            "filter": "Application: Network"
+            "filter": ""
           },
           "textFilter": "",
           "trigger": {
