@@ -39,6 +39,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -107,7 +108,7 @@
           }
         ]
       },
-      "pluginVersion": "6.0.3",
+      "pluginVersion": "6.3.0",
       "targets": [
         {
           "application": {
@@ -123,7 +124,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -190,7 +190,7 @@
     "to": "now"
   },
   "timepicker": {},
-  "timezone": "",
+  "timezone": "browser",
   "title": "Problems - Geral",
   "uid": "b00056aa-8a92-435a-b5ee-ffbbf2cede07",
   "weekStart": ""
