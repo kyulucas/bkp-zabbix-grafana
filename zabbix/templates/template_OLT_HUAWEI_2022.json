@@ -500,10 +500,10 @@
                 "trigger_prototypes": [
                   {
                     "uuid": "9773a224c418430490d262beb44879a8",
-                    "expression": "last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])\n-\nmin(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"],5m)\n>=5\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>0",
+                    "expression": "last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])\n-\nmin(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"],5m)\n>=8\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>0",
                     "recovery_mode": "RECOVERY_EXPRESSION",
                     "recovery_expression": "last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])\n<=\nmin(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"],30m)",
-                    "name": "5+ Clientes ficaram off na PON {#GPON}",
+                    "name": "8+ Clientes ficaram off na PON {#GPON}",
                     "priority": "WARNING",
                     "tags": [
                       {
