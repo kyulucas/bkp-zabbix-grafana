@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -20,7 +20,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -30,8 +30,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 614,
-      "panels": [],
+      "id": 624,
       "title": "$E1",
       "type": "row"
     },
@@ -52,7 +51,9 @@
         "content": "<tr>\n   <td align=\"center\"; background=\"d24dff\">\n      <a href=\"https://www.aligera.com.br/\">\n         <img alt=\"Aligera\" src=\"https://i.ibb.co/DCw4qcQ/aligera.png\"\n         width=\"160\" height=\"50\">\n      </a>\n   <td>\n<tr>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -100,8 +101,7 @@
             ]
           },
           "unit": "velocityms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -111,6 +111,14 @@
       },
       "id": 358,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -121,11 +129,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "sizing": "auto"
+        "showThresholdMarkers": false,
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -134,7 +147,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -231,7 +244,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -246,8 +258,7 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -258,6 +269,10 @@
       "id": 2,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -270,7 +285,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -279,7 +294,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -361,8 +376,7 @@
             ]
           },
           "unit": "dthms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -371,8 +385,7 @@
         "y": 4
       },
       "id": 618,
-      "maxDataPoints": "100",
-      "maxPerRow": 12,
+      "maxDataPoints": 100,
       "options": {
         "colorMode": "value",
         "graphMode": "none",
@@ -390,7 +403,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -399,7 +412,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -491,8 +504,7 @@
             ]
           },
           "unit": "ms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -502,6 +514,14 @@
       },
       "id": 357,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -512,11 +532,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "sizing": "auto"
+        "showThresholdMarkers": false,
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -525,7 +550,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -631,7 +656,8 @@
             },
             "properties": [
               {
-                "id": "color"
+                "id": "color",
+                "value": null
               }
             ]
           },
@@ -670,7 +696,7 @@
           }
         ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -679,7 +705,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -734,14 +760,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -789,13 +814,12 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -836,13 +860,12 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -883,13 +906,12 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -931,14 +953,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "Telefonia"
           },
-          "hide": false,
           "host": {
             "filter": "E1-Aligera"
           },
@@ -982,6 +1003,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1022,7 +1044,6 @@
         "uid": "ff5clh86a2mf4a"
       },
       "fieldConfig": {
-        "defaults": {},
         "overrides": [
           {
             "matcher": {
@@ -1053,6 +1074,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -1115,7 +1137,7 @@
           }
         ]
       },
-      "pluginVersion": "6.0.3",
+      "pluginVersion": "6.3.0",
       "targets": [
         {
           "application": {
@@ -1124,7 +1146,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1249,8 +1271,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -1276,7 +1297,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -1285,7 +1306,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1335,6 +1356,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1382,7 +1404,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1396,8 +1417,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -1407,6 +1427,10 @@
       },
       "id": 621,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -1419,7 +1443,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -1428,7 +1452,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1497,6 +1521,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -1565,8 +1590,7 @@
             ]
           },
           "unit": "ms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 9,
@@ -1576,6 +1600,10 @@
       },
       "id": 623,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -1588,7 +1616,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.1+security-01",
       "targets": [
         {
           "application": {
@@ -1597,8 +1625,8 @@
           "countTriggersBy": "",
           "dataset": "mysql",
           "datasource": {
-            "type": "mysql",
-            "uid": "aen8uc1e6ty4gf"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -1692,6 +1720,7 @@
   "templating": {
     "list": [
       {
+        "allowCustomValue": true,
         "current": {
           "text": "Telefonia",
           "value": "Telefonia"
@@ -1701,8 +1730,10 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - group",
+        "hide": 0,
         "includeAll": false,
         "label": "GROUP",
+        "multi": false,
         "name": "Group",
         "options": [],
         "query": {
@@ -1715,9 +1746,13 @@
         },
         "refresh": 2,
         "regex": "",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
           "text": "E1-Aligera",
           "value": "E1-Aligera"
@@ -1727,7 +1762,9 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - host",
+        "hide": 0,
         "includeAll": false,
+        "multi": false,
         "name": "E1",
         "options": [],
         "query": {
@@ -1739,9 +1776,13 @@
         },
         "refresh": 2,
         "regex": "/E1-.*/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
           "text": "All",
           "value": "$__all"
@@ -1753,6 +1794,7 @@
         "definition": "Zabbix - item",
         "hide": 2,
         "includeAll": true,
+        "multi": false,
         "name": "Channels",
         "options": [],
         "query": {
@@ -1764,6 +1806,9 @@
         },
         "refresh": 2,
         "regex": "/\"([^\\\\].*)\\\"/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
@@ -1772,9 +1817,21 @@
     "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "E1 ALIGERA AG1700",
-  "uid": "bXAYSxd7k",
-  "weekStart": ""
+  "uid": "bXAYSxd7k"
 }
