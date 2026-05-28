@@ -525,6 +525,17 @@
                     "tag": "QUEDA_PON"
                   }
                 ]
+              },
+              {
+                "uuid": "40142bf2ae4c42c0818088d697e42baf",
+                "expression": "last(/OLT_HUAWEI_2022/hwGponDeviceOltControlOntNum.[{#SNMPINDEX}])>=3\nand last(/OLT_HUAWEI_2022/interface.[\"{#GPON}\"])>0\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>0\nand last(/OLT_HUAWEI_2022/interfaceoffline.[\"{#GPON}\"])>=last(/OLT_HUAWEI_2022/hwGponDeviceOltControlOntNum.[{#SNMPINDEX}])*0.5",
+                "name": "Queda massiva detecada em {#GPON} 50%",
+                "priority": "WARNING",
+                "tags": [
+                  {
+                    "tag": "QUEDA_PON"
+                  }
+                ]
               }
             ]
           },
