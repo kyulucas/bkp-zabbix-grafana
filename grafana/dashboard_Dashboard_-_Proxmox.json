@@ -20,7 +20,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "gridPos": {
@@ -39,7 +39,9 @@
         "content": "<div style=\"\r\n    width: 2000px;\r\n    height: 85px;\r\n    background-image: url('https://images7.alphacoders.com/134/1344394.png');\r\n    background-size: cover;\r\n    background-position: center;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n\">\r\n    <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Logo_Proxmox.svg/2560px-Logo_Proxmox.svg.png\" alt=\"Logo Proxmox\" style=\"height: 40px;\">\r\n</div>\r\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -86,8 +88,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -116,7 +117,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -125,7 +126,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -159,7 +160,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -247,7 +247,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -266,8 +265,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 9,
@@ -277,6 +275,10 @@
       },
       "id": 58,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -289,7 +291,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -298,7 +300,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -332,7 +334,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -372,6 +373,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "timeseries"
     },
@@ -385,7 +387,6 @@
           "color": {
             "mode": "continuous-BlYlRd"
           },
-          "mappings": [],
           "max": 98,
           "min": 0,
           "thresholds": {
@@ -414,8 +415,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -448,7 +448,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -457,7 +457,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -491,7 +491,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -552,7 +551,9 @@
         "content": "<div style=\"\r\n    font-size: 32px;\r\n    text-align: center;\r\n    font-family: 'Arial Black', sans-serif;\r\n    border-radius: 0px 100px 0px 100px;\r\n    background-image: url('https://minio.trtelecom.net/api/v1/buckets/dedicados/objects/download?preview=true&prefix=3d-render-abstract-background-with-cyber-particles-design.jpg&version_id=41264e09-ed2a-486e-b5d1-bd077f85b6b7');\r\n    background-size: cover; /* Ajusta a imagem para cobrir toda a área do div */\r\n    background-position: center; /* Centraliza a imagem de fundo */\r\n\">\r\n    <span style=\"font-family: Arial; color: #0000AA;\">JOBS Main Cluster</span>\r\n</div>\r\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "type": "text"
     },
     {
@@ -575,7 +576,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -660,15 +660,24 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [
+          {
+            "desc": false,
+            "displayName": "item_key"
+          }
+        ]
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -726,7 +735,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -779,7 +787,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -832,7 +839,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -872,6 +878,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -887,7 +894,7 @@
           "options": {
             "delimiter": ",",
             "format": "regexp",
-            "regExp": "/Node\\s+\\[[^\\]]+\\]:\\s+(?<item>CPU,\\s*usage|Uptime|Memory,\\s*(?:used|total))/",
+            "regExp": "/(?<item>CPU,\\s*usage|Uptime|Memory,\\s*(?:used|total))/",
             "source": "item"
           }
         },
@@ -901,9 +908,18 @@
           }
         },
         {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/(?<NODE>Node\\s+\\[[^\\]]+\\]):\\s+(?<metric>CPU,\\s*usage|Uptime|Memory,\\s*(?:used|total))/",
+            "source": "item"
+          }
+        },
+        {
           "id": "groupingToMatrix",
           "options": {
-            "columnField": "item 2",
+            "columnField": "metric",
             "rowField": "NODE",
             "valueField": "Last *"
           }
@@ -920,7 +936,9 @@
             },
             "includeByName": {},
             "indexByName": {},
-            "renameByName": {}
+            "renameByName": {
+              "NODE\\metric": "Host"
+            }
           }
         }
       ],
@@ -1008,13 +1026,17 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [
             {
@@ -1087,6 +1109,7 @@
         }
       ],
       "timeFrom": "24h",
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1136,7 +1159,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1174,7 +1196,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1183,7 +1205,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1243,7 +1265,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1289,7 +1310,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1349,7 +1370,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1393,6 +1413,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [
             {
@@ -1451,7 +1475,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1491,6 +1514,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1540,7 +1564,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1551,8 +1574,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -1565,7 +1587,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1574,14 +1596,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1627,14 +1648,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1678,12 +1698,15 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1723,6 +1746,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1796,7 +1820,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1810,8 +1833,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -1821,6 +1843,10 @@
       },
       "id": 68,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -1833,19 +1859,22 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "$Node"
           },
@@ -1907,6 +1936,8 @@
         "mode": "html"
       },
       "pluginVersion": "12.3.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1928,6 +1959,8 @@
         "mode": "html"
       },
       "pluginVersion": "12.3.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1975,7 +2008,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1989,8 +2021,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -2021,7 +2052,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2073,14 +2104,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2126,14 +2156,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2179,14 +2208,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "CPD-02 RACK-02 SG 2404MR GERENCIA"
           },
@@ -2232,14 +2260,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "Cisco N3k CPD-02 Servidores"
           },
@@ -2279,6 +2306,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -2325,7 +2353,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2339,8 +2366,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -2371,7 +2397,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2423,14 +2449,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2476,14 +2501,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2529,14 +2553,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2582,14 +2605,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2635,14 +2657,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "N3k Cisco CPD-02 Data Center"
           },
@@ -2682,6 +2703,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -2728,7 +2750,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2742,8 +2763,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -2781,7 +2801,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "/Pull PBS .*/"
           },
@@ -2821,6 +2840,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -2867,7 +2887,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2881,8 +2900,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -2920,7 +2938,6 @@
           "group": {
             "filter": "PROXMOX"
           },
-          "hide": false,
           "host": {
             "filter": "/Pull PBS .*/"
           },
@@ -2960,6 +2977,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -2980,6 +2998,8 @@
         "mode": "html"
       },
       "pluginVersion": "12.3.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -3003,7 +3023,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3047,6 +3066,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [
             {
@@ -3144,6 +3167,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3192,7 +3216,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3210,8 +3233,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 25,
@@ -3232,6 +3254,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -3276,6 +3302,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3325,7 +3352,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3340,8 +3366,7 @@
             ]
           },
           "unit": "dtdhms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 25,
@@ -3362,6 +3387,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -3406,6 +3435,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3455,7 +3485,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3470,8 +3499,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 25,
@@ -3492,6 +3520,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -3536,6 +3568,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3585,7 +3618,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3600,8 +3632,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 25,
@@ -3622,6 +3653,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -3666,6 +3701,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3739,7 +3775,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3753,8 +3788,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -3783,6 +3817,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -3849,6 +3887,8 @@
         "mode": "html"
       },
       "pluginVersion": "12.3.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -3870,6 +3910,8 @@
         "mode": "html"
       },
       "pluginVersion": "12.3.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -3917,7 +3959,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3931,8 +3972,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -3963,7 +4003,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4009,6 +4049,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -4055,7 +4096,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4069,8 +4109,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -4101,7 +4140,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4147,6 +4186,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     }
   ],
@@ -4166,7 +4206,11 @@
             "$__all"
           ]
         },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource"
+        },
         "definition": "",
+        "hide": 0,
         "includeAll": true,
         "label": "Maquina",
         "multi": true,
@@ -4182,18 +4226,26 @@
         },
         "refresh": 1,
         "regex": "/name:.*/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
         "sort": 1,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
           "text": "PVE-DELL-2950",
           "value": "PVE-DELL-2950"
         },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource"
+        },
         "definition": "",
         "description": "Selecione a node que quer ler",
+        "hide": 0,
         "includeAll": false,
         "label": "Node",
+        "multi": false,
         "name": "Node",
         "options": [],
         "query": {
@@ -4206,6 +4258,9 @@
         },
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
@@ -4214,9 +4269,21 @@
     "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "Dashboard - Proxmox",
-  "uid": "d6072508-c30a-4339-982f-9a5619862020",
-  "weekStart": ""
+  "uid": "d6072508-c30a-4339-982f-9a5619862020"
 }
