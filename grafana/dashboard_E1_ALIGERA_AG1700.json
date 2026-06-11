@@ -51,7 +51,7 @@
         "content": "<tr>\n   <td align=\"center\"; background=\"d24dff\">\n      <a href=\"https://www.aligera.com.br/\">\n         <img alt=\"Aligera\" src=\"https://i.ibb.co/DCw4qcQ/aligera.png\"\n         width=\"160\" height=\"50\">\n      </a>\n   <td>\n<tr>",
         "mode": "html"
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -138,7 +138,7 @@
         "sparkline": false,
         "textMode": "auto"
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -285,7 +285,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -403,7 +403,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -541,7 +541,7 @@
         "sparkline": false,
         "textMode": "auto"
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -696,7 +696,7 @@
           }
         ]
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1176,7 +1176,7 @@
           "proxy": {
             "filter": ""
           },
-          "queryType": "2",
+          "queryType": "5",
           "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
@@ -1297,7 +1297,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1314,10 +1314,10 @@
             "filter": "Telefonia"
           },
           "host": {
-            "filter": "BGP Rota OI"
+            "filter": "E1-Aligera"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "icmpping rota oi 172.19.1.1"
           },
           "itemTag": {
             "filter": ""
@@ -1443,7 +1443,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1479,10 +1479,10 @@
             "filter": "Telefonia"
           },
           "host": {
-            "filter": "BGP Rota OI"
+            "filter": "E1-Aligera"
           },
           "item": {
-            "filter": "ICMP response time"
+            "filter": "icmpresponsetime rota oi 172.19.1.1"
           },
           "itemTag": {
             "filter": ""
@@ -1616,7 +1616,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
