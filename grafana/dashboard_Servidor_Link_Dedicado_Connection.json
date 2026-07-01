@@ -19,7 +19,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -29,8 +29,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 64,
-      "panels": [],
+      "id": 89,
       "title": "Connection Dedicado Três Rios",
       "type": "row"
     },
@@ -45,7 +44,6 @@
             "fixedColor": "#5a7fa7",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "CONNECTION TRÊS RIOS",
           "thresholds": {
             "mode": "absolute",
@@ -60,8 +58,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -87,7 +84,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -95,7 +92,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
@@ -138,6 +135,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -152,7 +150,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "ICMP STATUS",
           "thresholds": {
             "mode": "absolute",
@@ -167,8 +164,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -194,7 +190,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -203,7 +199,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -253,6 +249,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -267,7 +264,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "LINK DEDICADO 350MB",
           "thresholds": {
             "mode": "absolute",
@@ -282,8 +278,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -309,7 +304,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -318,7 +313,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -368,6 +363,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -414,8 +410,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -441,7 +436,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -450,7 +445,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -514,7 +509,6 @@
             "mode": "thresholds"
           },
           "displayName": "LATÊNCIA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -536,8 +530,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -563,7 +556,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -572,7 +565,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -636,7 +629,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -646,8 +638,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -673,7 +664,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -682,7 +673,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -779,7 +770,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -793,8 +783,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 11,
@@ -804,6 +793,10 @@
       },
       "id": 72,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -816,7 +809,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -825,7 +818,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -922,7 +915,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -936,8 +928,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 11,
@@ -947,6 +938,10 @@
       },
       "id": 63,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -959,7 +954,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -968,7 +963,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1031,7 +1026,6 @@
           "color": {
             "mode": "continuous-GrYlRd"
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -1047,8 +1041,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1081,7 +1074,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1090,7 +1083,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1144,10 +1137,12 @@
       "type": "bargauge"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1161,8 +1156,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1272,6 +1266,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1301,10 +1296,12 @@
       "type": "gapit-htmlgraphics-panel"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1318,8 +1315,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1429,6 +1425,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1458,10 +1455,12 @@
       "type": "gapit-htmlgraphics-panel"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1475,8 +1474,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1536,7 +1534,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1586,6 +1584,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1622,8 +1621,7 @@
         "x": 0,
         "y": 16
       },
-      "id": 55,
-      "panels": [],
+      "id": 90,
       "title": "Connection Dedicado Santana",
       "type": "row"
     },
@@ -1638,7 +1636,6 @@
             "fixedColor": "#5a7fa7",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "CONNECTION SANTANA",
           "thresholds": {
             "mode": "absolute",
@@ -1653,8 +1650,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1680,7 +1676,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1689,7 +1685,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1739,6 +1735,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1753,7 +1750,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "ICMP STATUS",
           "thresholds": {
             "mode": "absolute",
@@ -1768,8 +1764,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1795,7 +1790,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1803,7 +1798,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
@@ -1846,6 +1841,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1860,7 +1856,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "L2L CONNECT/TR  1GB",
           "thresholds": {
             "mode": "absolute",
@@ -1875,8 +1870,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1902,7 +1896,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1911,7 +1905,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1961,6 +1955,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -2007,8 +2002,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2034,7 +2028,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2043,7 +2037,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2107,7 +2101,6 @@
             "mode": "thresholds"
           },
           "displayName": "LATÊNCIA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2129,8 +2122,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2156,7 +2148,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2165,7 +2157,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2229,7 +2221,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2239,8 +2230,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2266,7 +2256,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2275,7 +2265,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2372,7 +2362,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2422,6 +2411,10 @@
       },
       "id": 62,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -2434,7 +2427,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2443,7 +2436,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2539,7 +2532,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2553,8 +2545,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -2564,6 +2555,10 @@
       },
       "id": 78,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -2576,7 +2571,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2585,7 +2580,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2647,7 +2642,6 @@
           "color": {
             "mode": "continuous-GrYlRd"
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -2663,8 +2657,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -2697,7 +2690,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2706,7 +2699,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2760,10 +2753,12 @@
       "type": "bargauge"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2777,8 +2772,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2838,7 +2832,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2888,6 +2882,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -2917,10 +2912,12 @@
       "type": "gapit-htmlgraphics-panel"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2934,8 +2931,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2995,7 +2991,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3045,6 +3041,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3084,7 +3081,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "LINK DEDICADO 700MB",
           "thresholds": {
             "mode": "absolute",
@@ -3099,8 +3095,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -3126,7 +3121,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3135,7 +3130,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3185,14 +3180,17 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3206,8 +3204,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3267,7 +3264,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3278,7 +3275,7 @@
             "filter": "DEDICADO - 2018674 - Connection Santana do Deserto"
           },
           "item": {
-            "filter": "Device: Temperature"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -3317,6 +3314,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -3389,7 +3387,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3403,8 +3400,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -3414,6 +3410,10 @@
       },
       "id": 74,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -3426,7 +3426,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3435,7 +3435,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3531,7 +3531,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3545,8 +3544,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -3556,6 +3554,10 @@
       },
       "id": 77,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -3568,7 +3570,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3577,7 +3579,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3637,8 +3639,7 @@
         "x": 0,
         "y": 37
       },
-      "id": 15,
-      "panels": [],
+      "id": 91,
       "title": "Connection Dedicado Levy",
       "type": "row"
     },
@@ -3653,7 +3654,6 @@
             "fixedColor": "#5a7fa7",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "CONNECTION LEVY",
           "thresholds": {
             "mode": "absolute",
@@ -3668,8 +3668,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -3695,7 +3694,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3704,7 +3703,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3754,6 +3753,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -3768,7 +3768,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "ICMP STATUS",
           "thresholds": {
             "mode": "absolute",
@@ -3783,8 +3782,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -3810,7 +3808,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3819,7 +3817,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3869,6 +3867,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -3883,7 +3882,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "LINK DEDICADO 250MB",
           "thresholds": {
             "mode": "absolute",
@@ -3898,8 +3896,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -3925,7 +3922,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3934,7 +3931,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3984,6 +3981,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -4030,8 +4028,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4057,7 +4054,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4066,7 +4063,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4130,7 +4127,6 @@
             "mode": "thresholds"
           },
           "displayName": "LATÊNCIA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4152,8 +4148,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4179,7 +4174,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4188,7 +4183,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4252,7 +4247,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4262,8 +4256,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4289,7 +4282,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4298,7 +4291,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4395,7 +4388,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4409,8 +4401,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 11,
@@ -4420,6 +4411,10 @@
       },
       "id": 43,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -4432,7 +4427,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4441,7 +4436,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4538,7 +4533,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4552,8 +4546,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 11,
@@ -4563,6 +4556,10 @@
       },
       "id": 73,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -4575,7 +4572,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4584,7 +4581,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4647,7 +4644,6 @@
           "color": {
             "mode": "continuous-GrYlRd"
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -4663,8 +4659,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -4697,7 +4692,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4706,7 +4701,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4760,10 +4755,12 @@
       "type": "bargauge"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4777,8 +4774,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4838,7 +4834,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4888,6 +4884,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -4917,10 +4914,12 @@
       "type": "gapit-htmlgraphics-panel"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4934,8 +4933,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4995,7 +4993,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -5045,6 +5043,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -5074,10 +5073,12 @@
       "type": "gapit-htmlgraphics-panel"
     },
     {
-      "datasource": {},
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
       "fieldConfig": {
         "defaults": {
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -5091,8 +5092,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -5152,7 +5152,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "bfe0da4b-a372-47a1-9e8c-8caeef2a57fa"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -5163,7 +5163,7 @@
             "filter": "DEDICADO - 20201175 - Connection Levy"
           },
           "item": {
-            "filter": ""
+            "filter": "Device: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -5202,6 +5202,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -5238,16 +5239,25 @@
     "outros",
     "ZABBIX SERVER DASH"
   ],
-  "templating": {
-    "list": []
-  },
   "time": {
     "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "Servidor Link Dedicado Connection",
-  "uid": "d48b8624-0931-4935-8dff-f561a4785ba421",
-  "weekStart": ""
+  "uid": "d48b8624-0931-4935-8dff-f561a4785ba421"
 }
