@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -25,9 +25,15 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
       "id": 65,
       "options": {
         "code": {
@@ -38,7 +44,9 @@
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -59,7 +67,9 @@
         "content": "\r\n    \r\n     \r\n         <h1 style=\"text-align: center;\"><img alt=\"Qries\" src=\"https://lh3.googleusercontent.com/pw/AP1GczObAPJeWIx0DuKNeU-hOgdEVoqdxsD9BvZQ5W3UU0KM8acGy78CvzTbH8eFqOhd66KhikRLDvCSljlOc-DxDT9mS7u2hK6-u7yJkb3CtWwafZKlWI35JI5ATgmLJ6aIAE5Nug77kRZxqlQbBhArBtAd=w818-h209-s-no-gm?authuser=0\" alt=\"download.png\"\r\n         width=600\" height=\"150\"> ",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -81,7 +91,8 @@
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
       "title": " ",
       "transparent": true,
       "type": "text"
@@ -103,7 +114,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">CPD-01 TR TELECOM</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -124,7 +137,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP BMP</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -150,7 +165,9 @@
           "CPT-01 TR TELECOM"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -171,7 +188,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">CPD-02 TR TELECOM</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -189,10 +208,12 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP LEVY</div>",
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP CPD-TR-02-CENTRO</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -218,7 +239,9 @@
           "POP BMP"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -244,7 +267,9 @@
           "CPT-02 TR TELECOM"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -267,10 +292,12 @@
         "showSearch": true,
         "showStarred": false,
         "tags": [
-          "POP LEVY"
+          "POP-CPD-02"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -291,7 +318,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SANTANA</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -312,7 +341,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP VILA ISABEL</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -338,7 +369,9 @@
           "POP SANTANA"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -359,7 +392,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP CHIADOR</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -370,17 +405,19 @@
         "x": 12,
         "y": 13
       },
-      "id": 24,
+      "id": 70,
       "options": {
         "code": {
           "language": "plaintext",
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP PARAIBUNA</div>",
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP LEVY</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -407,7 +444,9 @@
           "POP VILA ISABEL"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -434,7 +473,9 @@
           "POP CHIADOR"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -445,7 +486,7 @@
         "x": 12,
         "y": 15
       },
-      "id": 25,
+      "id": 71,
       "options": {
         "includeVars": false,
         "keepTime": false,
@@ -457,10 +498,12 @@
         "showSearch": true,
         "showStarred": false,
         "tags": [
-          "POP PARAIBUNA"
+          "POP LEVY"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -481,7 +524,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP PARAIBA DO SUL</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -502,7 +547,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">ZABBIX SERVER DASH</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -529,7 +576,9 @@
           "POP PARAIBA DO SUL"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -550,7 +599,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP ALBERTO TORRES</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -561,17 +612,19 @@
         "x": 12,
         "y": 21
       },
-      "id": 68,
+      "id": 24,
       "options": {
         "code": {
           "language": "plaintext",
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SIMÃO PEREIRA</div>",
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP PARAIBUNA</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -597,7 +650,9 @@
           "ZABBIX SERVER DASH"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -624,7 +679,9 @@
           "POP ALBERTO TORRES"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -635,7 +692,7 @@
         "x": 12,
         "y": 23
       },
-      "id": 69,
+      "id": 25,
       "options": {
         "includeVars": false,
         "keepTime": false,
@@ -647,10 +704,12 @@
         "showSearch": true,
         "showStarred": false,
         "tags": [
-          "POP SIMÃO PEREIRA"
+          "POP PARAIBUNA"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -671,7 +730,9 @@
         "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">Central de  Energia Tr Telecom</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -682,17 +743,19 @@
         "x": 12,
         "y": 29
       },
-      "id": 48,
+      "id": 68,
       "options": {
         "code": {
           "language": "plaintext",
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">MITIGAÇÃO FASTMON / A10 BPA</div>",
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SIMÃO PEREIRA</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -719,16 +782,69 @@
           "sala de energia"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
+    },
+    {
+      "gridPos": {
+        "h": 6,
+        "w": 6,
+        "x": 12,
+        "y": 31
+      },
+      "id": 69,
+      "options": {
+        "includeVars": false,
+        "keepTime": false,
+        "maxItems": 30,
+        "query": "",
+        "showFolderNames": true,
+        "showHeadings": false,
+        "showRecentlyViewed": false,
+        "showSearch": true,
+        "showStarred": false,
+        "tags": [
+          "POP SIMÃO PEREIRA"
+        ]
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
+      "transparent": true,
+      "type": "dashlist"
+    },
+    {
+      "gridPos": {
+        "h": 2,
+        "w": 6,
+        "x": 12,
+        "y": 37
+      },
+      "id": 48,
+      "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">MITIGAÇÃO FASTMON / A10 BPA</div>",
+        "mode": "html"
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
+      "transparent": true,
+      "type": "text"
     },
     {
       "gridPos": {
         "h": 7,
         "w": 6,
         "x": 12,
-        "y": 31
+        "y": 39
       },
       "id": 49,
       "options": {
@@ -745,7 +861,9 @@
           "fast"
         ]
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "dashlist"
     },
@@ -754,7 +872,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 38
+        "y": 46
       },
       "id": 44,
       "options": {
@@ -766,7 +884,9 @@
         "content": "",
         "mode": "html"
       },
-      "pluginVersion": "12.3.2+security-01",
+      "pluginVersion": "13.0.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     }
@@ -774,19 +894,26 @@
   "preload": false,
   "refresh": "",
   "schemaVersion": 42,
-  "tags": [],
-  "templating": {
-    "list": []
-  },
   "time": {
     "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
-    "hidden": true
+    "hidden": true,
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
   },
   "timezone": "browser",
   "title": "Home2",
-  "uid": "aa44cdde-29fb-4c5f-a56e-28ca801c18ba",
-  "weekStart": ""
+  "uid": "aa44cdde-29fb-4c5f-a56e-28ca801c18ba"
 }
