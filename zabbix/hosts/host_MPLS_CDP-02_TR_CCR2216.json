@@ -96,7 +96,7 @@
         "interfaces": [
           {
             "type": "SNMP",
-            "ip": "10.254.254.11",
+            "ip": "10.15.0.11",
             "port": "161",
             "details": {
               "community": "TR-TELECOM"
