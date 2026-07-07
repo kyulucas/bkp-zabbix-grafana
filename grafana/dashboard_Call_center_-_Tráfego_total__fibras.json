@@ -19,7 +19,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": {
@@ -31,7 +31,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -41,8 +40,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -68,7 +66,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -77,7 +75,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -146,6 +144,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -159,7 +158,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -169,8 +167,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -196,7 +193,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -205,7 +202,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -274,6 +271,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -325,7 +323,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -336,8 +333,7 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 9,
@@ -347,6 +343,10 @@
       },
       "id": 11,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull"
@@ -361,7 +361,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -370,7 +370,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -422,7 +422,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -474,7 +474,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -526,7 +526,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -578,7 +578,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -630,7 +630,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -682,7 +682,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -734,7 +734,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -786,7 +786,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -832,6 +832,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "timeseries"
     },
@@ -857,7 +858,6 @@
             "inspect": false
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -891,7 +891,8 @@
                 }
               },
               {
-                "id": "color"
+                "id": "color",
+                "value": null
               }
             ]
           },
@@ -921,7 +922,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -930,7 +931,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1004,7 +1005,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1078,7 +1079,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1153,7 +1154,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1227,7 +1228,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1301,7 +1302,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1375,7 +1376,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1449,7 +1450,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1523,7 +1524,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1597,7 +1598,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1671,7 +1672,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1745,7 +1746,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1819,7 +1820,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1894,7 +1895,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1968,7 +1969,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2042,7 +2043,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2108,8 +2109,80 @@
           "triggers": {
             "acknowledged": 2
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO CPD-01 / CPD-02 TR"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS CDP-02 TR CCR2216"
+          },
+          "item": {
+            "filter": "Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS): RX Power"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "BBB",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -2187,7 +2260,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "max": 1000000001,
           "min": 0,
           "thresholds": {
@@ -2212,8 +2284,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -2242,6 +2313,10 @@
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -2293,17 +2368,25 @@
   "preload": false,
   "refresh": "",
   "schemaVersion": 42,
-  "tags": [],
-  "templating": {
-    "list": []
-  },
   "time": {
     "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
   "timezone": "browser",
   "title": "Call center - Tráfego total + fibras",
-  "uid": "a6161916-11c6-4d81-ac24-cd5d0861acb7",
-  "weekStart": ""
+  "uid": "a6161916-11c6-4d81-ac24-cd5d0861acb7"
 }
