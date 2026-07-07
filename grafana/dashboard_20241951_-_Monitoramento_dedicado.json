@@ -1,0 +1,1662 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 21,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "afterRender": "",
+        "content": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n\n<body>\n  <div id=\"total-card\" class=\"card\">\n    <div class=\"image-container\">\n      <img src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" alt=\"Icone.png\">\n    </div>\n      <div class=\"data-container-nome\">\n        <span class=\"adapted-value\">{{{@root.NOME}}}</span>\n      </div>\n    </div>\n</body>\n\n</html>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeIn {\r\n  from {\r\n    opacity: 0;\r\n    transform: translateY(10px);\r\n  }\r\n  to {\r\n    opacity: 1;\r\n    transform: translateY(0);\r\n  }\r\n}\r\n\r\nhtml, body, .card {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.card {\r\n    display: flex;\r\n    align-items: center;\r\n    background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%) !important;\r\n    backdrop-filter: blur(10px);\r\n    border-radius: 16px;\r\n    border: 1px solid rgba(74, 74, 90, 0.6);\r\n    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\r\n    color: #E5E7EB;\r\n    position: relative;\r\n    overflow: hidden;\r\n    animation: fadeIn 0.6s ease-out;\r\n    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\r\n}\r\n\r\n.card::before {\r\n    content: '';\r\n    position: absolute;\r\n    top: 0;\r\n    left: -100%;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);\r\n    animation: shimmer 3s infinite;\r\n}\r\n\r\n@keyframes shimmer {\r\n  0% { left: -100%; }\r\n  100% { left: 100%; }\r\n}\r\n\r\n.card:hover {\r\n    transform: translateY(-4px);\r\n    border-color: rgba(59, 130, 246, 0.6);\r\n    box-shadow: 0 12px 48px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.image-container {\r\n    flex: 0 0 auto;\r\n    margin: 0 24px;\r\n    position: relative;\r\n    z-index: 2;\r\n    padding: 16px;\r\n    background: linear-gradient(135deg, rgba(26, 26, 42, 0.9) 0%, rgba(20, 20, 32, 0.9) 100%);\r\n    backdrop-filter: blur(8px);\r\n    border-radius: 12px;\r\n    border: 1px solid rgba(74, 74, 90, 0.5);\r\n    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);\r\n    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\r\n}\r\n\r\n.image-container:hover {\r\n    border-color: rgba(59, 130, 246, 0.6);\r\n    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);\r\n    transform: scale(1.05);\r\n    box-shadow: 0 6px 24px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);\r\n}\r\n\r\n.image-container img {\r\n    margin-left: 0;\r\n    border-radius: 8px;\r\n    height: 75px;\r\n    width: auto;\r\n    transition: all 0.3s ease;\r\n}\r\n\r\n.data-container-nome {\r\n    flex: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: flex-end;\r\n    overflow: hidden;\r\n    padding-right: 20px;\r\n    text-align: center;\r\n    position: relative;\r\n    z-index: 2;\r\n}\r\n\r\n.adapted-value {\r\n    font-size: clamp(36px, 2vw, 42px);\r\n    font-weight: 800;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    width: 100%;\r\n    background: linear-gradient(135deg, #E5E7EB 0%, #3B82F6 100%);\r\n    -webkit-background-clip: text;\r\n    -webkit-text-fill-color: transparent;\r\n    background-clip: text;\r\n    transition: all 0.4s ease;\r\n    letter-spacing: 0.8px;\r\n    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\r\n}\r\n\r\n.card:hover .adapted-value {\r\n    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);\r\n    -webkit-background-clip: text;\r\n    -webkit-text-fill-color: transparent;\r\n    background-clip: text;\r\n    transform: scale(1.02);\r\n}\r\n\r\n.adapted-name {\r\n    font-size: clamp(12px, 1.25vw, 22px);\r\n    color: #9CA3AF;\r\n    margin-top: 10px;\r\n    white-space: nowrap;\r\n    overflow: hidden;\r\n    text-overflow: ellipsis;\r\n    width: 100%;\r\n    opacity: 0.9;\r\n}\r\n",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT a.NOME\r\nFROM CLIENTE as a\r\njoin ENDERECO_LOGIN as b ON b.COD_CLIENTE = a.COD_CLIENTE\r\nWHERE b.LOGIN = '$login'",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 21,
+        "y": 0
+      },
+      "id": 15,
+      "options": {
+        "afterRender": "",
+        "content": "",
+        "contentPartials": [],
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"pt-BR\">\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n</head>\r\n\r\n<body>\r\n    <a href=\"https://wa.me/5524993279575?text=Olá,%20gostaria%20de%20solicitar%20suporte.\" class=\"whatsapp-button\"\r\n      target=\"_blank\" rel=\"noopener noreferrer\">\r\n      <span>💬 Falar no WhatsApp</span>\r\n    </a>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "styles": "<style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    body {\n      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      min-height: 100vh;\n      background: transparent;\n      padding: 20px;\n    }\n    \n    @keyframes fadeIn {\n      from {\n        opacity: 0;\n        transform: translateY(10px);\n      }\n      to {\n        opacity: 1;\n        transform: translateY(0);\n      }\n    }\n\n    .whatsapp-button {\n      display: inline-block;\n      background: linear-gradient(135deg, #25D366 0%, #20B658 100%);\n      color: white;\n      padding: 16px 36px;\n      border-radius: 12px;\n      text-decoration: none;\n      font-weight: 700;\n      font-size: 24px;\n      letter-spacing: 0.5px;\n      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);\n      position: relative;\n      animation: fadeIn 0.6s ease-out;\n      border: 1px solid rgba(32, 182, 88, 0.5);\n      backdrop-filter: blur(8px);\n    }\n\n    .whatsapp-button:hover {\n      transform: translateY(-4px);\n      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);\n      background: linear-gradient(135deg, #20B658 0%, #1DA851 100%);\n    }\n\n    .whatsapp-button:active {\n      transform: translateY(0);\n      box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);\n    }\n\n    .whatsapp-button span {\n      position: relative;\n      z-index: 1;\n      display: inline-block;\n    }\n\n    @media (max-width: 480px) {\n      .whatsapp-button {\n        padding: 12px 28px;\n        font-size: 14px;\n      }\n    }\n  </style>",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "editorMode": "builder",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawSql": "",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 0,
+        "y": 4
+      },
+      "id": 16,
+      "options": {
+        "afterRender": "",
+        "content": "",
+        "contentPartials": [],
+        "defaultContent": "<!DOCTYPE html>\r\n<html lang=\"pt-BR\">\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n</head>\r\n\r\n<body>\r\n    <a href=\"https://lg.trtelecom.net/lg/\" class=\"looking-glass-button\"\r\n      target=\"_blank\" rel=\"noopener noreferrer\">\r\n      <span>🔍 Looking Glass</span>\r\n    </a>\r\n  </div>\r\n</body>\r\n\r\n</html>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "styles": "<style>\n    * {\n      margin: 0;\n      padding: 0;\n      box-sizing: border-box;\n    }\n\n    body {\n      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      min-height: 100vh;\n      background: transparent;\n      padding: 20px;\n    }\n    \n    @keyframes fadeIn {\n      from {\n        opacity: 0;\n        transform: translateY(10px);\n      }\n      to {\n        opacity: 1;\n        transform: translateY(0);\n      }\n    }\n\n    .looking-glass-button {\n      display: inline-block;\n      background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);\n      color: white;\n      padding: 16px 36px;\n      border-radius: 12px;\n      text-decoration: none;\n      font-weight: 1000;\n      font-size: 30px;\n      letter-spacing: 3.5px;\n      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n      box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);\n      position: center;\n      animation: fadeIn 0.6s ease-out;\n      border: 1px solid rgba(139, 92, 246, 0.5);\n      backdrop-filter: blur(8px);\n    }\n\n    .looking-glass-button:hover {\n      transform: translateY(-4px);\n      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);\n      background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);\n    }\n\n    .looking-glass-button:active {\n      transform: translateY(0);\n      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);\n    }\n\n    .looking-glass-button span {\n      position: relative;\n      z-index: 1;\n      display: inline-block;\n    }\n\n    @media (max-width: 520px) {\n      .looking-glass-button {\n        padding: 12px 28px;\n        font-size: 18px;\n      }\n    }\n  </style>",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "editorMode": "builder",
+          "evaltype": "0",
+          "format": "table",
+          "functions": [],
+          "group": {
+            "filter": ""
+          },
+          "host": {
+            "filter": ""
+          },
+          "item": {
+            "filter": ""
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "rawSql": "",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 18,
+        "x": 6,
+        "y": 4
+      },
+      "id": 14,
+      "options": {
+        "afterRender": "",
+        "content": "<div class=\"plano-wrapper\">\r\n  <div class=\"plano-card\">\r\n    <div class=\"plano-header\">\r\n      <div class=\"plano-icon-wrapper\">\r\n        <svg class=\"plano-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n          <path d=\"M12 2L2 7L12 12L22 7L12 2Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n          <path d=\"M2 17L12 22L22 17\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n          <path d=\"M2 12L12 17L22 12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n        </svg>\r\n        <div class=\"icon-glow\"></div>\r\n      </div>\r\n      <div class=\"plano-badge\">\r\n        <span class=\"badge-dot\"></span>\r\n        <span class=\"badge-text\">ATIVO</span>\r\n      </div>\r\n    </div>\r\n    <div class=\"plano-content\">\r\n      <div class=\"plano-label\">PLANO DE INTERNET</div>\r\n      <div class=\"plano-value\">{{{@root.plano}}}</div>\r\n      <div class=\"plano-subtitle\">Velocidade de Conexão</div>\r\n    </div>\r\n    <div class=\"plano-footer\">\r\n      <div class=\"speed-indicator\">\r\n        <div class=\"speed-bar\">\r\n          <div class=\"speed-fill\"></div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles",
+          "helpers"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeInUp {\n    from {\n      opacity: 0;\n      transform: translateY(20px);\n    }\n    to {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n  \n  @keyframes pulse {\n    0%, 100% {\n      opacity: 1;\n      transform: scale(1);\n    }\n    50% {\n      opacity: 0.8;\n      transform: scale(1.05);\n    }\n  }\n  \n  @keyframes shimmer {\n    0% {\n      background-position: -200% 0;\n    }\n    100% {\n      background-position: 200% 0;\n    }\n  }\n  \n  @keyframes slideIn {\n    from {\n      width: 0;\n    }\n    to {\n      width: 85%;\n    }\n  }\n  \n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n  \n  .plano-wrapper {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    padding: 16px;\n  }\n  \n  .plano-card {\n    width: 100%;\n    height: 100%;\n    background: linear-gradient(135deg, rgba(26, 26, 42, 0.98) 0%, rgba(30, 30, 45, 0.98) 100%);\n    backdrop-filter: blur(20px);\n    border-radius: 18px;\n    border: 1px solid rgba(74, 74, 90, 0.4);\n    box-shadow: \n      0 8px 32px rgba(0, 0, 0, 0.5),\n      inset 0 1px 0 rgba(255, 255, 255, 0.08),\n      0 0 0 1px rgba(59, 130, 246, 0.1);\n    position: relative;\n    overflow: hidden;\n    display: flex;\n    flex-direction: column;\n    padding: 24px;\n    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);\n    animation: fadeInUp 0.6s ease-out;\n  }\n  \n  .plano-card::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 2px;\n    background: linear-gradient(90deg, transparent, #3B82F6, #8B5CF6, transparent);\n    background-size: 200% 100%;\n    animation: shimmer 3s infinite;\n    opacity: 0.6;\n  }\n  \n  .plano-card::after {\n    content: '';\n    position: absolute;\n    top: -50%;\n    left: -50%;\n    width: 200%;\n    height: 200%;\n    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);\n    opacity: 0;\n    transition: opacity 0.5s ease;\n  }\n  \n  .plano-card:hover {\n    transform: translateY(-4px);\n    border-color: rgba(59, 130, 246, 0.5);\n    box-shadow: \n      0 16px 48px rgba(59, 130, 246, 0.3),\n      inset 0 1px 0 rgba(255, 255, 255, 0.12),\n      0 0 0 1px rgba(59, 130, 246, 0.2);\n  }\n  \n  .plano-card:hover::after {\n    opacity: 1;\n  }\n  \n  .plano-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: flex-start;\n    margin-bottom: 20px;\n    position: relative;\n    z-index: 2;\n  }\n  \n  .plano-icon-wrapper {\n    position: relative;\n    width: 64px;\n    height: 64px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n  \n  .plano-icon {\n    width: 48px;\n    height: 48px;\n    color: #3B82F6;\n    filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.4));\n    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n    z-index: 2;\n    position: relative;\n  }\n  \n  .icon-glow {\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    width: 64px;\n    height: 64px;\n    background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);\n    border-radius: 50%;\n    animation: pulse 2s ease-in-out infinite;\n    z-index: 1;\n  }\n  \n  .plano-card:hover .plano-icon {\n    color: #8B5CF6;\n    transform: scale(1.1) rotate(5deg);\n    filter: drop-shadow(0 6px 20px rgba(139, 92, 246, 0.5));\n  }\n  \n  .plano-badge {\n    display: flex;\n    align-items: center;\n    gap: 8px;\n    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.08) 0%);\n    border: 1px solid rgba(34, 197, 94, 0.3);\n    border-radius: 12px;\n    padding: 6px 12px;\n    backdrop-filter: blur(8px);\n    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n  }\n  \n  .badge-dot {\n    width: 8px;\n    height: 8px;\n    background: #22C55E;\n    border-radius: 50%;\n    box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);\n    animation: pulse 2s ease-in-out infinite;\n  }\n  \n  .badge-text {\n    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 10px;\n    font-weight: 700;\n    letter-spacing: 1.2px;\n    color: #22C55E;\n    text-transform: uppercase;\n  }\n  \n  .plano-content {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    position: relative;\n    z-index: 2;\n  }\n  \n  .plano-label {\n    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 10px;\n    font-weight: 600;\n    letter-spacing: 2px;\n    text-transform: uppercase;\n    color: #9CA3AF;\n    margin-bottom: 12px;\n    opacity: 0.9;\n  }\n  \n  .plano-value {\n    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: clamp(28px, 4vw, 36px);\n    font-weight: 900;\n    line-height: 1.1;\n    background: linear-gradient(135deg, #E5E7EB 0%, #3B82F6 50%, #8B5CF6 100%);\n    background-size: 200% 200%;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-clip: text;\n    margin-bottom: 8px;\n    letter-spacing: -0.5px;\n    transition: all 0.5s ease;\n    animation: shimmer 3s ease-in-out infinite;\n  }\n  \n  .plano-card:hover .plano-value {\n    background-position: 100% 0;\n    transform: scale(1.02);\n  }\n  \n  .plano-subtitle {\n    font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 11px;\n    font-weight: 500;\n    color: #9CA3AF;\n    letter-spacing: 0.5px;\n    opacity: 0.8;\n  }\n  \n  .plano-footer {\n    margin-top: 16px;\n    position: relative;\n    z-index: 2;\n  }\n  \n  .speed-indicator {\n    width: 100%;\n  }\n  \n  .speed-bar {\n    width: 100%;\n    height: 4px;\n    background: rgba(74, 74, 90, 0.4);\n    border-radius: 4px;\n    overflow: hidden;\n    position: relative;\n    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);\n  }\n  \n  .speed-fill {\n    height: 100%;\n    width: 85%;\n    background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);\n    border-radius: 4px;\n    box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);\n    animation: slideIn 1.5s ease-out;\n    position: relative;\n    overflow: hidden;\n  }\n  \n  .speed-fill::after {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);\n    animation: shimmer 2s infinite;\n  }\n  \n  @media (max-width: 768px) {\n    .plano-card {\n      padding: 20px;\n      border-radius: 16px;\n    }\n    \n    .plano-icon-wrapper {\n      width: 56px;\n      height: 56px;\n    }\n    \n    .plano-icon {\n      width: 40px;\n      height: 40px;\n    }\n    \n    .plano-value {\n      font-size: 24px;\n    }\n    \n    .plano-label {\n      font-size: 9px;\n    }\n    \n    .plano-subtitle {\n      font-size: 10px;\n    }\n  }",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT \r\n    COALESCE(pla.NOME, 'N/A') AS plano_original,\r\n    REGEXP_REPLACE(\r\n        pla.NOME,\r\n        '.*?(\\\\d+)(?:_?\\\\s*)([A-Za-z]+).*',\r\n        '\\\\1 \\\\2'\r\n    ) AS plano\r\nFROM PROVEDOR_GERAL prov\r\nLEFT JOIN PLANOS pla \r\n       ON pla.COD_PLANO = prov.COD_PLANO\r\nWHERE prov.LOGIN = '$login';\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 7
+      },
+      "id": 7,
+      "options": {
+        "afterRender": "",
+        "content": "<div class=\"status-card\" data-status=\"{{{ @root.Status}}}\">\n  <div class=\"icon-wrapper\">\n    <img class=\"equipment-icon icon-online\" src=\"https://cdn-icons-png.flaticon.com/512/2428/2428743.png\" alt=\"Online Icon\" />\n    <img class=\"equipment-icon icon-offline\" src=\"https://s3.trtelecom.net/grafana/EDIT.png\" alt=\"Offline Icon\" />\n  </div>\n  <div class=\"status-content\">\n    <div class=\"status-text\" style=\"color: {{#if (eq @root.Status \" Online\")}}#00E2FF{{else}}#FF6B6B{{/if}};\">\n      {{{@root.Status}}}</div>{{{\n    @root.Status}}}\n  </div>\n  <div class=\"status-label\"></div>\n</div>\n</div>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeIn {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.status-card {\n  width: 100%;\n  height: 100%;\n  min-height: 120px;\n  display: flex;\n  align-items: center;\n  padding: 28px 32px;\n  background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%) !important;\n  backdrop-filter: blur(10px);\n  border-radius: 16px;\n  border: 1px solid rgba(74, 74, 90, 0.6);\n  gap: 24px;\n  position: relative;\n  overflow: hidden;\n  animation: fadeIn 0.6s ease-out;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.status-card:hover {\n  transform: translateY(-4px);\n  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.status-card[data-status=\"Online\"],\n.status-card[data-status*=\"Online\"] {\n  border-color: rgba(34, 197, 94, 0.6);\n  border-left: 4px solid #22C55E;\n  box-shadow: 0 8px 32px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.status-card[data-status=\"Offline\"],\n.status-card[data-status*=\"Offline\"] {\n  border-color: rgba(239, 68, 68, 0.6);\n  border-left: 4px solid #EF4444;\n  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  padding: 12px;\n  background: #1A1A2A;\n  border-radius: 8px;\n  border: 1px solid #4A4A5A;\n  position: relative;\n  min-width: 90px;\n  min-height: 90px;\n  transition: all 0.3s ease;\n}\n\n.status-card[data-status=\"Online\"] .icon-wrapper {\n  border-color: #22C55E;\n  background: rgba(34, 197, 94, 0.1);\n}\n\n.status-card[data-status=\"Offline\"] .icon-wrapper {\n  border-color: #EF4444;\n  background: rgba(239, 68, 68, 0.1);\n}\n\n.equipment-icon {\n  width: 70px !important;\n  height: 70px !important;\n  border-radius: 8px;\n  object-fit: contain;\n  position: absolute;\n  transition: all 0.3s ease;\n}\n\n.icon-offline {\n  display: none !important;\n}\n\n.icon-online {\n  display: block !important;\n}\n\n.status-card[data-status=\"Online\"] .icon-online {\n  display: block !important;\n}\n\n.status-card[data-status=\"Online\"] .icon-offline {\n  display: none !important;\n}\n\n.status-card[data-status=\"Offline\"] .icon-online {\n  display: none !important;\n}\n\n.status-card[data-status=\"Offline\"] .icon-offline {\n  display: block !important;\n}\n\n.status-content {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-end;\n  text-align: right;\n  gap: 8px;\n  z-index: 2;\n}\n\n.status-text {\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\n  font-size: 48px !important;\n  font-weight: 800 !important;\n  line-height: 1 !important;\n  letter-spacing: 2px !important;\n  text-transform: uppercase !important;\n  margin: 0 !important;\n  padding: 0 !important;\n  transition: all 0.4s ease;\n  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);\n}\n\n.status-card[data-status=\"Online\"] .status-text {\n  color: #22C55E !important;\n}\n\n.status-card[data-status=\"Offline\"] .status-text {\n  color: #EF4444 !important;\n}\n\n.status-label {\n  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n  font-size: 11px;\n  font-weight: 600;\n  color: #9CA3AF;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  line-height: 1.6;\n  margin-top: 6px;\n}\n\n@media (max-width: 768px) {\n  .equipment-icon {\n    width: 60px !important;\n    height: 60px !important;\n  }\n  \n  .icon-wrapper {\n    min-width: 80px;\n    min-height: 80px;\n  }\n  \n  .status-text {\n    font-size: 32px !important;\n  }\n}",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select \r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status'\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='$login'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 12
+      },
+      "id": 10,
+      "options": {
+        "afterRender": "",
+        "content": "<div id=\"total-card\" class=\"card\">\n  <div class=\"image-container\">\n    <img src=\"https://cdn-icons-png.flaticon.com/512/12669/12669745.png\" alt=\"Icone.png\">\n  </div>\n  <div class=\"data-container\">\n    <div id=\"total-value\">{{{ @root.tempo_conectado}}}</div>\n    <div class=\"label\">TEMPO DE ATIVIDADE</div>\n  </div>\n</div>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeIn {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.card {\n  width: 100%;\n  height: 100%;\n  min-height: 100px;\n  display: flex;\n  align-items: center;\n  padding: 24px 28px;\n  background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%) !important;\n  backdrop-filter: blur(10px);\n  border-radius: 16px;\n  border: 1px solid rgba(74, 74, 90, 0.6);\n  gap: 24px;\n  position: relative;\n  overflow: hidden;\n  animation: fadeIn 0.6s ease-out;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.card:hover {\n  transform: translateY(-4px);\n  border-color: rgba(59, 130, 246, 0.6);\n  box-shadow: 0 12px 48px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.image-container {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  padding: 10px;\n  background: #1A1A2A;\n  border-radius: 8px;\n  border: 1px solid #4A4A5A;\n  position: relative;\n  transition: all 0.3s ease;\n}\n\n.card:hover .image-container {\n  border-color: #3B82F6;\n  background: rgba(59, 130, 246, 0.1);\n}\n\n.image-container img {\n  width: 50px;\n  height: 50px;\n  border-radius: 8px;\n  object-fit: contain;\n  transition: all 0.3s ease;\n}\n\n.data-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 8px;\n  position: relative;\n}\n\n#total-value {\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\n  font-size: 32px !important;\n  font-weight: 800 !important;\n  line-height: 1.2 !important;\n  letter-spacing: 1.5px !important;\n  margin: 0 !important;\n  padding: 0 !important;\n  background: linear-gradient(135deg, #E5E7EB 0%, #3B82F6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transition: all 0.4s ease;\n}\n\n.card:hover #total-value {\n  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transform: scale(1.05);\n}\n\n.label {\n  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;\n  font-size: 11px !important;\n  font-weight: 600 !important;\n  color: #9CA3AF !important;\n  text-transform: uppercase !important;\n  letter-spacing: 1px !important;\n  line-height: 1.5 !important;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n@media (max-width: 768px) {\n  .card {\n    padding: 16px;\n    min-height: 90px;\n  }\n  \n  #total-value {\n    font-size: 22px;\n  }\n  \n  .image-container img {\n    width: 40px;\n    height: 40px;\n  }\n  \n  .label {\n    font-size: 10px;\n  }\n}",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select \r\n\r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado\r\n\r\n\r\nFROM ALTAREDE.radacct\r\nwhere UserName ='$login'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 6,
+        "y": 12
+      },
+      "id": 8,
+      "options": {
+        "afterRender": "",
+        "content": "<div class=\"ip-card\">\n  <div class=\"icon-wrapper\">\n    <img class=\"ip-icon\" src=\"https://s3.trtelecom.net/grafana/wifi-router.png\" alt=\"IP Icon\" />\n  </div>\n  <div class=\"data-container\">\n    <div class=\"ip-value\">{{{ @root.Login}}}</div>\n    <div class=\"label\">LOGIN</div>\n  </div>\n</div>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "markdown"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeIn {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.ip-card {\n  width: 100%;\n  height: 100%;\n  min-height: 100px;\n  display: flex;\n  align-items: center;\n  padding: 24px 28px;\n  background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%) !important;\n  backdrop-filter: blur(10px);\n  border-radius: 16px;\n  border: 1px solid rgba(74, 74, 90, 0.6);\n  gap: 24px;\n  position: relative;\n  overflow: hidden;\n  animation: fadeIn 0.6s ease-out;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.ip-card:hover {\n  transform: translateY(-4px);\n  border-color: rgba(59, 130, 246, 0.6);\n  box-shadow: 0 12px 48px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  padding: 14px;\n  background: linear-gradient(135deg, rgba(26, 26, 42, 0.9) 0%, rgba(20, 20, 32, 0.9) 100%);\n  backdrop-filter: blur(8px);\n  border-radius: 12px;\n  border: 1px solid rgba(74, 74, 90, 0.5);\n  position: relative;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.ip-card:hover .icon-wrapper {\n  border-color: rgba(59, 130, 246, 0.6);\n  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);\n  transform: scale(1.05);\n  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.ip-icon {\n  width: 52px;\n  height: 56px;\n  border-radius: 10px;\n  object-fit: contain;\n  transition: all 0.4s ease;\n  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));\n}\n\n.data-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 10px;\n  position: relative;\n}\n\n.ip-value {\n  font-family: 'Courier New', 'Consolas', 'Fira Code', monospace !important;\n  font-size: 28px !important;\n  font-weight: 800 !important;\n  line-height: 1.2 !important;\n  letter-spacing: 2px !important;\n  margin: 0 !important;\n  padding: 0 !important;\n  background: linear-gradient(135deg, #E5E7EB 0%, #3B82F6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transition: all 0.4s ease;\n}\n\n.ip-card:hover .ip-value {\n  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transform: scale(1.05);\n}\n\n.label {\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\n  font-size: 10px !important;\n  font-weight: 600 !important;\n  color: #9CA3AF !important;\n  text-transform: uppercase !important;\n  letter-spacing: 1.5px !important;\n  line-height: 1.5 !important;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n@media (max-width: 768px) {\n  .ip-card {\n    padding: 20px;\n    min-height: 90px;\n  }\n  \n  .ip-value {\n    font-size: 24px;\n  }\n  \n  .ip-icon {\n    width: 44px;\n    height: 44px;\n  }\n  \n  .label {\n    font-size: 11px;\n  }\n}",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select \r\n  UserName as Login\r\n\r\nFROM ALTAREDE.radacct\r\nwhere UserName ='$login'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "decimals": 2,
+          "max": 40,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-blue",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-orange",
+                "value": 20
+              },
+              {
+                "color": "semi-dark-red",
+                "value": 30
+              }
+            ]
+          },
+          "unit": "ms"
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 13,
+        "y": 12
+      },
+      "id": 17,
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^ICMP response time$/",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": false,
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "/DEDICADO - $login.*/"
+          },
+          "item": {
+            "filter": "ICMP response time"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Latência",
+      "transparent": true,
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 7,
+        "x": 17,
+        "y": 12
+      },
+      "id": 12,
+      "options": {
+        "afterRender": "const container = document.querySelector('.dns-container');\nif (container) {\n  const cards = container.querySelectorAll('.dns-card');\n  cards.forEach((card, index) => {\n    card.style.animationDelay = `${index * 0.2}s`;\n  });\n}",
+        "content": "<div class=\"dns-container\">\n  {{#if @root.data}}\n  {{#each @root.data}}\n  {{#if this}}\n  {{#each this}}\n  {{#if Field}}\n  <div class=\"dns-card\" data-status=\"{{#if Last}}online{{else}}offline{{/if}}\">\n    <div class=\"dns-card-header\">\n      <div class=\"dns-icon-wrapper\">\n        <img src=\"https://cdn-icons-png.flaticon.com/512/18831/18831498.png\" alt=\"DNS Icon\" style=\"width: 24px; height: 24px;\" />\n      </div>\n      <div class=\"dns-status-indicator\" data-status=\"{{#if Last}}online{{else}}offline{{/if}}\"></div>\n    </div>\n    <div class=\"dns-card-body\">\n      <div class=\"dns-name\">{{Field}}</div>\n      <div class=\"dns-status-text\">\n        {{#if Last}}\n        <span class=\"status-online\">OPERANDO</span>\n        {{else}}\n        <span class=\"status-offline\">OFFLINE</span>\n        {{/if}}\n      </div>\n    </div>\n  </div>\n  {{/if}}\n  {{/each}}\n  {{/if}}\n  {{/each}}\n  {{/if}}\n</div>",
+        "contentPartials": [
+          {
+            "content": "<div class=\"dns-container\">\n  <div class=\"dns-header\">\n    <div class=\"dns-title-icon\">\n      <img src=\"https://cdn-icons-png.flaticon.com/512/18405/18405090.png\" alt=\"DNS Icon\" style=\"width: 20px; height: 20px;\" />\n    </div>\n    <h2 class=\"dns-title\">SERVIDORES DNS</h2>\n  </div>\n  <div class=\"dns-cards-wrapper\" id=\"dns-cards\">",
+            "name": "header"
+          },
+          {
+            "content": "  </div>\n</div>",
+            "name": "footer"
+          }
+        ],
+        "defaultContent": "<div class=\"dns-container\"><div class=\"dns-error\">Aguardando dados dos servidores DNS...</div></div>",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "data",
+        "styles": "@keyframes fadeIn {\n    from {\n      opacity: 0;\n      transform: translateY(10px);\n    }\n    to {\n      opacity: 1;\n      transform: translateY(0);\n    }\n  }\n  \n  .dns-container {\n    width: 100%;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    padding: 24px;\n    background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%);\n    backdrop-filter: blur(10px);\n    border-radius: 16px;\n    border: 1px solid rgba(74, 74, 90, 0.6);\n    position: relative;\n    overflow: hidden;\n    animation: fadeIn 0.6s ease-out;\n    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n  }\n  \n  .dns-header {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 20px;\n    padding-bottom: 16px;\n    border-bottom: 1px solid #4A4A5A;\n  }\n  \n  .dns-title-icon {\n    width: 36px;\n    height: 36px;\n    background: #1A1A2A;\n    border-radius: 8px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border: 1px solid #4A4A5A;\n  }\n  \n  .dns-title-icon img {\n    width: 20px;\n    height: 20px;\n    object-fit: contain;\n    display: block;\n  }\n  \n  .dns-title-icon svg {\n    width: 20px;\n    height: 20px;\n    color: #3B82F6;\n  }\n  \n  .dns-title {\n    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 16px;\n    font-weight: 700;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    margin: 0;\n    color: #E5E7EB;\n  }\n  \n  .dns-cards-wrapper {\n    display: flex;\n    flex-direction: column;\n    gap: 12px;\n    position: relative;\n    flex: 1;\n    min-height: 0;\n  }\n  \n  .dns-card {\n    background: linear-gradient(135deg, rgba(26, 26, 42, 0.9) 0%, rgba(20, 20, 32, 0.9) 100%);\n    backdrop-filter: blur(8px);\n    border-radius: 12px;\n    padding: 20px 22px;\n    border: 1px solid rgba(74, 74, 90, 0.5);\n    position: relative;\n    overflow: hidden;\n    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n    animation: fadeIn 0.6s ease-out;\n    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n  }\n  \n  .dns-card:hover {\n    transform: translateY(-4px);\n    border-color: rgba(59, 130, 246, 0.6);\n    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n  }\n  \n  .dns-card[data-status=\"online\"] {\n    border-left: 4px solid #22C55E;\n    border-color: rgba(34, 197, 94, 0.3);\n  }\n  \n  .dns-card[data-status=\"offline\"] {\n    border-left: 4px solid #EF4444;\n    border-color: rgba(239, 68, 68, 0.3);\n  }\n  \n  .dns-card-header {\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n    margin-bottom: 12px;\n  }\n  \n  .dns-icon-wrapper {\n    width: 40px;\n    height: 40px;\n    background: #2D2D3A;\n    border-radius: 8px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    border: 1px solid #4A4A5A;\n    position: relative;\n    overflow: hidden;\n  }\n  \n  .dns-card[data-status=\"online\"] .dns-icon-wrapper {\n    border-color: #22C55E;\n    background: rgba(34, 197, 94, 0.1);\n  }\n  \n  .dns-card[data-status=\"offline\"] .dns-icon-wrapper {\n    border-color: #EF4444;\n    background: rgba(239, 68, 68, 0.1);\n  }\n  \n  .dns-icon-wrapper img {\n    width: 24px;\n    height: 24px;\n    object-fit: contain;\n    display: block;\n    filter: brightness(1.1);\n  }\n  \n  .dns-status-indicator {\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    position: relative;\n    transition: all 0.3s ease;\n  }\n  \n  .dns-status-indicator[data-status=\"online\"] {\n    background: #22C55E;\n    box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);\n  }\n  \n  .dns-status-indicator[data-status=\"offline\"] {\n    background: #EF4444;\n    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);\n  }\n  \n  .dns-card-body {\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n  }\n  \n  .dns-name {\n    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 14px;\n    font-weight: 600;\n    color: #E5E7EB;\n    letter-spacing: 0.3px;\n    line-height: 1.4;\n  }\n  \n  .dns-status-text {\n    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 14px;\n    font-weight: 700;\n    letter-spacing: 1px;\n    text-transform: uppercase;\n    line-height: 1.2;\n  }\n  \n  .status-online {\n    color: #22C55E;\n  }\n  \n  .status-offline {\n    color: #EF4444;\n  }\n  \n  .dns-error {\n    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n    font-size: 14px;\n    color: #9CA3AF;\n    text-align: center;\n    padding: 40px 20px;\n  }\n  \n  @media (max-width: 768px) {\n    .dns-container {\n      padding: 16px;\n    }\n    \n    .dns-title {\n      font-size: 14px;\n    }\n    \n    .dns-card {\n      padding: 14px 16px;\n    }\n    \n    .dns-name {\n      font-size: 13px;\n    }\n    \n    .dns-status-text {\n      font-size: 12px;\n    }\n  }",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "DNS 01 - 170.80.225.4"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "TechnoBox DNS"
+          },
+          "host": {
+            "filter": "TechnoBox DNS-01"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "DNS 02 - 170.80.225.5"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "TechnoBox DNS"
+          },
+          "host": {
+            "filter": "TechnoBox DNS-02"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "labelsToFields": false,
+            "mode": "seriesToRows",
+            "reducers": [
+              "last"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 17
+      },
+      "id": 13,
+      "options": {
+        "afterRender": "",
+        "content": "<div class=\"potencia-container\">\n  <div class=\"titulo\">Potência (dBm)</div>\n  <div class=\"valor\">{{{@root.Value}}}</div>\n</div>",
+        "contentPartials": [],
+        "defaultContent": "",
+        "editor": {
+          "format": "auto",
+          "language": "html"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeIn {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.potencia-container {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%);\n  backdrop-filter: blur(10px);\n  border-radius: 16px;\n  padding: 28px 24px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n  border: 1px solid rgba(74, 74, 90, 0.6);\n  color: white;\n  position: relative;\n  overflow: hidden;\n  animation: fadeIn 0.6s ease-out;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n}\n\n.potencia-container::before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 3px;\n  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.6), transparent);\n  opacity: 0;\n  transition: opacity 0.4s ease;\n}\n\n.potencia-container:hover {\n  transform: translateY(-4px);\n  border-color: rgba(59, 130, 246, 0.6);\n  box-shadow: 0 12px 48px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.potencia-container:hover::before {\n  opacity: 1;\n}\n\n.titulo {\n  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  margin-bottom: 12px;\n  color: #9CA3AF;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  position: relative;\n}\n\n.valor {\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;\n  font-size: 32px;\n  font-weight: 800;\n  background: linear-gradient(135deg, #E5E7EB 0%, #3B82F6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  letter-spacing: 1.5px;\n  position: relative;\n  transition: all 0.4s ease;\n  text-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);\n}\n\n.potencia-container:hover .valor {\n  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transform: scale(1.05);\n}\n\n@media (max-width: 768px) {\n  .potencia-container {\n    padding: 20px 16px;\n  }\n  \n  .titulo {\n    font-size: 12px;\n  }\n  \n  .valor {\n    font-size: 42px;\n  }\n}",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "DEDICADO - 20241951 - FLAVIO FORTES DE OLIVEIRA"
+          },
+          "item": {
+            "filter": "potencia"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "2",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "includeTimeField": false,
+            "mode": "reduceFields",
+            "reducers": [
+              "last"
+            ]
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 6,
+        "y": 17
+      },
+      "id": 9,
+      "options": {
+        "afterRender": "",
+        "content": "<div class=\"ip-card\">\n  <div class=\"icon-wrapper\">\n    <img class=\"ip-icon\" src=\"https://s3.trtelecom.net/grafana/ip-address.png\" alt=\"IP Icon\" />\n  </div>\n  <div class=\"data-container\">\n    <div class=\"ip-value\">{{{ @root.IP}}}</div>\n    <div class=\"label\">IP</div>\n  </div>\n</div>",
+        "contentPartials": [],
+        "defaultContent": "The query didn't return any results.",
+        "editor": {
+          "format": "auto",
+          "language": "markdown"
+        },
+        "editors": [
+          "styles"
+        ],
+        "externalStyles": [],
+        "helpers": "",
+        "renderMode": "everyRow",
+        "styles": "@keyframes fadeIn {\n  from {\n    opacity: 0;\n    transform: translateY(10px);\n  }\n  to {\n    opacity: 1;\n    transform: translateY(0);\n  }\n}\n\n.ip-card {\n  width: 100%;\n  height: 100%;\n  min-height: 100px;\n  display: flex;\n  align-items: center;\n  padding: 24px 28px;\n  background: linear-gradient(135deg, rgba(45, 45, 58, 0.95) 0%, rgba(30, 30, 42, 0.95) 100%) !important;\n  backdrop-filter: blur(10px);\n  border-radius: 16px;\n  border: 1px solid rgba(74, 74, 90, 0.6);\n  gap: 24px;\n  position: relative;\n  overflow: hidden;\n  animation: fadeIn 0.6s ease-out;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.ip-card:hover {\n  transform: translateY(-4px);\n  border-color: rgba(59, 130, 246, 0.6);\n  box-shadow: 0 12px 48px rgba(59, 130, 246, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.icon-wrapper {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  padding: 14px;\n  background: linear-gradient(135deg, rgba(26, 26, 42, 0.9) 0%, rgba(20, 20, 32, 0.9) 100%);\n  backdrop-filter: blur(8px);\n  border-radius: 12px;\n  border: 1px solid rgba(74, 74, 90, 0.5);\n  position: relative;\n  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);\n}\n\n.ip-card:hover .icon-wrapper {\n  border-color: rgba(59, 130, 246, 0.6);\n  background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 100%);\n  transform: scale(1.05);\n  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);\n}\n\n.ip-icon {\n  width: 56px;\n  height: 56px;\n  border-radius: 10px;\n  object-fit: contain;\n  transition: all 0.4s ease;\n  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));\n}\n\n.data-container {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  gap: 10px;\n  position: relative;\n}\n\n.ip-value {\n  font-family: 'Courier New', 'Consolas', 'Fira Code', monospace !important;\n  font-size: 32px !important;\n  font-weight: 800 !important;\n  line-height: 1.2 !important;\n  letter-spacing: 2px !important;\n  margin: 0 !important;\n  padding: 0 !important;\n  background: linear-gradient(135deg, #E5E7EB 0%, #3B82F6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transition: all 0.4s ease;\n}\n\n.ip-card:hover .ip-value {\n  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  transform: scale(1.05);\n}\n\n.label {\n  font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;\n  font-size: 12px !important;\n  font-weight: 600 !important;\n  color: #9CA3AF !important;\n  text-transform: uppercase !important;\n  letter-spacing: 1.5px !important;\n  line-height: 1.5 !important;\n  margin: 0 !important;\n  padding: 0 !important;\n}\n\n@media (max-width: 768px) {\n  .ip-card {\n    padding: 20px;\n    min-height: 90px;\n  }\n  \n  .ip-value {\n    font-size: 24px;\n  }\n  \n  .ip-icon {\n    width: 44px;\n    height: 44px;\n  }\n  \n  .label {\n    font-size: 11px;\n  }\n}",
+        "wrap": true
+      },
+      "pluginVersion": "6.2.0",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "select \r\n  FramedIPAddress as IP\r\nFROM ALTAREDE.radacct\r\nwhere UserName ='$login'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "marcusolsson-dynamictext-panel"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "semi-dark-blue",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 13,
+        "y": 17
+      },
+      "id": 18,
+      "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "DEDICADO"
+          },
+          "host": {
+            "filter": "/DEDICADO - $login.*/"
+          },
+          "item": {
+            "filter": "ICMP loss"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Perda de Pacotes",
+      "transparent": true,
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 40,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "smooth",
+            "lineWidth": 3,
+            "pointSize": 6,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "DOWNLOAD"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#0B60C8",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 40
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 3
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "smooth"
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [],
+                  "fill": "solid"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "UPLOAD"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#6FB3FF",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.fillOpacity",
+                "value": 40
+              },
+              {
+                "id": "custom.lineWidth",
+                "value": 3
+              },
+              {
+                "id": "custom.lineInterpolation",
+                "value": "smooth"
+              },
+              {
+                "id": "custom.lineStyle",
+                "value": {
+                  "dash": [],
+                  "fill": "solid"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "20241774@tr-telecom - Download"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "20241774@tr-telecom - Upload"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 22
+      },
+      "id": 6,
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [
+            "last",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true,
+          "width": 500
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "PPPOE"
+          },
+          "host": {
+            "filter": "CONCENTRADOR PPPOE NE8K"
+          },
+          "item": {
+            "filter": "$login@tr-telecom - Download"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "PPPOE"
+          },
+          "host": {
+            "filter": "CONCENTRADOR PPPOE NE8K"
+          },
+          "item": {
+            "filter": "$login@tr-telecom - Upload"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Consumo Mensal - Download e Upload",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "30s",
+  "schemaVersion": 42,
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "20241951",
+          "value": "20241951"
+        },
+        "hide": 2,
+        "label": "login",
+        "name": "login",
+        "query": "20241951",
+        "skipUrlSync": true,
+        "type": "constant"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "20241951 - Monitoramento dedicado",
+  "uid": "adldjfp"
+}
