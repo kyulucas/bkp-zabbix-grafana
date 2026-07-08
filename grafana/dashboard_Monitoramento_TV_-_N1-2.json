@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": {
@@ -45,6 +45,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -107,7 +108,7 @@
           }
         ]
       },
-      "pluginVersion": "6.0.3",
+      "pluginVersion": "6.3.0",
       "targets": [
         {
           "application": {
@@ -116,14 +117,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -177,14 +177,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "CGNATS"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -238,14 +237,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "PPPOE"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -299,14 +297,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SERVIDOR"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -360,14 +357,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -421,14 +417,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -482,14 +477,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -543,14 +537,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -604,14 +597,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "Nobreak"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -665,14 +657,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -726,14 +717,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "VMWARE"
           },
-          "hide": false,
           "host": {
             "filter": "/.*/"
           },
@@ -814,13 +804,12 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(51, 183, 33, 1)",
+                "color": "#1f60c4",
                 "value": 0
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -847,7 +836,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -856,7 +845,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -906,6 +895,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -939,13 +929,12 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(51, 183, 33, 1)",
+                "color": "#1f60c4",
                 "value": 0
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -972,7 +961,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -981,7 +970,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1031,6 +1020,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1064,13 +1054,12 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(51, 183, 33, 1)",
+                "color": "#1f60c4",
                 "value": 0
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1097,7 +1086,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1106,7 +1095,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1156,6 +1145,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1189,13 +1179,12 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(51, 183, 33, 1)",
+                "color": "#1f60c4",
                 "value": 0
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1222,7 +1211,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1231,7 +1220,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1281,6 +1270,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1296,18 +1286,16 @@
             "mode": "thresholds"
           },
           "displayName": "TEMPERATURA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-blue",
+                "color": "#1F60C4",
                 "value": 0
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1334,7 +1322,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1343,15 +1331,15 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "Energia"
+            "filter": "ENERGIA"
           },
           "host": {
-            "filter": "ROUTER ENERGIA BMP CPD TR TELECOM"
+            "filter": "ENERGIA POP BMP"
           },
           "item": {
             "filter": "ICMP ping"
@@ -1393,6 +1381,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1651,7 +1640,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -1660,7 +1649,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1686,7 +1675,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP PARAIBA HW"
           },
@@ -1732,7 +1720,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1758,7 +1746,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP SIMAO PEREIRA"
           },
@@ -1804,7 +1791,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1830,7 +1817,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP CHIADOR"
           },
@@ -1876,7 +1862,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1902,7 +1888,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP BMP"
           },
@@ -1948,7 +1933,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1974,7 +1959,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "Adicionar rack TR"
           },
@@ -2020,7 +2004,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2046,7 +2030,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Altarede Sistemas"
           },
@@ -2092,7 +2075,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2118,7 +2101,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP LEVY JFA"
           },
@@ -2164,7 +2146,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2190,7 +2172,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP SANTANA"
           },
@@ -2236,7 +2217,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2262,7 +2243,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP VILA ISABEL JFA"
           },
@@ -2308,7 +2288,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2334,7 +2314,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP ALBERTO TORRES"
           },
@@ -2380,7 +2359,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2406,7 +2385,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP CPD TR RACK 1 HW"
           },
@@ -2452,7 +2430,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2478,7 +2456,6 @@
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "ENERGIA POP CPD TR RACK 2 HW"
           },
@@ -2518,6 +2495,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -2560,8 +2538,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2588,7 +2565,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2597,7 +2574,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2647,6 +2624,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -2688,8 +2666,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2716,7 +2693,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2725,7 +2702,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2775,6 +2752,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -2832,8 +2810,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2860,7 +2837,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2869,7 +2846,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2919,6 +2896,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -2931,7 +2909,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "max": 65,
           "min": 0,
           "thresholds": {
@@ -2952,18 +2929,17 @@
             ]
           },
           "unit": "celsius"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
-        "h": 8,
+        "h": 9,
         "w": 10,
         "x": 14,
         "y": 12
       },
-      "id": 132,
+      "id": 140,
       "options": {
-        "displayMode": "lcd",
+        "displayMode": "gradient",
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -2986,7 +2962,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -2995,7 +2971,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3021,12 +2997,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW-05 MPLS CPD CHIADOR"
+            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (2)"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -3070,7 +3045,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3096,12 +3071,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW-03 MPLS CPD LEVY"
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (2)"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -3142,10 +3116,12 @@
           "application": {
             "filter": ""
           },
+          "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
+          "evaltype": "0",
           "functions": [
             {
               "$$hashKey": "object:718",
@@ -3169,20 +3145,24 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW-04 MPLS CPD SIMAO PEREIRA"
+            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (2)"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
           },
+          "macro": {
+            "filter": ""
+          },
           "options": {
+            "count": false,
             "disableDataAlignment": false,
             "showDisabledItems": false,
             "skipEmptyValues": false,
+            "useTrends": "default",
             "useZabbixValueMapping": false
           },
           "proxy": {
@@ -3191,12 +3171,14 @@
           "queryType": "0",
           "refId": "D",
           "resultFormat": "time_series",
+          "schema": 12,
           "table": {
             "skipEmptyValues": false
           },
           "tags": {
             "filter": ""
           },
+          "textFilter": "",
           "trigger": {
             "filter": ""
           },
@@ -3208,10 +3190,12 @@
           "application": {
             "filter": ""
           },
+          "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
+          "evaltype": "0",
           "functions": [
             {
               "$$hashKey": "object:760",
@@ -3235,20 +3219,24 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW-06 MPLS CPD SANTANA"
+            "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (2)"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
           },
+          "macro": {
+            "filter": ""
+          },
           "options": {
+            "count": false,
             "disableDataAlignment": false,
             "showDisabledItems": false,
             "skipEmptyValues": false,
+            "useTrends": "default",
             "useZabbixValueMapping": false
           },
           "proxy": {
@@ -3257,12 +3245,14 @@
           "queryType": "0",
           "refId": "F",
           "resultFormat": "time_series",
+          "schema": 12,
           "table": {
             "skipEmptyValues": false
           },
           "tags": {
             "filter": ""
           },
+          "textFilter": "",
           "trigger": {
             "filter": ""
           },
@@ -3274,10 +3264,12 @@
           "application": {
             "filter": ""
           },
+          "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
+          "evaltype": "0",
           "functions": [
             {
               "$$hashKey": "object:781",
@@ -3301,20 +3293,24 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW-07 MPLS CPD VILA ISABEL"
+            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (2)"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
           },
+          "macro": {
+            "filter": ""
+          },
           "options": {
+            "count": false,
             "disableDataAlignment": false,
             "showDisabledItems": false,
             "skipEmptyValues": false,
+            "useTrends": "default",
             "useZabbixValueMapping": false
           },
           "proxy": {
@@ -3323,12 +3319,14 @@
           "queryType": "0",
           "refId": "G",
           "resultFormat": "time_series",
+          "schema": 12,
           "table": {
             "skipEmptyValues": false
           },
           "tags": {
             "filter": ""
           },
+          "textFilter": "",
           "trigger": {
             "filter": ""
           },
@@ -3343,7 +3341,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3369,12 +3367,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "Switch 02 MPLS CPD BMP"
+            "filter": "SW-08 MPLS POP BMP CCR2004"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (2)"
+            "filter": "CPU: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -3419,7 +3416,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3445,12 +3442,11 @@
           "group": {
             "filter": "OLT"
           },
-          "hide": false,
           "host": {
-            "filter": "OLT5800X2-PARAIBA DO SUL"
+            "filter": "OLT HUAWEI MA5800X2 PARAIBA"
           },
           "item": {
-            "filter": "Temperatura 2"
+            "filter": "Temperatura 1"
           },
           "itemTag": {
             "filter": ""
@@ -3491,7 +3487,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3517,12 +3513,11 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW MPLS ALBERTO TORRES"
+            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
           "item": {
-            "filter": "Temperatura: Dispositivo (1)"
+            "filter": "Device: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -3563,7 +3558,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aefq119i80pa8a"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3589,7 +3584,6 @@
           "group": {
             "filter": "SERVIDOR"
           },
-          "hide": false,
           "host": {
             "filter": "SERVIDOR GERENCIAMENTO INTERNO"
           },
@@ -3627,8 +3621,151 @@
           "trigger": {
             "filter": ""
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "POP CPD TR-02"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS CDP-02 TR CCR2216"
+          },
+          "item": {
+            "filter": "CPU: Temperature"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "J",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "POP PARAIBUNA"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "CPU: Temperature"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "K",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "bargauge"
     },
@@ -3671,8 +3808,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3699,7 +3835,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3708,7 +3844,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3758,6 +3894,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3799,8 +3936,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3827,7 +3963,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -3836,7 +3972,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3886,6 +4022,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3898,53 +4035,44 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "GGNET R1",
           "mappings": [
             {
               "options": {
-                "1": {
-                  "index": 0,
-                  "text": "🔴  "
-                },
-                "2": {
-                  "index": 1,
-                  "text": "🔴  "
-                },
-                "3": {
-                  "index": 2,
-                  "text": "🔴  "
-                },
-                "4": {
-                  "index": 3,
-                  "text": "🔴  "
-                },
-                "5": {
-                  "index": 4,
-                  "text": "🔴  "
-                },
                 "6": {
-                  "index": 5,
-                  "text": "🟢"
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "GGNET R1 - ONLINE"
                 }
               },
               "type": "value"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "GGNET R1 - OFFLINE"
+                },
+                "to": 5
+              },
+              "type": "range"
             }
           ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
+                "color": "#c4162a00",
                 "value": 0
               },
               {
-                "color": "dark-green",
+                "color": "#37872d00",
                 "value": 1
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3952,7 +4080,7 @@
         "x": 12,
         "y": 15
       },
-      "id": 93,
+      "id": 141,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -3968,19 +4096,19 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Status"
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3991,7 +4119,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "ALT | GRUPO BRASIL TECPAR/177.155.141.254 - Status do peer"
+            "filter": "/.*\\/177.155.141.254 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -4030,6 +4158,8 @@
           }
         }
       ],
+      "title": "",
+      "transparent": true,
       "type": "stat"
     },
     {
@@ -4071,8 +4201,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4099,7 +4228,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4108,7 +4237,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4157,6 +4286,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4198,8 +4328,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4226,7 +4355,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4235,7 +4364,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4285,6 +4414,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4297,53 +4427,44 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "GGNET R2",
           "mappings": [
             {
               "options": {
-                "1": {
-                  "index": 0,
-                  "text": "🔴  "
-                },
-                "2": {
-                  "index": 1,
-                  "text": "🔴  "
-                },
-                "3": {
-                  "index": 2,
-                  "text": "🔴  "
-                },
-                "4": {
-                  "index": 3,
-                  "text": "🔴  "
-                },
-                "5": {
-                  "index": 4,
-                  "text": "🔴  "
-                },
                 "6": {
-                  "index": 5,
-                  "text": "🟢"
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "GGNET R2 - ONLINE"
                 }
               },
               "type": "value"
+            },
+            {
+              "options": {
+                "from": 1,
+                "result": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "GGNET R2 - OFFLINE"
+                },
+                "to": 5
+              },
+              "type": "range"
             }
           ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
+                "color": "#c4162a00",
                 "value": 0
               },
               {
-                "color": "dark-green",
+                "color": "#37872d00",
                 "value": 1
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4351,7 +4472,7 @@
         "x": 12,
         "y": 18
       },
-      "id": 117,
+      "id": 142,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -4367,19 +4488,19 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Status"
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4390,7 +4511,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "ALT | GRUPO BRASIL TECPAR/186.211.109.254 - Status do peer"
+            "filter": "/.*\\/186.211.109.254 - Status do peer/"
           },
           "itemTag": {
             "filter": ""
@@ -4429,127 +4550,7 @@
           }
         }
       ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "fixedColor": "transparent",
-            "mode": "thresholds"
-          },
-          "displayName": "HUAWEI CORES",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-blue",
-                "value": 0
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 10,
-        "x": 14,
-        "y": 20
-      },
-      "id": 75,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "name",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": "Status"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Energia"
-          },
-          "host": {
-            "filter": "ROUTER ENERGIA BMP CPD TR TELECOM"
-          },
-          "item": {
-            "filter": "ICMP ping"
-          },
-          "itemTag": {
-            "filter": "Application: Status"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        }
-      ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -4588,8 +4589,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -4616,7 +4616,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -4625,7 +4625,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4675,6 +4675,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -4686,38 +4687,28 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "fixedColor": "transparent",
             "mode": "thresholds"
           },
-          "displayName": "CPU BNG NE8K",
-          "mappings": [],
+          "displayName": "HUAWEI CORES",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-green",
+                "color": "dark-blue",
                 "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
               }
             ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
+          }
+        }
       },
       "gridPos": {
-        "h": 3,
-        "w": 2,
+        "h": 2,
+        "w": 10,
         "x": 14,
-        "y": 22
+        "y": 21
       },
-      "id": 67,
+      "id": 75,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -4733,33 +4724,33 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Status"
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "/.*/"
+            "filter": "Energia"
           },
           "host": {
-            "filter": "CONCENTRADOR PPPOE NE8K"
+            "filter": "ROUTER ENERGIA BMP CPD TR TELECOM"
           },
           "item": {
-            "filter": "USO DE CPU"
+            "filter": "ICMP ping"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "Application: Status"
           },
           "macro": {
             "filter": ""
@@ -4795,482 +4786,18 @@
           }
         }
       ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "CPU A10",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "lastNotNull"
             ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 16,
-        "y": 22
-      },
-      "id": 79,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "CGNAT"
-          },
-          "host": {
-            "filter": "A10 THUNDER"
-          },
-          "item": {
-            "filter": "Utilização média da CPU"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         }
       ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "CISCO NE3K",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 18,
-        "y": 22
-      },
-      "id": 124,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "N3k Cisco CPD-02 Data Center"
-          },
-          "item": {
-            "filter": "CPU #1 Usage 1min"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "CPU 6730 OLT",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 20,
-        "y": 22
-      },
-      "id": 113,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "cpu"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "CPU 6730 BGP",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 22,
-        "y": 22
-      },
-      "id": 77,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
-          },
-          "item": {
-            "filter": "cpu"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
+      "transparent": true,
       "type": "stat"
     },
     {
@@ -5295,7 +4822,6 @@
             "inspect": false
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -5329,7 +4855,8 @@
                 }
               },
               {
-                "id": "color"
+                "id": "color",
+                "value": null
               }
             ]
           }
@@ -5347,7 +4874,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -5356,7 +4883,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5382,7 +4909,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -5431,7 +4957,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5457,7 +4983,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -5506,7 +5031,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5532,7 +5057,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -5582,7 +5106,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5608,7 +5132,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-01 MPLS CDP TR CCR1072"
           },
@@ -5657,7 +5180,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5683,7 +5206,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -5732,7 +5254,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5758,7 +5280,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -5807,7 +5328,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5833,7 +5354,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -5882,7 +5402,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5908,7 +5428,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -5957,7 +5476,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5983,7 +5502,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -6032,7 +5550,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6058,7 +5576,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -6107,7 +5624,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6133,7 +5650,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -6182,7 +5698,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6208,7 +5724,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -6257,7 +5772,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6283,7 +5798,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -6333,7 +5847,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6359,7 +5873,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -6402,6 +5915,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -6453,7 +5967,6 @@
             "inspect": false
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -6487,7 +6000,8 @@
                 }
               },
               {
-                "id": "color"
+                "id": "color",
+                "value": null
               }
             ]
           }
@@ -6505,7 +6019,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -6514,7 +6028,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6540,7 +6054,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -6589,7 +6102,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6615,7 +6128,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -6664,7 +6176,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6690,7 +6202,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
@@ -6740,7 +6251,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6766,7 +6277,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-01 MPLS CDP TR CCR1072"
           },
@@ -6815,7 +6325,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6841,7 +6351,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-03 MPLS POP LEVY CCR2004"
           },
@@ -6890,7 +6399,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6916,7 +6425,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -6965,7 +6473,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -6991,7 +6499,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -7040,7 +6547,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7066,7 +6573,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -7115,7 +6621,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7141,7 +6647,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
           },
@@ -7190,7 +6695,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7216,7 +6721,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
@@ -7265,7 +6769,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7291,7 +6795,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -7340,7 +6843,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7366,7 +6869,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -7415,7 +6917,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7441,7 +6943,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
@@ -7491,7 +6992,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -7517,7 +7018,6 @@
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -7560,6 +7060,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -7600,8 +7101,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "CPU BGP NE40",
-          "mappings": [],
+          "displayName": "CPU BNG NE8K",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -7615,21 +7115,20 @@
               },
               {
                 "color": "dark-red",
-                "value": 50
+                "value": 45
               }
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
-        "w": 5,
+        "w": 2,
         "x": 14,
-        "y": 25
+        "y": 23
       },
-      "id": 98,
+      "id": 67,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -7648,7 +7147,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -7657,18 +7156,18 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "BGP"
+            "filter": "/.*/"
           },
           "host": {
-            "filter": "ROUTER-BGP"
+            "filter": "CONCENTRADOR PPPOE NE8K"
           },
           "item": {
-            "filter": "cpu"
+            "filter": "USO DE CPU"
           },
           "itemTag": {
             "filter": ""
@@ -7707,6 +7206,479 @@
           }
         }
       ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU A10",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 16,
+        "y": 23
+      },
+      "id": 79,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "CGNAT"
+          },
+          "host": {
+            "filter": "A10 THUNDER"
+          },
+          "item": {
+            "filter": "Utilização média da CPU"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CISCO NE3K",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 18,
+        "y": 23
+      },
+      "id": 124,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "N3k Cisco CPD-02 Data Center"
+          },
+          "item": {
+            "filter": "CPU #1 Usage 1min"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU 6730 OLT",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 20,
+        "y": 23
+      },
+      "id": 113,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "MPU Board 0: CPU utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU 6730 BGP",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 22,
+        "y": 23
+      },
+      "id": 77,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 CORE LINK BGP"
+          },
+          "item": {
+            "filter": "MPU Board 0: CPU utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -7720,7 +7692,124 @@
             "mode": "thresholds"
           },
           "displayName": "CPU BGP NE40",
-          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 5,
+        "x": 14,
+        "y": 26
+      },
+      "id": 98,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "BGP"
+          },
+          "host": {
+            "filter": "ROUTER-BGP"
+          },
+          "item": {
+            "filter": "CPU utilization"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU BGP NE40",
           "noValue": "ADICIONAR CPU 2404",
           "thresholds": {
             "mode": "absolute",
@@ -7740,14 +7829,13 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
         "w": 5,
         "x": 19,
-        "y": 25
+        "y": 26
       },
       "id": 129,
       "options": {
@@ -7768,7 +7856,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -7777,7 +7865,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -7827,363 +7915,7 @@
           }
         }
       ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "MPLS CPD CHIADOR",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 14,
-        "y": 28
-      },
-      "id": 105,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
-          },
-          "item": {
-            "filter": "CPU Load"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "ALBERTO TORRES",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 4,
-        "x": 17,
-        "y": 28
-      },
-      "id": 110,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
-          },
-          "item": {
-            "filter": "CPU Load"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "displayName": "CPU MPLS  S. PEREIRA",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "semi-dark-yellow",
-                "value": 40
-              },
-              {
-                "color": "dark-red",
-                "value": 45
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 21,
-        "y": 28
-      },
-      "id": 84,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
-          },
-          "item": {
-            "filter": "CPU Load"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -8198,7 +7930,6 @@
             "mode": "thresholds"
           },
           "displayName": "CPU CORES MK MPLS",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8208,14 +7939,13 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
         "w": 10,
         "x": 14,
-        "y": 31
+        "y": 29
       },
       "id": 128,
       "options": {
@@ -8236,7 +7966,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -8245,7 +7975,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8295,6 +8025,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -8318,8 +8049,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "CPU MPLS SANTANA",
-          "mappings": [],
+          "displayName": "MPLS CPD CHIADOR",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8338,16 +8068,15 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
         "w": 2,
         "x": 14,
-        "y": 33
+        "y": 31
       },
-      "id": 82,
+      "id": 105,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -8366,7 +8095,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -8375,7 +8104,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8383,7 +8112,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
           },
           "item": {
             "filter": "CPU Load"
@@ -8425,6 +8154,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -8438,7 +8168,6 @@
             "mode": "thresholds"
           },
           "displayName": "MPLS CPD VILA ISABEL",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8457,14 +8186,13 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
         "w": 2,
         "x": 16,
-        "y": 33
+        "y": 31
       },
       "id": 107,
       "options": {
@@ -8485,7 +8213,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -8494,7 +8222,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8544,6 +8272,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -8556,8 +8285,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "CPU MPLS  LEVY",
-          "mappings": [],
+          "displayName": "ALBERTO TORRES",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8576,16 +8304,15 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
         "w": 2,
         "x": 18,
-        "y": 33
+        "y": 31
       },
-      "id": 80,
+      "id": 110,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -8604,7 +8331,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -8613,7 +8340,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8621,7 +8348,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
           },
           "item": {
             "filter": "CPU Load"
@@ -8663,12 +8390,13 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
       "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
+        "type": "mixed",
+        "uid": "-- Mixed --"
       },
       "fieldConfig": {
         "defaults": {
@@ -8676,7 +8404,6 @@
             "mode": "thresholds"
           },
           "displayName": "CPU MPLS BMP",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8695,14 +8422,13 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
         "w": 2,
         "x": 20,
-        "y": 33
+        "y": 31
       },
       "id": 83,
       "options": {
@@ -8723,7 +8449,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -8732,7 +8458,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8789,7 +8515,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8846,7 +8572,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8903,7 +8629,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -8955,16 +8681,15 @@
         },
         {
           "datasource": {
-            "name": "Expression",
             "type": "__expr__",
             "uid": "__expr__"
           },
           "expression": "($A + $B + $C + $D) / 4",
-          "hide": false,
           "refId": "E",
           "type": "math"
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -8977,8 +8702,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "CPU MPLS  CPD TR",
-          "mappings": [],
+          "displayName": "CPU MPLS  S. PEREIRA",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -8997,14 +8721,485 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
         "w": 2,
         "x": 22,
-        "y": 33
+        "y": 31
+      },
+      "id": 84,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU MPLS SANTANA",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 14,
+        "y": 34
+      },
+      "id": 82,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "MPLS CPD PARAIBUNA",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 16,
+        "y": 34
+      },
+      "id": 143,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU MPLS  LEVY",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 18,
+        "y": 34
+      },
+      "id": 80,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-03 MPLS POP LEVY CCR2004"
+          },
+          "item": {
+            "filter": "CPU Load"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "CPU MPLS  CPD TR",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "percent"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 20,
+        "y": 34
       },
       "id": 116,
       "options": {
@@ -9025,7 +9220,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -9034,7 +9229,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -9084,6 +9279,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -9094,43 +9290,36 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "fixedColor": "dark-blue",
-            "mode": "fixed"
+            "mode": "thresholds"
           },
-          "mappings": [
-            {
-              "options": {
-                "0": {
-                  "index": 1,
-                  "text": "ROTAS RECEBIDAS OPERADORAS"
-                },
-                "1": {
-                  "index": 0,
-                  "text": "ROTAS RECEBIDAS OPERADORAS"
-                }
-              },
-              "type": "value"
-            }
-          ],
+          "displayName": "CPU CPD TR-02",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "rgba(51, 183, 33, 1)",
+                "color": "dark-green",
                 "value": 0
+              },
+              {
+                "color": "semi-dark-yellow",
+                "value": 40
+              },
+              {
+                "color": "dark-red",
+                "value": 45
               }
             ]
-          }
-        },
-        "overrides": []
+          },
+          "unit": "percent"
+        }
       },
       "gridPos": {
-        "h": 2,
-        "w": 10,
-        "x": 14,
-        "y": 36
+        "h": 3,
+        "w": 2,
+        "x": 22,
+        "y": 34
       },
-      "id": 87,
+      "id": 144,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -9146,30 +9335,30 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "value",
+        "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
-            "filter": "Status"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "ENERGIA"
+            "filter": "SWITCH"
           },
           "host": {
-            "filter": "ENERGIA POP BMP"
+            "filter": "MPLS CDP-02 TR CCR2216"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "CPU Load"
           },
           "itemTag": {
             "filter": ""
@@ -9208,7 +9397,7 @@
           }
         }
       ],
-      "transparent": true,
+      "title": "",
       "type": "stat"
     },
     {
@@ -9233,7 +9422,6 @@
             "inspect": false
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -9303,7 +9491,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -9312,7 +9500,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -9338,7 +9526,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -9386,7 +9573,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -9411,7 +9598,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -9453,7 +9639,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -9479,7 +9665,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -9523,6 +9708,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -9550,6 +9736,131 @@
       ],
       "transparent": true,
       "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "dark-blue",
+            "mode": "fixed"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "index": 1,
+                  "text": "ROTAS RECEBIDAS OPERADORAS"
+                },
+                "1": {
+                  "index": 0,
+                  "text": "ROTAS RECEBIDAS OPERADORAS"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(51, 183, 33, 1)",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 10,
+        "x": 14,
+        "y": 37
+      },
+      "id": 87,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Status"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "ENERGIA"
+          },
+          "host": {
+            "filter": "ENERGIA POP BMP"
+          },
+          "item": {
+            "filter": "ICMP ping"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
     },
     {
       "datasource": {
@@ -9595,7 +9906,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -9610,18 +9920,21 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 12,
         "w": 10,
         "x": 14,
-        "y": 38
+        "y": 39
       },
       "id": 89,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
@@ -9634,7 +9947,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.0.2",
       "targets": [
         {
           "application": {
@@ -9643,7 +9956,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -9724,7 +10037,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -9757,7 +10070,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -9798,7 +10110,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -9831,7 +10143,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -9872,7 +10183,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -9905,7 +10216,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -9946,7 +10256,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -9979,7 +10289,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -10021,7 +10330,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -10055,7 +10364,6 @@
           "group": {
             "filter": "BGP"
           },
-          "hide": false,
           "host": {
             "filter": "ROUTER-BGP"
           },
@@ -10099,26 +10407,36 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     }
   ],
   "preload": false,
-  "refresh": "5s",
+  "refresh": "30s",
   "schemaVersion": 42,
   "tags": [
     "outros",
     "ZABBIX SERVER DASH"
   ],
-  "templating": {
-    "list": []
-  },
   "time": {
-    "from": "now-3h",
+    "from": "now-1h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "Monitoramento TV - N1-2",
-  "uid": "GhVEAqm7k5",
-  "weekStart": ""
+  "uid": "GhVEAqm7k5"
 }
