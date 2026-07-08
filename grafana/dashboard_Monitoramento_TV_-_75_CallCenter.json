@@ -146,7 +146,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "POP BMP",
+          "displayName": "POP TR 02",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2794,6 +2794,308 @@
         "x": 0,
         "y": 14
       },
+      "id": 169,
+      "options": {
+        "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS CDP-02 TR CCR2216"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS CDP-02 TR CCR2216"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS CDP-02 TR CCR2216"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface sfp28-2(Link  OLTs)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS CDP-02 TR CCR2216"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface sfp28-2(Link  OLTs)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "CIRCUITO CPD TR / MPLS POP-TR-02",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 12,
+        "y": 14
+      },
       "id": 78,
       "options": {
         "alertThreshold": true,
@@ -3324,8 +3626,8 @@
       "gridPos": {
         "h": 5,
         "w": 12,
-        "x": 12,
-        "y": 14
+        "x": 0,
+        "y": 19
       },
       "id": 80,
       "options": {
@@ -3692,6 +3994,264 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "mode": "continuous-BlPu"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 20,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        }
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 12,
+        "y": 19
+      },
+      "id": 81,
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.0.2",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:664",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "SW-02 Mikrotik Torre Tres Rios:",
+                " "
+              ],
+              "text": "replaceAlias(SW-02 Mikrotik Torre Tres Rios:,  )"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:685",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "SW-02 Mikrotik Torre Tres Rios:",
+                " "
+              ],
+              "text": "replaceAlias(SW-02 Mikrotik Torre Tres Rios:,  )"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "CIRCUITO SIMÃO PEREIRA /ANEL COST 300 MPLS SANTANA",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
             "mode": "palette-classic"
           },
           "custom": {
@@ -3748,7 +4308,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 24
       },
       "id": 79,
       "options": {
@@ -4410,7 +4970,7 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "continuous-BlPu"
+            "mode": "palette-classic"
           },
           "custom": {
             "axisBorderShow": false,
@@ -4466,18 +5026,17 @@
         "h": 5,
         "w": 12,
         "x": 12,
-        "y": 19
+        "y": 24
       },
-      "id": 81,
+      "id": 111,
       "options": {
+        "alertThreshold": true,
         "annotations": {
           "clustering": -1,
           "multiLane": false
         },
         "legend": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": [],
           "displayMode": "list",
           "placement": "bottom",
           "showLegend": false
@@ -4492,7 +5051,7 @@
       "targets": [
         {
           "application": {
-            "filter": "Network interfaces"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
@@ -4502,7 +5061,7 @@
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:664",
+              "$$hashKey": "object:1117",
               "def": {
                 "category": "Alias",
                 "defaultParams": [
@@ -4522,10 +5081,174 @@
                 ]
               },
               "params": [
-                "SW-02 Mikrotik Torre Tres Rios:",
+                "SW-06 MPLS CPD SANTANA:",
                 " "
               ],
-              "text": "replaceAlias(SW-02 Mikrotik Torre Tres Rios:,  )"
+              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface MPLS  VLAN 550 Clientes OLT 5800x2(MPLS  VLAN 550 BNG M8k Tres Rios)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1138",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "SW-06 MPLS CPD SANTANA:",
+                " "
+              ],
+              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface MPLS  VLAN 550 Clientes OLT 5800x2(MPLS  VLAN 550 BNG M8k Tres Rios)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:1159",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "SW-06 MPLS CPD SANTANA:",
+                " "
+              ],
+              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
             }
           ],
           "group": {
@@ -4535,7 +5258,7 @@
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Entrada na Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira)"
+            "filter": "Trafego de Entrada na Interface VPLS VLAN 750 OLT Clientes(VPLS  VLAN 750 OLT Clientes)"
           },
           "itemTag": {
             "filter": ""
@@ -4574,7 +5297,7 @@
         },
         {
           "application": {
-            "filter": "Network interfaces"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
@@ -4584,7 +5307,7 @@
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:685",
+              "$$hashKey": "object:1180",
               "def": {
                 "category": "Alias",
                 "defaultParams": [
@@ -4604,10 +5327,10 @@
                 ]
               },
               "params": [
-                "SW-02 Mikrotik Torre Tres Rios:",
+                "SW-06 MPLS CPD SANTANA:",
                 " "
               ],
-              "text": "replaceAlias(SW-02 Mikrotik Torre Tres Rios:,  )"
+              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
             }
           ],
           "group": {
@@ -4617,7 +5340,7 @@
             "filter": "SW-06 MPLS POP SANTANA CCR2004"
           },
           "item": {
-            "filter": "Trafego de Saida na Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira)"
+            "filter": "Trafego de Saida na Interface VPLS VLAN 750 OLT Clientes(VPLS  VLAN 750 OLT Clientes)"
           },
           "itemTag": {
             "filter": ""
@@ -4638,7 +5361,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "A",
+          "refId": "D",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -4656,7 +5379,7 @@
           }
         }
       ],
-      "title": "CIRCUITO SIMÃO PEREIRA /ANEL COST 300 MPLS SANTANA",
+      "title": "CIRCUITO POP CHIADOR / MPLS SANTANA (OLT'S)",
       "transparent": true,
       "type": "timeseries"
     },
@@ -4724,7 +5447,7 @@
         "h": 5,
         "w": 12,
         "x": 0,
-        "y": 24
+        "y": 29
       },
       "id": 124,
       "options": {
@@ -5265,427 +5988,6 @@
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
-            "fillOpacity": 20,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineWidth": 2,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "never",
-            "showValues": false,
-            "spanNulls": true,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "off"
-            }
-          },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "bps"
-        }
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 12,
-        "x": 12,
-        "y": 24
-      },
-      "id": 111,
-      "options": {
-        "alertThreshold": true,
-        "annotations": {
-          "clustering": -1,
-          "multiLane": false
-        },
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "multi",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "13.0.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:1117",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-06 MPLS CPD SANTANA:",
-                " "
-              ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Entrada na Interface MPLS  VLAN 550 Clientes OLT 5800x2(MPLS  VLAN 550 BNG M8k Tres Rios)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:1138",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-06 MPLS CPD SANTANA:",
-                " "
-              ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Saida na Interface MPLS  VLAN 550 Clientes OLT 5800x2(MPLS  VLAN 550 BNG M8k Tres Rios)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:1159",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-06 MPLS CPD SANTANA:",
-                " "
-              ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Entrada na Interface VPLS VLAN 750 OLT Clientes(VPLS  VLAN 750 OLT Clientes)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:1180",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW-06 MPLS CPD SANTANA:",
-                " "
-              ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "Trafego de Saida na Interface VPLS VLAN 750 OLT Clientes(VPLS  VLAN 750 OLT Clientes)"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "D",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "title": "CIRCUITO POP CHIADOR / MPLS SANTANA (OLT'S)",
-      "transparent": true,
-      "type": "timeseries"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
             "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
@@ -5730,7 +6032,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 34
       },
       "id": 166,
       "options": {
