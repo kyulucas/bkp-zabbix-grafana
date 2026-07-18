@@ -83,6 +83,7 @@
       {
         "host": "DEDICADO - 20252156 - ERICA DA SILVA COSTA",
         "name": "DEDICADO - 20252156 - ERICA DA SILVA COSTA",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "ping.cgnat"
