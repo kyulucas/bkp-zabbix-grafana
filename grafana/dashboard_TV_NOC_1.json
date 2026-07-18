@@ -101,7 +101,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -226,7 +226,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -337,7 +337,7 @@
         "textMode": "name",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -477,7 +477,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -607,7 +607,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -737,7 +737,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -844,6 +844,7 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -863,7 +864,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1737,7 +1738,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1867,7 +1868,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1998,7 +1999,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2124,7 +2125,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2261,7 +2262,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2297,10 +2298,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2371,10 +2372,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/19: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2594,10 +2595,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus7(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3409,10 +3410,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/22: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3483,10 +3484,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "MPLS CDP-02 TR CCR2216"
+            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3633,7 +3634,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4975,7 +4976,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -5279,7 +5280,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -6263,7 +6264,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -6572,7 +6573,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -7707,7 +7708,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -7952,7 +7953,7 @@
           }
         ]
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8305,7 +8306,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Levy Gasparian\n</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -8328,7 +8329,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Vila Isabel</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -8384,7 +8385,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8497,7 +8498,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8610,7 +8611,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8739,7 +8740,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8869,7 +8870,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -8998,7 +8999,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9111,7 +9112,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9224,7 +9225,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9337,7 +9338,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9466,7 +9467,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9596,7 +9597,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9725,7 +9726,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9844,7 +9845,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -9957,7 +9958,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10078,7 +10079,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10193,7 +10194,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10306,7 +10307,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10427,7 +10428,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10560,6 +10561,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -10569,7 +10572,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10705,6 +10708,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -10714,7 +10719,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10852,6 +10857,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -10861,7 +10868,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -10997,6 +11004,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11006,7 +11015,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -11144,6 +11153,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11153,7 +11164,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -11289,6 +11300,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11298,7 +11311,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -11435,6 +11448,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11444,7 +11459,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -11580,6 +11595,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11589,7 +11606,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -11726,6 +11743,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11735,7 +11754,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -11871,6 +11890,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -11880,7 +11901,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -12022,7 +12043,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "datasource": {
