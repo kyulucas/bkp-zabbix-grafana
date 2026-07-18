@@ -83,6 +83,7 @@
       {
         "host": "MPLS CDP-02 TR CCR2216",
         "name": "MPLS CDP-02 TR CCR2216",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "Template Net Mikrotik SNMPv2"
