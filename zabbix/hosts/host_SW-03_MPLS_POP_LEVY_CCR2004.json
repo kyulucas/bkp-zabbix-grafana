@@ -83,6 +83,7 @@
       {
         "host": "SW-03 MPLS POP LEVY CCR2004",
         "name": "SW-03 MPLS POP LEVY CCR2004",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "Template Net Mikrotik SNMPv2"
