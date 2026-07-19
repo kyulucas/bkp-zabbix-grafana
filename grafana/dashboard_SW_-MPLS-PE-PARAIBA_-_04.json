@@ -143,7 +143,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "ICMP ping"
@@ -279,7 +279,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "#0: Fan status"
@@ -465,7 +465,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "MPU Board 0: CPU utilization"
@@ -583,7 +583,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "MPU Board 0: Temperature"
@@ -693,7 +693,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "Uptime (hardware)"
@@ -808,7 +808,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "MPU Board 0: Memory utilization"
@@ -946,17 +946,17 @@
                 ]
               },
               "params": [
-                "SW -MPLS-PE-PARAIBA - 04",
+                "SW -MPLS-PE-LEVY-02",
                 " "
               ],
-              "text": "replaceAlias(SW -MPLS-PE-PARAIBA - 04,  )"
+              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "/.*RxPower$/"
@@ -1091,7 +1091,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "/.*RxPower$/"
@@ -1224,7 +1224,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "/.*TxPower$/"
@@ -1429,17 +1429,17 @@
                 ]
               },
               "params": [
-                "SW -MPLS-PE-PARAIBA - 04",
+                "SW -MPLS-PE-LEVY-02",
                 " "
               ],
-              "text": "replaceAlias(SW -MPLS-PE-PARAIBA - 04,  )"
+              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "Trafego de Entrada na Interface $iface1"
@@ -1512,17 +1512,17 @@
                 ]
               },
               "params": [
-                "SW -MPLS-PE-PARAIBA - 04",
+                "SW -MPLS-PE-LEVY-02",
                 " "
               ],
-              "text": "replaceAlias(SW -MPLS-PE-PARAIBA - 04,  )"
+              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "Trafego de Saida na Interface $iface1"
@@ -1684,7 +1684,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-PARAIBA - 04"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
             "filter": "$iface2"
@@ -1736,7 +1736,7 @@
   "schemaVersion": 42,
   "tags": [
     "switchs",
-    "POP PARAIBA DO SUL"
+    "POP LEVY"
   ],
   "templating": {
     "list": [
@@ -1760,7 +1760,7 @@
         "query": {
           "application": "Network interfaces",
           "group": "SWITCH",
-          "host": "SW -MPLS-PE-PARAIBA - 04",
+          "host": "SW -MPLS-PE-LEVY-02",
           "item": "/.*/",
           "itemTag": "",
           "queryType": "item"
@@ -1792,7 +1792,7 @@
         "query": {
           "application": "RX-POWER",
           "group": "SWITCH",
-          "host": "SW -MPLS-PE-PARAIBA - 04",
+          "host": "SW -MPLS-PE-LEVY-02",
           "item": "/.*RxPower$/",
           "itemTag": "",
           "queryType": "item",
@@ -1827,5 +1827,5 @@
   },
   "timezone": "browser",
   "title": "SW -MPLS-PE-PARAIBA - 04",
-  "uid": "adtkfz5"
+  "uid": "adpt5sn"
 }
