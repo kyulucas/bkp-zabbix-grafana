@@ -3336,13 +3336,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
           },
           "itemTag": {
-            "filter": "Application: RX-POWER"
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
           },
           "macro": {
             "filter": ""
@@ -3413,7 +3413,7 @@
             "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/22: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3487,7 +3487,7 @@
             "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3670,10 +3670,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3744,10 +3744,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/19: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3967,10 +3967,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus7(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4708,13 +4708,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: TxPower"
           },
           "itemTag": {
-            "filter": "Application: TX-POWER"
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
           },
           "macro": {
             "filter": ""
@@ -4782,10 +4782,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4856,10 +4856,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "MPLS CDP-02 TR CCR2216"
+            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -5144,70 +5144,23 @@
                 "value": [
                   {
                     "options": {
-                      "1": {
+                      "3": {
                         "color": "dark-green",
                         "index": 0,
                         "text": "🟢"
                       },
-                      "2": {
+                      "5": {
+                        "color": "dark-red",
+                        "index": 2,
+                        "text": "🔴"
+                      },
+                      "6": {
                         "color": "dark-green",
                         "index": 1,
                         "text": "🟢"
                       }
                     },
                     "type": "value"
-                  },
-                  {
-                    "options": {
-                      "from": 3,
-                      "result": {
-                        "color": "dark-red",
-                        "index": 2,
-                        "text": "🔴"
-                      },
-                      "to": 10
-                    },
-                    "type": "range"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "CPD TR R.2"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "1": {
-                        "color": "dark-green",
-                        "index": 0,
-                        "text": "🟢"
-                      },
-                      "2": {
-                        "color": "dark-green",
-                        "index": 1,
-                        "text": "🟢"
-                      }
-                    },
-                    "type": "value"
-                  },
-                  {
-                    "options": {
-                      "from": 3,
-                      "result": {
-                        "color": "dark-red",
-                        "index": 2,
-                        "text": "🔴"
-                      },
-                      "to": 10
-                    },
-                    "type": "range"
                   }
                 ]
               }
@@ -5224,30 +5177,57 @@
                 "value": [
                   {
                     "options": {
-                      "1": {
-                        "color": "dark-green",
-                        "index": 0,
-                        "text": "🟢"
-                      },
-                      "2": {
+                      "3": {
                         "color": "dark-green",
                         "index": 1,
+                        "text": "🟢"
+                      },
+                      "5": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "🔴"
+                      },
+                      "6": {
+                        "color": "dark-green",
+                        "index": 2,
                         "text": "🟢"
                       }
                     },
                     "type": "value"
-                  },
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Paraibuna",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
                   {
                     "options": {
-                      "from": 3,
-                      "result": {
+                      "3": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "🟢"
+                      },
+                      "5": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "🟢"
+                      },
+                      "6": {
                         "color": "dark-red",
                         "index": 2,
                         "text": "🔴"
-                      },
-                      "to": 10
+                      }
                     },
-                    "type": "range"
+                    "type": "value"
                   }
                 ]
               }
@@ -5319,7 +5299,7 @@
             "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "Baterias - Status de Carga"
+            "filter": "Bateria Li - Status Operacional"
           },
           "itemTag": {
             "filter": ""
@@ -5591,7 +5571,7 @@
                 ]
               },
               "params": [
-                "CPD TR"
+                "CPD TR R.1"
               ],
               "text": "setAlias()"
             }
@@ -5600,13 +5580,13 @@
             "filter": "ENERGIA"
           },
           "host": {
-            "filter": "Adicionar rack TR"
+            "filter": "ENERGIA POP CPD TR RACK 1 HW"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "Bateria Li - Status Operacional"
           },
           "itemTag": {
-            "filter": "Application: Status"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -5624,77 +5604,6 @@
           },
           "queryType": "0",
           "refId": "F",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "Altarede"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "Linux servers"
-          },
-          "host": {
-            "filter": "Altarede Sistemas"
-          },
-          "item": {
-            "filter": "ICMP ping"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "G",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5765,7 +5674,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "H",
+          "refId": "G",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6017,148 +5926,6 @@
                 ]
               },
               "params": [
-                "CPD TR R.1"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP CPD TR RACK 1 HW"
-          },
-          "item": {
-            "filter": "Baterias - Status de Carga"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "K",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CPD TR R.2"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP CPD TR RACK 2 HW"
-          },
-          "item": {
-            "filter": "Baterias - Status de Carga"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "L",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
                 "Paraibuna"
               ],
               "text": "setAlias()"
@@ -6168,10 +5935,10 @@
             "filter": "ENERGIA"
           },
           "host": {
-            "filter": "ENERGIA POP PARAIBUNA"
+            "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "Bateria Li - Status Operacional"
           },
           "itemTag": {
             "filter": ""
