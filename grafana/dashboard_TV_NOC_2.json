@@ -715,7 +715,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -834,7 +834,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -953,7 +953,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1062,7 +1062,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1171,7 +1171,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1290,7 +1290,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1409,7 +1409,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1528,7 +1528,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1647,7 +1647,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1766,7 +1766,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1885,7 +1885,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2004,7 +2004,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2133,7 +2133,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2350,7 +2350,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -3705,7 +3705,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -3830,7 +3830,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -3955,7 +3955,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4084,7 +4084,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4212,7 +4212,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4348,7 +4348,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4477,7 +4477,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4605,7 +4605,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4741,7 +4741,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -4870,7 +4870,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -5006,7 +5006,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -5178,70 +5178,23 @@
                 "value": [
                   {
                     "options": {
-                      "1": {
+                      "3": {
                         "color": "dark-green",
                         "index": 0,
                         "text": "🟢"
                       },
-                      "2": {
+                      "5": {
+                        "color": "dark-red",
+                        "index": 2,
+                        "text": "🔴"
+                      },
+                      "6": {
                         "color": "dark-green",
                         "index": 1,
                         "text": "🟢"
                       }
                     },
                     "type": "value"
-                  },
-                  {
-                    "options": {
-                      "from": 3,
-                      "result": {
-                        "color": "dark-red",
-                        "index": 2,
-                        "text": "🔴"
-                      },
-                      "to": 10
-                    },
-                    "type": "range"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "CPD TR R.2"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "1": {
-                        "color": "dark-green",
-                        "index": 0,
-                        "text": "🟢"
-                      },
-                      "2": {
-                        "color": "dark-green",
-                        "index": 1,
-                        "text": "🟢"
-                      }
-                    },
-                    "type": "value"
-                  },
-                  {
-                    "options": {
-                      "from": 3,
-                      "result": {
-                        "color": "dark-red",
-                        "index": 2,
-                        "text": "🔴"
-                      },
-                      "to": 10
-                    },
-                    "type": "range"
                   }
                 ]
               }
@@ -5258,30 +5211,57 @@
                 "value": [
                   {
                     "options": {
-                      "1": {
-                        "color": "dark-green",
-                        "index": 0,
-                        "text": "🟢"
-                      },
-                      "2": {
+                      "3": {
                         "color": "dark-green",
                         "index": 1,
+                        "text": "🟢"
+                      },
+                      "5": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "🔴"
+                      },
+                      "6": {
+                        "color": "dark-green",
+                        "index": 2,
                         "text": "🟢"
                       }
                     },
                     "type": "value"
-                  },
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Paraibuna",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
                   {
                     "options": {
-                      "from": 3,
-                      "result": {
+                      "3": {
+                        "color": "dark-green",
+                        "index": 0,
+                        "text": "🟢"
+                      },
+                      "5": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "🟢"
+                      },
+                      "6": {
                         "color": "dark-red",
                         "index": 2,
                         "text": "🔴"
-                      },
-                      "to": 10
+                      }
                     },
-                    "type": "range"
+                    "type": "value"
                   }
                 ]
               }
@@ -5295,7 +5275,7 @@
         "x": 0,
         "y": 31
       },
-      "id": 149,
+      "id": 156,
       "options": {
         "colorMode": "none",
         "graphMode": "none",
@@ -5314,7 +5294,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -5353,7 +5333,7 @@
             "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "Baterias - Status de Carga"
+            "filter": "Bateria Li - Status Operacional"
           },
           "itemTag": {
             "filter": ""
@@ -5625,7 +5605,7 @@
                 ]
               },
               "params": [
-                "CPD TR"
+                "CPD TR R.1"
               ],
               "text": "setAlias()"
             }
@@ -5634,13 +5614,13 @@
             "filter": "ENERGIA"
           },
           "host": {
-            "filter": "Adicionar rack TR"
+            "filter": "ENERGIA POP CPD TR RACK 1 HW"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "Bateria Li - Status Operacional"
           },
           "itemTag": {
-            "filter": "Application: Status"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -5658,77 +5638,6 @@
           },
           "queryType": "0",
           "refId": "F",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "Altarede"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "Linux servers"
-          },
-          "host": {
-            "filter": "Altarede Sistemas"
-          },
-          "item": {
-            "filter": "ICMP ping"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "G",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5799,7 +5708,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "H",
+          "refId": "G",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6051,148 +5960,6 @@
                 ]
               },
               "params": [
-                "CPD TR R.1"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP CPD TR RACK 1 HW"
-          },
-          "item": {
-            "filter": "Baterias - Status de Carga"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "K",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CPD TR R.2"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP CPD TR RACK 2 HW"
-          },
-          "item": {
-            "filter": "Baterias - Status de Carga"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "L",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
                 "Paraibuna"
               ],
               "text": "setAlias()"
@@ -6202,10 +5969,10 @@
             "filter": "ENERGIA"
           },
           "host": {
-            "filter": "ENERGIA POP PARAIBUNA"
+            "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "Bateria Li - Status Operacional"
           },
           "itemTag": {
             "filter": ""
