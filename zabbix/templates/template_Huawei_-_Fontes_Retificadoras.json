@@ -84,7 +84,7 @@
         "uuid": "eb2a756206ec4a16a985080f20ccddcf",
         "template": "Huawei - Fontes Retificadoras",
         "name": "Huawei - Fontes Retificadoras",
-        "description": "Template para monitoramento de fontes retificadoras Huawei via SNMP.\n\nEste template monitora parâmetros operacionais e de configuração de fontes retificadoras Huawei, incluindo:\n- Status e parâmetros do grupo de retificadores\n- Status e parâmetros individuais de cada retificador\n- Status e parâmetros das baterias\n- Detecção de falta de energia e modo de operação\n\nOIDs baseados em EMAP-MIB (HUAWEI-MIB).\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
+        "description": "Template para monitoramento de fontes retificadoras Huawei via SNMP.\n\nEste template monitora parâmetros operacionais e de configuração de fontes retificadoras Huawei, incluindo:\n- Status e parâmetros do grupo de retificadores\n- Status e parâmetros individuais de cada retificador\n- Status e parâmetros das baterias\n- Status e parâmetros das baterias de lítio / AcbGroup\n- Detecção de falta de energia e modo de operação\n\nOIDs baseados em EMAP-MIB (HUAWEI-MIB).\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
         "groups": [
           {
             "name": "Huawei - Fontes Retificadoras"
@@ -131,6 +131,191 @@
             "trends": "90d",
             "units": "A",
             "description": "Corrente total do grupo de baterias. Indica estatísticas em tempo real do grupo. Valor com precisão de uma casa decimal (0.1A). Valores negativos indicam descarga (modo bateria), valores positivos indicam carga (energia elétrica).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "b2276fd432f64cdca795d10c0fdccf9a",
+            "name": "Bateria Li - Tempo de Backup",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.11.96",
+            "key": "liBattBackupTime",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "h",
+            "description": "Tempo de backup estimado da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1h).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "ebe4f8bf5dd64033aa109bbe83984fbf",
+            "name": "Bateria Li - Tensão Equalização",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.2.1.11.96",
+            "key": "liBattBoostVoltage",
+            "delay": "5m",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "30d",
+            "units": "V",
+            "description": "Tensão de equalização/boost configurada da bateria de lítio. Valor com precisão de uma casa decimal (0.1V).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "c235f2a5d43641f4b2aee27bff863b11",
+            "name": "Bateria Li - Corrente",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.6.96",
+            "key": "liBattCurrent",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "A",
+            "description": "Corrente da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1A). Valores negativos indicam descarga (modo bateria), valores positivos indicam carga.",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "297d383abffd4c2aae9077ed126621b1",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattCurrent)<0",
+                "name": "OPERANDO VIA BATERIA (Lítio)",
+                "priority": "HIGH"
+              }
+            ]
+          },
+          {
+            "uuid": "c9cf1fcd8c674c4cbd6d359968b635da",
+            "name": "Bateria Li - Tensão Flutuação",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.2.1.12.96",
+            "key": "liBattFloatVoltage",
+            "delay": "5m",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "30d",
+            "units": "V",
+            "description": "Tensão de flutuação configurada da bateria de lítio. Valor com precisão de uma casa decimal (0.1V).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "bc8e90644e6f448996ed21c383b4cab4",
+            "name": "Bateria Li - Nome do Grupo",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.3.96",
+            "key": "liBattGroupName",
+            "delay": "1h",
+            "history": "30d",
+            "value_type": "TEXT",
+            "trends": "0",
+            "description": "Nome do grupo de bateria de lítio / AcbGroup."
+          },
+          {
+            "uuid": "a76c8c2fccbb4a9d82fdc9d0ab2152f0",
+            "name": "Bateria Li - ID",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.1.96",
+            "key": "liBattId",
+            "delay": "1h",
+            "history": "30d",
+            "trends": "0",
+            "description": "ID do grupo de bateria de lítio / AcbGroup."
+          },
+          {
+            "uuid": "6c8e5c807ce1426792d4846c5884502d",
+            "name": "Bateria Li - Status Operacional",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.4.96",
+            "key": "liBattOperStatus",
+            "history": "7d",
+            "trends": "0",
+            "description": "Estado operacional da bateria de lítio / AcbGroup."
+          },
+          {
+            "uuid": "558b4d6dbdce44f993f252734ce6e09e",
+            "name": "Bateria Li - SOC",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.8.96",
+            "key": "liBattSoc",
+            "history": "7d",
+            "trends": "90d",
+            "units": "%",
+            "description": "Estado de carga (SOC) da bateria de lítio / AcbGroup. Faixa típica: 0 a 100%."
+          },
+          {
+            "uuid": "b1213627048943ec9ef4ad8957c38459",
+            "name": "Bateria Li - SoH",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.13.96",
+            "key": "liBattSoh",
+            "history": "7d",
+            "trends": "90d",
+            "units": "%",
+            "description": "Indicador de saúde/capacidade restante (SoH) da bateria de lítio / AcbGroup."
+          },
+          {
+            "uuid": "c388c3aec0694d4a844edfb2b5cc7463",
+            "name": "Bateria Li - Temperatura",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.9.96",
+            "key": "liBattTemperature",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "°C",
+            "description": "Temperatura da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1°C).",
+            "preprocessing": [
+              {
+                "type": "MULTIPLIER",
+                "parameters": [
+                  "0.1"
+                ]
+              }
+            ]
+          },
+          {
+            "uuid": "90807570085d4f9a803f3a60ffccb9a3",
+            "name": "Bateria Li - Tensão",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.5.96",
+            "key": "liBattVoltage",
+            "history": "7d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "V",
+            "description": "Tensão da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1V).",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
