@@ -1776,8 +1776,8 @@
       {
         "allowCustomValue": true,
         "current": {
-          "text": "Optical Module Interface XGigabitEthernet0/0/15: RxPower",
-          "value": "Optical Module Interface XGigabitEthernet0/0/15: RxPower"
+          "text": "Optical Module Interface XGigabitEthernet0/0/1: RxPower",
+          "value": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
