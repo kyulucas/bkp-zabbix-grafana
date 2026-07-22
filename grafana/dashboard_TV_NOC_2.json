@@ -2321,7 +2321,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "RX POWER"
+              "options": "RX Power"
             },
             "properties": [
               {
@@ -2339,12 +2339,12 @@
         ]
       },
       "gridPos": {
-        "h": 17,
+        "h": 19,
         "w": 12,
         "x": 0,
         "y": 14
       },
-      "id": 150,
+      "id": 157,
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
@@ -2386,10 +2386,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2460,10 +2460,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/19: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2609,10 +2609,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-01 MPLS CDP TR CCR1072"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/11: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2683,10 +2683,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus7(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2831,10 +2831,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-02): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/13: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2905,10 +2905,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3053,10 +3053,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3424,13 +3424,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
           },
           "macro": {
             "filter": ""
@@ -3489,7 +3489,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X PARAIBUNA F 2"
+                "CIRCUITO / LEVY X PARAIBUNA  F 2"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -3498,10 +3498,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3521,7 +3521,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "C",
+          "refId": "DDD",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -3563,7 +3563,7 @@
                 ]
               },
               "params": [
-                "TRÊS RIOS 01 / TRÊS RIOS 02"
+                "TRÊS RIOS 01 - TRÊS RIOS 02"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -3572,10 +3572,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "MPLS CDP-02 TR CCR2216"
+            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3619,7 +3619,7 @@
           "id": "reduce",
           "options": {
             "reducers": [
-              "lastNotNull"
+              "last"
             ]
           }
         },
@@ -3631,9 +3631,14 @@
               "Last (not null)": true,
               "Last *": false
             },
-            "indexByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Field": 0,
+              "Last": 1
+            },
             "renameByName": {
               "Field": "INTERFACE",
+              "Last": "RX Power",
               "Last (not null)": "RX - POWER",
               "Last *": "RX POWER"
             }
@@ -5273,7 +5278,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 31
+        "y": 33
       },
       "id": 156,
       "options": {
