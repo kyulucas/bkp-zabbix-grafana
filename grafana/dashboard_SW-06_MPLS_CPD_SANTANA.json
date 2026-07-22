@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -35,8 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 2,
-      "panels": [],
+      "id": 49,
       "title": "STATUS DO SWITCH ",
       "type": "row"
     },
@@ -47,17 +46,19 @@
         "x": 0,
         "y": 1
       },
-      "id": 47,
+      "id": 48,
       "options": {
         "code": {
           "language": "html",
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://technopedia.io/technopedia/wp-content/uploads/2022/05/800px-Mikrotik-logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 250px;\">\n    <h2 style=\"color: #d32f2f;\"> CCR2004-1G-12S+2XS </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (Inserir ISO/Firmware)\n    </p>\n</div>\n",
+        "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://cdn.vectorstock.com/i/500p/39/34/huawei-logo-brand-phone-symbol-red-with-name-white-vector-46213934.jpg\"\n         alt=\"Huawei Logo\"\n         style=\"width: 250px;\">\n\n    <h2 style=\"color: #d32f2f;\">Huawei S6730-H24X6C</h2>\n\n    <p style=\"font-size: 18px; font-weight: bold; color: #d32f2f;\">\n        (Inserir VRP/Firmware)\n    </p>\n</div>",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -98,8 +99,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -126,7 +126,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -135,7 +135,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -143,10 +143,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Mikrotik: ICMP ping"
+            "filter": "ICMP ping"
           },
           "itemTag": {
             "filter": ""
@@ -185,6 +185,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -206,7 +207,6 @@
                   "text": "ANORMAL"
                 },
                 "1": {
-                  "color": "dark-green",
                   "index": 0,
                   "text": "NORMAL"
                 }
@@ -235,8 +235,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -244,7 +243,7 @@
         "x": 5,
         "y": 1
       },
-      "id": 48,
+      "id": 41,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -263,7 +262,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -272,45 +271,18 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "-state: State",
-                " "
-              ],
-              "text": "replaceAlias(/(.*)/, $1)"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "/.*state/"
+            "filter": "#0: Fan status"
           },
           "itemTag": {
             "filter": ""
@@ -349,6 +321,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -396,7 +369,6 @@
             }
           },
           "decimals": 0,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -429,19 +401,25 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 7,
+        "w": 10,
         "x": 8,
         "y": 1
       },
       "id": 3,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
             "max"
           ],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -451,7 +429,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -460,12 +438,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:3042",
+              "$$hashKey": "object:303",
               "def": {
                 "category": "Alias",
                 "defaultParams": [],
@@ -487,13 +465,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "CPU Load"
+            "filter": "MPU Board 0: CPU utilization"
           },
           "itemTag": {
-            "filter": "Application: CPU"
+            "filter": "component: cpu"
           },
           "macro": {
             "filter": ""
@@ -529,6 +507,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -541,176 +520,17 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [
-            {
-              "options": {
-                "from": 0,
-                "result": {
-                  "color": "dark-red",
-                  "index": 0,
-                  "text": "FALHA"
-                },
-                "to": 3000
-              },
-              "type": "range"
-            },
-            {
-              "options": {
-                "from": 3001,
-                "result": {
-                  "color": "dark-green",
-                  "index": 1,
-                  "text": "NORMAL"
-                },
-                "to": 100000000
-              },
-              "type": "range"
-            }
-          ],
+          "displayName": "TEMPERATURA",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "dark-green",
                 "value": 0
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 6,
-        "w": 3,
-        "x": 15,
-        "y": 1
-      },
-      "id": 43,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "auto",
-        "wideLayout": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
               },
-              "params": [
-                "-speed",
-                " "
-              ],
-              "text": "replaceAlias(/(.*)/, $1)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
-          },
-          "item": {
-            "filter": "/.*-speed/"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "decimals": 0,
-          "displayName": "USO DE MEMÓRIA",
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
               {
-                "color": "dark-green",
-                "value": 0
+                "color": "#EAB839",
+                "value": 50
               },
               {
                 "color": "red",
@@ -718,9 +538,8 @@
               }
             ]
           },
-          "unit": "percent"
-        },
-        "overrides": []
+          "unit": "celsius"
+        }
       },
       "gridPos": {
         "h": 3,
@@ -728,7 +547,7 @@
         "x": 18,
         "y": 1
       },
-      "id": 6,
+      "id": 8,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -747,16 +566,16 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
-            "filter": "Memory"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -764,13 +583,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Memory utilization"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
-            "filter": "Application: Memory"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -806,6 +625,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -819,7 +639,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -830,8 +649,7 @@
             ]
           },
           "unit": "dtdhms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -858,7 +676,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -867,7 +685,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -875,10 +693,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Mikrotik: Uptime (network)"
+            "filter": "Uptime (hardware)"
           },
           "itemTag": {
             "filter": ""
@@ -917,6 +735,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -929,8 +748,8 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "TEMPERATURA",
-          "mappings": [],
+          "decimals": 0,
+          "displayName": "USO DE MEMÓRIA",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -939,18 +758,13 @@
                 "value": 0
               },
               {
-                "color": "#EAB839",
-                "value": 50
-              },
-              {
                 "color": "red",
                 "value": 80
               }
             ]
           },
-          "unit": "celsius"
-        },
-        "overrides": []
+          "unit": "percent"
+        }
       },
       "gridPos": {
         "h": 3,
@@ -958,7 +772,7 @@
         "x": 18,
         "y": 4
       },
-      "id": 8,
+      "id": 6,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -977,16 +791,16 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Memory"
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -994,13 +808,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Memory utilization"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "component: memory"
           },
           "macro": {
             "filter": ""
@@ -1036,6 +850,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1046,8 +861,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 11,
-      "panels": [],
+      "id": 50,
       "title": "SINAL DBM",
       "type": "row"
     },
@@ -1071,7 +885,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1086,11 +899,10 @@
             ]
           },
           "unit": "dBm"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 8,
         "x": 0,
         "y": 8
@@ -1100,7 +912,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1109,12 +921,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:3251",
+              "$$hashKey": "object:140",
               "def": {
                 "category": "Alias",
                 "defaultParams": [
@@ -1134,20 +946,20 @@
                 ]
               },
               "params": [
-                "SW-06 MPLS CPD SANTANA:",
+                "SW -MPLS-PE-LEVY-02",
                 " "
               ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
+              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "/RX Power.*/"
+            "filter": "/.*RxPower$/"
           },
           "itemTag": {
             "filter": ""
@@ -1186,6 +998,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1234,7 +1047,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1249,11 +1061,10 @@
             ]
           },
           "unit": "dBm"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 8,
         "x": 8,
         "y": 8
@@ -1263,7 +1074,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1272,7 +1083,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1280,10 +1091,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "/RX Power.*/"
+            "filter": "/.*RxPower$/"
           },
           "itemTag": {
             "filter": ""
@@ -1322,6 +1133,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1368,7 +1180,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1383,11 +1194,10 @@
             ]
           },
           "unit": "dBm"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
-        "h": 5,
+        "h": 7,
         "w": 8,
         "x": 16,
         "y": 8
@@ -1397,7 +1207,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1406,7 +1216,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1414,10 +1224,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "/TX Power.*/"
+            "filter": "/.*TxPower$/"
           },
           "itemTag": {
             "filter": ""
@@ -1456,6 +1266,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1473,6 +1284,7 @@
             },
             "indexByName": {},
             "renameByName": {
+              "Field": "",
               "Last (not null)": "TX POWER",
               "Last *": "TX POWER"
             }
@@ -1487,10 +1299,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 13
+        "y": 15
       },
-      "id": 17,
-      "panels": [],
+      "id": 51,
       "title": "TRÁFEGO INTERFACES ",
       "type": "row"
     },
@@ -1538,7 +1349,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1553,23 +1363,28 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 14
+        "y": 16
       },
       "id": 31,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull"
           ],
-          "displayMode": "list",
+          "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1579,7 +1394,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1588,12 +1403,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:3339",
+              "$$hashKey": "object:317",
+              "added": false,
               "def": {
                 "category": "Alias",
                 "defaultParams": [
@@ -1613,17 +1429,17 @@
                 ]
               },
               "params": [
-                "SW-06 MPLS CPD SANTANA:",
+                "SW -MPLS-PE-LEVY-02",
                 " "
               ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
+              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
             "filter": "Trafego de Entrada na Interface $iface1"
@@ -1670,12 +1486,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:3360",
+              "$$hashKey": "object:319",
+              "added": false,
               "def": {
                 "category": "Alias",
                 "defaultParams": [
@@ -1695,18 +1512,17 @@
                 ]
               },
               "params": [
-                "SW-06 MPLS CPD SANTANA:",
+                "SW -MPLS-PE-LEVY-02",
                 " "
               ],
-              "text": "replaceAlias(SW-06 MPLS CPD SANTANA:,  )"
+              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
             "filter": "Trafego de Saida na Interface $iface1"
@@ -1758,10 +1574,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 24
+        "y": 26
       },
-      "id": 46,
-      "panels": [],
+      "id": 52,
       "title": "POTÊNCIA DA INTERFACE",
       "type": "row"
     },
@@ -1809,7 +1624,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "max": 0,
           "min": -41,
           "thresholds": {
@@ -1825,20 +1639,25 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 27
       },
-      "id": 45,
+      "id": 47,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1848,7 +1667,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1857,7 +1676,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1865,7 +1684,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
             "filter": "$iface2"
@@ -1916,72 +1735,97 @@
   "refresh": "30s",
   "schemaVersion": 42,
   "tags": [
-    "switchs",
     "POP SANTANA"
   ],
   "templating": {
     "list": [
       {
+        "allowCustomValue": true,
         "current": {
-          "text": "L2L Connect Transporte()",
-          "value": "L2L Connect Transporte()"
+          "text": "Console9/0/0()",
+          "value": "Console9/0/0()"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
+        "hide": 0,
         "includeAll": false,
         "label": "10GE",
+        "multi": false,
         "name": "iface1",
         "options": [],
         "query": {
           "application": "Network interfaces",
           "group": "SWITCH",
-          "host": "SW-06 MPLS POP SANTANA CCR2004",
+          "host": "SW -MPLS-PE-PARAIBUNA-03",
           "item": "/.*/",
           "itemTag": "",
-          "queryType": "item"
+          "queryType": "item",
+          "showDisabledItems": false
         },
         "refresh": 1,
-        "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(.*)/",
+        "regex": "/^Trafego de (?:Entrada|Saida) na Interface\\s+(.*)$/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
-          "text": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): RX Power",
-          "value": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): RX Power"
+          "text": "Optical Module Interface XGigabitEthernet0/0/1: RxPower",
+          "value": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
+        "hide": 0,
         "includeAll": false,
         "label": "INTERFACE - FIBRA",
+        "multi": false,
         "name": "iface2",
         "options": [],
         "query": {
           "application": "RX-POWER",
           "group": "SWITCH",
-          "host": "SW-06 MPLS POP SANTANA CCR2004",
-          "item": "/.*RX Power/",
+          "host": "SW -MPLS-PE-PARAIBUNA-03",
+          "item": "/.*RxPower$/",
           "itemTag": "",
-          "queryType": "item"
+          "queryType": "item",
+          "showDisabledItems": false
         },
         "refresh": 1,
-        "regex": "/.sfpplus*/",
+        "regex": "/XGigabitEthernet.*/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "SW-06 MPLS CPD SANTANA",
-  "uid": "QN9H1M_GzQ152",
-  "weekStart": ""
+  "uid": "addqtps"
 }
