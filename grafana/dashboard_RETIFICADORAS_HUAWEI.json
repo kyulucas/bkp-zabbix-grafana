@@ -834,24 +834,24 @@
                   "text": "REDE ELÉTRICA"
                 },
                 "2": {
-                  "color": "semi-dark-blue",
+                  "color": "dark-red",
                   "index": 1,
-                  "text": "REDE ELÉTRICA"
+                  "text": "SEM ENERGIA (acOff)"
                 },
                 "3": {
-                  "color": "yellow",
+                  "color": "dark-red",
                   "index": 2,
-                  "text": "BATERIA"
+                  "text": "SEM ENERGIA (acAbsent)"
                 },
                 "4": {
                   "color": "semi-dark-yellow",
                   "index": 3,
-                  "text": "HIBERNANDO"
+                  "text": "SOBRETENSÃO"
                 },
-                "7": {
-                  "color": "dark-red",
+                "5": {
+                  "color": "dark-yellow",
                   "index": 4,
-                  "text": "OFFLINE"
+                  "text": "SUBTENSÃO"
                 }
               },
               "type": "value"
@@ -870,38 +870,7 @@
               }
             ]
           }
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Bateria Li - Status Operacional",
-              "scope": "series"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "3": {
-                        "color": "dark-blue",
-                        "index": 0,
-                        "text": "REDE ELÉTRICA"
-                      },
-                      "5": {
-                        "color": "dark-yellow",
-                        "index": 1,
-                        "text": "BATERIA"
-                      }
-                    },
-                    "type": "value"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        }
       },
       "gridPos": {
         "h": 3,
@@ -947,7 +916,7 @@
             "filter": "$Retificadora"
           },
           "item": {
-            "filter": "Baterias - Status de Carga"
+            "filter": "AC - Status de Entrada"
           },
           "itemTag": {
             "filter": ""
@@ -969,62 +938,6 @@
           },
           "queryType": "0",
           "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "$Retificadora"
-          },
-          "item": {
-            "filter": "Bateria Li - Status Operacional"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
