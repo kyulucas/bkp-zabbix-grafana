@@ -95,7 +95,7 @@
         ],
         "interfaces": [
           {
-            "ip": "10.13.0.7",
+            "ip": "10.12.0.10",
             "interface_ref": "if1"
           }
         ],
