@@ -83,6 +83,7 @@
       {
         "host": "SW-02 MPLS POP ALBERTO TORRES CCR1036",
         "name": "SW-02 MPLS POP ALBERTO TORRES CCR1036",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "Template Net Mikrotik SNMPv2"
