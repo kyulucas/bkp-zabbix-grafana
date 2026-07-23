@@ -101,12 +101,12 @@
         ],
         "interfaces": [
           {
-            "ip": "10.13.0.6",
+            "ip": "10.12.0.9",
             "interface_ref": "if1"
           },
           {
             "type": "SNMP",
-            "ip": "10.13.0.6",
+            "ip": "10.12.0.9",
             "port": "161",
             "details": {
               "version": "SNMPV1",
