@@ -98,12 +98,12 @@
         ],
         "interfaces": [
           {
-            "ip": "10.13.0.3",
+            "ip": "10.12.0.11",
             "interface_ref": "if1"
           },
           {
             "type": "SNMP",
-            "ip": "10.13.0.3",
+            "ip": "10.12.0.11",
             "port": "161",
             "details": {
               "community": "TR-TELECOM"
