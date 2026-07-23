@@ -143,7 +143,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "ICMP ping"
@@ -279,7 +279,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "#0: Fan status"
@@ -465,7 +465,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "MPU Board 0: CPU utilization"
@@ -583,7 +583,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "MPU Board 0: Temperature"
@@ -693,7 +693,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "Uptime (hardware)"
@@ -808,7 +808,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "MPU Board 0: Memory utilization"
@@ -946,17 +946,17 @@
                 ]
               },
               "params": [
-                "SW -MPLS-PE-CHIADOR",
+                "SW -MPLS-PE-PARAIBA - 04",
                 " "
               ],
-              "text": "replaceAlias(SW -MPLS-PE-CHIADOR,  )"
+              "text": "replaceAlias(SW -MPLS-PE-PARAIBA - 04,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "/.*RxPower$/"
@@ -1091,7 +1091,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "/.*RxPower$/"
@@ -1224,7 +1224,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "/.*TxPower$/"
@@ -1429,17 +1429,17 @@
                 ]
               },
               "params": [
-                "SW -MPLS-PE-CHIADOR",
+                "SW -MPLS-PE-PARAIBA - 04",
                 " "
               ],
-              "text": "replaceAlias(SW -MPLS-PE-CHIADOR,  )"
+              "text": "replaceAlias(SW -MPLS-PE-PARAIBA - 04,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "Trafego de Entrada na Interface $iface1"
@@ -1512,17 +1512,17 @@
                 ]
               },
               "params": [
-                "SW -MPLS-PE-CHIADOR",
+                "SW -MPLS-PE-PARAIBA - 04",
                 " "
               ],
-              "text": "replaceAlias(SW -MPLS-PE-CHIADOR,  )"
+              "text": "replaceAlias(SW -MPLS-PE-PARAIBA - 04,  )"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "Trafego de Saida na Interface $iface1"
@@ -1684,7 +1684,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
             "filter": "$iface2"
@@ -1736,7 +1736,7 @@
   "schemaVersion": 42,
   "tags": [
     "switchs",
-    "POP CHIADOR"
+    "POP PARAIBA DO SUL"
   ],
   "templating": {
     "list": [
@@ -1760,7 +1760,7 @@
         "query": {
           "application": "Network interfaces",
           "group": "SWITCH",
-          "host": "SW -MPLS-PE-CHIADOR",
+          "host": "SW -MPLS-PE-PARAIBA - 04",
           "item": "/.*/",
           "itemTag": "",
           "queryType": "item",
@@ -1793,7 +1793,7 @@
         "query": {
           "application": "RX-POWER",
           "group": "SWITCH",
-          "host": "SW -MPLS-PE-CHIADOR",
+          "host": "SW -MPLS-PE-PARAIBA - 04",
           "item": "/.*RxPower$/",
           "itemTag": "",
           "queryType": "item",
@@ -1828,5 +1828,5 @@
   },
   "timezone": "browser",
   "title": "SW -MPLS-PE-PARAIBA ",
-  "uid": "adtkfz5AS"
+  "uid": "adtkfz5"
 }
