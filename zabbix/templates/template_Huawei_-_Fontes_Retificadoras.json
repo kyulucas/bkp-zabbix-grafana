@@ -84,13 +84,55 @@
         "uuid": "eb2a756206ec4a16a985080f20ccddcf",
         "template": "Huawei - Fontes Retificadoras",
         "name": "Huawei - Fontes Retificadoras",
-        "description": "Template para monitoramento de fontes retificadoras Huawei via SNMP.\n\nEste template monitora parâmetros operacionais e de configuração de fontes retificadoras Huawei, incluindo:\n- Status e parâmetros do grupo de retificadores\n- Status e parâmetros individuais de cada retificador\n- Status e parâmetros das baterias\n- Status e parâmetros das baterias de lítio / AcbGroup\n- Detecção de falta de energia e modo de operação\n\nOIDs baseados em EMAP-MIB (HUAWEI-MIB).\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
+        "description": "Template para monitoramento de fontes retificadoras Huawei via SNMP.\n\nEste template monitora parâmetros operacionais e de configuração de fontes retificadoras Huawei, incluindo:\n- Status e parâmetros do grupo de retificadores\n- Status e parâmetros individuais de cada retificador\n- Status e parâmetros das baterias\n- Status e parâmetros das baterias de lítio / AcbGroup\n- Status da entrada AC (energia da rua)\n- Detecção de falta de energia e modo de operação\n\nOIDs baseados em EMAP-MIB (HUAWEI-MIB).\n\n#=======================================\nCriado por: kyulucas\nData: 01/12/2025\n#=======================================",
         "groups": [
           {
             "name": "Huawei - Fontes Retificadoras"
           }
         ],
         "items": [
+          {
+            "uuid": "1f003afe5a8d450f964f786b95875f47",
+            "name": "AC - Status de Entrada",
+            "type": "SNMP_AGENT",
+            "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.5.2.1.1.99.1",
+            "key": "acInputOperStatus",
+            "history": "7d",
+            "trends": "0",
+            "description": "Estado da unidade de distribuição AC do site (hwAcInputOperStatus). Valores: 1=normal (energia da rua OK), 2=acOff (energia da rua desligada), 3=acAbsent (fase AC ausente), 4=voltHigh (sobretensão), 5=voltLow (subtensão), 6=freqHigh (frequência alta), 7=freqLow (frequência baixa), 254=alarmResume (alarme resolvido), 255=unknown (desconhecido).",
+            "triggers": [
+              {
+                "uuid": "81c14e90a1d246d985c05a90622dcfd2",
+                "expression": "last(/Huawei - Fontes Retificadoras/acInputOperStatus)=2 or last(/Huawei - Fontes Retificadoras/acInputOperStatus)=3",
+                "name": "FALTA DE ENERGIA DA RUA (AC)",
+                "priority": "HIGH"
+              },
+              {
+                "uuid": "040ecbbea05047d29c7612b1493117fb",
+                "expression": "last(/Huawei - Fontes Retificadoras/acInputOperStatus)=6",
+                "name": "FREQUÊNCIA ALTA NA ENTRADA AC",
+                "priority": "AVERAGE"
+              },
+              {
+                "uuid": "180604b724674b6c9b1fb992e4c27c77",
+                "expression": "last(/Huawei - Fontes Retificadoras/acInputOperStatus)=7",
+                "name": "FREQUÊNCIA BAIXA NA ENTRADA AC",
+                "priority": "AVERAGE"
+              },
+              {
+                "uuid": "a967d4dd50024ad19a94060906e5df3b",
+                "expression": "last(/Huawei - Fontes Retificadoras/acInputOperStatus)=4",
+                "name": "SOBRETENSÃO NA ENTRADA AC",
+                "priority": "HIGH"
+              },
+              {
+                "uuid": "e23c159db07346528137112c6627b4c1",
+                "expression": "last(/Huawei - Fontes Retificadoras/acInputOperStatus)=5",
+                "name": "SUBTENSÃO NA ENTRADA AC",
+                "priority": "HIGH"
+              }
+            ]
+          },
           {
             "uuid": "b6507ddc10154fe5b92140b6b28fe448",
             "name": "Baterias - Status de Carga",
@@ -150,13 +192,21 @@
             "value_type": "FLOAT",
             "trends": "90d",
             "units": "h",
-            "description": "Tempo de backup estimado da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1h).",
+            "description": "Tempo de backup do grupo de baterias AcbGroup (hwAcbGroupBackupTime). Faixa: 0 a 256h com precisão de uma casa decimal (0.1h). Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
                 "parameters": [
                   "0.1"
                 ]
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "f1d1826e2937483694e9eac5ae476089",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattBackupTime)<{$BATT.BACKUP.MIN}",
+                "name": "TEMPO DE BACKUP DA BATERIA LI BAIXO",
+                "priority": "WARNING"
               }
             ]
           },
@@ -171,7 +221,7 @@
             "value_type": "FLOAT",
             "trends": "30d",
             "units": "V",
-            "description": "Tensão de equalização/boost configurada da bateria de lítio. Valor com precisão de uma casa decimal (0.1V).",
+            "description": "Tensão de equalização configurável do grupo de baterias AcbGroup (hwAcbGroupEqualVolt). Faixa: 42.0 a 58.0V com precisão de uma casa decimal (0.1V). Valor padrão: 56.4V. Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
@@ -191,21 +241,13 @@
             "value_type": "FLOAT",
             "trends": "90d",
             "units": "A",
-            "description": "Corrente da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1A). Valores negativos indicam descarga (modo bateria), valores positivos indicam carga.",
+            "description": "Corrente do grupo de baterias AcbGroup (hwAcbGroupBatCurr). Faixa: -4000 a 4000A com precisão de uma casa decimal (0.1A). Valores negativos indicam descarga; valores positivos indicam carga. Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
                 "parameters": [
                   "0.1"
                 ]
-              }
-            ],
-            "triggers": [
-              {
-                "uuid": "297d383abffd4c2aae9077ed126621b1",
-                "expression": "last(/Huawei - Fontes Retificadoras/liBattCurrent)<0",
-                "name": "OPERANDO VIA BATERIA (Lítio)",
-                "priority": "HIGH"
               }
             ]
           },
@@ -220,7 +262,7 @@
             "value_type": "FLOAT",
             "trends": "30d",
             "units": "V",
-            "description": "Tensão de flutuação configurada da bateria de lítio. Valor com precisão de uma casa decimal (0.1V).",
+            "description": "Tensão de flutuação configurável do grupo de baterias AcbGroup (hwAcbGroupFloatVolt). Faixa: 42.0 a 58.0V com precisão de uma casa decimal (0.1V). Valor padrão: 54.5V. Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
@@ -240,39 +282,61 @@
             "history": "30d",
             "value_type": "TEXT",
             "trends": "0",
-            "description": "Nome do grupo de bateria de lítio / AcbGroup."
+            "description": "Nome do equipamento do grupo de baterias AcbGroup (hwAcbGroupEquipName)."
           },
           {
             "uuid": "a76c8c2fccbb4a9d82fdc9d0ab2152f0",
-            "name": "Bateria Li - ID",
+            "name": "Bateria Li - Índice",
             "type": "SNMP_AGENT",
             "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.1.96",
             "key": "liBattId",
             "delay": "1h",
             "history": "30d",
             "trends": "0",
-            "description": "ID do grupo de bateria de lítio / AcbGroup."
+            "description": "Índice do equipamento do grupo de baterias AcbGroup (hwAcbGroupIndex). Faixa: 0 a 256."
           },
           {
             "uuid": "6c8e5c807ce1426792d4846c5884502d",
-            "name": "Bateria Li - Status Operacional",
+            "name": "Bateria Li - Estado de Operação",
             "type": "SNMP_AGENT",
             "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.4.96",
             "key": "liBattOperStatus",
             "history": "7d",
             "trends": "0",
-            "description": "Estado operacional da bateria de lítio / AcbGroup."
+            "description": "Estado de operação do grupo de baterias AcbGroup (hwAcbGroupBatRunningState). Valores: 1=firstOn (primeira vez online), 2=powerOff (desligada), 3=float (carregamento flutuante), 4=equal (carregamento de equalização), 5=dicharge (descarregando - modo bateria), 6=charge (carregando), 7=test (teste), 255=unknown (desconhecido).",
+            "triggers": [
+              {
+                "uuid": "c1eeedeada03432e81a2c46e973a24f6",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattOperStatus)=2",
+                "name": "BATERIA LI DESLIGADA (powerOff)",
+                "priority": "AVERAGE"
+              },
+              {
+                "uuid": "297d383abffd4c2aae9077ed126621b1",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattOperStatus)=5",
+                "name": "OPERANDO VIA BATERIA (Lítio)",
+                "priority": "HIGH"
+              }
+            ]
           },
           {
             "uuid": "558b4d6dbdce44f993f252734ce6e09e",
-            "name": "Bateria Li - SOC",
+            "name": "Bateria Li - Capacidade Restante",
             "type": "SNMP_AGENT",
             "snmp_oid": ".1.3.6.1.4.1.2011.6.164.1.17.1.1.8.96",
             "key": "liBattSoc",
             "history": "7d",
             "trends": "90d",
             "units": "%",
-            "description": "Estado de carga (SOC) da bateria de lítio / AcbGroup. Faixa típica: 0 a 100%."
+            "description": "Capacidade restante total do grupo de baterias AcbGroup (hwAcbGroupTotalRemainCapacity). Faixa: 0 a 100%. Valor inteiro. Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
+            "triggers": [
+              {
+                "uuid": "737ac49554124dcd8bcf30a24c35aa28",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattSoc)<{$BATT.CAPACITY.MIN}",
+                "name": "CAPACIDADE RESTANTE DA BATERIA LI BAIXA",
+                "priority": "WARNING"
+              }
+            ]
           },
           {
             "uuid": "b1213627048943ec9ef4ad8957c38459",
@@ -283,7 +347,7 @@
             "history": "7d",
             "trends": "90d",
             "units": "%",
-            "description": "Indicador de saúde/capacidade restante (SoH) da bateria de lítio / AcbGroup."
+            "description": "Estado de saúde (SoH) do grupo de baterias AcbGroup (hwAcbGroupBatSoh). Faixa: 0 a 100%. Valor inteiro. Se o valor for 2147483647 (0x7FFFFFFF), indica inválido."
           },
           {
             "uuid": "c388c3aec0694d4a844edfb2b5cc7463",
@@ -295,13 +359,27 @@
             "value_type": "FLOAT",
             "trends": "90d",
             "units": "°C",
-            "description": "Temperatura da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1°C).",
+            "description": "Temperatura do grupo de baterias AcbGroup (hwAcbGroupTemperature). Faixa: -50 a 100°C com precisão de uma casa decimal (0.1°C). Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
                 "parameters": [
                   "0.1"
                 ]
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "6726f26b30b14c5d9bf521a15898c42f",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattTemperature)>{$BATT.TEMP.MAX}",
+                "name": "TEMPERATURA ALTA DA BATERIA LI",
+                "priority": "WARNING"
+              },
+              {
+                "uuid": "0013e660b9904a92aa9ff39b3d9af690",
+                "expression": "last(/Huawei - Fontes Retificadoras/liBattTemperature)<{$BATT.TEMP.MIN}",
+                "name": "TEMPERATURA BAIXA DA BATERIA LI",
+                "priority": "WARNING"
               }
             ]
           },
@@ -315,7 +393,7 @@
             "value_type": "FLOAT",
             "trends": "90d",
             "units": "V",
-            "description": "Tensão da bateria de lítio / AcbGroup. Valor com precisão de uma casa decimal (0.1V).",
+            "description": "Tensão do grupo de baterias AcbGroup (hwAcbGroupBatVolt). Faixa: 0 a 100V com precisão de uma casa decimal (0.1V). Se o valor for 2147483647 (0x7FFFFFFF), indica inválido.",
             "preprocessing": [
               {
                 "type": "MULTIPLIER",
@@ -395,7 +473,33 @@
             "key": "rectOperStatus",
             "history": "7d",
             "trends": "0",
-            "description": "Estado operacional do módulo retificador. Valores: 1=normal (energia elétrica), 2=fault (falha), 3=protect (proteção automática), 4=commFail (falha de comunicação), 5=switchOff (desligado), 6=invalid (inválido), 7=noConfig (não configurado), 8=acOff (sem energia na tomada), 9=rectLost (retificador perdido), 254=alarmResume (alarme resolvido), 255=unknown (desconhecido)."
+            "description": "Estado operacional do módulo retificador. Valores: 1=normal (energia elétrica), 2=fault (falha), 3=protect (proteção automática), 4=commFail (falha de comunicação), 5=switchOff (desligado), 6=invalid (inválido), 7=noConfig (não configurado), 8=acOff (sem energia na tomada), 9=rectLost (retificador perdido), 254=alarmResume (alarme resolvido), 255=unknown (desconhecido).",
+            "triggers": [
+              {
+                "uuid": "30be44563a2d42cba6071070823fb47a",
+                "expression": "last(/Huawei - Fontes Retificadoras/rectOperStatus)=4",
+                "name": "FALHA DE COMUNICAÇÃO COM RETIFICADOR",
+                "priority": "AVERAGE"
+              },
+              {
+                "uuid": "e18d73bf6618400a9e0c83b65d3a8812",
+                "expression": "last(/Huawei - Fontes Retificadoras/rectOperStatus)=2",
+                "name": "FALHA NO MÓDULO RETIFICADOR",
+                "priority": "HIGH"
+              },
+              {
+                "uuid": "8098158cd0f2412f83ebed00d1625fab",
+                "expression": "last(/Huawei - Fontes Retificadoras/rectOperStatus)=3",
+                "name": "RETIFICADOR EM PROTEÇÃO",
+                "priority": "AVERAGE"
+              },
+              {
+                "uuid": "cdd7f1b3ceba4b8ab1cbe5927bff6808",
+                "expression": "last(/Huawei - Fontes Retificadoras/rectOperStatus)=9",
+                "name": "RETIFICADOR PERDIDO (rectLost)",
+                "priority": "HIGH"
+              }
+            ]
           },
           {
             "uuid": "f792544073024ec98f69a20c07162be5",
@@ -675,6 +779,28 @@
                 ]
               }
             ]
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$BATT.BACKUP.MIN}",
+            "value": "2",
+            "description": "Limite mínimo de tempo de backup da bateria de lítio (horas)."
+          },
+          {
+            "macro": "{$BATT.CAPACITY.MIN}",
+            "value": "20",
+            "description": "Limite mínimo de capacidade restante da bateria de lítio (%)."
+          },
+          {
+            "macro": "{$BATT.TEMP.MAX}",
+            "value": "45",
+            "description": "Limite máximo de temperatura da bateria de lítio (°C)."
+          },
+          {
+            "macro": "{$BATT.TEMP.MIN}",
+            "value": "0",
+            "description": "Limite mínimo de temperatura da bateria de lítio (°C)."
           }
         ]
       }
