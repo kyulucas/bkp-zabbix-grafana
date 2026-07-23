@@ -900,10 +900,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+            "filter": "SW -MPLS-PE-CHIADOR"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -974,10 +974,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1048,10 +1048,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-04 MPLS POP SIMAO PEREIRA CCR2004"
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1122,10 +1122,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1270,10 +1270,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-08 MPLS POP BMP CCR2004"
+            "filter": "SW -MPLS-PE-BEMPOSTA"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1342,13 +1342,13 @@
             }
           ],
           "group": {
-            "filter": "OLT"
+            "filter": "SWITCH"
           },
           "host": {
-            "filter": "OLT HUAWEI MA5800X2 PARAIBA"
+            "filter": "SW -MPLS-PE-PARAIBA - 04"
           },
           "item": {
-            "filter": "Temperatura 1"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1416,10 +1416,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
+            "filter": "SW -MPLS-PE-ALBERTO-TORRES"
           },
           "item": {
-            "filter": "Device: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1484,13 +1484,13 @@
             }
           ],
           "group": {
-            "filter": "SERVIDOR"
+            "filter": "SWITCH"
           },
           "host": {
-            "filter": "SERVIDOR GERENCIAMENTO INTERNO"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Device: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1558,10 +1558,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "MPLS CDP-02 TR CCR2216"
+            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -1629,10 +1629,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -2446,10 +2446,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
+            "filter": "SW -MPLS-PE-ALBERTO-TORRES"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3187,10 +3187,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+            "filter": "SW -MPLS-PE-CHIADOR"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3818,13 +3818,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
+            "filter": "SW -MPLS-PE-ALBERTO-TORRES"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
           },
           "itemTag": {
-            "filter": "Application: TX-POWER"
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
           },
           "macro": {
             "filter": ""
@@ -4559,10 +4559,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+            "filter": "SW -MPLS-PE-CHIADOR"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -5050,12 +5050,34 @@
             {
               "options": {
                 "0": {
+                  "color": "dark-red",
                   "index": 0,
-                  "text": "🔴  "
+                  "text": "🔴 "
                 },
                 "1": {
+                  "color": "dark-green",
                   "index": 1,
                   "text": "🟢"
+                },
+                "2": {
+                  "color": "dark-red",
+                  "index": 2,
+                  "text": "🔴"
+                },
+                "3": {
+                  "color": "dark-red",
+                  "index": 3,
+                  "text": "🔴 "
+                },
+                "4": {
+                  "color": "dark-yellow",
+                  "index": 4,
+                  "text": "🟡"
+                },
+                "5": {
+                  "color": "dark-yellow",
+                  "index": 5,
+                  "text": "🟡"
                 }
               },
               "type": "value"
@@ -5096,134 +5118,6 @@
                       "1": {
                         "color": "dark-red",
                         "index": 0,
-                        "text": "🔴"
-                      }
-                    },
-                    "type": "value"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Levy"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "0": {
-                        "color": "dark-green",
-                        "index": 1,
-                        "text": "🟢"
-                      },
-                      "1": {
-                        "color": "dark-red",
-                        "index": 0,
-                        "text": "🔴"
-                      }
-                    },
-                    "type": "value"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "CPD TR R.1"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "3": {
-                        "color": "dark-green",
-                        "index": 0,
-                        "text": "🟢"
-                      },
-                      "5": {
-                        "color": "dark-red",
-                        "index": 2,
-                        "text": "🔴"
-                      },
-                      "6": {
-                        "color": "dark-green",
-                        "index": 1,
-                        "text": "🟢"
-                      }
-                    },
-                    "type": "value"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Paraíba"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "3": {
-                        "color": "dark-green",
-                        "index": 1,
-                        "text": "🟢"
-                      },
-                      "5": {
-                        "color": "dark-red",
-                        "index": 0,
-                        "text": "🔴"
-                      },
-                      "6": {
-                        "color": "dark-green",
-                        "index": 2,
-                        "text": "🟢"
-                      }
-                    },
-                    "type": "value"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Paraibuna",
-              "scope": "series"
-            },
-            "properties": [
-              {
-                "id": "mappings",
-                "value": [
-                  {
-                    "options": {
-                      "3": {
-                        "color": "dark-green",
-                        "index": 0,
-                        "text": "🟢"
-                      },
-                      "5": {
-                        "color": "dark-green",
-                        "index": 1,
-                        "text": "🟢"
-                      },
-                      "6": {
-                        "color": "dark-red",
-                        "index": 2,
                         "text": "🔴"
                       }
                     },
@@ -5299,7 +5193,7 @@
             "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "Bateria Li - Status Operacional"
+            "filter": "AC - Status de Entrada"
           },
           "itemTag": {
             "filter": ""
@@ -5500,77 +5394,6 @@
                 ]
               },
               "params": [
-                "Bemposta"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP BMP"
-          },
-          "item": {
-            "filter": "ICMP ping"
-          },
-          "itemTag": {
-            "filter": "Application: Status"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "E",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
                 "CPD TR R.1"
               ],
               "text": "setAlias()"
@@ -5583,7 +5406,7 @@
             "filter": "ENERGIA POP CPD TR RACK 1 HW"
           },
           "item": {
-            "filter": "Bateria Li - Status Operacional"
+            "filter": "AC - Status de Entrada"
           },
           "itemTag": {
             "filter": ""
@@ -5938,7 +5761,7 @@
             "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "Bateria Li - Status Operacional"
+            "filter": "AC - Status de Entrada"
           },
           "itemTag": {
             "filter": ""
@@ -5959,6 +5782,77 @@
           },
           "queryType": "0",
           "refId": "M",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Bemposta"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "ENERGIA"
+          },
+          "host": {
+            "filter": "ENERGIA POP CPD BMP HW"
+          },
+          "item": {
+            "filter": "AC - Status de Entrada"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
