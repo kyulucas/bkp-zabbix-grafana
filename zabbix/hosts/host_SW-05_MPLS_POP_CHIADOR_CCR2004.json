@@ -83,6 +83,7 @@
       {
         "host": "SW-05 MPLS POP CHIADOR CCR2004",
         "name": "SW-05 MPLS POP CHIADOR CCR2004",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "Template Net Mikrotik SNMPv2"
