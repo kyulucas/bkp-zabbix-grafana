@@ -851,7 +851,7 @@
         "maxVizHeight": 300,
         "minVizHeight": 16,
         "minVizWidth": 8,
-        "namePlacement": "auto",
+        "namePlacement": "top",
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
@@ -1196,10 +1196,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "CPU: Temperature"
+            "filter": "MPU Board 0: Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -2660,7 +2660,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA (FIBRA 1 - Sentido Upa)"
+                "CIRCUITO POP VILA FIBRA 1 - Sentido Upa"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 1 - Sentido Upa))"
             }
@@ -2669,10 +2669,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -2891,10 +2891,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -3327,7 +3327,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / PARAIBUNA X SIMÃO"
+                "CIRCUITO / PARAIBUNA X SIMÃO 2"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -3339,10 +3339,10 @@
             "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
-            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
           },
           "macro": {
             "filter": ""
@@ -3508,6 +3508,80 @@
           },
           "queryType": "0",
           "refId": "CCCC",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CIRCUITO / PARAIBUNA X SIMÃO 1"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
+          },
+          "item": {
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+          },
+          "itemTag": {
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -4041,10 +4115,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4263,10 +4337,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): TX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4880,6 +4954,80 @@
           },
           "queryType": "0",
           "refId": "CCCC",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:285",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "paraibuna x simao f 2"
+              ],
+              "text": "setAlias(LINK DEDICADO ITANET)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
+          },
+          "item": {
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
+          },
+          "itemTag": {
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
