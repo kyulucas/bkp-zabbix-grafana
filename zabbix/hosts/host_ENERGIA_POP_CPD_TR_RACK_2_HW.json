@@ -83,7 +83,6 @@
       {
         "host": "ENERGIA POP CPD TR RACK 2 HW",
         "name": "ENERGIA POP CPD TR RACK 2 HW",
-        "status": "DISABLED",
         "templates": [
           {
             "name": "Huawei - Fontes Retificadoras"
