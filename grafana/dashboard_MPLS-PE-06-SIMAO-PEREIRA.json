@@ -35,25 +35,25 @@
         "x": 0,
         "y": 0
       },
-      "id": 49,
+      "id": 33,
       "title": "STATUS DO SWITCH ",
       "type": "row"
     },
     {
       "gridPos": {
         "h": 5,
-        "w": 2,
+        "w": 4,
         "x": 0,
         "y": 1
       },
-      "id": 48,
+      "id": 31,
       "options": {
         "code": {
           "language": "html",
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://cdn.vectorstock.com/i/500p/39/34/huawei-logo-brand-phone-symbol-red-with-name-white-vector-46213934.jpg\"\n         alt=\"Huawei Logo\"\n         style=\"width: 250px;\">\n\n    <h2 style=\"color: #d32f2f;\">Huawei S6730-H24X6C</h2>\n\n    <p style=\"font-size: 18px; font-weight: bold; color: #d32f2f;\">\n        (Inserir VRP/Firmware)\n    </p>\n</div>",
+        "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://upload.wikimedia.org/wikipedia/pt/1/11/Huawei_logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 90px;\">\n    <h2 style=\"color: #d32f2f;\"> Version 5.170 </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (S6730 V200R019C10SPC500)\n    </p>\n</div>\n",
         "mode": "html"
       },
       "pluginVersion": "13.1.0",
@@ -103,8 +103,8 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 3,
-        "x": 2,
+        "w": 5,
+        "x": 4,
         "y": 1
       },
       "id": 4,
@@ -198,52 +198,30 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [
-            {
-              "options": {
-                "0": {
-                  "color": "dark-red",
-                  "index": 1,
-                  "text": "ANORMAL"
-                },
-                "1": {
-                  "index": 0,
-                  "text": "NORMAL"
-                }
-              },
-              "type": "value"
-            },
-            {
-              "options": {
-                "from": 3,
-                "result": {
-                  "color": "dark-red",
-                  "index": 2,
-                  "text": "ANORMAL"
-                },
-                "to": 10000
-              },
-              "type": "range"
-            }
-          ],
+          "displayName": "USO DE MEMÓRIA",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "dark-green",
                 "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
               }
             ]
-          }
+          },
+          "unit": "percent"
         }
       },
       "gridPos": {
-        "h": 6,
+        "h": 3,
         "w": 3,
-        "x": 5,
+        "x": 9,
         "y": 1
       },
-      "id": 41,
+      "id": 6,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -259,14 +237,14 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "auto",
+        "textMode": "value_and_name",
         "wideLayout": true
       },
       "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Memory"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -282,7 +260,7 @@
             "filter": "MPLS-PE-06-SIMAO-PEREIRA"
           },
           "item": {
-            "filter": "#0: Fan status"
+            "filter": "MPU Board 0: Memory utilization"
           },
           "itemTag": {
             "filter": ""
@@ -359,7 +337,7 @@
             },
             "showPoints": "never",
             "showValues": false,
-            "spanNulls": true,
+            "spanNulls": false,
             "stacking": {
               "group": "A",
               "mode": "none"
@@ -369,6 +347,7 @@
             }
           },
           "decimals": 0,
+          "displayName": "USO DE CPU",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -383,29 +362,15 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": [
-          {
-            "matcher": {
-              "id": "byType",
-              "options": "time"
-            },
-            "properties": [
-              {
-                "id": "custom.axisPlacement",
-                "value": "hidden"
-              }
-            ]
-          }
-        ]
+        }
       },
       "gridPos": {
-        "h": 6,
-        "w": 10,
-        "x": 8,
+        "h": 3,
+        "w": 6,
+        "x": 12,
         "y": 1
       },
-      "id": 3,
+      "id": 7,
       "options": {
         "alertThreshold": true,
         "annotations": {
@@ -413,15 +378,12 @@
           "multiLane": false
         },
         "legend": {
-          "calcs": [
-            "lastNotNull",
-            "max"
-          ],
+          "calcs": [],
           "displayMode": "list",
           "enableFacetedFilter": false,
           "overflow": "ellipsis",
           "placement": "bottom",
-          "showLegend": true
+          "showLegend": false
         },
         "tooltip": {
           "hideZeros": false,
@@ -441,26 +403,7 @@
             "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:303",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "USO DE CPU"
-              ],
-              "text": "setAlias(USO DE CPU)"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
@@ -471,7 +414,7 @@
             "filter": "MPU Board 0: CPU utilization"
           },
           "itemTag": {
-            "filter": "component: cpu"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -520,6 +463,413 @@
           "color": {
             "mode": "thresholds"
           },
+          "displayName": "FONTE 1",
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "index": 0,
+                  "text": "NORMAL"
+                },
+                "2": {
+                  "index": 1,
+                  "text": "notSupply"
+                },
+                "3": {
+                  "index": 2,
+                  "text": "Sleep"
+                },
+                "4": {
+                  "index": 3,
+                  "text": "unknown"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          },
+          "unit": "none"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 18,
+        "y": 1
+      },
+      "id": 29,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "PowerSupply"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "Pwr supply 1"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "FONTE 2",
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "index": 0,
+                  "text": "NORMAL"
+                },
+                "2": {
+                  "index": 1,
+                  "text": "notSupply"
+                },
+                "3": {
+                  "index": 2,
+                  "text": "Sleep"
+                },
+                "4": {
+                  "index": 3,
+                  "text": "unknown"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "dark-red",
+                "value": 2
+              }
+            ]
+          },
+          "unit": "none"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 21,
+        "y": 1
+      },
+      "id": 30,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "PowerSupply"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "Pwr supply 2"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "displayName": "STATUS DOS FANS",
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "index": 0,
+                  "text": "NORMAL"
+                },
+                "2": {
+                  "index": 1,
+                  "text": "FALHA"
+                },
+                "3": {
+                  "index": 2,
+                  "text": "LOW VOLTAGEM"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "none"
+        }
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 9,
+        "y": 4
+      },
+      "id": 28,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "Fans"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "#0: Fan status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "displayName": "TEMPERATURA",
           "thresholds": {
             "mode": "absolute",
@@ -545,7 +895,7 @@
         "h": 3,
         "w": 3,
         "x": 18,
-        "y": 1
+        "y": 4
       },
       "id": 8,
       "options": {
@@ -570,7 +920,7 @@
       "targets": [
         {
           "application": {
-            "filter": ""
+            "filter": "Temperature"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -652,10 +1002,10 @@
         }
       },
       "gridPos": {
-        "h": 6,
+        "h": 3,
         "w": 3,
         "x": 21,
-        "y": 1
+        "y": 4
       },
       "id": 9,
       "options": {
@@ -696,125 +1046,10 @@
             "filter": "MPLS-PE-06-SIMAO-PEREIRA"
           },
           "item": {
-            "filter": "Uptime (hardware)"
+            "filter": "Uptime (network)"
           },
           "itemTag": {
             "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "title": "",
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "decimals": 0,
-          "displayName": "USO DE MEMÓRIA",
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "percent"
-        }
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 18,
-        "y": 4
-      },
-      "id": 6,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "percentChangeColorMode": "standard",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showPercentChange": false,
-        "text": {},
-        "textMode": "value_and_name",
-        "wideLayout": true
-      },
-      "pluginVersion": "13.1.0",
-      "targets": [
-        {
-          "application": {
-            "filter": "Memory"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
-          },
-          "item": {
-            "filter": "MPU Board 0: Memory utilization"
-          },
-          "itemTag": {
-            "filter": "component: memory"
           },
           "macro": {
             "filter": ""
@@ -861,7 +1096,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 50,
+      "id": 34,
       "title": "SINAL DBM",
       "type": "row"
     },
@@ -878,7 +1113,7 @@
           "custom": {
             "align": "center",
             "cellOptions": {
-              "type": "auto"
+              "type": "color-background"
             },
             "footer": {
               "reducers": []
@@ -889,196 +1124,88 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
                 "color": "dark-green",
-                "value": -19
+                "value": 0
               }
             ]
           },
           "unit": "dBm"
-        }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Interface",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#233f69",
+                  "mode": "fixed"
+                }
+              },
+              {
+                "id": "custom.width",
+                "value": 773
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "RX",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "mode": "thresholds"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-yellow",
+                      "value": -26
+                    },
+                    {
+                      "color": "dark-green",
+                      "value": -14
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
-        "h": 7,
-        "w": 8,
+        "h": 15,
+        "w": 24,
         "x": 0,
         "y": 8
       },
       "id": 13,
       "options": {
         "cellHeight": "sm",
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": []
       },
       "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:140",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW -MPLS-PE-LEVY-02",
-                " "
-              ],
-              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
-          },
-          "item": {
-            "filter": "/.*RxPower$/"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "title": "",
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Last (not null)": true,
-              "Last *": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "INTERFACE",
-              "Last (not null)": "SINAL RX POWER",
-              "Last *": "RX POWER"
-            }
-          }
-        }
-      ],
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "mode": "gradient",
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
-                "color": "dark-green",
-                "value": -19
-              }
-            ]
-          },
-          "unit": "dBm"
-        }
-      },
-      "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 8,
-        "y": 8
-      },
-      "id": 28,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "13.1.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
+            "filter": "RX-POWER"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -1094,10 +1221,10 @@
             "filter": "MPLS-PE-06-SIMAO-PEREIRA"
           },
           "item": {
-            "filter": "/.*RxPower$/"
+            "filter": "/.*: RxPower$/"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "/Application: Transceiver Data Interface.*/"
           },
           "macro": {
             "filter": ""
@@ -1131,87 +1258,10 @@
           "triggers": {
             "acknowledged": 2
           }
-        }
-      ],
-      "title": "",
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
         },
         {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Last (not null)": "RX POWER",
-              "Last *": "RX POWER"
-            }
-          }
-        }
-      ],
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "mode": "gradient",
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
-                "color": "dark-green",
-                "value": -19
-              }
-            ]
-          },
-          "unit": "dBm"
-        }
-      },
-      "gridPos": {
-        "h": 7,
-        "w": 8,
-        "x": 16,
-        "y": 8
-      },
-      "id": 29,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "13.1.0",
-      "targets": [
-        {
           "application": {
-            "filter": ""
+            "filter": "RX-POWER"
           },
           "countTriggersBy": "",
           "datasource": {
@@ -1227,10 +1277,10 @@
             "filter": "MPLS-PE-06-SIMAO-PEREIRA"
           },
           "item": {
-            "filter": "/.*TxPower$/"
+            "filter": "/.*: TxPower$/"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "/Application: Transceiver Data Interface.*/"
           },
           "macro": {
             "filter": ""
@@ -1248,7 +1298,63 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "A",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "/.*Trafego de Entrada na Interface XGigabitEthernet.*/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -1271,26 +1377,110 @@
         {
           "id": "reduce",
           "options": {
+            "labelsToFields": true,
             "reducers": [
-              "lastNotNull"
+              "last"
             ]
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "keepTime": false,
+            "regExp": "/.*(?<iface>XGigabitEthernet\\d+\\/\\d+\\/\\d+).*/",
+            "replace": false,
+            "source": "item"
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/.*(?<tipo>RxPower|TxPower|Trafego).*/",
+            "source": "item"
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/Trafego de Entrada na Interface (?<description>.*)/",
+            "source": "item"
+          }
+        },
+        {
+          "id": "partitionByValues",
+          "options": {
+            "fields": [
+              "tipo"
+            ],
+            "keepFields": false
+          }
+        },
+        {
+          "id": "joinByField",
+          "options": {
+            "byField": "iface",
+            "mode": "outer"
           }
         },
         {
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Field": true
+              "Field RxPower": true,
+              "Field Trafego": true,
+              "Field TxPower": true,
+              "Last Trafego": true,
+              "description RxPower": true,
+              "description Trafego": false,
+              "description TxPower": true,
+              "host RxPower": true,
+              "host Trafego": true,
+              "host TxPower": true,
+              "iface RxPower": true,
+              "item RxPower": true,
+              "item Trafego": true,
+              "item TxPower": true,
+              "item_key RxPower": true,
+              "item_key Trafego": true,
+              "item_key TxPower": true
             },
-            "indexByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Field RxPower": 4,
+              "Field Trafego": 14,
+              "Field TxPower": 9,
+              "Last RxPower": 1,
+              "Last Trafego": 18,
+              "Last TxPower": 2,
+              "description RxPower": 8,
+              "description Trafego": 0,
+              "description TxPower": 13,
+              "host RxPower": 5,
+              "host Trafego": 15,
+              "host TxPower": 10,
+              "iface RxPower": 3,
+              "item RxPower": 6,
+              "item Trafego": 16,
+              "item TxPower": 11,
+              "item_key RxPower": 7,
+              "item_key Trafego": 17,
+              "item_key TxPower": 12
+            },
             "renameByName": {
-              "Field": "",
-              "Last (not null)": "TX POWER",
-              "Last *": "TX POWER"
+              "Last RxPower": "RX",
+              "Last TxPower": "TX",
+              "description Trafego": "Interface"
             }
           }
         }
       ],
+      "transparent": true,
       "type": "table"
     },
     {
@@ -1299,9 +1489,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 15
+        "y": 23
       },
-      "id": 51,
+      "id": 35,
       "title": "TRÁFEGO INTERFACES ",
       "type": "row"
     },
@@ -1324,7 +1514,7 @@
             "barAlignment": 0,
             "barWidthFactor": 0.6,
             "drawStyle": "line",
-            "fillOpacity": 30,
+            "fillOpacity": 90,
             "gradientMode": "opacity",
             "hideFrom": {
               "legend": false,
@@ -1349,6 +1539,7 @@
               "mode": "off"
             }
           },
+          "decimals": 1,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1367,11 +1558,11 @@
       },
       "gridPos": {
         "h": 10,
-        "w": 24,
+        "w": 8,
         "x": 0,
-        "y": 16
+        "y": 24
       },
-      "id": 31,
+      "id": 19,
       "options": {
         "alertThreshold": true,
         "annotations": {
@@ -1380,9 +1571,10 @@
         },
         "legend": {
           "calcs": [
-            "lastNotNull"
+            "lastNotNull",
+            "max"
           ],
-          "displayMode": "table",
+          "displayMode": "list",
           "enableFacetedFilter": false,
           "overflow": "ellipsis",
           "placement": "bottom",
@@ -1406,35 +1598,7 @@
             "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:317",
-              "added": false,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW -MPLS-PE-LEVY-02",
-                " "
-              ],
-              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
@@ -1445,7 +1609,7 @@
             "filter": "Trafego de Entrada na Interface $iface1"
           },
           "itemTag": {
-            "filter": "Application: Network interfaces"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -1489,35 +1653,7 @@
             "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:319",
-              "added": false,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "SW -MPLS-PE-LEVY-02",
-                " "
-              ],
-              "text": "replaceAlias(SW -MPLS-PE-LEVY-02,  )"
-            }
-          ],
+          "functions": [],
           "group": {
             "filter": "SWITCH"
           },
@@ -1528,7 +1664,7 @@
             "filter": "Trafego de Saida na Interface $iface1"
           },
           "itemTag": {
-            "filter": "Application: Network interfaces"
+            "filter": ""
           },
           "macro": {
             "filter": ""
@@ -1564,8 +1700,423 @@
           }
         }
       ],
-      "title": "$iface1",
-      "transparent": true,
+      "title": "TRÁFEGO $iface1",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 90,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        }
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 8,
+        "x": 8,
+        "y": 24
+      },
+      "id": 26,
+      "options": {
+        "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "max"
+          ],
+          "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface $iface2"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface $iface2"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "TRÁFEGO $iface2",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 90,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "showValues": false,
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 1,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "bps"
+        }
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 8,
+        "x": 16,
+        "y": 24
+      },
+      "id": 27,
+      "options": {
+        "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "max"
+          ],
+          "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "Trafego de Entrada na Interface $iface3"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "Network interfaces"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "MPLS-PE-06-SIMAO-PEREIRA"
+          },
+          "item": {
+            "filter": "Trafego de Saida na Interface $iface3"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "TRÁFEGO $iface3",
       "type": "timeseries"
     },
     {
@@ -1574,10 +2125,10 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 34
       },
-      "id": 52,
-      "title": "POTÊNCIA DA INTERFACE",
+      "id": 36,
+      "title": "HIST. POTÊNCIA INTERFACE",
       "type": "row"
     },
     {
@@ -1642,12 +2193,12 @@
         }
       },
       "gridPos": {
-        "h": 8,
-        "w": 24,
+        "h": 9,
+        "w": 8,
         "x": 0,
-        "y": 27
+        "y": 35
       },
-      "id": 47,
+      "id": 32,
       "options": {
         "annotations": {
           "clustering": -1,
@@ -1687,10 +2238,10 @@
             "filter": "MPLS-PE-06-SIMAO-PEREIRA"
           },
           "item": {
-            "filter": "$iface2"
+            "filter": "Optical Module Interface $iface4: RxPower"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "/.*/"
           },
           "macro": {
             "filter": ""
@@ -1726,7 +2277,7 @@
           }
         }
       ],
-      "title": "$iface2",
+      "title": "$iface3",
       "transparent": true,
       "type": "timeseries"
     }
@@ -1735,6 +2286,7 @@
   "refresh": "30s",
   "schemaVersion": 42,
   "tags": [
+    "switchs",
     "POP SIMÃO PEREIRA"
   ],
   "templating": {
@@ -1751,21 +2303,21 @@
         },
         "definition": "",
         "hide": 0,
-        "includeAll": false,
-        "label": "10GE",
-        "multi": false,
+        "includeAll": true,
+        "label": "100GE",
+        "multi": true,
         "name": "iface1",
         "options": [],
         "query": {
-          "application": "Network interfaces",
+          "application": "Application: Network interfaces",
           "group": "SWITCH",
-          "host": "SW -MPLS-PE-LEVY-02",
+          "host": "MPLS-PE-06-SIMAO-PEREIRA",
           "item": "/.*/",
           "itemTag": "",
           "queryType": "item"
         },
         "refresh": 1,
-        "regex": "/^Trafego de (?:Entrada|Saida) na Interface\\s+(.*)$/",
+        "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface) (40GE.*)/",
         "regexApplyTo": "value",
         "skipUrlSync": false,
         "sort": 0,
@@ -1783,22 +2335,92 @@
         },
         "definition": "",
         "hide": 0,
-        "includeAll": false,
-        "label": "INTERFACE - FIBRA",
-        "multi": false,
+        "includeAll": true,
+        "label": "ETH-TRUNK",
+        "multi": true,
         "name": "iface2",
         "options": [],
         "query": {
-          "application": "RX-POWER",
+          "application": "Network interfaces",
           "group": "SWITCH",
-          "host": "SW -MPLS-PE-LEVY-02",
-          "item": "/.*RxPower$/",
+          "host": "MPLS-PE-06-SIMAO-PEREIRA",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(Eth.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "allValue": ".*",
+        "allowCustomValue": true,
+        "current": {
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "definition": "",
+        "hide": 0,
+        "includeAll": true,
+        "label": "XGIGABIT",
+        "multi": true,
+        "name": "iface3",
+        "options": [],
+        "query": {
+          "application": "Network interfaces",
+          "group": "SWITCH",
+          "host": "MPLS-PE-06-SIMAO-PEREIRA",
+          "item": "/.*/",
+          "itemTag": "",
+          "queryType": "item"
+        },
+        "refresh": 1,
+        "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(XGigabit.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "allowCustomValue": true,
+        "current": {
+          "text": "All",
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "definition": "",
+        "hide": 2,
+        "includeAll": true,
+        "multi": true,
+        "name": "iface4",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/.*/",
+          "host": "MPLS-PE-06-SIMAO-PEREIRA",
+          "item": "/.*${iface3:regex}.*/",
           "itemTag": "",
           "queryType": "item",
           "showDisabledItems": false
         },
         "refresh": 1,
-        "regex": "/XGigabitEthernet.*/",
+        "regex": "/.*?(XGigabitEthernet0\\/\\d+\\/\\d+).*/",
         "regexApplyTo": "value",
         "skipUrlSync": false,
         "sort": 0,
@@ -1825,6 +2447,6 @@
     ]
   },
   "timezone": "browser",
-  "title": " MPLS-PE-06-SIMAO-PEREIRA",
+  "title": "MPLS-PE-06-SIMAO-PEREIRA",
   "uid": "ad7qlhz"
 }
