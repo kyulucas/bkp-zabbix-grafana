@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -35,8 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 2,
-      "panels": [],
+      "id": 33,
       "title": "STATUS DO SWITCH ",
       "type": "row"
     },
@@ -57,7 +56,9 @@
         "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://upload.wikimedia.org/wikipedia/pt/1/11/Huawei_logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 90px;\">\n    <h2 style=\"color: #d32f2f;\"> Version 5.170 </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (S6730 V200R019C10SPC500)\n    </p>\n</div>\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -98,8 +99,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -126,7 +126,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -135,7 +135,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -185,6 +185,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -198,7 +199,6 @@
             "mode": "thresholds"
           },
           "displayName": "USO DE MEMÓRIA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -213,8 +213,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -241,7 +240,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -250,7 +249,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -300,6 +299,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -348,7 +348,6 @@
           },
           "decimals": 0,
           "displayName": "USO DE CPU",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -363,8 +362,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -375,9 +373,15 @@
       "id": 7,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": false
         },
@@ -387,7 +391,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -396,7 +400,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -446,6 +450,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -496,8 +501,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -524,7 +528,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -533,7 +537,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -583,6 +587,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -633,8 +638,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -661,7 +665,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -670,7 +674,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -720,6 +724,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -766,8 +771,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -794,7 +798,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -803,7 +807,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -853,6 +857,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -866,7 +871,6 @@
             "mode": "thresholds"
           },
           "displayName": "TEMPERATURA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -885,8 +889,7 @@
             ]
           },
           "unit": "celsius"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -913,7 +916,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -922,7 +925,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -972,6 +975,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -985,7 +989,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -996,8 +999,7 @@
             ]
           },
           "unit": "dtdhms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1024,7 +1026,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1033,7 +1035,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1083,6 +1085,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1093,8 +1096,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 11,
-      "panels": [],
+      "id": 34,
       "title": "SINAL DBM",
       "type": "row"
     },
@@ -1111,24 +1113,19 @@
           "custom": {
             "align": "center",
             "cellOptions": {
-              "type": "auto"
+              "type": "color-background"
             },
             "footer": {
               "reducers": []
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
                 "color": "dark-green",
-                "value": -19
+                "value": 0
               }
             ]
           },
@@ -1138,20 +1135,63 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "INTERFACE"
+              "options": "Interface",
+              "scope": "series"
             },
             "properties": [
               {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#233f69",
+                  "mode": "fixed"
+                }
+              },
+              {
                 "id": "custom.width",
-                "value": 483
+                "value": 773
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "RX",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "mode": "thresholds"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red",
+                      "value": 0
+                    },
+                    {
+                      "color": "dark-yellow",
+                      "value": -26
+                    },
+                    {
+                      "color": "dark-green",
+                      "value": -14
+                    }
+                  ]
+                }
               }
             ]
           }
         ]
       },
       "gridPos": {
-        "h": 10,
-        "w": 6,
+        "h": 15,
+        "w": 24,
         "x": 0,
         "y": 8
       },
@@ -1161,7 +1201,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1170,174 +1210,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:88",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
-                "params": [
-                  {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "Switch core 6730-OLTs:",
-                " "
-              ],
-              "text": "replaceAlias(Switch core 6730-OLTs:,  )"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "/.*/"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Last (not null)": true,
-              "Last *": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "INTERFACE",
-              "Last (not null)": "SINAL RX POWER"
-            }
-          }
-        }
-      ],
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "mode": "gradient",
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "decimals": 1,
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
-                "color": "dark-orange",
-                "value": -30
-              },
-              {
-                "color": "dark-green",
-                "value": -20
-              }
-            ]
-          },
-          "unit": "dBm"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 10,
-        "x": 6,
-        "y": 8
-      },
-      "id": 24,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1348,10 +1221,10 @@
             "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "/.*/"
+            "filter": "/.*: RxPower$/"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "/Application: Transceiver Data Interface.*/"
           },
           "macro": {
             "filter": ""
@@ -1385,100 +1258,15 @@
           "triggers": {
             "acknowledged": 2
           }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
         },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
-              "Last (not null)": false
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "INTERFACE",
-              "Last (not null)": "SINAL RX POWER",
-              "Last *": "RX POWER"
-            }
-          }
-        }
-      ],
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "mode": "gradient",
-              "type": "color-background"
-            },
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "decimals": 1,
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-red",
-                "value": 0
-              },
-              {
-                "color": "#EAB839",
-                "value": -30
-              },
-              {
-                "color": "dark-green",
-                "value": -20
-              }
-            ]
-          },
-          "unit": "dBm"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 10,
-        "w": 8,
-        "x": 16,
-        "y": 8
-      },
-      "id": 25,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true
-      },
-      "pluginVersion": "12.3.0",
-      "targets": [
         {
           "application": {
-            "filter": "TX-POWER"
+            "filter": "RX-POWER"
           },
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1489,10 +1277,10 @@
             "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "/.*/"
+            "filter": "/.*: TxPower$/"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "/Application: Transceiver Data Interface.*/"
           },
           "macro": {
             "filter": ""
@@ -1510,7 +1298,63 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "A",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "/.*Trafego de Entrada na Interface XGigabitEthernet.*/"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -1528,31 +1372,115 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
           "options": {
+            "labelsToFields": true,
             "reducers": [
-              "lastNotNull"
+              "last"
             ]
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "keepTime": false,
+            "regExp": "/.*(?<iface>XGigabitEthernet\\d+\\/\\d+\\/\\d+).*/",
+            "replace": false,
+            "source": "item"
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/.*(?<tipo>RxPower|TxPower|Trafego).*/",
+            "source": "item"
+          }
+        },
+        {
+          "id": "extractFields",
+          "options": {
+            "delimiter": ",",
+            "format": "regexp",
+            "regExp": "/Trafego de Entrada na Interface (?<description>.*)/",
+            "source": "item"
+          }
+        },
+        {
+          "id": "partitionByValues",
+          "options": {
+            "fields": [
+              "tipo"
+            ],
+            "keepFields": false
+          }
+        },
+        {
+          "id": "joinByField",
+          "options": {
+            "byField": "iface",
+            "mode": "outer"
           }
         },
         {
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Field": true,
-              "Last (not null)": false
+              "Field RxPower": true,
+              "Field Trafego": true,
+              "Field TxPower": true,
+              "Last Trafego": true,
+              "description RxPower": true,
+              "description Trafego": false,
+              "description TxPower": true,
+              "host RxPower": true,
+              "host Trafego": true,
+              "host TxPower": true,
+              "iface RxPower": true,
+              "item RxPower": true,
+              "item Trafego": true,
+              "item TxPower": true,
+              "item_key RxPower": true,
+              "item_key Trafego": true,
+              "item_key TxPower": true
             },
-            "indexByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Field RxPower": 4,
+              "Field Trafego": 14,
+              "Field TxPower": 9,
+              "Last RxPower": 1,
+              "Last Trafego": 18,
+              "Last TxPower": 2,
+              "description RxPower": 8,
+              "description Trafego": 0,
+              "description TxPower": 13,
+              "host RxPower": 5,
+              "host Trafego": 15,
+              "host TxPower": 10,
+              "iface RxPower": 3,
+              "item RxPower": 6,
+              "item Trafego": 16,
+              "item TxPower": 11,
+              "item_key RxPower": 7,
+              "item_key Trafego": 17,
+              "item_key TxPower": 12
+            },
             "renameByName": {
-              "Field": "INTERFACE",
-              "Last (not null)": "SINAL TX POWER",
-              "Last *": "TX POWER"
+              "Last RxPower": "RX",
+              "Last TxPower": "TX",
+              "description Trafego": "Interface"
             }
           }
         }
       ],
+      "transparent": true,
       "type": "table"
     },
     {
@@ -1561,10 +1489,9 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 23
       },
-      "id": 17,
-      "panels": [],
+      "id": 35,
       "title": "TRÁFEGO INTERFACES ",
       "type": "row"
     },
@@ -1613,7 +1540,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1628,24 +1554,29 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
         "w": 8,
         "x": 0,
-        "y": 19
+        "y": 24
       },
       "id": 19,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
             "max"
           ],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1655,7 +1586,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1664,7 +1595,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1719,14 +1650,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -1818,7 +1748,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1833,24 +1762,29 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
         "w": 8,
         "x": 8,
-        "y": 19
+        "y": 24
       },
       "id": 26,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
             "max"
           ],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1860,7 +1794,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1869,7 +1803,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1924,14 +1858,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -2023,7 +1956,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2038,24 +1970,29 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
         "w": 8,
         "x": 16,
-        "y": 19
+        "y": 24
       },
       "id": 27,
       "options": {
         "alertThreshold": true,
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
             "max"
           ],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -2065,7 +2002,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2074,7 +2011,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2129,14 +2066,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 OLTS"
           },
@@ -2182,6 +2118,168 @@
       ],
       "title": "TRÁFEGO $iface3",
       "type": "timeseries"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 36,
+      "title": "HIST. POTÊNCIA INTERFACE",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "max": 0,
+          "min": -41,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 8,
+        "x": 0,
+        "y": 35
+      },
+      "id": 32,
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [
+        {
+          "application": {
+            "filter": "RX-POWER"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "Optical Module Interface $iface4: RxPower"
+          },
+          "itemTag": {
+            "filter": "/.*/"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "$iface3",
+      "transparent": true,
+      "type": "timeseries"
     }
   ],
   "preload": false,
@@ -2194,6 +2292,7 @@
   "templating": {
     "list": [
       {
+        "allowCustomValue": true,
         "current": {
           "text": [
             "40GE0/0/1(Ne8000M8-Huawei PPPoE Server Eth-Trunk20 PORT 100GE0/3/1)"
@@ -2207,6 +2306,7 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
+        "hide": 0,
         "includeAll": true,
         "label": "100GE",
         "multi": true,
@@ -2222,9 +2322,13 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface) (40GE.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
           "text": [
             "Eth-Trunk1(Porta Ligada na Gerencia da Rede interna 1009)"
@@ -2238,6 +2342,7 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
+        "hide": 0,
         "includeAll": true,
         "label": "ETH-TRUNK",
         "multi": true,
@@ -2253,9 +2358,14 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(Eth.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allValue": ".*",
+        "allowCustomValue": true,
         "current": {
           "text": [
             "XGigabitEthernet0/0/1(Eth-Trunk 1 Porta Ligada na Gerencia da Rede interna 1009)"
@@ -2269,6 +2379,7 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "",
+        "hide": 0,
         "includeAll": true,
         "label": "XGIGABIT",
         "multi": true,
@@ -2284,17 +2395,65 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(XGigabit.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
+      },
+      {
+        "allValue": "",
+        "allowCustomValue": true,
+        "current": {
+          "text": "All",
+          "value": "$__all"
+        },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource",
+          "uid": "ff5clh86a2mf4a"
+        },
+        "definition": "",
+        "hide": 2,
+        "includeAll": true,
+        "multi": true,
+        "name": "iface4",
+        "options": [],
+        "query": {
+          "application": "",
+          "group": "/.*/",
+          "host": "SW - 6730 OLTS",
+          "item": "/.*${iface3:regex}.*/",
+          "itemTag": "",
+          "queryType": "item",
+          "showDisabledItems": false
+        },
+        "refresh": 1,
+        "regex": "/.*?(XGigabitEthernet0\\/\\d+\\/\\d+).*/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "Switch core 6730-OLTs",
-  "uid": "QN9H1M_Gza",
-  "weekStart": ""
+  "uid": "QN9H1M_Gza"
 }
