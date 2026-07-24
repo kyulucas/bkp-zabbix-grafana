@@ -537,14 +537,14 @@
         "x": 18,
         "y": 19
       },
-      "id": 60,
+      "id": 68,
       "options": {
         "code": {
           "language": "plaintext",
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">ZABBIX SERVER DASH</div>",
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SIMÃO PEREIRA</div>",
         "mode": "html"
       },
       "pluginVersion": "13.1.0",
@@ -630,12 +630,12 @@
     },
     {
       "gridPos": {
-        "h": 7,
+        "h": 6,
         "w": 6,
         "x": 18,
         "y": 21
       },
-      "id": 61,
+      "id": 69,
       "options": {
         "includeVars": false,
         "keepTime": false,
@@ -647,7 +647,7 @@
         "showSearch": true,
         "showStarred": false,
         "tags": [
-          "ZABBIX SERVER DASH"
+          "POP SIMÃO PEREIRA"
         ]
       },
       "pluginVersion": "13.1.0",
@@ -687,7 +687,7 @@
     },
     {
       "gridPos": {
-        "h": 6,
+        "h": 7,
         "w": 6,
         "x": 12,
         "y": 23
@@ -738,29 +738,6 @@
     },
     {
       "gridPos": {
-        "h": 2,
-        "w": 6,
-        "x": 12,
-        "y": 29
-      },
-      "id": 68,
-      "options": {
-        "code": {
-          "language": "plaintext",
-          "showLineNumbers": false,
-          "showMiniMap": false
-        },
-        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">POP SIMÃO PEREIRA</div>",
-        "mode": "html"
-      },
-      "pluginVersion": "13.1.0",
-      "targets": [],
-      "title": "",
-      "transparent": true,
-      "type": "text"
-    },
-    {
-      "gridPos": {
         "h": 7,
         "w": 6,
         "x": 0,
@@ -790,38 +767,33 @@
     },
     {
       "gridPos": {
-        "h": 6,
+        "h": 2,
         "w": 6,
-        "x": 12,
-        "y": 31
+        "x": 6,
+        "y": 30
       },
-      "id": 69,
+      "id": 60,
       "options": {
-        "includeVars": false,
-        "keepTime": false,
-        "maxItems": 30,
-        "query": "",
-        "showFolderNames": true,
-        "showHeadings": false,
-        "showRecentlyViewed": false,
-        "showSearch": true,
-        "showStarred": false,
-        "tags": [
-          "POP SIMÃO PEREIRA"
-        ]
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
+        "content": "<div style=\"font-size:20px;\n            text-align:center;\n            font-family:Arial;\n            border-radius: 20px;\n            background-image: linear-gradient(315deg, #00FA9A 0%, #0000CD 74%);\ncolor:white\">ZABBIX SERVER DASH</div>",
+        "mode": "html"
       },
       "pluginVersion": "13.1.0",
       "targets": [],
       "title": "",
       "transparent": true,
-      "type": "dashlist"
+      "type": "text"
     },
     {
       "gridPos": {
         "h": 2,
         "w": 6,
         "x": 12,
-        "y": 37
+        "y": 30
       },
       "id": 48,
       "options": {
@@ -843,8 +815,36 @@
       "gridPos": {
         "h": 7,
         "w": 6,
+        "x": 6,
+        "y": 32
+      },
+      "id": 61,
+      "options": {
+        "includeVars": false,
+        "keepTime": false,
+        "maxItems": 30,
+        "query": "",
+        "showFolderNames": true,
+        "showHeadings": false,
+        "showRecentlyViewed": false,
+        "showSearch": true,
+        "showStarred": false,
+        "tags": [
+          "ZABBIX SERVER DASH"
+        ]
+      },
+      "pluginVersion": "13.1.0",
+      "targets": [],
+      "title": "",
+      "transparent": true,
+      "type": "dashlist"
+    },
+    {
+      "gridPos": {
+        "h": 7,
+        "w": 6,
         "x": 12,
-        "y": 39
+        "y": 32
       },
       "id": 49,
       "options": {
@@ -872,7 +872,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 46
+        "y": 39
       },
       "id": 44,
       "options": {
