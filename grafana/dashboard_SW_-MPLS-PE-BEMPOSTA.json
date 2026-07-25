@@ -2294,8 +2294,8 @@
       {
         "allowCustomValue": true,
         "current": {
-          "text": "Console9/0/0()",
-          "value": "Console9/0/0()"
+          "text": "All",
+          "value": "$__all"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
@@ -2326,8 +2326,12 @@
       {
         "allowCustomValue": true,
         "current": {
-          "text": "Optical Module Interface XGigabitEthernet0/0/1: RxPower",
-          "value": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
@@ -2359,9 +2363,7 @@
         "allValue": ".*",
         "allowCustomValue": true,
         "current": {
-          "text": [
-            "All"
-          ],
+          "text": "All",
           "value": [
             "$__all"
           ]
@@ -2448,5 +2450,5 @@
   },
   "timezone": "browser",
   "title": "SW -MPLS-PE-BEMPOSTA",
-  "uid": "adp7plh"
+  "uid": "ad9nsjh"
 }
