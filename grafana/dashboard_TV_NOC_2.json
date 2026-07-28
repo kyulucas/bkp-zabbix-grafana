@@ -2321,12 +2321,14 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "RX Power"
+              "options": "RX POWER",
+              "scope": "series"
             },
             "properties": [
               {
                 "id": "custom.cellOptions",
                 "value": {
+                  "applyToRow": true,
                   "type": "color-background"
                 }
               },
@@ -3693,7 +3695,7 @@
           "id": "reduce",
           "options": {
             "reducers": [
-              "last"
+              "lastNotNull"
             ]
           }
         },
