@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "gridPos": {
@@ -44,7 +44,9 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">DASHBOARD RETIFICADORA ${Retificadora}</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -88,8 +90,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -115,7 +116,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -124,14 +125,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -189,7 +189,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -204,8 +203,7 @@
             ]
           },
           "unit": "celsius"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -231,7 +229,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -240,14 +238,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -336,8 +333,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -363,7 +359,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -372,14 +368,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -437,7 +432,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -452,8 +446,7 @@
             ]
           },
           "unit": "volt"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -479,7 +472,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -488,14 +481,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -553,7 +545,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -568,8 +559,7 @@
             ]
           },
           "unit": "volt"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -595,7 +585,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -604,13 +594,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -668,7 +657,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -691,8 +679,7 @@
             ]
           },
           "unit": "dtdhms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -718,7 +705,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -727,14 +714,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "aa12f38a-6b87-4f3f-b7d7-58ff4e0df046"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -795,7 +781,9 @@
         "content": "<div style=\"font-size:25px;font-weight:700; background-color:#1e2d79;border-radius:10px; text-align:center;\"><p>REDE CA ⚡</p></div>",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -810,7 +798,6 @@
             "mode": "thresholds"
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -837,8 +824,7 @@
             ]
           },
           "unit": "amp"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -864,7 +850,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -873,13 +859,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -967,8 +952,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -994,7 +978,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1003,14 +987,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1075,7 +1058,9 @@
         "content": "<div style=\"font-size:25px;font-weight:700; background-color:#1e2d79;border-radius:10px; text-align:center;\"><p>REDE CC 🔋</p></div>",
         "mode": "markdown"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -1124,7 +1109,6 @@
             }
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1162,6 +1146,10 @@
       },
       "id": 12,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
@@ -1170,6 +1158,8 @@
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1179,7 +1169,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1188,13 +1178,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
+          "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1286,7 +1276,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1324,6 +1313,10 @@
       },
       "id": 13,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
@@ -1332,6 +1325,8 @@
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1341,7 +1336,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1350,13 +1345,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1448,7 +1442,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -1488,6 +1481,10 @@
       },
       "id": 11,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
@@ -1496,6 +1493,8 @@
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1505,7 +1504,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1514,13 +1513,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1613,7 +1611,6 @@
             }
           },
           "decimals": 0,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1651,6 +1648,10 @@
       },
       "id": 24,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [
             "lastNotNull",
@@ -1659,6 +1660,8 @@
             "mean"
           ],
           "displayMode": "table",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1668,7 +1671,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1677,13 +1680,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1741,7 +1743,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "max": 30,
           "min": 0,
           "thresholds": {
@@ -1758,8 +1759,7 @@
             ]
           },
           "unit": "amp"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1785,7 +1785,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1794,14 +1794,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1859,7 +1858,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1870,8 +1868,7 @@
             ]
           },
           "unit": "dtdhms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1897,7 +1894,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -1906,13 +1903,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -1970,7 +1966,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -1991,8 +1986,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2018,7 +2012,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2027,13 +2021,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -2091,7 +2084,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2106,8 +2098,7 @@
             ]
           },
           "unit": "volt"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -2133,7 +2124,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.1.0",
       "targets": [
         {
           "application": {
@@ -2142,13 +2133,12 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "7qUfMSa4z"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "ENERGIA"
           },
-          "hide": false,
           "host": {
             "filter": "$Retificadora"
           },
@@ -2214,6 +2204,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -2276,13 +2267,17 @@
           }
         ]
       },
-      "pluginVersion": "6.0.3",
+      "pluginVersion": "6.3.0",
       "targets": [
         {
           "application": {
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -2350,12 +2345,18 @@
   "templating": {
     "list": [
       {
+        "allowCustomValue": true,
         "current": {
           "text": "ENERGIA POP LEVY JFA",
           "value": "ENERGIA POP LEVY JFA"
         },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource"
+        },
         "definition": "",
+        "hide": 0,
         "includeAll": false,
+        "multi": false,
         "name": "Retificadora",
         "options": [],
         "query": {
@@ -2368,17 +2369,32 @@
         },
         "refresh": 1,
         "regex": "",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "RETIFICADORA JFA",
-  "uid": "pwU-t5wVz",
-  "weekStart": ""
+  "uid": "pwU-t5wVz"
 }
