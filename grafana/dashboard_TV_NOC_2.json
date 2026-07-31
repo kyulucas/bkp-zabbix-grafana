@@ -5074,6 +5074,35 @@
                 ]
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Levy",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "🟢"
+                      },
+                      "1": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "🔴"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -5375,6 +5404,77 @@
           },
           "queryType": "0",
           "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "CPD TR R.2"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "ENERGIA"
+          },
+          "host": {
+            "filter": "ENERGIA POP CPD TR RACK 2 HW"
+          },
+          "item": {
+            "filter": "AC - Status de Entrada"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "FF",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5801,77 +5901,6 @@
           },
           "queryType": "0",
           "refId": "E",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CPD TR R.2"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP CPD TR RACK 2 HW"
-          },
-          "item": {
-            "filter": "AC - Status de Entrada"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "H",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
