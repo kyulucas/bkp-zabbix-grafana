@@ -5274,6 +5274,35 @@
                 ]
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Levy",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "🟢"
+                      },
+                      "1": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "🔴"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
