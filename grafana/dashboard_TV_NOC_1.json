@@ -2298,7 +2298,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 OLTS"
+            "filter": "SW -MPLS-PE-BEMPOSTA"
           },
           "item": {
             "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
