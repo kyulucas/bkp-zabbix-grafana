@@ -648,11 +648,12 @@
             "trigger_prototypes": [
               {
                 "uuid": "58bb482b68ab402d9b889e55226507d0",
-                "expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}])) \n <= \n(last(/Optical Modules Huawei/hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}])))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]))\n<> -40)",
+                "expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}])) \n <= \n(last(/Optical Modules Huawei/hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}])))",
                 "recovery_mode": "RECOVERY_EXPRESSION",
-                "recovery_expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}])) \n >\n(last(/Optical Modules Huawei/hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}])))\n\nand\n\n((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}]))\n<> -40)",
+                "recovery_expression": "((last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane0[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane1[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane2[{#ENTPHYSICALNAME}]) or\n last(/Optical Modules Huawei/hwEntityOpticalLaneRxPowerMLLane3[{#ENTPHYSICALNAME}])) \n >\n(last(/Optical Modules Huawei/hwEntityOpticalRxLowWarnThresholdML[{#ENTPHYSICALNAME}])))",
                 "name": "Low Rx Signal on Optical Module ML: {#ENTPHYSICALNAME}",
                 "priority": "DISASTER",
+                "description": "Alarma tambem quando RxPower = -40 (valor sem sinal / LOS).",
                 "manual_close": "YES"
               },
               {
@@ -1151,11 +1152,12 @@
             "trigger_prototypes": [
               {
                 "uuid": "9bb66a5c490042c4a39f4c2949322270",
-                "expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n <= \n(last(/Optical Modules Huawei/hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))\nand\n(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                "expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n <= \n(last(/Optical Modules Huawei/hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))",
                 "recovery_mode": "RECOVERY_EXPRESSION",
-                "recovery_expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n >\n(last(/Optical Modules Huawei/hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))\nand\n(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}]) <> -40)",
+                "recovery_expression": "(last(/Optical Modules Huawei/hwEntityOpticalLaneRxPower[{#ENTPHYSICALNAME}])\n >\n(last(/Optical Modules Huawei/hwEntityOpticalRxLowThreshold[{#ENTPHYSICALNAME}]) * 0.90))",
                 "name": "Low Rx Signal on Optical Module SL: {#ENTPHYSICALNAME}",
                 "priority": "DISASTER",
+                "description": "Alarma tambem quando RxPower = -40 (valor sem sinal / LOS).",
                 "manual_close": "YES"
               },
               {
