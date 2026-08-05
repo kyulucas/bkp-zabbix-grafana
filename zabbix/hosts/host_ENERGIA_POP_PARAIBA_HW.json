@@ -105,16 +105,16 @@
         ],
         "interfaces": [
           {
-            "ip": "60.60.50.2",
+            "ip": "10.12.0.5",
             "interface_ref": "if1"
           },
           {
             "type": "SNMP",
-            "ip": "60.60.50.2",
+            "ip": "10.12.0.5",
             "port": "161",
             "details": {
               "version": "SNMPV1",
-              "community": "TrTelecom2025re"
+              "community": "TrTelecom2026re"
             },
             "interface_ref": "if2"
           }
