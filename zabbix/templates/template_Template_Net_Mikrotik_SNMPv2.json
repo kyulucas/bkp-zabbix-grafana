@@ -802,6 +802,156 @@
             ]
           },
           {
+            "uuid": "f931acada6124f6eaaf02ca335c1b140",
+            "name": "BGP peers SSH discovery",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"discover\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\"]",
+            "delay": "5m",
+            "status": "DISABLED",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#PEER.DISABLED}",
+                  "value": "0",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "description": "Descobre peers BGP via SSH (RouterOS 6 /routing bgp peer). Requer script mikrotik_bgp_ssh.py em externalscripts.",
+            "item_prototypes": [
+              {
+                "uuid": "3f9140cd9ff64579ae242dbbc29b15f5",
+                "name": "BGP [{#PEER.NAME}]: Established",
+                "type": "EXTERNAL",
+                "key": "mikrotik_bgp_ssh.py[\"get\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{#PEER.NAME}\",\"established\"]",
+                "delay": "2m",
+                "history": "30d",
+                "trends": "90d",
+                "description": "BGP peer via SSH (externalscript mikrotik_bgp_ssh.py)",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bgp"
+                  },
+                  {
+                    "tag": "peer",
+                    "value": "{#PEER.NAME}"
+                  }
+                ],
+                "trigger_prototypes": [
+                  {
+                    "uuid": "990c953ba76840bab300d37284c4f21f",
+                    "expression": "last(/Template Net Mikrotik SNMPv2/mikrotik_bgp_ssh.py[\"get\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{#PEER.NAME}\",\"established\"])=0",
+                    "name": "BGP peer {#PEER.NAME} DOWN ({#PEER.REMOTE.ADDR} / AS{#PEER.REMOTE.AS})",
+                    "opdata": "state={ITEM.LASTVALUE1}",
+                    "priority": "HIGH",
+                    "description": "Peer BGP sem sessao established.\nColeta: SSH via mikrotik_bgp_ssh.py (External check).\nPeers disabled nao entram no LLD (filtro {#PEER.DISABLED}=0).\nMacros necessarias no host: {$MK.SSH.USER} e {$MK.SSH.PASSWORD}.\nHabilitar a discovery rule apenas nos hosts desejados (no template ela fica Disabled).",
+                    "manual_close": "YES",
+                    "tags": [
+                      {
+                        "tag": "component",
+                        "value": "bgp"
+                      },
+                      {
+                        "tag": "peer",
+                        "value": "{#PEER.NAME}"
+                      },
+                      {
+                        "tag": "scope",
+                        "value": "availability"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "uuid": "e5a36630571d4b2f9e646dd61b561d4f",
+                "name": "BGP [{#PEER.NAME}]: Prefix count",
+                "type": "EXTERNAL",
+                "key": "mikrotik_bgp_ssh.py[\"get\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{#PEER.NAME}\",\"prefix-count\"]",
+                "delay": "2m",
+                "history": "30d",
+                "trends": "90d",
+                "description": "BGP peer via SSH (externalscript mikrotik_bgp_ssh.py)",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bgp"
+                  },
+                  {
+                    "tag": "peer",
+                    "value": "{#PEER.NAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "1564a3a6f2454568b17aaeeabdecac25",
+                "name": "BGP [{#PEER.NAME}]: State",
+                "type": "EXTERNAL",
+                "key": "mikrotik_bgp_ssh.py[\"get\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{#PEER.NAME}\",\"state\"]",
+                "delay": "2m",
+                "history": "30d",
+                "value_type": "CHAR",
+                "trends": "0",
+                "description": "Estado textual do peer BGP no RouterOS (idle/connect/active/opensent/openconfirm/established/disabled)",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bgp"
+                  },
+                  {
+                    "tag": "peer",
+                    "value": "{#PEER.NAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "6de1018d6b8c4a69baa1111d9de0fb64",
+                "name": "BGP [{#PEER.NAME}]: State code",
+                "type": "EXTERNAL",
+                "key": "mikrotik_bgp_ssh.py[\"get\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{#PEER.NAME}\",\"state-code\"]",
+                "delay": "2m",
+                "history": "30d",
+                "trends": "90d",
+                "description": "Codigo FSM BGP do peer MikroTik: 0 disabled, 1 idle, 2 connect, 3 active, 4 opensent, 5 openconfirm, 6 established",
+                "valuemap": {
+                  "name": "MikroTik BGP peer state"
+                },
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bgp"
+                  },
+                  {
+                    "tag": "peer",
+                    "value": "{#PEER.NAME}"
+                  }
+                ]
+              },
+              {
+                "uuid": "764725381951423a9052826a4150ab27",
+                "name": "BGP [{#PEER.NAME}]: Uptime",
+                "type": "EXTERNAL",
+                "key": "mikrotik_bgp_ssh.py[\"get\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{#PEER.NAME}\",\"uptime\"]",
+                "delay": "2m",
+                "history": "30d",
+                "value_type": "CHAR",
+                "trends": "0",
+                "description": "BGP peer via SSH (externalscript mikrotik_bgp_ssh.py)",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "bgp"
+                  },
+                  {
+                    "tag": "peer",
+                    "value": "{#PEER.NAME}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "uuid": "aa64b5bb03f1453aacacfd551c47be42",
             "name": "Fan discovery",
             "type": "SNMP_AGENT",
@@ -1606,6 +1756,16 @@
           {
             "macro": "{$MEMORY.UTIL.MAX}",
             "value": "90"
+          },
+          {
+            "macro": "{$MK.SSH.PASSWORD}",
+            "type": "SECRET_TEXT",
+            "description": "Senha SSH MikroTik (definir no host). Tipo secret."
+          },
+          {
+            "macro": "{$MK.SSH.USER}",
+            "value": "zabbix",
+            "description": "Usuario SSH MikroTik para discovery BGP"
           },
           {
             "macro": "{$TEMP_CRIT}",
@@ -2848,6 +3008,40 @@
               {
                 "value": "290",
                 "newvalue": "ghn"
+              }
+            ]
+          },
+          {
+            "uuid": "ec53eaeddf3c4ee2a932b2674eb7d2b5",
+            "name": "MikroTik BGP peer state",
+            "mappings": [
+              {
+                "value": "0",
+                "newvalue": "disabled"
+              },
+              {
+                "value": "1",
+                "newvalue": "idle"
+              },
+              {
+                "value": "2",
+                "newvalue": "connect"
+              },
+              {
+                "value": "3",
+                "newvalue": "active"
+              },
+              {
+                "value": "4",
+                "newvalue": "opensent"
+              },
+              {
+                "value": "5",
+                "newvalue": "openconfirm"
+              },
+              {
+                "value": "6",
+                "newvalue": "established"
               }
             ]
           },
