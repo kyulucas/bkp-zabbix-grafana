@@ -51,7 +51,7 @@
         "content": "<tr>\n   <td align=\"center\"; background=\"d24dff\">\n      <a href=\"https://www.aligera.com.br/\">\n         <img alt=\"Aligera\" src=\"https://i.ibb.co/DCw4qcQ/aligera.png\"\n         width=\"160\" height=\"50\">\n      </a>\n   <td>\n<tr>",
         "mode": "html"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -138,7 +138,7 @@
         "sparkline": false,
         "textMode": "auto"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -276,6 +276,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -285,7 +287,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -403,7 +405,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -420,7 +422,7 @@
             "filter": "$Group"
           },
           "host": {
-            "filter": "$E1"
+            "filter": "E1-Aligera"
           },
           "item": {
             "filter": "Uptime"
@@ -541,7 +543,7 @@
         "sparkline": false,
         "textMode": "auto"
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -696,7 +698,7 @@
           }
         ]
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1166,10 +1168,17 @@
             "filter": ""
           },
           "options": {
+            "acknowledged": 2,
             "count": false,
             "disableDataAlignment": false,
+            "hostProxy": false,
+            "hostsInMaintenance": false,
+            "limit": 1001,
+            "minSeverity": 0,
             "showDisabledItems": false,
             "skipEmptyValues": false,
+            "sortProblems": "default",
+            "useTimeRange": false,
             "useTrends": "default",
             "useZabbixValueMapping": false
           },
@@ -1180,6 +1189,7 @@
           "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
+          "showProblems": "problems",
           "table": {
             "skipEmptyValues": false
           },
@@ -1240,19 +1250,19 @@
           "color": {
             "mode": "thresholds"
           },
-          "displayName": "Remoto IP OI Circuito Altarede",
+          "displayName": "Remote BGP CCR1036",
           "mappings": [
             {
               "options": {
                 "0": {
                   "color": "dark-red",
                   "index": 1,
-                  "text": "172.19.1.1"
+                  "text": "172.255.255.2"
                 },
                 "1": {
                   "color": "dark-green",
                   "index": 0,
-                  "text": "172.19.1.1"
+                  "text": "172.255.255.2"
                 }
               },
               "type": "value"
@@ -1297,7 +1307,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1317,7 +1327,7 @@
             "filter": "E1-Aligera"
           },
           "item": {
-            "filter": "icmpping rota oi 172.19.1.1"
+            "filter": "Ping"
           },
           "itemTag": {
             "filter": ""
@@ -1434,6 +1444,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1443,7 +1455,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1607,6 +1619,8 @@
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -1616,7 +1630,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1633,13 +1647,13 @@
           "format": "table",
           "functions": [],
           "group": {
-            "filter": ""
+            "filter": "Telefonia"
           },
           "host": {
-            "filter": ""
+            "filter": "E1-Aligera"
           },
           "item": {
-            "filter": ""
+            "filter": "Uptime"
           },
           "itemTag": {
             "filter": ""
