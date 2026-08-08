@@ -19,7 +19,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "gridPos": {
@@ -35,10 +35,12 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<center><img src=\"https://uploaddeimagens.com.br/images/004/605/775/thumb/dns1.jpg?1694605560\" width=350\" height=\"200\"></center>\n\n",
+        "content": "<center><img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO2O5_4axfKPcEr-tP-A2p54zmbxhv-uTPQhKPsBYLzQ&s\" width=350\" height=\"200\"></center>\n\n",
         "mode": "html"
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -53,7 +55,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -63,8 +64,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -90,7 +90,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -99,7 +99,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -149,6 +149,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -161,7 +162,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "noValue": "Uso de memória",
           "thresholds": {
             "mode": "absolute",
@@ -176,8 +176,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -203,7 +202,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -212,7 +211,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -262,6 +261,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -274,7 +274,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "noValue": "CPU Load Average",
           "thresholds": {
             "mode": "absolute",
@@ -289,8 +288,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -316,7 +314,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -325,7 +323,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -375,6 +373,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -389,7 +388,6 @@
             "mode": "thresholds"
           },
           "displayName": "Contagem DNS",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -399,8 +397,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -426,7 +423,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -435,7 +432,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -485,6 +482,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -532,8 +530,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -559,7 +556,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -568,7 +565,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -618,6 +615,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -632,7 +630,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Erro",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -642,8 +639,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -669,7 +665,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -678,7 +674,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -728,6 +724,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -742,7 +739,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Serv Fail",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -752,8 +748,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -779,7 +774,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -788,7 +783,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -838,6 +833,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -852,7 +848,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Miss",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -862,8 +857,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -889,7 +883,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -898,7 +892,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -948,6 +942,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -994,8 +989,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1021,7 +1015,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1030,7 +1024,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1080,12 +1074,13 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
       "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
+        "type": "mixed",
+        "uid": "-- Mixed --"
       },
       "fieldConfig": {
         "defaults": {
@@ -1093,7 +1088,6 @@
             "mode": "thresholds"
           },
           "decimals": 2,
-          "mappings": [],
           "max": 17020891136,
           "min": 0,
           "thresholds": {
@@ -1114,8 +1108,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -1125,6 +1118,14 @@
       },
       "id": 34,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -1135,11 +1136,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto"
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1148,7 +1154,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1204,7 +1210,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1256,7 +1262,6 @@
         },
         {
           "datasource": {
-            "name": "Expression",
             "type": "__expr__",
             "uid": "__expr__"
           },
@@ -1265,6 +1270,7 @@
           "type": "math"
         }
       ],
+      "title": "",
       "type": "gauge"
     },
     {
@@ -1278,7 +1284,6 @@
             "mode": "thresholds"
           },
           "decimals": 2,
-          "mappings": [],
           "max": 2,
           "thresholds": {
             "mode": "absolute",
@@ -1298,8 +1303,7 @@
             ]
           },
           "unit": "%"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -1309,6 +1313,14 @@
       },
       "id": 44,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -1319,11 +1331,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto"
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1332,7 +1349,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1382,6 +1399,7 @@
           }
         }
       ],
+      "title": "",
       "type": "gauge"
     },
     {
@@ -1428,8 +1446,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1455,7 +1472,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1464,7 +1481,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1514,6 +1531,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1528,7 +1546,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Nx Domain",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1538,8 +1555,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1565,7 +1581,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1574,7 +1590,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1624,6 +1640,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1638,7 +1655,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Any",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1648,8 +1664,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1675,7 +1690,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1684,7 +1699,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1734,6 +1749,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1748,7 +1764,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Hit",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1758,8 +1773,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1785,7 +1799,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1794,7 +1808,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1844,6 +1858,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1856,7 +1871,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "max": 10,
           "min": 0,
           "noValue": "SEM RESPOSTA",
@@ -1874,8 +1888,7 @@
             ]
           },
           "unit": "dtdurationms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1901,7 +1914,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1910,7 +1923,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1960,6 +1973,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -2010,7 +2024,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2020,8 +2033,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -2031,9 +2043,15 @@
       },
       "id": 5,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -2043,7 +2061,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2052,7 +2070,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2154,7 +2172,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2164,8 +2181,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -2175,9 +2191,15 @@
       },
       "id": 4,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -2187,7 +2209,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2196,7 +2218,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2294,7 +2316,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2305,8 +2326,7 @@
             ]
           },
           "unit": "decbytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -2316,9 +2336,15 @@
       },
       "id": 40,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -2328,7 +2354,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2337,7 +2363,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2461,7 +2487,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2472,8 +2497,7 @@
             ]
           },
           "unit": "decbytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -2483,9 +2507,15 @@
       },
       "id": 41,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -2495,7 +2525,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2504,7 +2534,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2586,7 +2616,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2681,10 +2711,12 @@
           "showLineNumbers": false,
           "showMiniMap": false
         },
-        "content": "<center><img src=\"https://uploaddeimagens.com.br/images/004/605/776/thumb/dns2.jpg?1694605635\" width=350\" height=\"200\"></center>\n\n",
+        "content": "<center><img src=\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO2O5_4axfKPcEr-tP-A2p54zmbxhv-uTPQhKPsBYLzQ&s\" width=350\" height=\"200\"></center>\n\n",
         "mode": "html"
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -2699,7 +2731,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2709,8 +2740,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -2736,7 +2766,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2745,7 +2775,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2795,6 +2825,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -2807,7 +2838,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "noValue": "Uso de memória",
           "thresholds": {
             "mode": "absolute",
@@ -2822,8 +2852,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -2849,7 +2878,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2858,7 +2887,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -2908,6 +2937,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -2920,7 +2950,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "noValue": "CPU Load Average",
           "thresholds": {
             "mode": "absolute",
@@ -2935,8 +2964,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -2962,7 +2990,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2971,7 +2999,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3021,6 +3049,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3035,7 +3064,6 @@
             "mode": "thresholds"
           },
           "displayName": "Contagem DNS",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3045,8 +3073,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -3072,7 +3099,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3081,7 +3108,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3131,6 +3158,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3178,8 +3206,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3205,7 +3232,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3214,7 +3241,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3264,6 +3291,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3278,7 +3306,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Erro",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3288,8 +3315,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3315,7 +3341,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3324,7 +3350,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3374,6 +3400,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3388,7 +3415,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Serv Fail",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3398,8 +3424,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3425,7 +3450,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3434,7 +3459,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3484,6 +3509,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3498,7 +3524,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Miss",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3508,8 +3533,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -3535,7 +3559,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3544,7 +3568,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3594,6 +3618,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3640,8 +3665,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -3667,7 +3691,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3676,7 +3700,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3726,12 +3750,13 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
       "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
+        "type": "mixed",
+        "uid": "-- Mixed --"
       },
       "fieldConfig": {
         "defaults": {
@@ -3739,7 +3764,6 @@
             "mode": "thresholds"
           },
           "decimals": 2,
-          "mappings": [],
           "max": 17020891136,
           "min": 0,
           "thresholds": {
@@ -3760,8 +3784,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -3771,6 +3794,14 @@
       },
       "id": 35,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -3781,11 +3812,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto"
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3794,7 +3830,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3850,7 +3886,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3902,7 +3938,6 @@
         },
         {
           "datasource": {
-            "name": "Expression",
             "type": "__expr__",
             "uid": "__expr__"
           },
@@ -3911,6 +3946,7 @@
           "type": "math"
         }
       ],
+      "title": "",
       "type": "gauge"
     },
     {
@@ -3924,7 +3960,6 @@
             "mode": "thresholds"
           },
           "decimals": 2,
-          "mappings": [],
           "max": 8,
           "thresholds": {
             "mode": "absolute",
@@ -3944,8 +3979,7 @@
             ]
           },
           "unit": "%"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -3955,6 +3989,14 @@
       },
       "id": 46,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "auto",
@@ -3965,11 +4007,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto"
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3978,7 +4025,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4028,6 +4075,7 @@
           }
         }
       ],
+      "title": "",
       "type": "gauge"
     },
     {
@@ -4074,8 +4122,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4101,7 +4148,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4110,7 +4157,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4160,6 +4207,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4174,7 +4222,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Nx Domain",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4184,8 +4231,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4211,7 +4257,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4220,7 +4266,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4270,6 +4316,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4284,7 +4331,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Any",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4294,8 +4340,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4321,7 +4366,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4330,7 +4375,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4380,6 +4425,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4394,7 +4440,6 @@
             "mode": "thresholds"
           },
           "displayName": "Consultas com Hit",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4404,8 +4449,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -4431,7 +4475,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4440,7 +4484,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4490,6 +4534,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4502,7 +4547,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "max": 10,
           "min": 0,
           "noValue": "SEM RESPOSTA",
@@ -4520,8 +4564,7 @@
             ]
           },
           "unit": "dtdurationms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -4547,7 +4590,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4556,7 +4599,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4606,6 +4649,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -4656,7 +4700,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4666,8 +4709,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -4677,9 +4719,15 @@
       },
       "id": 28,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4689,7 +4737,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4698,7 +4746,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4800,7 +4848,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4810,8 +4857,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -4821,9 +4867,15 @@
       },
       "id": 29,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4833,7 +4885,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4842,7 +4894,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4940,7 +4992,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4951,8 +5002,7 @@
             ]
           },
           "unit": "decbytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -4962,9 +5012,15 @@
       },
       "id": 42,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -4974,7 +5030,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -4983,7 +5039,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5107,7 +5163,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -5118,8 +5173,7 @@
             ]
           },
           "unit": "decbytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -5129,9 +5183,15 @@
       },
       "id": 43,
       "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
         "legend": {
           "calcs": [],
           "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
           "placement": "bottom",
           "showLegend": true
         },
@@ -5141,7 +5201,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.4.1",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -5150,7 +5210,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5232,7 +5292,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -5321,16 +5381,25 @@
     "outros",
     "CPT-02 TR TELECOM"
   ],
-  "templating": {
-    "list": []
-  },
   "time": {
     "from": "now-6h",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
   "timezone": "browser",
   "title": "DNS Server Tr Telecom / VMS / NS-01 NS-02",
-  "uid": "f6140cf2-6895-44c2-995e-7308892e46e8",
-  "weekStart": ""
+  "uid": "f6140cf2-6895-44c2-995e-7308892e46e8"
 }
