@@ -95,6 +95,12 @@
         "groups": [
           {
             "name": "BGP"
+          },
+          {
+            "name": "SWITCH"
+          },
+          {
+            "name": "Telefonia"
           }
         ],
         "interfaces": [
@@ -106,6 +112,16 @@
               "community": "TR-TELECOM"
             },
             "interface_ref": "if1"
+          }
+        ],
+        "macros": [
+          {
+            "macro": "{$MK.SSH.PASSWORD}",
+            "type": "SECRET_TEXT"
+          },
+          {
+            "macro": "{$MK.SSH.USER}",
+            "value": "zabbix"
           }
         ],
         "inventory_mode": "DISABLED"
