@@ -116,6 +116,14 @@
         ],
         "macros": [
           {
+            "macro": "{$MK.PING.COUNT}",
+            "value": "5"
+          },
+          {
+            "macro": "{$MK.PING.TARGET}",
+            "value": "172.19.1.1"
+          },
+          {
             "macro": "{$MK.SSH.PASSWORD}",
             "type": "SECRET_TEXT"
           },
