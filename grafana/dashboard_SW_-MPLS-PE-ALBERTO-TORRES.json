@@ -56,7 +56,7 @@
         "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://upload.wikimedia.org/wikipedia/pt/1/11/Huawei_logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 90px;\">\n    <h2 style=\"color: #d32f2f;\"> Version 5.170 </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (S6730 V200R019C10SPC500)\n    </p>\n</div>\n",
         "mode": "html"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -126,7 +126,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -240,7 +240,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -391,7 +391,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -528,7 +528,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -665,7 +665,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -798,7 +798,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -916,7 +916,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1026,7 +1026,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1201,7 +1201,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1442,7 +1442,7 @@
               "host RxPower": true,
               "host Trafego": true,
               "host TxPower": true,
-              "iface RxPower": true,
+              "iface RxPower": false,
               "item RxPower": true,
               "item Trafego": true,
               "item TxPower": true,
@@ -1455,16 +1455,16 @@
               "Field RxPower": 4,
               "Field Trafego": 14,
               "Field TxPower": 9,
-              "Last RxPower": 1,
+              "Last RxPower": 2,
               "Last Trafego": 18,
-              "Last TxPower": 2,
+              "Last TxPower": 3,
               "description RxPower": 8,
-              "description Trafego": 0,
+              "description Trafego": 1,
               "description TxPower": 13,
               "host RxPower": 5,
               "host Trafego": 15,
               "host TxPower": 10,
-              "iface RxPower": 3,
+              "iface RxPower": 0,
               "item RxPower": 6,
               "item Trafego": 16,
               "item TxPower": 11,
@@ -1475,7 +1475,8 @@
             "renameByName": {
               "Last RxPower": "RX",
               "Last TxPower": "TX",
-              "description Trafego": "Interface"
+              "description Trafego": "Interface",
+              "iface RxPower": "Porta"
             }
           }
         }
@@ -1586,7 +1587,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1794,7 +1795,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2002,7 +2003,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2218,7 +2219,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
