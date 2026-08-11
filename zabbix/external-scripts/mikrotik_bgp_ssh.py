@@ -1,14 +1,21 @@
 #!/usr/bin/env python3
 """
-MikroTik BGP peers via SSH (RouterOS 6.x /routing bgp peer).
+MikroTik via SSH (RouterOS 6.x): BGP peers + ping interno.
 
 Uso no Zabbix Server (External check / script):
   mikrotik_bgp_ssh.py discover <host> <user> <senha> [porta]
   mikrotik_bgp_ssh.py get <host> <usuario> <senha> <peer_name> <campo> [porta]
+  mikrotik_bgp_ssh.py ping <host> <usuario> <senha> <destino> <campo> [count] [porta]
 
-Campos:
+Campos BGP:
   state | state-code | prefix-count | uptime | remote-as | remote-address
   | established | disabled | updates-received | updates-sent
+
+Campos ping (executado DENTRO do MikroTik):
+  loss | sent | received | avg-rtt | min-rtt | max-rtt | ok
+  loss = % perda (0-100)
+  ok   = 1 se received>0, senao 0
+  *-rtt em ms (0 se nao houver resposta)
 
 Estados MikroTik (state) e codigos (state-code), alinhados ao FSM BGP:
   0 disabled
@@ -188,6 +195,67 @@ def cmd_get(host: str, user: str, password: str, peer_name: str, field: str, por
     print(mapping[key])
 
 
+def parse_ping(output: str) -> dict:
+    """Parse saida de /ping <ip> count=N no RouterOS."""
+    sent = received = loss = 0
+    min_rtt = avg_rtt = max_rtt = 0.0
+
+    m = re.search(
+        r"sent=(\d+)\s+received=(\d+)\s+packet-loss=(\d+)%"
+        r"(?:\s+min-rtt=([\d.]+)ms\s+avg-rtt=([\d.]+)ms\s+max-rtt=([\d.]+)ms)?",
+        output,
+    )
+    if m:
+        sent = int(m.group(1))
+        received = int(m.group(2))
+        loss = int(m.group(3))
+        if m.group(4) is not None:
+            min_rtt = float(m.group(4))
+            avg_rtt = float(m.group(5))
+            max_rtt = float(m.group(6))
+
+    return {
+        "sent": sent,
+        "received": received,
+        "loss": loss,
+        "min_rtt": min_rtt,
+        "avg_rtt": avg_rtt,
+        "max_rtt": max_rtt,
+        "ok": 1 if received > 0 else 0,
+    }
+
+
+def cmd_ping(
+    host: str,
+    user: str,
+    password: str,
+    target: str,
+    field: str,
+    count: int = 5,
+    port: int = 22,
+) -> None:
+    # count limitado para nao travar o poller do Zabbix
+    count = max(1, min(int(count), 10))
+    cmd = f"/ping {target} count={count}"
+    raw = ssh_exec(host, user, password, cmd, port)
+    data = parse_ping(raw)
+
+    key = field.strip().lower().replace("-", "_")
+    mapping = {
+        "loss": str(data["loss"]),
+        "sent": str(data["sent"]),
+        "received": str(data["received"]),
+        "min_rtt": str(data["min_rtt"]),
+        "avg_rtt": str(data["avg_rtt"]),
+        "max_rtt": str(data["max_rtt"]),
+        "ok": str(data["ok"]),
+    }
+    if key not in mapping:
+        print(f"UNKNOWN_FIELD:{field}", file=sys.stderr)
+        sys.exit(1)
+    print(mapping[key])
+
+
 def usage() -> None:
     print(__doc__.strip(), file=sys.stderr)
     sys.exit(2)
@@ -210,6 +278,14 @@ def main() -> None:
         host, user, password, peer, field = sys.argv[2:7]
         port = int(sys.argv[7]) if len(sys.argv) > 7 else 22
         cmd_get(host, user, password, peer, field, port)
+    elif action == "ping":
+        # ping <host> <user> <pass> <target> <field> [count] [port]
+        if len(sys.argv) < 7:
+            usage()
+        host, user, password, target, field = sys.argv[2:7]
+        count = int(sys.argv[7]) if len(sys.argv) > 7 else 5
+        port = int(sys.argv[8]) if len(sys.argv) > 8 else 22
+        cmd_ping(host, user, password, target, field, count, port)
     else:
         usage()
 
