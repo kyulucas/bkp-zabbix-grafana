@@ -242,6 +242,93 @@
             ]
           },
           {
+            "uuid": "e9b323dfc48d4058b16191ea452f59ad",
+            "name": "MikroTik SSH Ping [{$MK.PING.TARGET}]: Avg RTT",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{$MK.PING.TARGET}\",\"avg-rtt\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "status": "DISABLED",
+            "units": "ms",
+            "description": "Ping executado DENTRO do MikroTik via SSH (mikrotik_bgp_ssh.py ping). Item desabilitado no template; habilitar no host desejado e definir {$MK.PING.TARGET}.",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "icmp"
+              },
+              {
+                "tag": "source",
+                "value": "mikrotik-ssh-ping"
+              }
+            ]
+          },
+          {
+            "uuid": "3cd12b5efa75439e966ec3f30cbde526",
+            "name": "MikroTik SSH Ping [{$MK.PING.TARGET}]: Loss",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{$MK.PING.TARGET}\",\"loss\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "status": "DISABLED",
+            "units": "%",
+            "description": "Ping executado DENTRO do MikroTik via SSH (mikrotik_bgp_ssh.py ping). Item desabilitado no template; habilitar no host desejado e definir {$MK.PING.TARGET}.",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "icmp"
+              },
+              {
+                "tag": "source",
+                "value": "mikrotik-ssh-ping"
+              }
+            ]
+          },
+          {
+            "uuid": "8e58c52d2dba4105bb4f7a82ee510f3c",
+            "name": "MikroTik SSH Ping [{$MK.PING.TARGET}]: OK",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{$MK.PING.TARGET}\",\"ok\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "status": "DISABLED",
+            "description": "Ping executado DENTRO do MikroTik via SSH (mikrotik_bgp_ssh.py ping). Item desabilitado no template; habilitar no host desejado e definir {$MK.PING.TARGET}.",
+            "tags": [
+              {
+                "tag": "component",
+                "value": "icmp"
+              },
+              {
+                "tag": "source",
+                "value": "mikrotik-ssh-ping"
+              }
+            ],
+            "triggers": [
+              {
+                "uuid": "e3db954ad2f54786a0461a9a81072538",
+                "expression": "last(/Template Net Mikrotik SNMPv2/mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"{$MK.PING.TARGET}\",\"ok\",\"{$MK.PING.COUNT}\"])=0",
+                "name": "MikroTik SSH Ping FAILED to {$MK.PING.TARGET}",
+                "status": "DISABLED",
+                "priority": "HIGH",
+                "description": "Ping executado dentro do MikroTik via SSH. Trigger desabilitada no template; habilitar no host junto com os itens. Macros: {$MK.PING.TARGET}, {$MK.SSH.USER}, {$MK.SSH.PASSWORD}.",
+                "manual_close": "YES",
+                "tags": [
+                  {
+                    "tag": "component",
+                    "value": "icmp"
+                  },
+                  {
+                    "tag": "scope",
+                    "value": "availability"
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "uuid": "ff76ae8b75b44c0c8aefaf38b27bdc5e",
             "name": "CPU Load",
             "type": "SNMP_AGENT",
@@ -1756,6 +1843,15 @@
           {
             "macro": "{$MEMORY.UTIL.MAX}",
             "value": "90"
+          },
+          {
+            "macro": "{$MK.PING.COUNT}",
+            "value": "5",
+            "description": "Quantidade de pings (1-10) executados dentro do MikroTik."
+          },
+          {
+            "macro": "{$MK.PING.TARGET}",
+            "description": "IP/host para ping interno via SSH no MikroTik. Definir no host (ex: 172.19.1.1)."
           },
           {
             "macro": "{$MK.SSH.PASSWORD}",
