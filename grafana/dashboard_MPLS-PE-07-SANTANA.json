@@ -56,7 +56,7 @@
         "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://upload.wikimedia.org/wikipedia/pt/1/11/Huawei_logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 90px;\">\n    <h2 style=\"color: #d32f2f;\"> Version 5.170 </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (S6730 V200R019C10SPC500)\n    </p>\n</div>\n",
         "mode": "html"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -126,7 +126,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -240,7 +240,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -391,7 +391,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -528,7 +528,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -665,7 +665,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -798,7 +798,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -916,7 +916,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1026,7 +1026,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1171,8 +1171,12 @@
                   "mode": "absolute",
                   "steps": [
                     {
-                      "color": "dark-red",
+                      "color": "dark-green",
                       "value": 0
+                    },
+                    {
+                      "color": "dark-red",
+                      "value": -40
                     },
                     {
                       "color": "dark-yellow",
@@ -1201,7 +1205,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1586,7 +1590,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1794,7 +1798,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2002,7 +2006,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2218,7 +2222,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
