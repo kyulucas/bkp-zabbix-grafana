@@ -545,6 +545,70 @@
                 ]
               }
             ]
+          },
+          {
+            "uuid": "ac740ef94c0d4bab89d88b3a266ddc98",
+            "name": "Descoberta LLD SIP Peers",
+            "type": "SNMP_AGENT",
+            "snmp_oid": "discovery[{#SIP.NAME},ALIGERA-MIB::sipName,{#SIP.HOST},ALIGERA-MIB::sipHost]",
+            "key": "sip.peer.discovery",
+            "delay": "1h",
+            "filter": {
+              "conditions": [
+                {
+                  "macro": "{#SIP.NAME}",
+                  "value": ".+",
+                  "formulaid": "A"
+                }
+              ]
+            },
+            "description": "Descobre peers SIP (nome + IP) via sipStatusTable. Substitui itens fixos Status OI_PETRO_*.",
+            "item_prototypes": [
+              {
+                "uuid": "0b044bcdd36b4f85b882987fd8d475e7",
+                "name": "SIP Host {#SIP.NAME}",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::sipHost.{#SNMPINDEX}",
+                "key": "sip.host[{#SIP.NAME}]",
+                "delay": "1h",
+                "history": "7d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "description": "IP/host do peer SIP (LLD)."
+              },
+              {
+                "uuid": "9622e95ed0fd447bacf3a4e00c2cbf9e",
+                "name": "Status {#SIP.NAME} [{#SIP.HOST}]",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::sipKeepalive.{#SNMPINDEX}",
+                "key": "sip.keepalive[{#SIP.NAME}]",
+                "history": "90d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "description": "SIP Options Keepalive state (LLD).",
+                "trigger_prototypes": [
+                  {
+                    "uuid": "56ce93b5b41a44f682a56c42ba8150eb",
+                    "expression": "find(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/sip.keepalive[{#SIP.NAME}],,\"like\",\"UNREACHABLE\")=1",
+                    "name": "SIP peer {#SIP.NAME} [{#SIP.HOST}] UNREACHABLE",
+                    "priority": "HIGH",
+                    "description": "Peer SIP com Options Keepalive UNREACHABLE (descoberta LLD).",
+                    "manual_close": "YES"
+                  }
+                ]
+              },
+              {
+                "uuid": "0082a7c7470341499476f7ca13a75902",
+                "name": "Registry {#SIP.NAME} [{#SIP.HOST}]",
+                "type": "SNMP_AGENT",
+                "snmp_oid": "ALIGERA-MIB::sipRegistry.{#SNMPINDEX}",
+                "key": "sip.registry[{#SIP.NAME}]",
+                "history": "90d",
+                "value_type": "TEXT",
+                "trends": "0",
+                "description": "SIP Registry state (LLD)."
+              }
+            ]
           }
         ],
         "valuemaps": [
