@@ -35,7 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 315,
+      "id": 318,
       "title": "Row title",
       "type": "row"
     },
@@ -65,6 +65,7 @@
               "type": "value"
             }
           ],
+          "noValue": "DNS",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -78,11 +79,11 @@
       },
       "gridPos": {
         "h": 1,
-        "w": 6,
+        "w": 4,
         "x": 0,
         "y": 1
       },
-      "id": 95,
+      "id": 316,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -101,7 +102,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -165,10 +166,71 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#15244a",
+            "mode": "fixed"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "index": 1,
+                  "text": "DNS"
+                },
+                "1": {
+                  "index": 0,
+                  "text": "DNS"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "noValue": "BGP TELEFONIA",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "rgba(51, 183, 33, 1)",
+                "value": 0
+              }
+            ]
+          }
+        }
       },
+      "gridPos": {
+        "h": 1,
+        "w": 4,
+        "x": 4,
+        "y": 1
+      },
+      "id": 95,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "text": {},
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -190,6 +252,7 @@
               "type": "value"
             }
           ],
+          "noValue": "CDN BGP",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -226,65 +289,8 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
-      "targets": [
-        {
-          "application": {
-            "filter": "Status"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "ENERGIA"
-          },
-          "host": {
-            "filter": "ENERGIA POP BMP"
-          },
-          "item": {
-            "filter": "ICMP ping"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
+      "pluginVersion": "13.1.1",
+      "targets": [],
       "title": "",
       "transparent": true,
       "type": "stat"
@@ -300,12 +306,12 @@
             "fixedColor": "#15244a",
             "mode": "fixed"
           },
-          "displayName": "TEMPERATURA",
+          "noValue": "Temperatura",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "dark-blue",
+                "color": "rgba(51, 183, 33, 1)",
                 "value": 0
               }
             ]
@@ -318,7 +324,7 @@
         "x": 14,
         "y": 1
       },
-      "id": 66,
+      "id": 285,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -334,14 +340,14 @@
         },
         "showPercentChange": false,
         "text": {},
-        "textMode": "name",
+        "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
-            "filter": "Status"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
@@ -351,13 +357,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "ENERGIA"
+            "filter": ""
           },
           "host": {
-            "filter": "ENERGIA POP BMP"
+            "filter": ""
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": ""
           },
           "itemTag": {
             "filter": ""
@@ -366,9 +372,8 @@
             "filter": ""
           },
           "options": {
-            "count": true,
+            "count": false,
             "disableDataAlignment": false,
-            "minSeverity": 3,
             "showDisabledItems": false,
             "skipEmptyValues": false,
             "useTrends": "default",
@@ -390,23 +395,10 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         }
       ],
       "title": "",
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        }
-      ],
       "transparent": true,
       "type": "stat"
     },
@@ -454,7 +446,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 6,
+        "w": 4,
         "x": 0,
         "y": 2
       },
@@ -477,7 +469,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -533,6 +525,181 @@
           },
           "triggers": {
             "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#ad46ff",
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 6,
+                  "text": "OI - DOWN"
+                },
+                "1": {
+                  "color": "dark-blue",
+                  "index": 0,
+                  "text": "OI - Idle"
+                },
+                "2": {
+                  "color": "dark-purple",
+                  "index": 1,
+                  "text": "OI - Connect"
+                },
+                "3": {
+                  "color": "dark-yellow",
+                  "index": 2,
+                  "text": "OI - Active"
+                },
+                "4": {
+                  "color": "dark-orange",
+                  "index": 3,
+                  "text": "OI - Opensent"
+                },
+                "5": {
+                  "color": "dark-yellow",
+                  "index": 4,
+                  "text": "OI - Openconfirm"
+                },
+                "6": {
+                  "color": "dark-green",
+                  "index": 5,
+                  "text": "OI - Established "
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 2
+      },
+      "id": 315,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^BGP \\[Operadora\\-OI\\] $/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": State code",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "CCR1036 BGP Telefonia"
+          },
+          "item": {
+            "filter": "/.*: State code/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
           }
         }
       ],
@@ -607,7 +774,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -737,7 +904,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -864,7 +1031,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1715,7 +1882,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 6,
+        "w": 4,
         "x": 0,
         "y": 4
       },
@@ -1738,7 +1905,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1868,7 +2035,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -1999,7 +2166,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2125,7 +2292,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -2262,7 +2429,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -3708,7 +3875,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -5105,7 +5272,7 @@
         "x": 14,
         "y": 17
       },
-      "id": 285,
+      "id": 317,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -5124,7 +5291,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -5331,7 +5498,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -6885,7 +7052,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -7194,7 +7361,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -7615,7 +7782,7 @@
         "x": 0,
         "y": 40
       },
-      "id": 316,
+      "id": 319,
       "title": "LINKS DEDICADOS",
       "type": "row"
     },
@@ -7688,7 +7855,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -7933,7 +8100,7 @@
           }
         ]
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8265,7 +8432,7 @@
         "x": 0,
         "y": 57
       },
-      "id": 317,
+      "id": 320,
       "title": "FONTES RETIFICADORAS",
       "type": "row"
     },
@@ -8286,7 +8453,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Levy Gasparian\n</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -8309,7 +8476,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Vila Isabel</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -8365,7 +8532,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8478,7 +8645,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8591,7 +8758,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8720,7 +8887,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8850,7 +9017,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -8979,7 +9146,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9092,7 +9259,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9205,7 +9372,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9318,7 +9485,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9447,7 +9614,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9577,7 +9744,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9706,7 +9873,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9825,7 +9992,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -9938,7 +10105,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10059,7 +10226,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10174,7 +10341,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10287,7 +10454,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10408,7 +10575,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10552,7 +10719,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10699,7 +10866,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10848,7 +11015,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -10995,7 +11162,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -11144,7 +11311,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -11291,7 +11458,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -11439,7 +11606,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -11586,7 +11753,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -11734,7 +11901,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -11881,7 +12048,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "application": {
@@ -12023,7 +12190,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "datasource": {
