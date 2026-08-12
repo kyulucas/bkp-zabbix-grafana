@@ -1113,6 +1113,18 @@
       "type": "stat"
     },
     {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "id": 66,
+      "title": "STATUS INTERFACES FÍSICA/VIRTUAL/BGP peer",
+      "type": "row"
+    },
+    {
       "datasource": {
         "type": "alexanderzobnin-zabbix-datasource",
         "uid": "ff5clh86a2mf4a"
@@ -1181,7 +1193,7 @@
         "h": 3,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 8
       },
       "id": 47,
       "options": {
@@ -1283,18 +1295,6 @@
       ],
       "transparent": true,
       "type": "table"
-    },
-    {
-      "collapsed": false,
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 10
-      },
-      "id": 66,
-      "title": "STATUS INTERFACES FÍSICA/VIRTUAL/BGP peer",
-      "type": "row"
     },
     {
       "datasource": {
@@ -2138,7 +2138,7 @@
               "Field": "Peer",
               "Last": "RX Power",
               "Last (not null)": "RX - POWER",
-              "Last *": "time"
+              "Last *": "Uptime"
             }
           }
         }
