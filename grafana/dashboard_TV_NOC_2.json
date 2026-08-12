@@ -4761,7 +4761,7 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 8,
+        "w": 5,
         "x": 12,
         "y": 31
       },
@@ -4976,6 +4976,181 @@
           },
           "triggers": {
             "acknowledged": 2
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#ad46ff",
+            "mode": "thresholds"
+          },
+          "decimals": 0,
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 6,
+                  "text": "OI - DOWN"
+                },
+                "1": {
+                  "color": "dark-blue",
+                  "index": 0,
+                  "text": "OI - Idle"
+                },
+                "2": {
+                  "color": "dark-purple",
+                  "index": 1,
+                  "text": "OI - Connect"
+                },
+                "3": {
+                  "color": "dark-yellow",
+                  "index": 2,
+                  "text": "OI - Active"
+                },
+                "4": {
+                  "color": "dark-orange",
+                  "index": 3,
+                  "text": "OI - Opensent"
+                },
+                "5": {
+                  "color": "dark-yellow",
+                  "index": 4,
+                  "text": "OI - Openconfirm"
+                },
+                "6": {
+                  "color": "dark-green",
+                  "index": 5,
+                  "text": "OI - Established "
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 12,
+        "x": 12,
+        "y": 33
+      },
+      "id": 161,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^BGP \\[Operadora\\-OI\\] $/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": State code",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "CCR1036 BGP Telefonia"
+          },
+          "item": {
+            "filter": "/.*: State code/"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
           }
         }
       ],
