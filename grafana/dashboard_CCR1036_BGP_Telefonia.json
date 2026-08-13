@@ -35,7 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 65,
+      "id": 67,
       "title": "STATUS DO EQUIPAMENTO",
       "type": "row"
     },
@@ -1120,7 +1120,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 66,
+      "id": 68,
       "title": "STATUS INTERFACES FÍSICA/VIRTUAL/BGP peer",
       "type": "row"
     },
@@ -2154,7 +2154,7 @@
         "x": 0,
         "y": 21
       },
-      "id": 67,
+      "id": 69,
       "title": "TRÁFEGO INTERFACES ",
       "type": "row"
     },
@@ -2427,7 +2427,7 @@
         "x": 0,
         "y": 32
       },
-      "id": 68,
+      "id": 70,
       "title": "POTÊNCIA DA INTERFACE",
       "type": "row"
     },
@@ -2589,7 +2589,7 @@
         "x": 0,
         "y": 41
       },
-      "id": 69,
+      "id": 71,
       "title": "E1 Aligera",
       "type": "row"
     },
@@ -2623,6 +2623,9 @@
       },
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "decimals": 2,
           "displayName": "",
           "mappings": [
@@ -2663,24 +2666,18 @@
         }
       },
       "gridPos": {
-        "h": 3,
+        "h": 2,
         "w": 3,
         "x": 5,
         "y": 42
       },
       "id": 57,
       "options": {
-        "barShape": "flat",
-        "barWidthFactor": 0.5,
-        "effects": {
-          "barGlow": false,
-          "centerGlow": false,
-          "gradient": false
-        },
-        "endpointMarker": "point",
-        "minVizHeight": 75,
-        "minVizWidth": 75,
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
         "orientation": "auto",
+        "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
@@ -2688,14 +2685,9 @@
           "fields": "",
           "values": false
         },
-        "segmentCount": 1,
-        "segmentSpacing": 0.3,
-        "shape": "gauge",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": false,
-        "sizing": "auto",
-        "sparkline": false,
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
       "pluginVersion": "13.1.1",
       "targets": [
@@ -2756,8 +2748,8 @@
           }
         }
       ],
-      "title": "LATENCY",
-      "type": "gauge"
+      "title": "",
+      "type": "stat"
     },
     {
       "datasource": {
@@ -2915,6 +2907,272 @@
       },
       "fieldConfig": {
         "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "SNMP OFF"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "SNMP ON"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 2,
+        "w": 5,
+        "x": 0,
+        "y": 44
+      },
+      "id": 66,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Telefonia"
+          },
+          "host": {
+            "filter": "E1-Aligera"
+          },
+          "item": {
+            "filter": "SNMP agent availability"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "red",
+            "mode": "fixed"
+          },
+          "displayName": "",
+          "mappings": [
+            {
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
+            }
+          ],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 30
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "ms"
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 5,
+        "y": 44
+      },
+      "id": 58,
+      "options": {
+        "barShape": "rounded",
+        "barWidthFactor": 0.25,
+        "effects": {
+          "barGlow": true,
+          "centerGlow": true,
+          "gradient": true
+        },
+        "endpointMarker": "glow",
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "circle",
+        "showThresholdLabels": false,
+        "showThresholdMarkers": false,
+        "sizing": "auto",
+        "sparkline": true,
+        "textMode": "auto"
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": "Discovery Interface"
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Telefonia"
+          },
+          "host": {
+            "filter": "E1-Aligera"
+          },
+          "item": {
+            "filter": "Perda de Pacote"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": true,
+            "disableDataAlignment": false,
+            "minSeverity": 3,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        }
+      ],
+      "title": "LOSS",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
           "decimals": 0,
           "mappings": [
             {
@@ -2940,17 +3198,17 @@
         }
       },
       "gridPos": {
-        "h": 4,
+        "h": 2,
         "w": 5,
         "x": 0,
-        "y": 44
+        "y": 46
       },
-      "id": 55,
+      "id": 65,
       "maxDataPoints": 100,
       "options": {
         "colorMode": "value",
         "graphMode": "none",
-        "justifyMode": "auto",
+        "justifyMode": "center",
         "orientation": "horizontal",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
@@ -3023,146 +3281,8 @@
           }
         }
       ],
-      "title": "UPTIME",
+      "title": "",
       "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "displayName": "",
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "max": 100,
-          "min": 0,
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              },
-              {
-                "color": "#EAB839",
-                "value": 30
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "ms"
-        }
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 5,
-        "y": 45
-      },
-      "id": 58,
-      "options": {
-        "barShape": "flat",
-        "barWidthFactor": 0.5,
-        "effects": {
-          "barGlow": false,
-          "centerGlow": false,
-          "gradient": false
-        },
-        "endpointMarker": "point",
-        "minVizHeight": 75,
-        "minVizWidth": 75,
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "segmentCount": 1,
-        "segmentSpacing": 0.3,
-        "shape": "gauge",
-        "showThresholdLabels": false,
-        "showThresholdMarkers": false,
-        "sizing": "auto",
-        "sparkline": false,
-        "textMode": "auto"
-      },
-      "pluginVersion": "13.1.1",
-      "targets": [
-        {
-          "application": {
-            "filter": "Discovery Interface"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "Telefonia"
-          },
-          "host": {
-            "filter": "E1-Aligera"
-          },
-          "item": {
-            "filter": "Perda de Pacote"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "title": "LOSS",
-      "type": "gauge"
     },
     {
       "datasource": {
@@ -3698,37 +3818,6 @@
         }
       ],
       "title": "Problemas detectados",
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "includeTimeField": false,
-            "mode": "seriesToRows",
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Time": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "SIP",
-              "Last *": "Status",
-              "Status OI_PETRO_LC1": "OI PETRO LC1",
-              "Status OI_PETRO_LC2": "OI PETRO LC2",
-              "Status OI_PETRO_LD1": "OI PETRO LD1",
-              "Status OI_PETRO_LD2": "OI PETRO LD2",
-              "Status OI_PETRO_TR1": "OI PETRO TR1",
-              "Status OI_PETRO_TR2": "OI PETRO TR2"
-            }
-          }
-        }
-      ],
       "transparent": true,
       "type": "alexanderzobnin-zabbix-triggers-panel"
     },
