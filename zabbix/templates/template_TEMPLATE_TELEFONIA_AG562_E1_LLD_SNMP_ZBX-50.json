@@ -163,7 +163,7 @@
             "uuid": "a6bf3dbc2515426598106d05876055cd",
             "name": "Latencia Ping",
             "type": "SIMPLE",
-            "key": "icmppingsec",
+            "key": "icmppingsecs",
             "delay": "120s",
             "history": "7d",
             "value_type": "FLOAT",
@@ -178,7 +178,7 @@
             "triggers": [
               {
                 "uuid": "0aa61930a07c459ab0094dae7e4f75e3",
-                "expression": "avg(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmppingsec,2m)>100",
+                "expression": "avg(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmppingsecs,2m)>100",
                 "name": "{HOSTNAME} esta com latência (>100ms)",
                 "priority": "WARNING",
                 "description": "Latência a cima de 100ms"
