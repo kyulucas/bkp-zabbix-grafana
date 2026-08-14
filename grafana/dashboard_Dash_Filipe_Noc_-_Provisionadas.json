@@ -23,7 +23,7 @@
   "panels": [
     {
       "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
+        "type": "mysql",
         "uid": "bf5cl81i2yz28d"
       },
       "fieldConfig": {
@@ -68,18 +68,18 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "13.0.1+security-01",
+      "pluginVersion": "13.1.1",
       "targets": [
         {
           "dataset": "ALTAREDE",
           "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
+            "type": "mysql",
             "uid": "bf5cl81i2yz28d"
           },
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n    TIMESTAMP(o.DATA_OPERACAO, o.HORA_OPERACAO) AS time,\r\n    o.LOGIN,\r\n    CONCAT(o.SLOT,'/',o.PORTA) AS PON,\r\n    olt.NOME AS OLT,\r\n    cto.NOME AS CTO\r\nFROM FTTH_ONUS o\r\nLEFT JOIN FTTH_OLTS olt\r\n    ON olt.COD_OLT = o.COD_OLT\r\nLEFT JOIN FTTH_CTO cto\r\n    ON cto.COD_CTO = o.COD_CTO\r\nWHERE TIMESTAMP(o.DATA_OPERACAO, o.HORA_OPERACAO)\r\nBETWEEN FROM_UNIXTIME($__unixEpochFrom())\r\nAND FROM_UNIXTIME($__unixEpochTo())\r\nORDER BY time;",
+          "rawSql": "SELECT\r\n    TIMESTAMP(o.DATA_OPERACAO, o.HORA_OPERACAO) AS time,\r\n    o.LOGIN,\r\n    CONCAT(o.SLOT,'/',o.PORTA) AS PON,\r\n    olt.NOME AS OLT,\r\n    cto.NOME AS CTO,\r\n    o.USUARIO as FUNCIONARIO\r\nFROM FTTH_ONUS o\r\nLEFT JOIN FTTH_OLTS olt\r\n    ON olt.COD_OLT = o.COD_OLT\r\nLEFT JOIN FTTH_CTO cto\r\n    ON cto.COD_CTO = o.COD_CTO\r\nWHERE TIMESTAMP(o.DATA_OPERACAO, o.HORA_OPERACAO)\r\nBETWEEN FROM_UNIXTIME($__unixEpochFrom())\r\nAND FROM_UNIXTIME($__unixEpochTo())\r\nORDER BY time;",
           "refId": "A",
           "sql": {
             "columns": [
@@ -108,7 +108,7 @@
   "refresh": "",
   "schemaVersion": 42,
   "time": {
-    "from": "now-6h",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
