@@ -91,6 +91,7 @@
       {
         "host": "EDD - Itanet",
         "name": "EDD - Itanet",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "DM DmOS"
