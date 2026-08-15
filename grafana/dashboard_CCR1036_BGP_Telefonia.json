@@ -35,7 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 67,
+      "id": 68,
       "title": "STATUS DO EQUIPAMENTO",
       "type": "row"
     },
@@ -1120,7 +1120,7 @@
         "x": 0,
         "y": 7
       },
-      "id": 68,
+      "id": 69,
       "title": "STATUS INTERFACES FÍSICA/VIRTUAL/BGP peer",
       "type": "row"
     },
@@ -1629,7 +1629,7 @@
         ]
       },
       "gridPos": {
-        "h": 8,
+        "h": 5,
         "w": 6,
         "x": 12,
         "y": 13
@@ -1819,7 +1819,7 @@
         ]
       },
       "gridPos": {
-        "h": 8,
+        "h": 5,
         "w": 3,
         "x": 18,
         "y": 13
@@ -2009,7 +2009,7 @@
         ]
       },
       "gridPos": {
-        "h": 8,
+        "h": 5,
         "w": 3,
         "x": 21,
         "y": 13
@@ -2147,6 +2147,193 @@
       "type": "table"
     },
     {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic",
+            "seriesBy": "last"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 27,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "BGP Status",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": null
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 15,
+        "y": 18
+      },
+      "id": 67,
+      "options": {
+        "annotations": {
+          "clustering": -1,
+          "multiLane": false
+        },
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "enableFacetedFilter": false,
+          "overflow": "ellipsis",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.1.1",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                ": Established",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "CCR1036 BGP Telefonia"
+          },
+          "item": {
+            "filter": "BGP [Operadora-OI]: Prefix count"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
@@ -2154,7 +2341,7 @@
         "x": 0,
         "y": 21
       },
-      "id": 69,
+      "id": 70,
       "title": "TRÁFEGO INTERFACES ",
       "type": "row"
     },
@@ -2427,7 +2614,7 @@
         "x": 0,
         "y": 32
       },
-      "id": 70,
+      "id": 71,
       "title": "POTÊNCIA DA INTERFACE",
       "type": "row"
     },
@@ -2589,7 +2776,7 @@
         "x": 0,
         "y": 41
       },
-      "id": 71,
+      "id": 72,
       "title": "E1 Aligera",
       "type": "row"
     },
@@ -2626,21 +2813,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "decimals": 2,
           "displayName": "",
-          "mappings": [
-            {
-              "options": {
-                "match": "null",
-                "result": {
-                  "text": "N/A"
-                }
-              },
-              "type": "special"
-            }
-          ],
-          "max": 100,
-          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2662,7 +2835,7 @@
               }
             ]
           },
-          "unit": "velocityms"
+          "unit": "s"
         }
       },
       "gridPos": {
@@ -2674,13 +2847,13 @@
       "id": 57,
       "options": {
         "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
+        "graphMode": "none",
+        "justifyMode": "center",
         "orientation": "auto",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "last"
           ],
           "fields": "",
           "values": false
@@ -2693,7 +2866,7 @@
       "targets": [
         {
           "application": {
-            "filter": "Discovery Interface"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
@@ -2701,7 +2874,34 @@
             "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "ICMP response time",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            }
+          ],
           "group": {
             "filter": "Telefonia"
           },
@@ -2709,18 +2909,17 @@
             "filter": "E1-Aligera"
           },
           "item": {
-            "filter": "Latencia Ping"
+            "filter": "ICMP response time"
           },
           "itemTag": {
-            "filter": "Application: Discovery Interface"
+            "filter": ""
           },
           "macro": {
             "filter": ""
           },
           "options": {
-            "count": true,
+            "count": false,
             "disableDataAlignment": false,
-            "minSeverity": 3,
             "showDisabledItems": false,
             "skipEmptyValues": false,
             "useTrends": "default",
@@ -2742,9 +2941,6 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
           }
         }
       ],
@@ -4129,8 +4325,8 @@
       {
         "allowCustomValue": true,
         "current": {
-          "text": "sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVI /VLAN 2811 TRANS N3K/1000 GERENCIA)",
-          "value": "sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVI /VLAN 2811 TRANS N3K/1000 GERENCIA)"
+          "text": "sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVO /VLAN 2811 TRANS N3K/1000 GERENCIA)",
+          "value": "sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVO /VLAN 2811 TRANS N3K/1000 GERENCIA)"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
@@ -4162,8 +4358,8 @@
       {
         "allowCustomValue": true,
         "current": {
-          "text": "Interface sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVI /VLAN 2811 TRANS N3K/1000 GERENCIA): RX Power",
-          "value": "Interface sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVI /VLAN 2811 TRANS N3K/1000 GERENCIA): RX Power"
+          "text": "Interface sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVO /VLAN 2811 TRANS N3K/1000 GERENCIA): RX Power",
+          "value": "Interface sfp-sfpplus1(VLAN2810 OI / VLAN2625 VIVO /VLAN 2811 TRANS N3K/1000 GERENCIA): RX Power"
         },
         "datasource": {
           "type": "alexanderzobnin-zabbix-datasource",
