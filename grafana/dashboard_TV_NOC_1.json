@@ -225,7 +225,11 @@
         "wideLayout": true
       },
       "pluginVersion": "13.1.1",
-      "targets": [],
+      "targets": [
+        {
+          "refId": "A"
+        }
+      ],
       "title": "",
       "transparent": true,
       "type": "stat"
@@ -290,7 +294,11 @@
         "wideLayout": true
       },
       "pluginVersion": "13.1.1",
-      "targets": [],
+      "targets": [
+        {
+          "refId": "A"
+        }
+      ],
       "title": "",
       "transparent": true,
       "type": "stat"
@@ -3397,80 +3405,6 @@
         },
         {
           "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:285",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK DEDICADO ITANET"
-              ],
-              "text": "setAlias(LINK DEDICADO ITANET)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/10: RxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "P",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
             "filter": ""
           },
           "countTriggersBy": "",
@@ -4825,80 +4759,6 @@
           },
           "queryType": "0",
           "refId": "LL",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:285",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK DEDICADO ITANET"
-              ],
-              "text": "setAlias(LINK DEDICADO ITANET)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/10: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "P",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
