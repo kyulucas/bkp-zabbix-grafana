@@ -113,7 +113,7 @@
         "interfaces": [
           {
             "type": "SNMP",
-            "ip": "60.60.97.2",
+            "ip": "10.13.0.2",
             "port": "161",
             "details": {
               "community": "TR-TELECOM"
