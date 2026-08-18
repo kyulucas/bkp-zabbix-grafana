@@ -3430,7 +3430,7 @@
             "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/22: RxPower"
           },
           "itemTag": {
             "filter": ""
