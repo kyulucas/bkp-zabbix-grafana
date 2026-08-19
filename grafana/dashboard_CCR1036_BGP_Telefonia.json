@@ -1625,6 +1625,19 @@
                 "value": null
               }
             ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Peer",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 274
+              }
+            ]
           }
         ]
       },
@@ -1638,12 +1651,7 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": [
-          {
-            "desc": true,
-            "displayName": "Peer"
-          }
-        ]
+        "sortBy": []
       },
       "pluginVersion": "13.1.1",
       "targets": [
@@ -1882,7 +1890,7 @@
             "filter": "CCR1036 BGP Telefonia"
           },
           "item": {
-            "filter": "BGP [Operadora-OI]: Prefix count"
+            "filter": "/.*: Prefix count/"
           },
           "itemTag": {
             "filter": ""
@@ -2073,7 +2081,7 @@
           },
           "itServiceFilter": "",
           "item": {
-            "filter": "BGP [Operadora-OI]: Uptime"
+            "filter": "/.*: Uptime/"
           },
           "itemTag": {
             "filter": ""
@@ -2223,8 +2231,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 9,
-        "x": 15,
+        "w": 12,
+        "x": 12,
         "y": 18
       },
       "id": 67,
@@ -2294,7 +2302,7 @@
             "filter": "CCR1036 BGP Telefonia"
           },
           "item": {
-            "filter": "BGP [Operadora-OI]: Prefix count"
+            "filter": "/.*: Prefix count/"
           },
           "itemTag": {
             "filter": ""
@@ -3829,7 +3837,7 @@
             "filter": "E1-Aligera"
           },
           "item": {
-            "filter": "/Status VIVO.*/"
+            "filter": "/Status VIVIO.*/"
           },
           "itemTag": {
             "filter": ""
