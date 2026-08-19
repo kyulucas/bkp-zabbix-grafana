@@ -35,7 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 318,
+      "id": 319,
       "title": "Row title",
       "type": "row"
     },
@@ -558,37 +558,37 @@
                 "0": {
                   "color": "dark-red",
                   "index": 6,
-                  "text": "OI - DOWN"
+                  "text": "DOWN"
                 },
                 "1": {
                   "color": "dark-blue",
                   "index": 0,
-                  "text": "OI - Idle"
+                  "text": "Idle"
                 },
                 "2": {
                   "color": "dark-purple",
                   "index": 1,
-                  "text": "OI - Connect"
+                  "text": "Connect"
                 },
                 "3": {
                   "color": "dark-yellow",
                   "index": 2,
-                  "text": "OI - Active"
+                  "text": "Active"
                 },
                 "4": {
                   "color": "dark-orange",
                   "index": 3,
-                  "text": "OI - Opensent"
+                  "text": "Opensent"
                 },
                 "5": {
                   "color": "dark-yellow",
                   "index": 4,
-                  "text": "OI - Openconfirm"
+                  "text": "Openconfirm"
                 },
                 "6": {
                   "color": "dark-green",
                   "index": 5,
-                  "text": "OI - Established "
+                  "text": "Established "
                 }
               },
               "type": "value"
@@ -611,7 +611,7 @@
         "x": 4,
         "y": 2
       },
-      "id": 315,
+      "id": 318,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -620,13 +620,13 @@
         "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
-            "last"
+            "lastNotNull"
           ],
-          "fields": "/^BGP \\[Operadora\\-OI\\] $/",
+          "fields": "",
           "values": false
         },
         "showPercentChange": false,
-        "textMode": "value",
+        "textMode": "value_and_name",
         "wideLayout": true
       },
       "pluginVersion": "13.1.1",
@@ -664,6 +664,32 @@
               },
               "params": [
                 ": State code",
+                " "
+              ],
+              "text": "replaceAlias(/(.*)/, $1)"
+            },
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [
+                  "/(.*)/",
+                  "$1"
+                ],
+                "name": "replaceAlias",
+                "params": [
+                  {
+                    "name": "regexp",
+                    "type": "string"
+                  },
+                  {
+                    "name": "newAlias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "BGP ",
                 " "
               ],
               "text": "replaceAlias(/(.*)/, $1)"
@@ -7642,7 +7668,7 @@
         "x": 0,
         "y": 40
       },
-      "id": 319,
+      "id": 320,
       "title": "LINKS DEDICADOS",
       "type": "row"
     },
@@ -8292,7 +8318,7 @@
         "x": 0,
         "y": 57
       },
-      "id": 320,
+      "id": 321,
       "title": "FONTES RETIFICADORAS",
       "type": "row"
     },
