@@ -1442,7 +1442,7 @@
               "host RxPower": true,
               "host Trafego": true,
               "host TxPower": true,
-              "iface RxPower": false,
+              "iface RxPower": true,
               "item RxPower": true,
               "item Trafego": true,
               "item TxPower": true,
