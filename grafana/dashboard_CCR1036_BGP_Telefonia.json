@@ -368,12 +368,12 @@
                 "0": {
                   "color": "dark-red",
                   "index": 0,
-                  "text": "Falha 172.19.1.1"
+                  "text": "OFF"
                 },
                 "1": {
                   "color": "dark-green",
                   "index": 1,
-                  "text": "Ok 172.19.1.1"
+                  "text": "OK"
                 }
               },
               "type": "value"
@@ -392,7 +392,67 @@
               }
             ]
           }
-        }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Ping Externo OI",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "OI 172.19.1.1"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "OI 172.19.1.1"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Ping Externo VIVO",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "0": {
+                        "color": "dark-red",
+                        "index": 0,
+                        "text": "VIVO 187.51.97.158"
+                      },
+                      "1": {
+                        "color": "dark-green",
+                        "index": 1,
+                        "text": "VIVO 187.51.97.158"
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 6,
@@ -405,7 +465,7 @@
         "colorMode": "value",
         "graphMode": "none",
         "justifyMode": "center",
-        "orientation": "auto",
+        "orientation": "horizontal",
         "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
@@ -415,7 +475,7 @@
           "values": false
         },
         "showPercentChange": false,
-        "textMode": "auto",
+        "textMode": "value",
         "wideLayout": true
       },
       "pluginVersion": "13.1.1",
@@ -435,27 +495,19 @@
               "added": true,
               "def": {
                 "category": "Alias",
-                "defaultParams": [
-                  "/(.*)/",
-                  "$1"
-                ],
-                "name": "replaceAlias",
+                "defaultParams": [],
+                "name": "setAlias",
                 "params": [
                   {
-                    "name": "regexp",
-                    "type": "string"
-                  },
-                  {
-                    "name": "newAlias",
+                    "name": "alias",
                     "type": "string"
                   }
                 ]
               },
               "params": [
-                "MikroTik SSH Ping [{$MK.PING.TARGET}]: OK",
-                " "
+                "Ping Externo OI"
               ],
-              "text": "replaceAlias(/(.*)/, $1)"
+              "text": "setAlias()"
             }
           ],
           "group": {
@@ -465,7 +517,7 @@
             "filter": "CCR1036 BGP Telefonia"
           },
           "item": {
-            "filter": "MikroTik SSH Ping [{$MK.PING.TARGET}]: OK"
+            "filter": "MikroTik SSH Ping [172.19.1.1]: OK"
           },
           "itemTag": {
             "filter": ""
@@ -486,6 +538,77 @@
           },
           "queryType": "0",
           "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Ping Externo VIVO"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "CCR1036 BGP Telefonia"
+          },
+          "item": {
+            "filter": "MikroTik SSH Ping [187.51.97.158]: OK"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
