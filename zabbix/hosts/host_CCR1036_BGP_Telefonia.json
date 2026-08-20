@@ -118,14 +118,96 @@
             "interface_ref": "if1"
           }
         ],
+        "items": [
+          {
+            "name": "MikroTik SSH Ping [172.19.1.1]: Avg RTT",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"172.19.1.1\",\"avg-rtt\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "ms",
+            "description": "Ping nativo do host. Executado DENTRO do MikroTik via SSH (nao do servidor Zabbix). Clone este item e troque o IP no nome e na key.",
+            "interface_ref": "if1"
+          },
+          {
+            "name": "MikroTik SSH Ping [172.19.1.1]: Loss",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"172.19.1.1\",\"loss\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "%",
+            "description": "Ping nativo do host. Executado DENTRO do MikroTik via SSH (nao do servidor Zabbix). Clone este item e troque o IP no nome e na key.",
+            "interface_ref": "if1"
+          },
+          {
+            "name": "MikroTik SSH Ping [172.19.1.1]: OK",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"172.19.1.1\",\"ok\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Ping nativo do host. Executado DENTRO do MikroTik via SSH (nao do servidor Zabbix). Clone este item e troque o IP no nome e na key.",
+            "interface_ref": "if1",
+            "triggers": [
+              {
+                "expression": "last(/CCR1036 BGP Telefonia/mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"172.19.1.1\",\"ok\",\"{$MK.PING.COUNT}\"])=0",
+                "name": "MikroTik SSH Ping FAILED to 172.19.1.1",
+                "priority": "HIGH",
+                "description": "Ping nativo do host. Alarme se o MikroTik nao alcancar 172.19.1.1.",
+                "manual_close": "YES"
+              }
+            ]
+          },
+          {
+            "name": "MikroTik SSH Ping [187.51.97.158]: Avg RTT",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"187.51.97.158\",\"avg-rtt\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "value_type": "FLOAT",
+            "trends": "90d",
+            "units": "ms",
+            "description": "Ping extra apenas neste host (nao vem do template). Destino 187.51.97.158 via SSH no MikroTik.",
+            "interface_ref": "if1"
+          },
+          {
+            "name": "MikroTik SSH Ping [187.51.97.158]: Loss",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"187.51.97.158\",\"loss\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "units": "%",
+            "description": "Ping extra apenas neste host (nao vem do template). Destino 187.51.97.158 via SSH no MikroTik.",
+            "interface_ref": "if1"
+          },
+          {
+            "name": "MikroTik SSH Ping [187.51.97.158]: OK",
+            "type": "EXTERNAL",
+            "key": "mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"187.51.97.158\",\"ok\",\"{$MK.PING.COUNT}\"]",
+            "delay": "2m",
+            "history": "30d",
+            "trends": "90d",
+            "description": "Ping extra apenas neste host (nao vem do template). Destino 187.51.97.158 via SSH no MikroTik.",
+            "interface_ref": "if1",
+            "triggers": [
+              {
+                "expression": "last(/CCR1036 BGP Telefonia/mikrotik_bgp_ssh.py[\"ping\",\"{HOST.IP}\",\"{$MK.SSH.USER}\",\"{$MK.SSH.PASSWORD}\",\"187.51.97.158\",\"ok\",\"{$MK.PING.COUNT}\"])=0",
+                "name": "MikroTik SSH Ping FAILED to 187.51.97.158",
+                "priority": "HIGH",
+                "description": "Ping extra no host CCR1036 BGP Telefonia. Alarme se o MikroTik nao alcancar 187.51.97.158.",
+                "manual_close": "YES"
+              }
+            ]
+          }
+        ],
         "macros": [
           {
             "macro": "{$MK.PING.COUNT}",
             "value": "5"
-          },
-          {
-            "macro": "{$MK.PING.TARGET}",
-            "value": "172.19.1.1"
           },
           {
             "macro": "{$MK.SSH.PASSWORD}",
