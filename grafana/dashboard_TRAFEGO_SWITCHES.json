@@ -92,7 +92,7 @@
         "y": 0
       },
       "id": 1,
-      "maxPerRow": 3,
+      "maxPerRow": 2,
       "options": {
         "annotations": {
           "clustering": -1,
@@ -116,7 +116,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.1.0",
+      "pluginVersion": "13.1.1",
       "repeat": "host",
       "repeatDirection": "h",
       "targets": [
