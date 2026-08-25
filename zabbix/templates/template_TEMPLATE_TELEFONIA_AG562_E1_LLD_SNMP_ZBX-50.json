@@ -139,7 +139,7 @@
             "name": "Perda de Pacote",
             "type": "SIMPLE",
             "key": "icmppingloss[,,,,]",
-            "delay": "120s",
+            "delay": "5m",
             "history": "7d",
             "trends": "90d",
             "units": "%",
@@ -164,7 +164,7 @@
             "name": "Latencia Ping",
             "type": "SIMPLE",
             "key": "icmppingsecs",
-            "delay": "120s",
+            "delay": "5m",
             "history": "7d",
             "value_type": "FLOAT",
             "trends": "90d",
@@ -190,7 +190,7 @@
             "name": "Ping",
             "type": "SIMPLE",
             "key": "icmpping[{HOST.IP},64,20,63,50]",
-            "delay": "120s",
+            "delay": "5m",
             "history": "7d",
             "valuemap": {
               "name": "E1-ALIGERA-STATUS-NETWROK"
@@ -246,7 +246,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::chanStatus.{#SNMPINDEX}",
                 "key": "chanStatus[{#CHANNAME}]",
-                "delay": "120s",
+                "delay": "5m",
                 "valuemap": {
                   "name": "E1-ALIGERA-STATUS-CHANNEL"
                 },
@@ -291,7 +291,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::e1AISEvents.{#SNMPINDEX}",
                 "key": "e1AISEvents[{#EVENTSDESCR}]",
-                "delay": "120s",
+                "delay": "5m",
                 "history": "30d",
                 "trends": "90d",
                 "tags": [
@@ -307,7 +307,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::e1Alarms.{#SNMPINDEX}",
                 "key": "e1Alarms[{#EVENTSDESCR}]",
-                "delay": "120s",
+                "delay": "5m",
                 "history": "30d",
                 "trends": "90d",
                 "valuemap": {
@@ -378,7 +378,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::e1CodeViolations.{#SNMPINDEX}",
                 "key": "e1CodeViolations[{#EVENTSDESCR}]",
-                "delay": "120s",
+                "delay": "5m",
                 "history": "30d",
                 "trends": "90d",
                 "description": "Code Violations: Erro de violação da codificação de linha. Geralmente é incrementada em virtude de problemas físicos, tais como cabos e/ou conectores;",
@@ -395,7 +395,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::e1LOSEvents.{#SNMPINDEX}",
                 "key": "e1LOSEvents[{#EVENTSDESCR}]",
-                "delay": "120s",
+                "delay": "5m",
                 "history": "30d",
                 "trends": "90d",
                 "tags": [
@@ -411,7 +411,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::e1RAIEvents.{#SNMPINDEX}",
                 "key": "e1RAIEvents[{#EVENTSDESCR}]",
-                "delay": "120s",
+                "delay": "5m",
                 "history": "30d",
                 "trends": "90d",
                 "tags": [
@@ -455,6 +455,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "IF-MIB::ifAlias.{#SNMPINDEX}",
                 "key": "ifAlias[{#IFDESCR}]",
+                "delay": "5m",
                 "value_type": "CHAR",
                 "trends": "0",
                 "tags": [
@@ -470,6 +471,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "IF-MIB::ifInOctets.{#SNMPINDEX}",
                 "key": "ifInOctets[{#IFDESCR}]",
+                "delay": "5m",
                 "units": "bps",
                 "preprocessing": [
                   {
@@ -502,6 +504,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "IF-MIB::ifOperStatus.{#SNMPINDEX}",
                 "key": "ifOperStatus[{#IFDESCR}]",
+                "delay": "5m",
                 "valuemap": {
                   "name": "E1-ALIGERA-STATUS-NETWROK"
                 },
@@ -518,6 +521,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "IF-MIB::ifOutOctets.{#SNMPINDEX}",
                 "key": "ifOutOctets[{#IFDESCR}]",
+                "delay": "5m",
                 "units": "bps",
                 "preprocessing": [
                   {
@@ -582,6 +586,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::sipKeepalive.{#SNMPINDEX}",
                 "key": "sip.keepalive[{#SIP.NAME}]",
+                "delay": "5m",
                 "history": "90d",
                 "value_type": "TEXT",
                 "trends": "0",
@@ -603,6 +608,7 @@
                 "type": "SNMP_AGENT",
                 "snmp_oid": "ALIGERA-MIB::sipRegistry.{#SNMPINDEX}",
                 "key": "sip.registry[{#SIP.NAME}]",
+                "delay": "5m",
                 "history": "90d",
                 "value_type": "TEXT",
                 "trends": "0",
