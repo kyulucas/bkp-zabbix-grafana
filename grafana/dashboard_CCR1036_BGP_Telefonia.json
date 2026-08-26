@@ -1497,7 +1497,7 @@
         ]
       },
       "gridPos": {
-        "h": 8,
+        "h": 10,
         "w": 12,
         "x": 0,
         "y": 11
@@ -3960,7 +3960,7 @@
             "filter": "E1-Aligera"
           },
           "item": {
-            "filter": "/Status VIVIO.*/"
+            "filter": "/Status VIVO.*/"
           },
           "itemTag": {
             "filter": ""
@@ -3979,7 +3979,7 @@
           "proxy": {
             "filter": ""
           },
-          "queryType": "0",
+          "queryType": "2",
           "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
@@ -3998,7 +3998,6 @@
       "title": "",
       "transformations": [
         {
-          "disabled": true,
           "id": "reduce",
           "options": {
             "includeTimeField": false,
@@ -4009,7 +4008,6 @@
           }
         },
         {
-          "disabled": true,
           "id": "organize",
           "options": {
             "excludeByName": {
