@@ -3195,7 +3195,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2"
+                "CIRCUITO LACP CPD-CENTRO / PARAÍBA"
               ],
               "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2)"
             }
@@ -3204,7 +3204,7 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 OLTS"
+            "filter": "MPLS CDP-02 TR CCR2216"
           },
           "item": {
             "filter": "Optical Module Interface XGigabitEthernet0/0/18: RxPower"
