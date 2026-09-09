@@ -1,0 +1,1089 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS Ativos\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_TIPOCLIENTE = 1;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-blue",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 4,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS Pausados\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_TIPOCLIENTE = 9;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-yellow",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 8,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS Permuta\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_TIPOCLIENTE = 2;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-orange",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 12,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS Inadimplente\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_TIPOCLIENTE = 3;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "light-red",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 16,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS \"C.Inadimplência\"\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_TIPOCLIENTE = 10;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 20,
+        "y": 0
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/.*/",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "value_and_name",
+        "wideLayout": true
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT COUNT(*) AS \"Cancelados\"\r\nFROM ALTAREDE.CLIENTE\r\nWHERE COD_TIPOCLIENTE = 8;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "OBS",
+              "scope": "series"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 0,
+        "y": 6
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    DIA,\r\n    SUM(CADASTROS) AS CADASTROS,\r\n    SUM(RETORNOS_ATIVO) AS RETORNOS_ATIVO,\r\n    SUM(INADIMPLENCIAS) AS INADIMPLENCIAS,\r\n    SUM(CANCELAMENTOS) AS CANCELAMENTOS,\r\n    SUM(CANCELAMENTOS_INADIMPLENCIA) AS CANCELAMENTOS_INADIMPLENCIA,\r\n    SUM(PAUSADOS) AS PAUSADOS,\r\n    SUM(PERMUTAS) AS PERMUTAS\r\nFROM (\r\n\r\n    /* CADASTROS */\r\n    SELECT\r\n        DATE(DATA_CADASTRO) AS DIA,\r\n        COUNT(*) AS CADASTROS,\r\n        0 AS RETORNOS_ATIVO,\r\n        0 AS INADIMPLENCIAS,\r\n        0 AS CANCELAMENTOS,\r\n        0 AS CANCELAMENTOS_INADIMPLENCIA,\r\n        0 AS PAUSADOS,\r\n        0 AS PERMUTAS\r\n    FROM ALTAREDE.CLIENTE\r\n    WHERE DATA_CADASTRO >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_CADASTRO)\r\n\r\n    UNION ALL\r\n\r\n    /* RETORNOS PARA ATIVO */\r\n    SELECT\r\n        DATE(DATA_OPERACAO) AS DIA,\r\n        0,\r\n        COUNT(*),\r\n        0, 0, 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '1'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* INADIMPLÊNCIAS */\r\n    SELECT\r\n        DATE(DATA_OPERACAO) AS DIA,\r\n        0, 0,\r\n        COUNT(*),\r\n        0, 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '3'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* CANCELAMENTOS */\r\n    SELECT\r\n        DATE(DATA_OPERACAO) AS DIA,\r\n        0, 0, 0,\r\n        COUNT(*),\r\n        0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '8'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* CANCELAMENTOS POR INADIMPLÊNCIA */\r\n    SELECT\r\n        DATE(DATA_OPERACAO) AS DIA,\r\n        0, 0, 0, 0,\r\n        COUNT(*),\r\n        0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '10'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* PAUSADOS */\r\n    SELECT\r\n        DATE(DATA_OPERACAO) AS DIA,\r\n        0, 0, 0, 0, 0,\r\n        COUNT(*),\r\n        0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '9'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* PERMUTAS */\r\n    SELECT\r\n        DATE(DATA_OPERACAO) AS DIA,\r\n        0, 0, 0, 0, 0, 0,\r\n        COUNT(*)\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '2'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 7 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n) AS MOVIMENTOS\r\nGROUP BY DIA\r\nORDER BY DIA;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "timeFrom": "1w",
+      "title": "Por dia",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "OBS",
+              "scope": "series"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 8,
+        "y": 6
+      },
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    DATE_SUB(DATA_EVENTO, INTERVAL WEEKDAY(DATA_EVENTO) DAY) AS DIA,\r\n    SUM(CADASTROS) AS CADASTROS,\r\n    SUM(RETORNOS_ATIVO) AS RETORNOS_ATIVO,\r\n    SUM(INADIMPLENCIAS) AS INADIMPLENCIAS,\r\n    SUM(CANCELAMENTOS) AS CANCELAMENTOS,\r\n    SUM(CANCELAMENTOS_INADIMPLENCIA) AS CANCELAMENTOS_INADIMPLENCIA,\r\n    SUM(PAUSADOS) AS PAUSADOS,\r\n    SUM(PERMUTAS) AS PERMUTAS\r\nFROM (\r\n\r\n    SELECT\r\n        DATE(DATA_CADASTRO) AS DATA_EVENTO,\r\n        1 AS CADASTROS,\r\n        0 AS RETORNOS_ATIVO,\r\n        0 AS INADIMPLENCIAS,\r\n        0 AS CANCELAMENTOS,\r\n        0 AS CANCELAMENTOS_INADIMPLENCIA,\r\n        0 AS PAUSADOS,\r\n        0 AS PERMUTAS\r\n    FROM ALTAREDE.CLIENTE\r\n    WHERE DATA_CADASTRO >= CURDATE() - INTERVAL 30 DAY\r\n\r\n    UNION ALL\r\n\r\n    SELECT\r\n        DATE(DATA_OPERACAO),\r\n        0, COUNT(*), 0, 0, 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '1'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 30 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    SELECT\r\n        DATE(DATA_OPERACAO),\r\n        0, 0, COUNT(*), 0, 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '3'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 30 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    SELECT\r\n        DATE(DATA_OPERACAO),\r\n        0, 0, 0, COUNT(*), 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '8'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 30 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    SELECT\r\n        DATE(DATA_OPERACAO),\r\n        0, 0, 0, 0, COUNT(*), 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '10'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 30 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    SELECT\r\n        DATE(DATA_OPERACAO),\r\n        0, 0, 0, 0, 0, COUNT(*), 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '9'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 30 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    SELECT\r\n        DATE(DATA_OPERACAO),\r\n        0, 0, 0, 0, 0, 0, COUNT(*)\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '2'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 30 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n) AS MOVIMENTOS\r\nGROUP BY DATE_SUB(DATA_EVENTO, INTERVAL WEEKDAY(DATA_EVENTO) DAY)\r\nORDER BY DIA;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "timeFrom": "1M",
+      "title": "Por semana",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "OBS",
+              "scope": "series"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 8,
+        "x": 16,
+        "y": 6
+      },
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    CAST(DATE_FORMAT(DATA_EVENTO, '%Y-%m-01') AS DATETIME) AS time,\r\n    SUM(CADASTROS) AS CADASTROS,\r\n    SUM(RETORNOS_ATIVO) AS RETORNOS_ATIVO,\r\n    SUM(INADIMPLENCIAS) AS INADIMPLENCIAS,\r\n    SUM(CANCELAMENTOS) AS CANCELAMENTOS,\r\n    SUM(CANCELAMENTOS_INADIMPLENCIA) AS CANCELAMENTOS_INADIMPLENCIA,\r\n    SUM(PAUSADOS) AS PAUSADOS,\r\n    SUM(PERMUTAS) AS PERMUTAS\r\nFROM (\r\n    /* CADASTROS */\r\n    SELECT\r\n        DATE(DATA_CADASTRO) AS DATA_EVENTO,\r\n        COUNT(*) AS CADASTROS,\r\n        0 AS RETORNOS_ATIVO,\r\n        0 AS INADIMPLENCIAS,\r\n        0 AS CANCELAMENTOS,\r\n        0 AS CANCELAMENTOS_INADIMPLENCIA,\r\n        0 AS PAUSADOS,\r\n        0 AS PERMUTAS\r\n    FROM ALTAREDE.CLIENTE\r\n    WHERE DATA_CADASTRO >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_CADASTRO)\r\n\r\n    UNION ALL\r\n\r\n    /* RETORNOS ATIVO */\r\n    SELECT DATE(DATA_OPERACAO), 0, COUNT(*), 0, 0, 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '1'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* INADIMPLÊNCIAS */\r\n    SELECT DATE(DATA_OPERACAO), 0, 0, COUNT(*), 0, 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '3'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* CANCELAMENTOS */\r\n    SELECT DATE(DATA_OPERACAO), 0, 0, 0, COUNT(*), 0, 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '8'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* CANCELAMENTOS POR INADIMPLÊNCIA */\r\n    SELECT DATE(DATA_OPERACAO), 0, 0, 0, 0, COUNT(*), 0, 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '10'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* PAUSADOS */\r\n    SELECT DATE(DATA_OPERACAO), 0, 0, 0, 0, 0, COUNT(*), 0\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '9'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n    UNION ALL\r\n\r\n    /* PERMUTAS */\r\n    SELECT DATE(DATA_OPERACAO), 0, 0, 0, 0, 0, 0, COUNT(*)\r\n    FROM ALTAREDE.AUDITORIA_CLIENTE\r\n    WHERE OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n      AND VALOR_ATUAL = '2'\r\n      AND VALOR_ANTERIOR <> VALOR_ATUAL\r\n      AND DATE(DATA_OPERACAO) >= CURDATE() - INTERVAL 360 DAY\r\n    GROUP BY DATE(DATA_OPERACAO)\r\n\r\n) AS MOVIMENTOS\r\nGROUP BY DATE_FORMAT(DATA_EVENTO, '%Y-%m')\r\nORDER BY time;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "timeFrom": "1y",
+      "title": "Por mês",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "bf5cl81i2yz28d"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "purple",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "TOTAL",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-blue",
+                      "value": 0
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ATIVOS",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "green",
+                      "value": 0
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CANCELADOS",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-red",
+                      "value": 0
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "INADIMPLENTES",
+              "scope": "series"
+            },
+            "properties": [
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "dark-yellow",
+                      "value": 0
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "13.2.1",
+      "targets": [
+        {
+          "dataset": "ALTAREDE",
+          "datasource": {
+            "type": "mysql",
+            "uid": "bf5cl81i2yz28d"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT\r\n    UNIX_TIMESTAMP(X.MES) AS time,\r\n\r\n    SUM(CASE\r\n        WHEN X.STATUS_FINAL IN ('1', '2') THEN 1\r\n        ELSE 0\r\n    END) AS ATIVOS,\r\n\r\n    SUM(CASE\r\n        WHEN X.STATUS_FINAL = '3' THEN 1\r\n        ELSE 0\r\n    END) AS INADIMPLENTES,\r\n\r\n    SUM(CASE\r\n        WHEN X.STATUS_FINAL IN ('8', '10') THEN 1\r\n        ELSE 0\r\n    END) AS CANCELADOS,\r\n\r\n    SUM(CASE\r\n        WHEN X.STATUS_FINAL = '9' THEN 1\r\n        ELSE 0\r\n    END) AS PAUSADOS,\r\n\r\n    COUNT(*) AS TOTAL\r\n\r\nFROM\r\n(\r\n    SELECT\r\n        M.MES,\r\n        C.COD_CLIENTE,\r\n\r\n        COALESCE(\r\n            (\r\n                SELECT A.VALOR_ATUAL\r\n                FROM ALTAREDE.AUDITORIA_CLIENTE A\r\n                WHERE A.COD_CLIENTE = C.COD_CLIENTE\r\n                  AND A.OBS LIKE 'ALTERAÇÃO TIPO CLIENTE%'\r\n                  AND A.DATA_OPERACAO < DATE_ADD(M.MES, INTERVAL 1 MONTH)\r\n\r\n                ORDER BY\r\n                    A.DATA_OPERACAO DESC,\r\n                    A.HORA_OPERACAO DESC,\r\n                    A.ID DESC\r\n\r\n                LIMIT 1\r\n            ),\r\n            CAST(C.COD_TIPOCLIENTE AS CHAR)\r\n        ) AS STATUS_FINAL\r\n\r\n    FROM\r\n    (\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 11 MONTH),\r\n            '%Y-%m-01'\r\n        ) AS MES\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 10 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 9 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 8 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 7 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 6 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 5 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 4 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 3 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 2 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            DATE_SUB(CURDATE(), INTERVAL 1 MONTH),\r\n            '%Y-%m-01'\r\n        )\r\n\r\n        UNION ALL\r\n\r\n        SELECT DATE_FORMAT(\r\n            CURDATE(),\r\n            '%Y-%m-01'\r\n        )\r\n    ) M\r\n\r\n    INNER JOIN ALTAREDE.CLIENTE C\r\n        ON C.DATA_CADASTRO < DATE_ADD(M.MES, INTERVAL 1 MONTH)\r\n\r\n) X\r\n\r\nGROUP BY X.MES\r\n\r\nORDER BY X.MES;",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "timeFrom": "6M",
+      "title": "Crescimento da base de clientes",
+      "type": "timeseries"
+    }
+  ],
+  "preload": false,
+  "refresh": "",
+  "schemaVersion": 42,
+  "time": {
+    "from": "now-7d",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
+  "title": "Ativações x Cancelamentos",
+  "uid": "adndjtl"
+}
