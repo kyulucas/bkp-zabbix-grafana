@@ -3611,10 +3611,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
+            "filter": "Optical Module Interface 40GE0/0/4: RxPower Lane0"
           },
           "itemTag": {
             "filter": ""
@@ -4983,10 +4983,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/1: TxPower"
+            "filter": "Optical Module Interface 40GE0/0/4: TxPower Lane0"
           },
           "itemTag": {
             "filter": ""
