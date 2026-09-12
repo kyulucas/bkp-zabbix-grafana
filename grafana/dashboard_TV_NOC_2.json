@@ -5291,13 +5291,13 @@
             }
           ],
           "group": {
-            "filter": "ENERGIA"
+            "filter": "ROUTERSPOP"
           },
           "host": {
-            "filter": "ENERGIA POP PARAIBA HW"
+            "filter": "ROUTER WIFI POP PARAIBA"
           },
           "item": {
-            "filter": "AC - Status de Entrada"
+            "filter": "ICMP ping"
           },
           "itemTag": {
             "filter": ""
@@ -5362,10 +5362,10 @@
             }
           ],
           "group": {
-            "filter": "ENERGIA"
+            "filter": "ROUTERSPOP"
           },
           "host": {
-            "filter": "ENERGIA POP SIMAO PEREIRA"
+            "filter": "ROUTER WIFI POP SIMAO PEREIRA"
           },
           "item": {
             "filter": "ICMP ping"
@@ -5933,7 +5933,7 @@
             "filter": "ENERGIA"
           },
           "host": {
-            "filter": "ENERGIA POP PARAIBA HW"
+            "filter": "ENERGIA POP CPD PARAIBUNA HW"
           },
           "item": {
             "filter": "AC - Status de Entrada"
@@ -6001,13 +6001,13 @@
             }
           ],
           "group": {
-            "filter": "ENERGIA"
+            "filter": "ROUTERSPOP"
           },
           "host": {
-            "filter": "ENERGIA POP CPD BMP HW"
+            "filter": "ROUTER WIFI POP BEMPOSTA"
           },
           "item": {
-            "filter": "AC - Status de Entrada"
+            "filter": "ICMP ping"
           },
           "itemTag": {
             "filter": ""
