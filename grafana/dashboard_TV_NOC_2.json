@@ -6001,13 +6001,13 @@
             }
           ],
           "group": {
-            "filter": "ROUTERSPOP"
+            "filter": "ENERGIA"
           },
           "host": {
-            "filter": "ROUTER WIFI POP BEMPOSTA"
+            "filter": "ENERGIA POP CPD BMP HW"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "AC - Status de Entrada"
           },
           "itemTag": {
             "filter": ""
