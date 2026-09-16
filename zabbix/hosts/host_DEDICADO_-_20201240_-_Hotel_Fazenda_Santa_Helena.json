@@ -91,6 +91,7 @@
       {
         "host": "DEDICADO - 20201240 - Hotel Fazenda Santa Helena",
         "name": "DEDICADO - 20201240 - Hotel Fazenda Santa Helena",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "ping.cgnat"
