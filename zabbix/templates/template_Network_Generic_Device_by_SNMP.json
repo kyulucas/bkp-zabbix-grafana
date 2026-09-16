@@ -119,6 +119,8 @@
               {
                 "uuid": "d08cae0e7fa54dfea41449f0adabe05d",
                 "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "max(/Network Generic Device by SNMP/icmpping,#3)>0",
                 "name": "Network Generic Device: Unavailable by ICMP ping",
                 "priority": "HIGH",
                 "description": "Last three attempts returned timeout. Please check device connectivity.",
@@ -161,7 +163,8 @@
                 "dependencies": [
                   {
                     "name": "Network Generic Device: Unavailable by ICMP ping",
-                    "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0"
+                    "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0",
+                    "recovery_expression": "max(/Network Generic Device by SNMP/icmpping,#3)>0"
                   }
                 ],
                 "tags": [
@@ -211,7 +214,8 @@
                   },
                   {
                     "name": "Network Generic Device: Unavailable by ICMP ping",
-                    "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0"
+                    "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0",
+                    "recovery_expression": "max(/Network Generic Device by SNMP/icmpping,#3)>0"
                   }
                 ],
                 "tags": [
@@ -482,7 +486,8 @@
                 "dependencies": [
                   {
                     "name": "Network Generic Device: Unavailable by ICMP ping",
-                    "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0"
+                    "expression": "max(/Network Generic Device by SNMP/icmpping,#3)=0",
+                    "recovery_expression": "max(/Network Generic Device by SNMP/icmpping,#3)>0"
                   }
                 ],
                 "tags": [
