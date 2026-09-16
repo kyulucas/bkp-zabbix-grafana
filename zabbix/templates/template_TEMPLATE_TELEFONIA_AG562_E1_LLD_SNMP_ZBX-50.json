@@ -153,6 +153,8 @@
               {
                 "uuid": "b196f5d2d1454c82ae244f31a7763408",
                 "expression": "avg(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmppingloss[,,,,],#3)>35",
+                "recovery_mode": "RECOVERY_EXPRESSION",
+                "recovery_expression": "avg(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmppingloss[,,,,],#3)<=35",
                 "name": "{HOSTNAME} com perda de pacote",
                 "priority": "WARNING",
                 "description": "Perda de Pacotes acima de 50%"
@@ -206,7 +208,7 @@
                 "uuid": "baab4538ff184900ae12455f03bcc640",
                 "expression": "sum(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmpping[{HOST.IP},64,20,63,50],60s)=0",
                 "recovery_mode": "RECOVERY_EXPRESSION",
-                "recovery_expression": "sum(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmpping[{HOST.IP},64,20,63,50],60s)=1",
+                "recovery_expression": "sum(/TEMPLATE_TELEFONIA_AG562_E1_LLD_SNMP_ZBX-5.0/icmpping[{HOST.IP},64,20,63,50],60s)>0",
                 "name": "{HOSTNAME} não responde (2m)",
                 "priority": "DISASTER"
               }
