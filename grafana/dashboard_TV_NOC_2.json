@@ -5291,13 +5291,13 @@
             }
           ],
           "group": {
-            "filter": "ROUTERSPOP"
+            "filter": "ENERGIA"
           },
           "host": {
-            "filter": "ROUTER WIFI POP PARAIBA"
+            "filter": "ENERGIA POP PARAIBA HW"
           },
           "item": {
-            "filter": "ICMP ping"
+            "filter": "AC - Status de Entrada"
           },
           "itemTag": {
             "filter": ""
