@@ -4,7 +4,7 @@
       {
         "builtIn": 1,
         "datasource": {
-          "type": "datasource",
+          "type": "grafana",
           "uid": "grafana"
         },
         "enable": true,
@@ -25,7 +25,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -35,8 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 2,
-      "panels": [],
+      "id": 32,
       "title": "STATUS DO SWITCH ",
       "type": "row"
     },
@@ -57,7 +56,9 @@
         "content": "<div style=\"text-align: center; font-family: Arial, sans-serif;\">\n    <img src=\"https://upload.wikimedia.org/wikipedia/pt/1/11/Huawei_logo.png\" \n         alt=\"Huawei Logo\" \n         style=\"width: 90px;\">\n    <h2 style=\"color: #d32f2f;\"> Version 5.170 </h2>\n    <p style=\"font-size: 18px; font-weight: bold; color: ##d32f2f;\">\n        (S6730 V200R019C10SPC500)\n    </p>\n</div>\n",
         "mode": "html"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
+      "targets": [],
+      "title": "",
       "transparent": true,
       "type": "text"
     },
@@ -98,8 +99,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -126,7 +126,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -135,7 +135,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -185,6 +185,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -198,7 +199,6 @@
             "mode": "thresholds"
           },
           "displayName": "USO DE MEMÓRIA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -213,8 +213,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -241,7 +240,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -250,7 +249,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -300,6 +299,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -348,7 +348,6 @@
           },
           "decimals": 0,
           "displayName": "USO DE CPU",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -363,8 +362,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -387,7 +385,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -396,7 +394,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -446,6 +444,7 @@
           }
         }
       ],
+      "title": "",
       "type": "timeseries"
     },
     {
@@ -496,8 +495,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -524,7 +522,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -533,7 +531,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -583,6 +581,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -633,8 +632,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -661,7 +659,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -670,7 +668,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -720,6 +718,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -733,7 +732,6 @@
             "mode": "thresholds"
           },
           "displayName": "TEMPERATURA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -752,8 +750,7 @@
             ]
           },
           "unit": "celsius"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -780,7 +777,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -789,7 +786,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -839,6 +836,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -852,7 +850,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -863,8 +860,7 @@
             ]
           },
           "unit": "dtdhms"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -891,7 +887,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -900,7 +896,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -950,6 +946,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -996,8 +993,7 @@
             ]
           },
           "unit": "none"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1024,7 +1020,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -1033,7 +1029,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1083,6 +1079,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1093,8 +1090,7 @@
         "x": 0,
         "y": 6
       },
-      "id": 11,
-      "panels": [],
+      "id": 33,
       "title": "SINAL DBM",
       "type": "row"
     },
@@ -1118,7 +1114,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1161,7 +1156,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -1170,7 +1165,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1208,7 +1203,7 @@
             "filter": "SW - 6730 CORE LINK BGP"
           },
           "item": {
-            "filter": "/.*/"
+            "filter": "/.*: RxPower$/"
           },
           "itemTag": {
             "filter": ""
@@ -1247,6 +1242,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1295,7 +1291,6 @@
             "inspect": false
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1314,8 +1309,7 @@
             ]
           },
           "unit": "dBm"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -1328,7 +1322,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -1337,7 +1331,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1348,7 +1342,7 @@
             "filter": "SW - 6730 CORE LINK BGP"
           },
           "item": {
-            "filter": "/.*/"
+            "filter": "/.*: RxPower$/"
           },
           "itemTag": {
             "filter": ""
@@ -1387,6 +1381,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1436,7 +1431,6 @@
             "inspect": false
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1455,8 +1449,7 @@
             ]
           },
           "unit": "dBm"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -1469,7 +1462,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -1478,7 +1471,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1489,7 +1482,7 @@
             "filter": "SW - 6730 CORE LINK BGP"
           },
           "item": {
-            "filter": "/.*/"
+            "filter": "/.*: TxPower$/"
           },
           "itemTag": {
             "filter": ""
@@ -1528,6 +1521,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1563,8 +1557,7 @@
         "x": 0,
         "y": 17
       },
-      "id": 17,
-      "panels": [],
+      "id": 34,
       "title": "TRÁFEGO INTERFACES ",
       "type": "row"
     },
@@ -1613,7 +1606,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1628,8 +1620,7 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -1655,7 +1646,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -1663,7 +1654,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
@@ -1707,14 +1698,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -1806,7 +1796,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1821,8 +1810,7 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -1848,7 +1836,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -1856,7 +1844,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
@@ -1900,14 +1888,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -1999,7 +1986,6 @@
             }
           },
           "decimals": 1,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2014,8 +2000,7 @@
             ]
           },
           "unit": "bps"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 10,
@@ -2041,7 +2026,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "application": {
@@ -2049,7 +2034,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
@@ -2094,13 +2079,12 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "SWITCH"
           },
-          "hide": false,
           "host": {
             "filter": "SW - 6730 CORE LINK BGP"
           },
@@ -2149,6 +2133,7 @@
   "templating": {
     "list": [
       {
+        "allowCustomValue": true,
         "current": {
           "text": "All",
           "value": "$__all"
@@ -2158,6 +2143,7 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - item",
+        "hide": 0,
         "includeAll": true,
         "label": "100GE",
         "multi": true,
@@ -2172,9 +2158,13 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(100.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
           "text": "All",
           "value": "$__all"
@@ -2184,6 +2174,7 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - item",
+        "hide": 0,
         "includeAll": true,
         "label": "ETH-TRUNK",
         "multi": true,
@@ -2198,9 +2189,13 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(Eth.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       },
       {
+        "allowCustomValue": true,
         "current": {
           "text": "All",
           "value": "$__all"
@@ -2210,6 +2205,7 @@
           "uid": "ff5clh86a2mf4a"
         },
         "definition": "Zabbix - item",
+        "hide": 0,
         "includeAll": true,
         "label": "XGIGABIT",
         "multi": true,
@@ -2224,6 +2220,9 @@
         },
         "refresh": 1,
         "regex": "/(?:Trafego de (?:Entrada|Saida) na Interface )(XGigabit.*)/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
@@ -2232,9 +2231,21 @@
     "from": "now-6h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "SW - 6730 CORE LINK BGP",
-  "uid": "QN9H1M_Gz",
-  "weekStart": ""
+  "uid": "QN9H1M_Gz"
 }
