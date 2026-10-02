@@ -2751,7 +2751,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA FIBRA 1 - Padre Solano"
+                "CIRCUITO POP VILA FIBRA 1 - SENTIDO UPA"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 1 - Sentido Upa))"
             }
@@ -2825,7 +2825,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA (FIBRA 2 - Sentido Upa"
+                "CIRCUITO POP VILA (FIBRA 2 - PADRE SOLANO"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 2 - Padre Solano))"
             }
