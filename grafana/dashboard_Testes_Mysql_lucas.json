@@ -19,7 +19,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "datasource": {
@@ -41,8 +41,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -79,8 +78,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -153,8 +152,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -163,7 +162,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "OLT HUAWEI MA5800X2 SANTANA"
           },
@@ -228,8 +226,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -238,7 +236,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "OLT HUAWEI MA5800X2 SANTANA"
           },
@@ -303,8 +300,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -313,7 +310,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "OLT HUAWEI MA5800X2 SANTANA"
           },
@@ -378,8 +374,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -388,7 +384,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "OLT HUAWEI MA5800X2 SANTANA"
           },
@@ -453,8 +448,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -463,7 +458,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "OLT HUAWEI MA5800X2 SANTANA"
           },
@@ -528,8 +522,8 @@
           "countTriggersBy": "",
           "dataset": "performance_schema",
           "datasource": {
-            "type": "mysql",
-            "uid": "eelvlbtb2pam8c"
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
           },
           "editorMode": "code",
           "evaltype": "0",
@@ -597,6 +591,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -687,7 +682,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -733,7 +727,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.2",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -744,7 +738,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "select \r\n  UserName as Login, \r\n  FramedIPAddress as IP,\r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status',\r\n  \r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado,\r\n\r\n  COALESCE(AcctStopTime, '-\\\\-') as data_desconexao\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='20222925'\r\nORDER BY RadAcctId desc\r\nlimit 1",
+          "rawSql": "select \r\n  UserName as Login, \r\n  FramedIPAddress as IP,\r\nCASE when AcctStopTime is null \r\n    then 'Online'\r\n      else 'Offline'\r\nEND AS 'Status',\r\n  \r\nCASE \r\n  WHEN AcctStartTime IS NOT NULL THEN \r\n    CONCAT(\r\n      FLOOR(TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) / 86400), 'd ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 86400) / 3600), 2, '0'), 'h ',\r\n      LPAD(FLOOR((TIMESTAMPDIFF(SECOND, AcctStartTime, NOW()) % 3600) / 60), 2, '0'), 'm'\r\n    )\r\n  ELSE '-\\\\-'\r\nEND AS tempo_conectado,\r\n\r\n  COALESCE(AcctStopTime, '-\\\\-') as data_desconexao\r\n  \r\nFROM ALTAREDE.radacct\r\nwhere UserName ='mcz22'\r\nORDER BY RadAcctId desc\r\nlimit 1",
           "refId": "A",
           "sql": {
             "columns": [
@@ -765,6 +759,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "table"
     }
@@ -772,17 +767,25 @@
   "preload": false,
   "refresh": "",
   "schemaVersion": 42,
-  "tags": [],
-  "templating": {
-    "list": []
-  },
   "time": {
     "from": "now-6h",
     "to": "now"
   },
-  "timepicker": {},
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
   "timezone": "browser",
   "title": "Testes Mysql lucas",
-  "uid": "cegwyzpxsjbb4d",
-  "weekStart": ""
+  "uid": "cegwyzpxsjbb4d"
 }
