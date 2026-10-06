@@ -164,7 +164,7 @@
         "multi": false,
         "name": "prefeitura",
         "options": [],
-        "query": "Três Rios : 29.138.377/0001-93, Chiador : 18.338.145/0001-62, Simão Pereira : 20.434.072/0001-54",
+        "query": "Três Rios : 29.138.377/0001-93, Chiador : 18.338.145/0001-62, Simão Pereira : 20.434.072/0001-54, Santana do Deserto : 18.338.277/0001-94",
         "skipUrlSync": false,
         "type": "custom",
         "valuesFormat": "csv"
