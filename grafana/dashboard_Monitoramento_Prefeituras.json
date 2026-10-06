@@ -44,7 +44,7 @@
         }
       },
       "gridPos": {
-        "h": 19,
+        "h": 35,
         "w": 24,
         "x": 0,
         "y": 0
@@ -81,7 +81,7 @@
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
-          "rawSql": "SELECT\r\n  pg.LOGIN AS Login,\r\n  CASE\r\n    WHEN r.RadAcctId IS NOT NULL AND r.AcctStopTime IS NULL THEN 'Online'\r\n    ELSE 'Offline'\r\n  END AS Status,\r\n  s.NOME AS Situacao\r\nFROM ALTAREDE.PROVEDOR_GERAL pg\r\nJOIN ALTAREDE.CLIENTE c\r\n  ON c.COD_CLIENTE = pg.COD_CLIENTE\r\nLEFT JOIN ALTAREDE.STATUS_IP s\r\n  ON s.CODIGO = pg.COD_STATUS\r\nLEFT JOIN ALTAREDE.radacct r\r\n  ON r.RadAcctId = (\r\n       SELECT MAX(r2.RadAcctId)\r\n       FROM ALTAREDE.radacct r2\r\n       WHERE r2.UserName = pg.LOGIN\r\n     )\r\nWHERE c.CPF in ('29.138.377/0001-93', '18.338.145/0001-62' ) AND pg.LOGIN NOT LIKE 'SIP\\_%'\r\nORDER BY pg.LOGIN;",
+          "rawSql": "SELECT\r\n  pg.LOGIN AS Login,\r\n  CASE\r\n    WHEN r.RadAcctId IS NOT NULL AND r.AcctStopTime IS NULL THEN 'Online'\r\n    ELSE 'Offline'\r\n  END AS Status,\r\n  s.NOME AS Situacao\r\nFROM ALTAREDE.PROVEDOR_GERAL pg\r\nJOIN ALTAREDE.CLIENTE c\r\n  ON c.COD_CLIENTE = pg.COD_CLIENTE\r\nLEFT JOIN ALTAREDE.STATUS_IP s\r\n  ON s.CODIGO = pg.COD_STATUS\r\nLEFT JOIN ALTAREDE.radacct r\r\n  ON r.RadAcctId = (\r\n       SELECT MAX(r2.RadAcctId)\r\n       FROM ALTAREDE.radacct r2\r\n       WHERE r2.UserName = pg.LOGIN\r\n     )\r\nWHERE c.CPF in ('29.138.377/0001-93', '18.338.145/0001-62', '20.434.072/0001-54', '18.338.277/0001-94' ) AND pg.LOGIN NOT LIKE 'SIP\\_%' and c.COD_TIPOCLIENTE NOT IN ('8', '9')\r\nORDER BY pg.LOGIN;",
           "refId": "A",
           "sql": {
             "columns": [
