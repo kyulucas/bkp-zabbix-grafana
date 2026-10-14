@@ -91,6 +91,7 @@
       {
         "host": "DEDICADO - 2023275 - RADIO E TELEVISAO",
         "name": "DEDICADO - 2023275 - RADIO E TELEVISAO",
+        "status": "DISABLED",
         "templates": [
           {
             "name": "ping.cgnat"
