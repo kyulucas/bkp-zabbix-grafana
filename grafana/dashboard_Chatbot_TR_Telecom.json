@@ -19,7 +19,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 0,
-  "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
@@ -29,8 +29,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 15,
-      "panels": [],
+      "id": 70,
       "title": "Row title",
       "type": "row"
     },
@@ -45,7 +44,6 @@
             "fixedColor": "#5a7fa7",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "Servidor Automacao",
           "thresholds": {
             "mode": "absolute",
@@ -60,8 +58,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -87,7 +84,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -96,7 +93,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -146,6 +143,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -160,7 +158,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "ICMP STATUS",
           "thresholds": {
             "mode": "absolute",
@@ -175,8 +172,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -202,7 +198,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -211,7 +207,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -261,6 +257,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -275,7 +272,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "CPU",
           "thresholds": {
             "mode": "absolute",
@@ -290,8 +286,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -317,7 +312,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -326,7 +321,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -376,6 +371,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -390,7 +386,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "MEMÓRIA",
           "thresholds": {
             "mode": "absolute",
@@ -405,8 +400,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -432,7 +426,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -441,7 +435,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -491,6 +485,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -537,8 +532,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -564,7 +558,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -573,7 +567,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -637,7 +631,6 @@
             "mode": "thresholds"
           },
           "displayName": "LATÊNCIA",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -655,8 +648,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -682,7 +674,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -691,7 +683,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -755,7 +747,6 @@
             "mode": "thresholds"
           },
           "displayName": "UPTIME",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -765,8 +756,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -792,7 +782,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -801,7 +791,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -864,7 +854,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "max": 10,
           "thresholds": {
             "mode": "absolute",
@@ -883,8 +872,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -894,6 +882,14 @@
       },
       "id": 9,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "horizontal",
@@ -904,11 +900,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto"
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -917,7 +918,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -980,7 +981,6 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -998,8 +998,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 5,
@@ -1009,6 +1008,14 @@
       },
       "id": 50,
       "options": {
+        "barShape": "flat",
+        "barWidthFactor": 0.5,
+        "effects": {
+          "barGlow": false,
+          "centerGlow": false,
+          "gradient": false
+        },
+        "endpointMarker": "point",
         "minVizHeight": 75,
         "minVizWidth": 75,
         "orientation": "horizontal",
@@ -1019,11 +1026,16 @@
           "fields": "",
           "values": false
         },
+        "segmentCount": 1,
+        "segmentSpacing": 0.3,
+        "shape": "gauge",
         "showThresholdLabels": false,
         "showThresholdMarkers": true,
-        "sizing": "auto"
+        "sizing": "auto",
+        "sparkline": false,
+        "textMode": "auto"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1032,7 +1044,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1096,7 +1108,6 @@
             "mode": "continuous-GrYlRd"
           },
           "displayName": "Total",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1111,8 +1122,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1138,7 +1148,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1147,7 +1157,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1224,6 +1234,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1237,7 +1248,6 @@
             "mode": "continuous-GrYlRd"
           },
           "displayName": "Disponível",
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1252,8 +1262,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1279,7 +1288,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1288,14 +1297,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -1339,6 +1347,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -1351,7 +1360,6 @@
           "color": {
             "mode": "continuous-GrYlRd"
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -1368,8 +1376,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 3,
@@ -1402,7 +1409,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1410,7 +1417,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -1443,7 +1450,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -1485,7 +1491,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -1519,7 +1525,6 @@
           "group": {
             "filter": "/.*/"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -1563,6 +1568,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -1585,7 +1591,6 @@
           "color": {
             "mode": "continuous-GrYlRd"
           },
-          "mappings": [],
           "max": 100,
           "min": 0,
           "thresholds": {
@@ -1601,8 +1606,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1635,7 +1639,7 @@
         "sizing": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1644,7 +1648,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1708,7 +1712,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "Armazenamentos",
           "thresholds": {
             "mode": "absolute",
@@ -1723,8 +1726,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1750,7 +1752,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1759,7 +1761,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1809,6 +1811,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1823,7 +1826,6 @@
             "fixedColor": "#3a675d",
             "mode": "fixed"
           },
-          "mappings": [],
           "noValue": "Network Status",
           "thresholds": {
             "mode": "absolute",
@@ -1838,8 +1840,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -1865,7 +1866,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1874,7 +1875,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -1924,6 +1925,7 @@
           }
         }
       ],
+      "title": "",
       "transparent": true,
       "type": "stat"
     },
@@ -1949,7 +1951,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1959,8 +1960,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -1974,7 +1974,7 @@
         "enablePagination": false,
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -1983,7 +1983,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2086,6 +2086,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -2132,7 +2133,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2147,8 +2147,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -2161,7 +2160,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -2170,7 +2169,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2247,6 +2246,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -2297,7 +2297,6 @@
             "inspect": false
           },
           "decimals": 2,
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2320,8 +2319,7 @@
             ]
           },
           "unit": "percent"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -2334,7 +2332,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -2343,7 +2341,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2420,6 +2418,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -2468,7 +2467,6 @@
             },
             "inspect": false
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -2483,8 +2481,7 @@
             ]
           },
           "unit": "bytes"
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 4,
@@ -2497,7 +2494,7 @@
         "cellHeight": "sm",
         "showHeader": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -2506,7 +2503,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2583,6 +2580,7 @@
           }
         }
       ],
+      "title": "",
       "transformations": [
         {
           "id": "reduce",
@@ -2650,8 +2648,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 2,
@@ -2681,7 +2678,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -2689,7 +2686,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -2788,7 +2785,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -2847,7 +2844,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -2889,7 +2885,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -2949,7 +2945,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -2993,6 +2988,7 @@
           }
         }
       ],
+      "title": "",
       "type": "stat"
     },
     {
@@ -3039,7 +3035,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3053,8 +3048,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 9,
@@ -3076,7 +3070,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -3084,7 +3078,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -3158,7 +3152,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -3192,7 +3186,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -3234,7 +3227,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3269,7 +3262,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -3360,7 +3352,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3374,8 +3365,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 9,
@@ -3397,7 +3387,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -3405,7 +3395,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -3478,7 +3468,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [
             {
@@ -3511,7 +3501,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -3553,7 +3542,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [
@@ -3587,7 +3576,6 @@
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -3631,7 +3619,7 @@
           }
         }
       ],
-      "title": "Tráfego de entrada",
+      "title": "Tráfego de saida",
       "type": "timeseries"
     },
     {
@@ -3652,6 +3640,7 @@
         "ageField": false,
         "allowDangerousHTML": false,
         "customLastChangeFormat": false,
+        "customTagColumns": "",
         "descriptionAtNewLine": false,
         "descriptionField": true,
         "fontSize": "100%",
@@ -3714,13 +3703,17 @@
           }
         ]
       },
-      "pluginVersion": "6.0.3",
+      "pluginVersion": "6.3.0",
       "targets": [
         {
           "application": {
             "filter": ""
           },
           "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
           "evaltype": "0",
           "functions": [],
           "group": {
@@ -3812,7 +3805,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3830,8 +3822,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 6,
@@ -3853,7 +3844,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -3862,7 +3853,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -3959,7 +3950,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -3977,8 +3967,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 7,
@@ -4000,7 +3989,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -4009,7 +3998,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4070,8 +4059,7 @@
         "x": 0,
         "y": 36
       },
-      "id": 55,
-      "panels": [],
+      "id": 71,
       "title": "INFO uso de disco leitura/escrita",
       "type": "row"
     },
@@ -4119,7 +4107,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4133,8 +4120,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -4156,7 +4142,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -4165,7 +4151,7 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
@@ -4262,7 +4248,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4276,8 +4261,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -4299,7 +4283,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -4307,7 +4291,7 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
@@ -4354,14 +4338,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -4452,7 +4435,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4466,8 +4448,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -4489,7 +4470,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -4498,14 +4479,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -4596,7 +4576,6 @@
               "mode": "off"
             }
           },
-          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -4610,8 +4589,7 @@
               }
             ]
           }
-        },
-        "overrides": []
+        }
       },
       "gridPos": {
         "h": 8,
@@ -4633,7 +4611,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "12.3.0",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "application": {
@@ -4641,13 +4619,12 @@
           },
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "functions": [],
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -4689,14 +4666,13 @@
           "countTriggersBy": "",
           "datasource": {
             "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "VQ2csaink"
+            "uid": "ff5clh86a2mf4a"
           },
           "evaltype": "0",
           "functions": [],
           "group": {
             "filter": "Linux servers"
           },
-          "hide": false,
           "host": {
             "filter": "Servidor Automacao"
           },
@@ -4751,7 +4727,7 @@
         "x": 0,
         "y": 53
       },
-      "id": 61,
+      "id": 72,
       "panels": [
         {
           "datasource": {
@@ -4770,18 +4746,17 @@
                 },
                 "inspect": false
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue"
+                    "color": "dark-blue",
+                    "value": null
                   }
                 ]
               },
               "unit": "percent"
-            },
-            "overrides": []
+            }
           },
           "gridPos": {
             "h": 18,
@@ -4814,7 +4789,7 @@
               "countTriggersBy": "",
               "datasource": {
                 "type": "alexanderzobnin-zabbix-datasource",
-                "uid": "gYUDoKY7k"
+                "uid": "aefq119i80pa8a"
               },
               "evaltype": "0",
               "functions": [
@@ -4882,6 +4857,7 @@
               }
             }
           ],
+          "title": "",
           "transformations": [
             {
               "id": "reduce",
@@ -4958,12 +4934,12 @@
                 },
                 "inspect": false
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue"
+                    "color": "dark-blue",
+                    "value": null
                   }
                 ]
               }
@@ -5184,7 +5160,7 @@
               "countTriggersBy": "",
               "datasource": {
                 "type": "alexanderzobnin-zabbix-datasource",
-                "uid": "gYUDoKY7k"
+                "uid": "aefq119i80pa8a"
               },
               "evaltype": "0",
               "functions": [
@@ -5252,6 +5228,7 @@
               }
             }
           ],
+          "title": "",
           "transformations": [
             {
               "id": "reduce",
@@ -5328,12 +5305,12 @@
                 },
                 "inspect": false
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue"
+                    "color": "dark-blue",
+                    "value": null
                   }
                 ]
               }
@@ -5554,7 +5531,7 @@
               "countTriggersBy": "",
               "datasource": {
                 "type": "alexanderzobnin-zabbix-datasource",
-                "uid": "gYUDoKY7k"
+                "uid": "aefq119i80pa8a"
               },
               "evaltype": "0",
               "functions": [
@@ -5622,6 +5599,7 @@
               }
             }
           ],
+          "title": "",
           "transformations": [
             {
               "disabled": true,
@@ -5703,12 +5681,12 @@
                 },
                 "inspect": false
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue"
+                    "color": "dark-blue",
+                    "value": null
                   }
                 ]
               },
@@ -5930,7 +5908,7 @@
               "countTriggersBy": "",
               "datasource": {
                 "type": "alexanderzobnin-zabbix-datasource",
-                "uid": "gYUDoKY7k"
+                "uid": "aefq119i80pa8a"
               },
               "evaltype": "0",
               "functions": [
@@ -5998,6 +5976,7 @@
               }
             }
           ],
+          "title": "",
           "transformations": [
             {
               "id": "reduce",
@@ -6100,12 +6079,12 @@
                   "mode": "off"
                 }
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue"
+                    "color": "dark-blue",
+                    "value": null
                   }
                 ]
               },
@@ -6263,7 +6242,7 @@
               "countTriggersBy": "",
               "datasource": {
                 "type": "alexanderzobnin-zabbix-datasource",
-                "uid": "gYUDoKY7k"
+                "uid": "aefq119i80pa8a"
               },
               "evaltype": "0",
               "functions": [
@@ -6423,12 +6402,12 @@
                   "mode": "off"
                 }
               },
-              "mappings": [],
               "thresholds": {
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "dark-blue"
+                    "color": "dark-blue",
+                    "value": null
                   }
                 ]
               },
@@ -6586,7 +6565,7 @@
               "countTriggersBy": "",
               "datasource": {
                 "type": "alexanderzobnin-zabbix-datasource",
-                "uid": "gYUDoKY7k"
+                "uid": "aefq119i80pa8a"
               },
               "evaltype": "0",
               "functions": [
@@ -6718,6 +6697,7 @@
   "templating": {
     "list": [
       {
+        "allowCustomValue": true,
         "current": {
           "text": [
             "All"
@@ -6726,8 +6706,11 @@
             "$__all"
           ]
         },
+        "datasource": {
+          "type": "alexanderzobnin-zabbix-datasource"
+        },
         "definition": "",
-        "description": "",
+        "hide": 0,
         "includeAll": true,
         "label": "Container",
         "multi": true,
@@ -6743,6 +6726,9 @@
         },
         "refresh": 1,
         "regex": "/\\/([^_]+)_/",
+        "regexApplyTo": "value",
+        "skipUrlSync": false,
+        "sort": 0,
         "type": "query"
       }
     ]
@@ -6751,9 +6737,21 @@
     "from": "now-3h",
     "to": "now"
   },
-  "timepicker": {},
-  "timezone": "",
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "browser",
   "title": "Chatbot TR Telecom",
-  "uid": "d48b8624-0931-4935-8dff-f561a4785ba43",
-  "weekStart": ""
+  "uid": "d48b8624-0931-4935-8dff-f561a4785ba43"
 }
