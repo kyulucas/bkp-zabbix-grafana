@@ -36,6 +36,7 @@
             "cellOptions": {
               "type": "auto"
             },
+            "filterable": true,
             "footer": {
               "reducers": []
             },
@@ -66,14 +67,9 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": [
-          {
-            "desc": false,
-            "displayName": "NASIPAddress"
-          }
-        ]
+        "sortBy": []
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.2.3",
       "targets": [
         {
           "dataset": "ALTAREDE",
