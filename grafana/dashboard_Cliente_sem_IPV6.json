@@ -67,9 +67,10 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.2.3",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "dataset": "ALTAREDE",
@@ -110,8 +111,8 @@
   "refresh": "",
   "schemaVersion": 42,
   "time": {
-    "from": "2026-04-20T07:03:42.153Z",
-    "to": "2026-04-20T19:03:42.153Z"
+    "from": "now-7d",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
