@@ -35,7 +35,7 @@
         "x": 0,
         "y": 0
       },
-      "id": 319,
+      "id": 320,
       "title": "Row title",
       "type": "row"
     },
@@ -102,7 +102,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -224,7 +224,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "refId": "A"
@@ -293,7 +293,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "refId": "A"
@@ -351,7 +351,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -477,7 +477,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -629,7 +629,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -808,7 +808,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -938,7 +938,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -1063,9 +1063,10 @@
         },
         "showUnfilled": true,
         "sizing": "auto",
+        "textMode": "auto",
         "valueMode": "color"
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -1939,7 +1940,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -2069,7 +2070,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -2200,7 +2201,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -2326,7 +2327,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -2452,8 +2453,8 @@
         ]
       },
       "gridPos": {
-        "h": 19,
-        "w": 10,
+        "h": 13,
+        "w": 7,
         "x": 0,
         "y": 8
       },
@@ -2461,9 +2462,10 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -2490,7 +2492,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO BMP FIBRA 1 (ALTAREDE-Swap)"
+                "BMP FIBRA 1 (ALTAREDE-Swap)"
               ],
               "text": "setAlias(CIRCUITO LACP BMP FIBRA 1 (ALTAREDE))"
             }
@@ -2564,7 +2566,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO TR / ALBERTO TORRES"
+                "TR / ALBERTO TORRES"
               ],
               "text": "setAlias(CIRCUITO LACP BMP FIBRA 2 (TR))"
             }
@@ -2638,7 +2640,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO ALBERTO TORRES / BMP"
+                "ALBERTO TORRES / BMP"
               ],
               "text": "setAlias(CIRCUITO BMP / CHIADOR)"
             }
@@ -2787,7 +2789,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X PARAIBUNA"
+                "LEVY X PARAIBUNA"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -2861,7 +2863,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA FIBRA 1 - SENTIDO UPA"
+                "VILA FIBRA 1 - SENTIDO UPA"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 1 - Sentido Upa))"
             }
@@ -2935,7 +2937,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA (FIBRA 2 - PADRE SOLANO"
+                "VILA FIBRA 2 - PADRE SOLANO"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 2 - Padre Solano))"
             }
@@ -3009,7 +3011,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO CHIADOR / SANTANA"
+                "CHIADOR / SANTANA"
               ],
               "text": "setAlias(CIRCUITO CHIADOR / SANTANA)"
             }
@@ -3083,7 +3085,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO VILA / CHIADOR"
+                "VILA / CHIADOR"
               ],
               "text": "setAlias(CIRCUITO VILA / CHIADOR)"
             }
@@ -3157,7 +3159,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO SIMÃO PEREIRA / SANTANA "
+                "SIMÃO PEREIRA / SANTANA "
               ],
               "text": "setAlias(CIRCUITO SANTANA / SIMÃO PEREIRA)"
             }
@@ -3190,525 +3192,6 @@
           },
           "queryType": "0",
           "refId": "M",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:411",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1"
-              ],
-              "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/17: RxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "N",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:432",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO LACP CPD-CENTRO / PARAÍBA"
-              ],
-              "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/3: RxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "O",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:453",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO BMP / CHIADOR"
-              ],
-              "text": "setAlias(CIRCUITO BMP / CHIADOR)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-CHIADOR"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "LL",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:201",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO / PARAIBUNA X SIMÃO 2"
-              ],
-              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-PARAIBUNA-03"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
-          },
-          "itemTag": {
-            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "DD",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:201",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO / LEVY X PARAIBUNA  F 2"
-              ],
-              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-LEVY-02"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/22: RxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "DDD",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:201",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "TRÊS RIOS 01 - TRÊS RIOS 02"
-              ],
-              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface 40GE0/0/4: RxPower Lane0"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "CCCC",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:201",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO / PARAIBUNA X SIMÃO 1"
-              ],
-              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-PARAIBUNA-03"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
-          },
-          "itemTag": {
-            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -3806,7 +3289,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "TX POWER"
+              "options": "RX Power"
             },
             "properties": [
               {
@@ -3824,760 +3307,20 @@
         ]
       },
       "gridPos": {
-        "h": 19,
-        "w": 4,
-        "x": 10,
+        "h": 13,
+        "w": 7,
+        "x": 7,
         "y": 8
       },
-      "id": 280,
+      "id": 319,
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:138",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO BMP FIBRA 1 (ALTAREDE-Swap)"
-              ],
-              "text": "setAlias(CIRCUITO LACP BMP FIBRA 1 (ALTAREDE))"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:159",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO TR / ALBERTO TORRES"
-              ],
-              "text": "setAlias(CIRCUITO LACP BMP FIBRA 2 (TR))"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/19: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:453",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO ALBERTO TORRES / BMP"
-              ],
-              "text": "setAlias(CIRCUITO BMP / CHIADOR)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-ALBERTO-TORRES"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
-          },
-          "itemTag": {
-            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "CC",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:180",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "TRÊS RIOS / LEVY"
-              ],
-              "text": "setAlias(TRÊS RIOS / LEVY)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/11: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "CCC",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:201",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO / LEVY X PARAIBUNA"
-              ],
-              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-LEVY-02"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "D",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:243",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO POP VILA (FIBRA 1 - Sentido Upa)"
-              ],
-              "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 1 - Sentido Upa))"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-VILA"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/1: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "F",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:264",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO POP VILA (FIBRA 2 - Padre Solano)"
-              ],
-              "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 2 - Padre Solano))"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/13: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "G",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:348",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO CHIADOR / SANTANA"
-              ],
-              "text": "setAlias(CIRCUITO CHIADOR / SANTANA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "MPLS-PE-07-SANTANA"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "K",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:369",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO VILA / CHIADOR"
-              ],
-              "text": "setAlias(CIRCUITO VILA / CHIADOR)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-VILA"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "L",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:390",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "CIRCUITO SIMÃO PEREIRA / SANTANA "
-              ],
-              "text": "setAlias(CIRCUITO SANTANA / SIMÃO PEREIRA)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "MPLS-PE-07-SANTANA"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/1: TxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "M",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
         {
           "application": {
             "filter": ""
@@ -4603,7 +3346,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1"
+                "TRÊS RIOS / PARAÍBA FIBRA 1"
               ],
               "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1)"
             }
@@ -4615,7 +3358,7 @@
             "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/17: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/17: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4677,7 +3420,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO LACP CPD-CENTRO / PARAÍBA"
+                "CPD-CENTRO / PARAÍBA"
               ],
               "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2)"
             }
@@ -4689,7 +3432,7 @@
             "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/3: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/3: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4751,7 +3494,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO BMP / CHIADOR"
+                "BMP / CHIADOR"
               ],
               "text": "setAlias(CIRCUITO BMP / CHIADOR)"
             }
@@ -4763,7 +3506,7 @@
             "filter": "SW -MPLS-PE-CHIADOR"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -4803,7 +3546,7 @@
         },
         {
           "application": {
-            "filter": "RX-POWER"
+            "filter": ""
           },
           "countTriggersBy": "",
           "datasource": {
@@ -4813,7 +3556,7 @@
           "evaltype": "0",
           "functions": [
             {
-              "$$hashKey": "object:285",
+              "$$hashKey": "object:201",
               "def": {
                 "category": "Alias",
                 "defaultParams": [],
@@ -4826,9 +3569,9 @@
                 ]
               },
               "params": [
-                "paraibuna x simao"
+                "PARAIBUNA X SIMÃO F2"
               ],
-              "text": "setAlias(LINK DEDICADO ITANET)"
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
           ],
           "group": {
@@ -4838,10 +3581,10 @@
             "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
-            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
           },
           "macro": {
             "filter": ""
@@ -4900,7 +3643,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X PARAIBUNA F 2"
+                "LEVY X PARAIBUNA  F 2"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -4912,10 +3655,158 @@
             "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/22: RxPower"
           },
           "itemTag": {
             "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "DDD",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "TR 01 X TR 02"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "Optical Module Interface 40GE0/0/4: RxPower Lane0"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "CCCC",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "PARAIBUNA X SIMÃO F 1"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
+          },
+          "item": {
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+          },
+          "itemTag": {
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
           },
           "macro": {
             "filter": ""
@@ -4974,7 +3865,7 @@
                 ]
               },
               "params": [
-                "TRÊS RIOS 01 - TRÊS RIOS 02"
+                "CHIADOR X SAPUCAIA"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -4983,87 +3874,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 OLTS"
+            "filter": "SW -MPLS-PE-SAPUCAIA"
           },
           "item": {
-            "filter": "Optical Module Interface 40GE0/0/4: TxPower Lane0"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "CCCC",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:285",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "paraibuna x simao f 2"
-              ],
-              "text": "setAlias(LINK DEDICADO ITANET)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW -MPLS-PE-PARAIBUNA-03"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: TxPower"
-          },
-          "itemTag": {
-            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/1"
           },
           "macro": {
             "filter": ""
@@ -5096,6 +3913,80 @@
           "triggers": {
             "acknowledged": 2
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "BMP X SAPUCAIA"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW -MPLS-PE-SAPUCAIA"
+          },
+          "item": {
+            "filter": "Optical Module Interface XGigabitEthernet0/0/20: RxPower"
+          },
+          "itemTag": {
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/20"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
         }
       ],
       "title": "",
@@ -5104,7 +3995,7 @@
           "id": "reduce",
           "options": {
             "reducers": [
-              "lastNotNull"
+              "last"
             ]
           }
         },
@@ -5112,16 +4003,20 @@
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Field": true,
+              "Field": false,
               "Last (not null)": true,
               "Last *": false
             },
             "includeByName": {},
-            "indexByName": {},
+            "indexByName": {
+              "Field": 0,
+              "Last": 1
+            },
             "renameByName": {
               "Field": "INTERFACE",
+              "Last": "RX Power",
               "Last (not null)": "RX - POWER",
-              "Last *": "TX POWER"
+              "Last *": "RX POWER"
             }
           }
         }
@@ -5177,7 +4072,7 @@
         "textMode": "value",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -5384,7 +4279,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -6252,7 +5147,7 @@
         "h": 11,
         "w": 14,
         "x": 0,
-        "y": 27
+        "y": 21
       },
       "id": 313,
       "options": {
@@ -6936,9 +5831,10 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -7245,9 +6141,10 @@
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -7668,7 +6565,7 @@
         "x": 0,
         "y": 40
       },
-      "id": 320,
+      "id": 321,
       "title": "LINKS DEDICADOS",
       "type": "row"
     },
@@ -7741,7 +6638,7 @@
         "textMode": "value_and_name",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -7984,9 +6881,10 @@
             "desc": true,
             "displayName": "Time"
           }
-        ]
+        ],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -8318,7 +7216,7 @@
         "x": 0,
         "y": 57
       },
-      "id": 321,
+      "id": 322,
       "title": "FONTES RETIFICADORAS",
       "type": "row"
     },
@@ -8339,7 +7237,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Levy Gasparian\n</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -8362,7 +7260,7 @@
         "content": "<div style=\"\n  display: flex; \n  align-items: center; \n  justify-content: center;\n  font-size: 25px; \n  font-weight: 700; \n  background-color: #1e2d79; \n  border-radius: 10px; \n  text-align: center;\n  padding: 10px;\n  gap: 20px;\n\">\n  <img \n    src=\"https://www.trtelecom.net/7c29480d-3cf8-4258-9b39-e32dfe42a7df.png\" \n    width=\"70px\"\n    style=\"flex-shrink: 0;\"\n  />\n  <p style=\"margin: 0;\">Fonte Nobreak Retificadora JFA - Vila Isabel</p>\n</div>\n",
         "mode": "markdown"
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [],
       "title": "",
       "transparent": true,
@@ -8418,7 +7316,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -8531,7 +7429,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -8644,7 +7542,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -8773,7 +7671,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -8903,7 +7801,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9032,7 +7930,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9145,7 +8043,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9258,7 +8156,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9371,7 +8269,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9500,7 +8398,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9630,7 +8528,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9759,7 +8657,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9878,7 +8776,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -9991,7 +8889,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10112,7 +9010,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10227,7 +9125,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10340,7 +9238,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10461,7 +9359,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10605,7 +9503,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10752,7 +9650,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -10901,7 +9799,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11048,7 +9946,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11197,7 +10095,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11344,7 +10242,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11492,7 +10390,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11639,7 +10537,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11787,7 +10685,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -11934,7 +10832,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -12076,7 +10974,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "13.2.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "datasource": {
