@@ -66,7 +66,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -193,7 +193,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -361,7 +361,7 @@
           "sort": "none"
         }
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -881,7 +881,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "RX POWER"
+              "options": "RX Power"
             },
             "properties": [
               {
@@ -895,34 +895,23 @@
                 "value": null
               }
             ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "INTERFACE"
-            },
-            "properties": [
-              {
-                "id": "custom.width",
-                "value": 819
-              }
-            ]
           }
         ]
       },
       "gridPos": {
-        "h": 39,
-        "w": 24,
+        "h": 13,
+        "w": 12,
         "x": 0,
         "y": 13
       },
-      "id": 10,
+      "id": 12,
       "options": {
         "cellHeight": "sm",
         "showHeader": true,
-        "sortBy": []
+        "sortBy": [],
+        "zebraStriping": false
       },
-      "pluginVersion": "13.0.2",
+      "pluginVersion": "13.3.0",
       "targets": [
         {
           "application": {
@@ -949,7 +938,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO BMP FIBRA 1 (ALTAREDE-Swap)"
+                "BMP FIBRA 1 (ALTAREDE-Swap)"
               ],
               "text": "setAlias(CIRCUITO LACP BMP FIBRA 1 (ALTAREDE))"
             }
@@ -958,10 +947,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW -MPLS-PE-BEMPOSTA"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1023,7 +1012,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO TR / ALBERTO TORRES"
+                "TR / ALBERTO TORRES"
               ],
               "text": "setAlias(CIRCUITO LACP BMP FIBRA 2 (TR))"
             }
@@ -1032,10 +1021,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 CORE LINK BGP"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/19: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1097,7 +1086,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO ALBERTO TORRES / BMP"
+                "ALBERTO TORRES / BMP"
               ],
               "text": "setAlias(CIRCUITO BMP / CHIADOR)"
             }
@@ -1106,10 +1095,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-02 MPLS POP ALBERTO TORRES CCR1036"
+            "filter": "SW -MPLS-PE-ALBERTO-TORRES"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Roteamento MPLS  / OSPF Link Fibra TrTelecom Link envia para POP BMP ): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1181,10 +1170,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-01 MPLS CDP TR CCR1072"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus8(Link Circuto LEVY /  Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/11: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1246,7 +1235,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X PARAIBUNA"
+                "LEVY X PARAIBUNA"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -1255,10 +1244,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus7(SW-10 MPLS 2004 Mikrotk POP PARAIBUNA 10GB): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1320,7 +1309,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA (FIBRA 1 - Sentido Upa)"
+                "VILA FIBRA 1 - SENTIDO UPA"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 1 - Sentido Upa))"
             }
@@ -1329,10 +1318,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus1(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-01): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1394,7 +1383,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO POP VILA (FIBRA 2 - Padre Solano)"
+                "VILA FIBRA 2 - PADRE SOLANO"
               ],
               "text": "setAlias(CIRCUITO LACP MPLS SW-07 POP VILA (FIBRA 2 - Padre Solano))"
             }
@@ -1403,10 +1392,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW - 6730 OLTS"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link Chegada LACP MPLS-01 CPD TR TELECOM Fibra-02): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/13: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1468,7 +1457,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO CHIADOR / SANTANA"
+                "CHIADOR / SANTANA"
               ],
               "text": "setAlias(CIRCUITO CHIADOR / SANTANA)"
             }
@@ -1477,10 +1466,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus1(Link Roteamento MPLS Chegada POP chiador): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1542,7 +1531,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO VILA / CHIADOR"
+                "VILA / CHIADOR"
               ],
               "text": "setAlias(CIRCUITO VILA / CHIADOR)"
             }
@@ -1551,10 +1540,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-07 MPLS POP VILA ISABEL CCR2004"
+            "filter": "SW -MPLS-PE-VILA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida para CPD POP MPLS-05 Chiador): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1616,7 +1605,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO SIMÃO PEREIRA / SANTANA "
+                "SIMÃO PEREIRA / SANTANA "
               ],
               "text": "setAlias(CIRCUITO SANTANA / SIMÃO PEREIRA)"
             }
@@ -1625,10 +1614,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-06 MPLS POP SANTANA CCR2004"
+            "filter": "MPLS-PE-07-SANTANA"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus7(Link Roteamento MPLS Chegada POP Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1664,7 +1653,120 @@
           "triggers": {
             "acknowledged": 2
           }
+        }
+      ],
+      "title": "",
+      "transformations": [
+        {
+          "id": "reduce",
+          "options": {
+            "reducers": [
+              "last"
+            ]
+          }
         },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Field": false,
+              "Last (not null)": true,
+              "Last *": false
+            },
+            "includeByName": {},
+            "indexByName": {
+              "Field": 0,
+              "Last": 1
+            },
+            "renameByName": {
+              "Field": "INTERFACE",
+              "Last": "RX Power",
+              "Last (not null)": "RX - POWER",
+              "Last *": "RX POWER"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "ff5clh86a2mf4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "custom": {
+            "align": "center",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "filterable": false,
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "decimals": 2,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": 0
+              },
+              {
+                "color": "semi-dark-orange",
+                "value": -30
+              },
+              {
+                "color": "#1e4516",
+                "value": -20
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "RX Power"
+            },
+            "properties": [
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background"
+                }
+              },
+              {
+                "id": "color",
+                "value": null
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 13,
+        "w": 12,
+        "x": 12,
+        "y": 13
+      },
+      "id": 13,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [],
+        "zebraStriping": false
+      },
+      "pluginVersion": "13.3.0",
+      "targets": [
         {
           "application": {
             "filter": ""
@@ -1690,7 +1792,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1"
+                "TRÊS RIOS / PARAÍBA FIBRA 1"
               ],
               "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 1)"
             }
@@ -1764,7 +1866,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2"
+                "CPD-CENTRO / PARAÍBA"
               ],
               "text": "setAlias(CIRCUITO LACP TRÊS RIOS / PARAÍBA FIBRA 2)"
             }
@@ -1773,10 +1875,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW - 6730 OLTS"
+            "filter": "SW -MPLS-PE-TR CENTRO POP2 - 03"
           },
           "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/18: RxPower"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/3: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1838,7 +1940,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO BMP / CHIADOR"
+                "BMP / CHIADOR"
               ],
               "text": "setAlias(CIRCUITO BMP / CHIADOR)"
             }
@@ -1847,10 +1949,10 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-05 MPLS POP CHIADOR CCR2004"
+            "filter": "SW -MPLS-PE-CHIADOR"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus2(Link OSPF Chegada  Anel Rede POP BMP): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
             "filter": ""
@@ -1872,80 +1974,6 @@
           },
           "queryType": "0",
           "refId": "LL",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": "RX-POWER"
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:285",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK DEDICADO ITANET"
-              ],
-              "text": "setAlias(LINK DEDICADO ITANET)"
-            }
-          ],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "SW - 6730 OLTS"
-          },
-          "item": {
-            "filter": "Optical Module Interface XGigabitEthernet0/0/10: RxPower"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "P",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -1987,7 +2015,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / PARAIBUNA X SIMÃO"
+                "PARAIBUNA X SIMÃO F2"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -1996,13 +2024,13 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-10 MPLS POP PARAIBUNA CCR2004"
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus12(Link Saida POP Simao Pereira): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/24: RxPower"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/24"
           },
           "macro": {
             "filter": ""
@@ -2061,7 +2089,7 @@
                 ]
               },
               "params": [
-                "CIRCUITO / LEVY X PARAIBUNA F 2"
+                "LEVY X PARAIBUNA  F 2"
               ],
               "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
@@ -2070,13 +2098,161 @@
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "SW-03 MPLS POP LEVY CCR2004"
+            "filter": "SW -MPLS-PE-LEVY-02"
           },
           "item": {
-            "filter": "Interface sfp-sfpplus10(Segunda Fibra Rota 2 Anel vai para do POP  PARAIBUNA FIBRA 2): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/22: RxPower"
           },
           "itemTag": {
             "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "DDD",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "TR 01 X TR 02"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW - 6730 OLTS"
+          },
+          "item": {
+            "filter": "Optical Module Interface 40GE0/0/4: RxPower Lane0"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "CCCC",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "PARAIBUNA X SIMÃO F 1"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW -MPLS-PE-PARAIBUNA-03"
+          },
+          "item": {
+            "filter": "Optical Module Interface XGigabitEthernet0/0/23: RxPower"
+          },
+          "itemTag": {
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/23"
           },
           "macro": {
             "filter": ""
@@ -2122,7 +2298,7 @@
           "evaltype": "0",
           "functions": [
             {
-              "added": true,
+              "$$hashKey": "object:201",
               "def": {
                 "category": "Alias",
                 "defaultParams": [],
@@ -2135,22 +2311,22 @@
                 ]
               },
               "params": [
-                "CIRCUITO CPD-01 / CPD-02 TR"
+                "CHIADOR X SAPUCAIA"
               ],
-              "text": "setAlias()"
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
             }
           ],
           "group": {
             "filter": "SWITCH"
           },
           "host": {
-            "filter": "MPLS CDP-02 TR CCR2216"
+            "filter": "SW -MPLS-PE-SAPUCAIA"
           },
           "item": {
-            "filter": "Interface sfp28-1(Link Fibra TR-1072 CPD OSPF+ MPLS): RX Power"
+            "filter": "Optical Module Interface XGigabitEthernet0/0/1: RxPower"
           },
           "itemTag": {
-            "filter": ""
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/1"
           },
           "macro": {
             "filter": ""
@@ -2167,7 +2343,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "BBB",
+          "refId": "E",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2179,6 +2355,83 @@
           "textFilter": "",
           "trigger": {
             "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "$$hashKey": "object:201",
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "BMP X SAPUCAIA"
+              ],
+              "text": "setAlias(CIRCUITO / LEVY X S PEREIRA)"
+            }
+          ],
+          "group": {
+            "filter": "SWITCH"
+          },
+          "host": {
+            "filter": "SW -MPLS-PE-SAPUCAIA"
+          },
+          "item": {
+            "filter": "Optical Module Interface XGigabitEthernet0/0/20: RxPower"
+          },
+          "itemTag": {
+            "filter": "Application: Transceiver Data Interface SL: XGigabitEthernet0/0/20"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          },
+          "triggers": {
+            "acknowledged": 2
           }
         }
       ],
@@ -2188,7 +2441,7 @@
           "id": "reduce",
           "options": {
             "reducers": [
-              "lastNotNull"
+              "last"
             ]
           }
         },
@@ -2200,9 +2453,14 @@
               "Last (not null)": true,
               "Last *": false
             },
-            "indexByName": {},
+            "includeByName": {},
+            "indexByName": {
+              "Field": 0,
+              "Last": 1
+            },
             "renameByName": {
               "Field": "INTERFACE",
+              "Last": "RX Power",
               "Last (not null)": "RX - POWER",
               "Last *": "RX POWER"
             }
@@ -2211,158 +2469,6 @@
       ],
       "transparent": true,
       "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "axisBorderShow": false,
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
-            "axisLabel": "",
-            "axisPlacement": "auto",
-            "barAlignment": 0,
-            "barWidthFactor": 0.6,
-            "drawStyle": "line",
-            "fillOpacity": 0,
-            "gradientMode": "none",
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            },
-            "insertNulls": false,
-            "lineInterpolation": "linear",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 1,
-            "pointSize": 5,
-            "scaleDistribution": {
-              "type": "linear"
-            },
-            "showPoints": "auto",
-            "showValues": false,
-            "spanNulls": false,
-            "stacking": {
-              "group": "A",
-              "mode": "none"
-            },
-            "thresholdsStyle": {
-              "mode": "dashed+area"
-            }
-          },
-          "decimals": 1,
-          "max": 1000000001,
-          "min": 0,
-          "thresholds": {
-            "mode": "percentage",
-            "steps": [
-              {
-                "color": "green",
-                "value": 0
-              },
-              {
-                "color": "#EAB839",
-                "value": 50
-              },
-              {
-                "color": "#EF843C",
-                "value": 70
-              },
-              {
-                "color": "dark-red",
-                "value": 90
-              }
-            ]
-          },
-          "unit": "bytes"
-        }
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 24,
-        "x": 0,
-        "y": 52
-      },
-      "id": 9,
-      "options": {
-        "legend": {
-          "calcs": [],
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true
-        },
-        "tooltip": {
-          "hideZeros": false,
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "pluginVersion": "12.4.1",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "SWITCH"
-          },
-          "host": {
-            "filter": "N3k Cisco CPD-02 Data Center"
-          },
-          "item": {
-            "filter": "/Trafego de (Entrada|Saida) na Interface Ethernet1\\/50\\(Servidor TR-TV IP 170\\.80\\.227\\.10\\/30 VLAN 101\\)/"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "title": "Tráfego servidor TR TV",
-      "type": "timeseries"
     }
   ],
   "preload": false,
