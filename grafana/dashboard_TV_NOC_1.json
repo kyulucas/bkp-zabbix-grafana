@@ -6425,7 +6425,7 @@
         "markAckEvents": false,
         "okEventColor": "rgb(56, 189, 113)",
         "opdataField": false,
-        "pageSize": 10,
+        "pageSize": 20,
         "problemTimeline": true,
         "resizedColumns": [
           {
