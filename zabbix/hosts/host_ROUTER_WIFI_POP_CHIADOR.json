@@ -102,6 +102,9 @@
         ],
         "groups": [
           {
+            "name": "ENERGIA"
+          },
+          {
             "name": "ROUTERSPOP"
           }
         ],
