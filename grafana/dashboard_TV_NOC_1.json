@@ -4661,77 +4661,6 @@
                 ]
               },
               "params": [
-                "Santana"
-              ],
-              "text": "setAlias()"
-            }
-          ],
-          "group": {
-            "filter": "ROUTERSPOP"
-          },
-          "host": {
-            "filter": "ROUTER WIFI POP SANTANA"
-          },
-          "item": {
-            "filter": "ICMP ping"
-          },
-          "itemTag": {
-            "filter": "Application: Status"
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "I",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "added": true,
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
                 "Vila"
               ],
               "text": "setAlias()"
@@ -5120,6 +5049,148 @@
           },
           "queryType": "0",
           "refId": "K",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Santana"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "ENERGIA"
+          },
+          "host": {
+            "filter": "ENERGIA POP CPD SANTANA HW"
+          },
+          "item": {
+            "filter": "AC - Status de Entrada"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "I",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "ff5clh86a2mf4a"
+          },
+          "evaltype": "0",
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Alias",
+                "defaultParams": [],
+                "name": "setAlias",
+                "params": [
+                  {
+                    "name": "alias",
+                    "type": "string"
+                  }
+                ]
+              },
+              "params": [
+                "Sapucaia"
+              ],
+              "text": "setAlias()"
+            }
+          ],
+          "group": {
+            "filter": "ENERGIA"
+          },
+          "host": {
+            "filter": "ENERGIA POP CPD SAPUCAIA HW"
+          },
+          "item": {
+            "filter": "AC - Status de Entrada"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "L",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5801,16 +5872,29 @@
             "inspect": false
           },
           "decimals": 2,
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "INOPERANTE"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "OPERACIONAL"
+                }
+              },
+              "type": "value"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
                 "color": "dark-red",
                 "value": 0
-              },
-              {
-                "color": "semi-dark-orange",
-                "value": -30
               },
               {
                 "color": "dark-green",
@@ -5823,7 +5907,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 5,
+        "w": 10,
         "x": 14,
         "y": 27
       },
@@ -5938,7 +6022,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Interface 40GE0/3/1(Link Operadora-02 K2 LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
+            "filter": "Interface 40GE0/3/1(Link Operadora-02 MEGANET LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
           },
           "itemTag": {
             "filter": ""
@@ -6012,7 +6096,7 @@
             "filter": "ROUTER-BGP"
           },
           "item": {
-            "filter": "Interface 40GE0/3/2(Link Operadora-01 K2 LACP Fibra TrTelecom (Rua da ProsCan) Eth-Trunk 843): Operational status"
+            "filter": "Interface 40GE0/3/2(Eth-Trunk1.101 Porta Ne40 X SwCore 6730 100GE-0/0/3): Operational status"
           },
           "itemTag": {
             "filter": ""
@@ -6065,320 +6149,11 @@
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Last (not null)": true,
-              "Last *": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Field": "LINK",
-              "Last (not null)": "RX - POWER",
-              "Last *": "STATUS"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "table"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "ff5clh86a2mf4a"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "continuous-purples"
-          },
-          "custom": {
-            "align": "center",
-            "cellOptions": {
-              "type": "color-background"
-            },
-            "filterable": false,
-            "footer": {
-              "reducers": []
-            },
-            "inspect": false
-          },
-          "decimals": 2,
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "#1e4516",
-                  "index": 0,
-                  "text": "OPERACIONAL"
-                },
-                "2": {
-                  "color": "dark-red",
-                  "index": 1,
-                  "text": "DOWN"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "dark-green",
-                "value": 0
-              }
-            ]
-          },
-          "unit": "none"
-        }
-      },
-      "gridPos": {
-        "h": 4,
-        "w": 5,
-        "x": 19,
-        "y": 27
-      },
-      "id": 229,
-      "options": {
-        "cellHeight": "sm",
-        "showHeader": true,
-        "sortBy": [],
-        "zebraStriping": false
-      },
-      "pluginVersion": "13.3.0",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:60",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK GGNET "
-              ],
-              "text": "setAlias(LINK GGNET )"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/3.1601(Link Operadora-02 GGNET (FIBRA VIADUTO VLAN 1601)): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "functions": [
-            {
-              "$$hashKey": "object:81",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK K2 - FIBRA 1 ROTA VIADUTO"
-              ],
-              "text": "setAlias(LINK K2 - FIBRA 1 ROTA VIADUTO)"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/1(Link Operadora-02 K2 LACP Fibra TrTelecom (Rua da Viaduto) Eth-Trunk 843): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "options": {
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "ff5clh86a2mf4a"
-          },
-          "evaltype": "0",
-          "functions": [
-            {
-              "$$hashKey": "object:102",
-              "def": {
-                "category": "Alias",
-                "defaultParams": [],
-                "name": "setAlias",
-                "params": [
-                  {
-                    "name": "alias",
-                    "type": "string"
-                  }
-                ]
-              },
-              "params": [
-                "LINK K2 - FIBRA 2 ROTA PROSCAN"
-              ],
-              "text": "setAlias(LINK K2 - FIBRA 2 ROTA PROSCAN)"
-            }
-          ],
-          "group": {
-            "filter": "BGP"
-          },
-          "host": {
-            "filter": "ROUTER-BGP"
-          },
-          "item": {
-            "filter": "Interface 40GE0/3/2(Link Operadora-01 K2 LACP Fibra TrTelecom (Rua da ProsCan) Eth-Trunk 843): Operational status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": true,
-            "disableDataAlignment": false,
-            "minSeverity": 3,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          },
-          "triggers": {
-            "acknowledged": 2
-          }
-        }
-      ],
-      "title": "",
-      "transformations": [
-        {
-          "id": "reduce",
-          "options": {
-            "reducers": [
-              "lastNotNull"
-            ]
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Field": true,
+              "Field": false,
               "Last (not null)": true,
               "Last *": false
             },
+            "includeByName": {},
             "indexByName": {},
             "renameByName": {
               "Field": "LINK",
